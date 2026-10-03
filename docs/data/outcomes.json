@@ -1,0 +1,40 @@
+{
+ "rows": [
+  {
+   "date": "2026-10-02",
+   "code": "G13",
+   "name": "Genting Singapore",
+   "side": "Short",
+   "grade": "C",
+   "entry": 0.605,
+   "stop": 0.63,
+   "t1": 0.58,
+   "outcome": "Pending",
+   "filled": "",
+   "closed": "",
+   "r": null
+  },
+  {
+   "date": "2026-10-02",
+   "code": "U11",
+   "name": "UOB",
+   "side": "Long",
+   "grade": "C",
+   "entry": 43.76,
+   "stop": 42.53,
+   "t1": 45.15,
+   "outcome": "Pending",
+   "filled": "",
+   "closed": "",
+   "r": null
+  }
+ ],
+ "summary": {
+  "signals": 2,
+  "filled": 0,
+  "closed": 0,
+  "wins": 0,
+  "win_rate": null,
+  "expectancy_r": null
+ }
+}
