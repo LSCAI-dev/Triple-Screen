@@ -1,0 +1,89 @@
+CSS = r"""
+:root{--paper:#F3F5F2;--panel:#FFFFFF;--ink:#17242B;--muted:#5E6B70;--rule:#D5DCD8;
+--long:#127A5F;--long-bg:#E1F0EA;--short:#B23A3A;--short-bg:#F6E3E1;--watch:#9A6F1C;--watch-bg:#F5EDDC;
+--none:#7C878B;--none-bg:#EBEEEC;--entry:#2F5FA7;color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--paper:#121A1E;--panel:#18232A;--ink:#E6ECE9;--muted:#93A3A9;--rule:#2B383F;
+--long:#4FC39E;--long-bg:#16332B;--short:#E07C72;--short-bg:#3A2224;--watch:#D9AE5B;--watch-bg:#33291A;
+--none:#8D989C;--none-bg:#1E292F;--entry:#7EA6E6;color-scheme:dark}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);
+font:16px/1.45 "Barlow Semi Condensed","Arial Narrow",system-ui,sans-serif;font-variant-numeric:tabular-nums;
+padding:env(safe-area-inset-top,0) 0 env(safe-area-inset-bottom,0)}
+a{color:inherit}
+a:focus-visible,button:focus-visible,select:focus-visible{outline:2px solid var(--entry);outline-offset:2px}
+.wrap{max-width:1180px;margin:0 auto;padding:20px 16px 48px}
+header.top{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 24px;
+border-bottom:2px solid var(--ink);padding-bottom:10px}
+header.top h1{font-size:30px;line-height:1.1;margin:0;font-weight:700;letter-spacing:-.01em}
+header.top nav a{margin-left:18px;text-decoration:none;color:var(--muted);font-weight:600}
+header.top nav a[aria-current]{color:var(--ink);border-bottom:2px solid var(--ink)}
+.stamp{color:var(--muted);font-size:14px;margin:8px 0 0}
+.tide{display:flex;flex-wrap:wrap;gap:4px 28px;margin:22px 0 6px;align-items:baseline}
+.tide b{font-size:40px;line-height:1;font-weight:700}
+.tide .Up{color:var(--long)}.tide .Down{color:var(--short)}.tide .Mixed{color:var(--watch)}
+.counts{display:flex;gap:18px;flex-wrap:wrap;font-size:15px;color:var(--muted)}
+.counts strong{color:var(--ink);font-size:20px;margin-right:4px}
+h2{font-size:21px;margin:34px 0 10px;font-weight:700}
+.board{display:grid;grid-template-columns:repeat(auto-fill,minmax(132px,1fr));gap:6px}
+.tile{display:block;text-decoration:none;padding:8px 10px;border-radius:4px;border-left:5px solid var(--none);background:var(--none-bg)}
+.tile .c{font-weight:700;font-size:17px}.tile .n{font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tile .p{font-size:14px}.tile .s{font-size:12px;font-weight:600}
+.st-long{border-color:var(--long);background:var(--long-bg)}.st-long .s{color:var(--long)}
+.st-short{border-color:var(--short);background:var(--short-bg)}.st-short .s{color:var(--short)}
+.st-lwatch,.st-swatch{border-color:var(--watch);background:var(--watch-bg)}.st-lwatch .s,.st-swatch .s{color:var(--watch)}
+.up{color:var(--long)}.dn{color:var(--short)}
+table.t{width:100%;border-collapse:collapse;background:var(--panel);font-size:15px}
+table.t th{text-align:right;font-weight:600;color:var(--muted);font-size:13px;padding:8px;border-bottom:1px solid var(--rule)}
+table.t td{text-align:right;padding:8px;border-bottom:1px solid var(--rule)}
+table.t th:first-child,table.t td:first-child{text-align:left}
+table.t td.l,table.t th.l{text-align:left}
+.g{display:inline-block;min-width:22px;text-align:center;border-radius:3px;font-weight:700;padding:0 4px}
+.gA{background:var(--long);color:var(--panel)}.gB{background:var(--watch);color:var(--panel)}.gC{background:var(--none);color:var(--panel)}
+.empty{padding:18px;background:var(--panel);border:1px dashed var(--rule);color:var(--muted)}
+.note{font-size:14px;color:var(--muted);max-width:76ch}
+details{margin-top:30px;background:var(--panel);border:1px solid var(--rule);border-radius:4px;padding:10px 14px}
+details summary{cursor:pointer;font-weight:700}
+details p,details li{max-width:76ch}
+.stock-head{display:flex;flex-wrap:wrap;gap:6px 20px;align-items:baseline;margin-top:18px}
+.stock-head h1{margin:0;font-size:32px}
+.badge{font-weight:700;padding:2px 10px;border-radius:3px}
+.plan{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:14px}
+.plan div{background:var(--panel);padding:10px}
+.plan span{display:block;font-size:13px;color:var(--muted)}.plan b{font-size:22px}
+.chart{background:var(--panel);border:1px solid var(--rule);border-radius:4px;margin-top:10px;padding:4px}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+ul.lv{list-style:none;padding:0;margin:0}ul.lv li{display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid var(--rule)}
+.screens{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
+.screens div{background:var(--panel);border:1px solid var(--rule);border-radius:4px;padding:10px 12px}
+.screens h3{margin:0 0 4px;font-size:15px;color:var(--muted);font-weight:600}
+.screens p{margin:0;font-size:15px}
+select{font:inherit;padding:6px 8px;background:var(--panel);color:var(--ink);border:1px solid var(--rule);border-radius:3px}
+.warn{border-left:4px solid var(--watch);padding:8px 12px;background:var(--watch-bg);margin-top:18px;font-size:14px}
+footer{margin-top:40px;color:var(--muted);font-size:13px;border-top:1px solid var(--rule);padding-top:10px}
+@media (max-width:760px){
+ .cols,.screens{grid-template-columns:1fr}
+ table.t.stack thead{display:none}
+ table.t.stack tr{display:grid;grid-template-columns:repeat(3,1fr);gap:2px 8px;padding:10px;border-bottom:1px solid var(--rule)}
+ table.t.stack td{border:0;padding:2px 0;text-align:left}
+ table.t.stack td::before{content:attr(data-h);display:block;font-size:11px;color:var(--muted)}
+ table.t.stack td:first-child{grid-column:1/-1;font-size:17px}
+ table.t.stack td:first-child::before{display:none}
+ header.top h1{font-size:25px}.tide b{font-size:32px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+"""
+
+THEME_JS = r"""
+(function(){
+  function apply(){
+    var dark = window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches;
+    var c = dark ? '#93A3A9' : '#5E6B70';
+    document.querySelectorAll('.js-plotly-plot').forEach(function(el){
+      try{ Plotly.relayout(el, {'font.color': c}); }catch(e){}
+    });
+  }
+  window.addEventListener('load', apply);
+  if (window.matchMedia) matchMedia('(prefers-color-scheme: dark)').addEventListener('change', apply);
+})();
+"""
