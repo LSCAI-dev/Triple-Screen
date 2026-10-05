@@ -1,6 +1,48 @@
 {
  "rows": [
   {
+   "date": "2026-10-05",
+   "code": "BN4",
+   "name": "Keppel",
+   "side": "Short",
+   "grade": "B",
+   "entry": 10.99,
+   "stop": 11.24,
+   "t1": 10.68,
+   "outcome": "Pending",
+   "filled": "",
+   "closed": "",
+   "r": null
+  },
+  {
+   "date": "2026-10-05",
+   "code": "C38U",
+   "name": "CapitaLand Integrated Commercial Trust",
+   "side": "Short",
+   "grade": "A",
+   "entry": 2.22,
+   "stop": 2.29,
+   "t1": 2.08,
+   "outcome": "Pending",
+   "filled": "",
+   "closed": "",
+   "r": null
+  },
+  {
+   "date": "2026-10-05",
+   "code": "Z74",
+   "name": "Singtel",
+   "side": "Short",
+   "grade": "B",
+   "entry": 4.2,
+   "stop": 4.32,
+   "t1": 3.96,
+   "outcome": "Pending",
+   "filled": "",
+   "closed": "",
+   "r": null
+  },
+  {
    "date": "2026-10-02",
    "code": "G13",
    "name": "Genting Singapore",
@@ -30,7 +72,7 @@
   }
  ],
  "summary": {
-  "signals": 2,
+  "signals": 5,
   "filled": 0,
   "closed": 0,
   "wins": 0,
