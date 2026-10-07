@@ -9,10 +9,10 @@
    "entry": 10.99,
    "stop": 11.24,
    "t1": 10.68,
-   "outcome": "Pending",
-   "filled": "",
+   "outcome": "Open",
+   "filled": "2026-10-06",
    "closed": "",
-   "r": null
+   "r": 0.08
   },
   {
    "date": "2026-10-05",
@@ -37,10 +37,10 @@
    "entry": 4.2,
    "stop": 4.32,
    "t1": 3.96,
-   "outcome": "Pending",
-   "filled": "",
+   "outcome": "Open",
+   "filled": "2026-10-06",
    "closed": "",
-   "r": null
+   "r": -0.42
   },
   {
    "date": "2026-10-02",
@@ -73,7 +73,7 @@
  ],
  "summary": {
   "signals": 5,
-  "filled": 0,
+  "filled": 2,
   "closed": 0,
   "wins": 0,
   "win_rate": null,
