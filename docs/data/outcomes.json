@@ -1,6 +1,34 @@
 {
  "rows": [
   {
+   "date": "2026-10-07",
+   "code": "V03",
+   "name": "Venture Corp",
+   "side": "Long",
+   "grade": "C",
+   "entry": 16.72,
+   "stop": 16.48,
+   "t1": 16.96,
+   "outcome": "Pending",
+   "filled": "",
+   "closed": "",
+   "r": null
+  },
+  {
+   "date": "2026-10-07",
+   "code": "Y92",
+   "name": "Thai Beverage",
+   "side": "Short",
+   "grade": "C",
+   "entry": 0.425,
+   "stop": 0.44,
+   "t1": 0.41,
+   "outcome": "Pending",
+   "filled": "",
+   "closed": "",
+   "r": null
+  },
+  {
    "date": "2026-10-05",
    "code": "BN4",
    "name": "Keppel",
@@ -12,7 +40,7 @@
    "outcome": "Open",
    "filled": "2026-10-06",
    "closed": "",
-   "r": 0.08
+   "r": -0.12
   },
   {
    "date": "2026-10-05",
@@ -40,7 +68,7 @@
    "outcome": "Open",
    "filled": "2026-10-06",
    "closed": "",
-   "r": -0.42
+   "r": -0.83
   },
   {
    "date": "2026-10-02",
@@ -51,7 +79,7 @@
    "entry": 0.605,
    "stop": 0.63,
    "t1": 0.58,
-   "outcome": "Pending",
+   "outcome": "Not filled",
    "filled": "",
    "closed": "",
    "r": null
@@ -65,14 +93,14 @@
    "entry": 43.76,
    "stop": 42.53,
    "t1": 45.15,
-   "outcome": "Pending",
+   "outcome": "Not filled",
    "filled": "",
    "closed": "",
    "r": null
   }
  ],
  "summary": {
-  "signals": 5,
+  "signals": 7,
   "filled": 2,
   "closed": 0,
   "wins": 0,
