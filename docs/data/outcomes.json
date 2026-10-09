@@ -1,6 +1,48 @@
 {
  "rows": [
   {
+   "date": "2026-10-08",
+   "code": "G13",
+   "name": "Genting Singapore",
+   "side": "Short",
+   "grade": "C",
+   "entry": 0.605,
+   "stop": 0.63,
+   "t1": 0.58,
+   "outcome": "Pending",
+   "filled": "",
+   "closed": "",
+   "r": null
+  },
+  {
+   "date": "2026-10-08",
+   "code": "V03",
+   "name": "Venture Corp",
+   "side": "Short",
+   "grade": "C",
+   "entry": 16.24,
+   "stop": 16.72,
+   "t1": 15.75,
+   "outcome": "Pending",
+   "filled": "",
+   "closed": "",
+   "r": null
+  },
+  {
+   "date": "2026-10-08",
+   "code": "Y92",
+   "name": "Thai Beverage",
+   "side": "Short",
+   "grade": "B",
+   "entry": 0.41,
+   "stop": 0.44,
+   "t1": 0.35,
+   "outcome": "Pending",
+   "filled": "",
+   "closed": "",
+   "r": null
+  },
+  {
    "date": "2026-10-07",
    "code": "V03",
    "name": "Venture Corp",
@@ -23,10 +65,10 @@
    "entry": 0.425,
    "stop": 0.44,
    "t1": 0.41,
-   "outcome": "Pending",
-   "filled": "",
+   "outcome": "Open",
+   "filled": "2026-10-08",
    "closed": "",
-   "r": null
+   "r": -0.33
   },
   {
    "date": "2026-10-05",
@@ -37,10 +79,10 @@
    "entry": 10.99,
    "stop": 11.24,
    "t1": 10.68,
-   "outcome": "Open",
+   "outcome": "T1 hit",
    "filled": "2026-10-06",
-   "closed": "",
-   "r": -0.12
+   "closed": "2026-10-08",
+   "r": 1.24
   },
   {
    "date": "2026-10-05",
@@ -51,7 +93,7 @@
    "entry": 2.22,
    "stop": 2.29,
    "t1": 2.08,
-   "outcome": "Pending",
+   "outcome": "Not filled",
    "filled": "",
    "closed": "",
    "r": null
@@ -65,10 +107,10 @@
    "entry": 4.2,
    "stop": 4.32,
    "t1": 3.96,
-   "outcome": "Open",
+   "outcome": "Stopped",
    "filled": "2026-10-06",
-   "closed": "",
-   "r": -0.83
+   "closed": "2026-10-08",
+   "r": -1.0
   },
   {
    "date": "2026-10-02",
@@ -100,11 +142,11 @@
   }
  ],
  "summary": {
-  "signals": 7,
-  "filled": 2,
-  "closed": 0,
-  "wins": 0,
-  "win_rate": null,
-  "expectancy_r": null
+  "signals": 10,
+  "filled": 3,
+  "closed": 2,
+  "wins": 1,
+  "win_rate": 50.0,
+  "expectancy_r": 0.12
  }
 }
