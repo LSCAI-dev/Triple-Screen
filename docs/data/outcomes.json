@@ -1,6 +1,34 @@
 {
  "rows": [
   {
+   "date": "2026-10-09",
+   "code": "C38U",
+   "name": "CapitaLand Integrated Commercial Trust",
+   "side": "Short",
+   "grade": "A",
+   "entry": 2.22,
+   "stop": 2.31,
+   "t1": 2.04,
+   "outcome": "Pending",
+   "filled": "",
+   "closed": "",
+   "r": null
+  },
+  {
+   "date": "2026-10-09",
+   "code": "G13",
+   "name": "Genting Singapore",
+   "side": "Short",
+   "grade": "C",
+   "entry": 0.605,
+   "stop": 0.63,
+   "t1": 0.58,
+   "outcome": "Pending",
+   "filled": "",
+   "closed": "",
+   "r": null
+  },
+  {
    "date": "2026-10-08",
    "code": "G13",
    "name": "Genting Singapore",
@@ -23,10 +51,10 @@
    "entry": 16.24,
    "stop": 16.72,
    "t1": 15.75,
-   "outcome": "Pending",
-   "filled": "",
+   "outcome": "Open",
+   "filled": "2026-10-09",
    "closed": "",
-   "r": null
+   "r": -0.1
   },
   {
    "date": "2026-10-08",
@@ -142,8 +170,8 @@
   }
  ],
  "summary": {
-  "signals": 10,
-  "filled": 3,
+  "signals": 12,
+  "filled": 4,
   "closed": 2,
   "wins": 1,
   "win_rate": 50.0,
