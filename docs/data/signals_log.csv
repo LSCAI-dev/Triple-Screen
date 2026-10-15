@@ -209,3 +209,33 @@ date,ticker,code,name,status,grade,close,entry,stop,t1,t2,rr1,rsi,tide,wave
 2026-10-14,V03.SI,V03,Venture Corp,Short watch,,16.14,,,,,,41.2,Down,Extended
 2026-10-14,Y92.SI,Y92,Thai Beverage,Short watch,,0.43,,,,,,37.9,Down,Falling
 2026-10-14,Z74.SI,Z74,Singtel,Short watch,,4.14,,,,,,29.2,Down,Extended
+2026-10-15,5E2.SI,5E2,Seatrium,Short watch,,1.85,,,,,,27.2,Down,Extended
+2026-10-15,9CI.SI,9CI,CapitaLand Investment,Short watch,,2.38,,,,,,24.1,Down,Extended
+2026-10-15,A17U.SI,A17U,CapitaLand Ascendas REIT,Short watch,,2.18,,,,,,25.4,Down,Extended
+2026-10-15,AJBU.SI,AJBU,Keppel DC REIT,Short watch,,2.08,,,,,,35.8,Down,Extended
+2026-10-15,BN4.SI,BN4,Keppel,Short watch,,10.12,,,,,,23.1,Down,Extended
+2026-10-15,BS6.SI,BS6,Yangzijiang Shipbuilding,No trade,,5.03,,,,,,50.1,Mixed,-
+2026-10-15,BUOU.SI,BUOU,Frasers Logistics & Commercial Trust,No trade,,0.88,,,,,,44.3,Mixed,-
+2026-10-15,C07.SI,C07,Jardine Cycle & Carriage,Short watch,,25.02,,,,,,43.9,Down,Falling
+2026-10-15,C09.SI,C09,City Developments,Short watch,,7.05,,,,,,31.9,Down,Extended
+2026-10-15,C38U.SI,C38U,CapitaLand Integrated Commercial Trust,Short setup,A,2.22,2.19,2.26,2.05,1.98,2.0,37.6,Down,Rally
+2026-10-15,C6L.SI,C6L,Singapore Airlines,No trade,,6.49,,,,,,32.4,Mixed,-
+2026-10-15,D05.SI,D05,DBS Group,No trade,,73.75,,,,,,35.9,Mixed,-
+2026-10-15,F34.SI,F34,Wilmar International,Short watch,,3.48,,,,,,38.5,Down,Extended
+2026-10-15,G13.SI,G13,Genting Singapore,Short watch,,0.61,,,,,,42.2,Down,Rally
+2026-10-15,H78.SI,H78,Hongkong Land,No trade,,8.06,,,,,,45.1,Mixed,-
+2026-10-15,J36.SI,J36,Jardine Matheson,No trade,,58.04,,,,,,54.9,Mixed,-
+2026-10-15,J69U.SI,J69U,Frasers Centrepoint Trust,No trade,,2.06,,,,,,39.7,Mixed,-
+2026-10-15,M44U.SI,M44U,Mapletree Logistics Trust,No trade,,1.09,,,,,,43.0,Mixed,-
+2026-10-15,ME8U.SI,ME8U,Mapletree Industrial Trust,Short watch,,1.79,,,,,,22.9,Down,Extended
+2026-10-15,N2IU.SI,N2IU,Mapletree Pan Asia Commercial Trust,Short watch,,1.16,,,,,,33.9,Down,Extended
+2026-10-15,O39.SI,O39,OCBC Bank,No trade,,28.99,,,,,,31.8,Mixed,-
+2026-10-15,S58.SI,S58,SATS,Short watch,,3.57,,,,,,22.5,Down,Extended
+2026-10-15,S63.SI,S63,ST Engineering,Short watch,,10.25,,,,,,37.8,Down,Extended
+2026-10-15,S68.SI,S68,SGX Group,Short watch,,20.89,,,,,,34.3,Down,Extended
+2026-10-15,U11.SI,U11,UOB,No trade,,41.69,,,,,,48.8,Mixed,-
+2026-10-15,U14.SI,U14,UOL Group,Short watch,,7.61,,,,,,20.0,Down,Extended
+2026-10-15,U96.SI,U96,Sembcorp Industries,No trade,,5.92,,,,,,49.2,Mixed,-
+2026-10-15,V03.SI,V03,Venture Corp,Short watch,,15.75,,,,,,34.7,Down,Extended
+2026-10-15,Y92.SI,Y92,Thai Beverage,Short watch,,0.425,,,,,,31.7,Down,Falling
+2026-10-15,Z74.SI,Z74,Singtel,Short watch,,4.16,,,,,,32.7,Down,Extended

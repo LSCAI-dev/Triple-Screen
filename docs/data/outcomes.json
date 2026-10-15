@@ -1,6 +1,20 @@
 {
  "rows": [
   {
+   "date": "2026-10-15",
+   "code": "C38U",
+   "name": "CapitaLand Integrated Commercial Trust",
+   "side": "Short",
+   "grade": "A",
+   "entry": 2.19,
+   "stop": 2.26,
+   "t1": 2.05,
+   "outcome": "Pending",
+   "filled": "",
+   "closed": "",
+   "r": null
+  },
+  {
    "date": "2026-10-14",
    "code": "C07",
    "name": "Jardine Cycle & Carriage",
@@ -26,7 +40,7 @@
    "outcome": "Open",
    "filled": "2026-10-13",
    "closed": "",
-   "r": 0.11
+   "r": -0.0
   },
   {
    "date": "2026-10-09",
@@ -65,10 +79,10 @@
    "entry": 16.24,
    "stop": 16.72,
    "t1": 15.75,
-   "outcome": "Open",
+   "outcome": "T1 hit",
    "filled": "2026-10-09",
-   "closed": "",
-   "r": 0.21
+   "closed": "2026-10-15",
+   "r": 1.02
   },
   {
    "date": "2026-10-08",
@@ -110,7 +124,7 @@
    "outcome": "Open",
    "filled": "2026-10-08",
    "closed": "",
-   "r": -0.33
+   "r": -0.0
   },
   {
    "date": "2026-10-05",
@@ -184,11 +198,11 @@
   }
  ],
  "summary": {
-  "signals": 13,
+  "signals": 14,
   "filled": 7,
-  "closed": 2,
-  "wins": 1,
-  "win_rate": 50.0,
-  "expectancy_r": 0.12
+  "closed": 3,
+  "wins": 2,
+  "win_rate": 66.7,
+  "expectancy_r": 0.42
  }
 }
