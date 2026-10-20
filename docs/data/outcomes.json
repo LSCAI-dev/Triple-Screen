@@ -23,7 +23,7 @@
    "entry": 2.19,
    "stop": 2.26,
    "t1": 2.05,
-   "outcome": "Pending",
+   "outcome": "Not filled",
    "filled": "",
    "closed": "",
    "r": null
@@ -37,10 +37,10 @@
    "entry": 24.8,
    "stop": 26.5,
    "t1": 22.87,
-   "outcome": "Open",
+   "outcome": "T1 hit",
    "filled": "2026-10-16",
-   "closed": "",
-   "r": 0.65
+   "closed": "2026-10-20",
+   "r": 1.14
   },
   {
    "date": "2026-10-09",
@@ -54,7 +54,7 @@
    "outcome": "Open",
    "filled": "2026-10-13",
    "closed": "",
-   "r": -0.11
+   "r": 0.22
   },
   {
    "date": "2026-10-09",
@@ -68,7 +68,7 @@
    "outcome": "Open",
    "filled": "2026-10-13",
    "closed": "",
-   "r": -0.2
+   "r": -0.0
   },
   {
    "date": "2026-10-08",
@@ -82,7 +82,7 @@
    "outcome": "Open",
    "filled": "2026-10-13",
    "closed": "",
-   "r": -0.2
+   "r": -0.0
   },
   {
    "date": "2026-10-08",
@@ -214,9 +214,9 @@
  "summary": {
   "signals": 15,
   "filled": 8,
-  "closed": 3,
-  "wins": 2,
-  "win_rate": 66.7,
-  "expectancy_r": 0.42
+  "closed": 4,
+  "wins": 3,
+  "win_rate": 75.0,
+  "expectancy_r": 0.6
  }
 }
