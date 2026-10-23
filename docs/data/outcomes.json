@@ -1,6 +1,20 @@
 {
  "rows": [
   {
+   "date": "2026-10-23",
+   "code": "C09",
+   "name": "City Developments",
+   "side": "Short",
+   "grade": "C",
+   "entry": 7.0,
+   "stop": 7.19,
+   "t1": 6.62,
+   "outcome": "Pending",
+   "filled": "",
+   "closed": "",
+   "r": null
+  },
+  {
    "date": "2026-10-22",
    "code": "U96",
    "name": "Sembcorp Industries",
@@ -40,7 +54,7 @@
    "outcome": "Open",
    "filled": "2026-10-22",
    "closed": "",
-   "r": -0.0
+   "r": 0.25
   },
   {
    "date": "2026-10-21",
@@ -107,10 +121,10 @@
    "entry": 2.22,
    "stop": 2.31,
    "t1": 2.04,
-   "outcome": "Open",
+   "outcome": "Stopped",
    "filled": "2026-10-13",
-   "closed": "",
-   "r": -0.33
+   "closed": "2026-10-23",
+   "r": -1.0
   },
   {
    "date": "2026-10-09",
@@ -124,7 +138,7 @@
    "outcome": "Open",
    "filled": "2026-10-13",
    "closed": "",
-   "r": 0.2
+   "r": 0.4
   },
   {
    "date": "2026-10-08",
@@ -138,7 +152,7 @@
    "outcome": "Open",
    "filled": "2026-10-13",
    "closed": "",
-   "r": 0.2
+   "r": 0.4
   },
   {
    "date": "2026-10-08",
@@ -191,10 +205,10 @@
    "entry": 0.425,
    "stop": 0.44,
    "t1": 0.41,
-   "outcome": "Open",
+   "outcome": "Stopped",
    "filled": "2026-10-08",
-   "closed": "",
-   "r": -0.0
+   "closed": "2026-10-23",
+   "r": -1.0
   },
   {
    "date": "2026-10-05",
@@ -268,11 +282,11 @@
   }
  ],
  "summary": {
-  "signals": 19,
+  "signals": 20,
   "filled": 9,
-  "closed": 4,
+  "closed": 6,
   "wins": 3,
-  "win_rate": 75.0,
-  "expectancy_r": 0.6
+  "win_rate": 50.0,
+  "expectancy_r": 0.07
  }
 }
