@@ -1,7 +1,7 @@
 {
  "meta": {
-  "as_of": "2026-10-29",
-  "generated": "2026-10-31 00:46",
+  "as_of": "2026-10-30",
+  "generated": "2026-11-03 04:27",
   "source": "Yahoo Finance via yfinance (unadjusted daily OHLC)",
   "demo": false,
   "universe": 30,
@@ -11,12 +11,12 @@
  },
  "results": [
   {
-   "ticker": "J69U.SI",
-   "code": "J69U",
-   "name": "Frasers Centrepoint Trust",
-   "date": "2026-10-29",
-   "close": 2.07,
-   "chg_pct": -2.36,
+   "ticker": "Y92.SI",
+   "code": "Y92",
+   "name": "Thai Beverage",
+   "date": "2026-10-30",
+   "close": 0.425,
+   "chg_pct": 2.41,
    "status": "Short setup",
    "wave": "Rally",
    "tide": {
@@ -27,52 +27,42 @@
     "impulse": "red",
     "strong": true
    },
-   "ema20": 2.098,
-   "ema50": 2.117,
-   "rsi": 44.7,
-   "fi2": -335989.0,
-   "atr": 0.038,
-   "macd": 0.004,
-   "macd_hist": 0.006,
-   "macd_hist_rising": false,
+   "ema20": 0.427,
+   "ema50": 0.435,
+   "rsi": 46.1,
+   "fi2": 39894.0,
+   "atr": 0.011,
+   "macd": -0.0041,
+   "macd_hist": 0.0,
+   "macd_hist_rising": true,
    "support": [
     {
-     "price": 2.05,
-     "touches": 5,
-     "strength": 5.97
+     "price": 0.41,
+     "touches": 1,
+     "strength": 1.0
     }
    ],
    "resistance": [
     {
-     "price": 2.13,
-     "touches": 2,
-     "strength": 2.94
-    },
-    {
-     "price": 2.255,
-     "touches": 52,
-     "strength": 52.85
-    },
-    {
-     "price": 2.37,
-     "touches": 1,
-     "strength": 1.49
+     "price": 0.45,
+     "touches": 102,
+     "strength": 102.97
     }
    ],
    "plan": {
     "side": "Short",
-    "order": "Sell stop 2.040, valid 3 sessions; trail it to 1 tick beyond each new day's low if not filled",
-    "entry": 2.04,
-    "stop": 2.17,
-    "t1": 1.78,
-    "t2": 1.65,
-    "risk_per_share": 0.13,
+    "order": "Sell stop 0.405, valid 3 sessions; trail it to 1 tick beyond each new day's low if not filled",
+    "entry": 0.405,
+    "stop": 0.435,
+    "t1": 0.345,
+    "t2": 0.315,
+    "risk_per_share": 0.03,
     "rr1": 2.0,
     "rr2": 3.0,
-    "qty": 7600,
-    "cash_risk": 988.0,
-    "grade": "A",
-    "stop_pct": 6.37
+    "qty": 33300,
+    "cash_risk": 999.0,
+    "grade": "B",
+    "stop_pct": 7.41
    },
    "notes": []
   },
@@ -80,9 +70,9 @@
    "ticker": "Z74.SI",
    "code": "Z74",
    "name": "Singtel",
-   "date": "2026-10-29",
-   "close": 4.12,
-   "chg_pct": 0.98,
+   "date": "2026-10-30",
+   "close": 4.13,
+   "chg_pct": 0.24,
    "status": "Short setup",
    "wave": "Rally",
    "tide": {
@@ -93,19 +83,24 @@
     "impulse": "red",
     "strong": true
    },
-   "ema20": 4.185,
-   "ema50": 4.278,
-   "rsi": 38.5,
-   "fi2": 364429.0,
-   "atr": 0.075,
-   "macd": -0.0576,
-   "macd_hist": -0.0018,
+   "ema20": 4.18,
+   "ema50": 4.272,
+   "rsi": 40.0,
+   "fi2": 231684.0,
+   "atr": 0.073,
+   "macd": -0.055,
+   "macd_hist": 0.0007,
    "macd_hist_rising": true,
    "support": [
     {
      "price": 4.09,
      "touches": 1,
      "strength": 1.96
+    },
+    {
+     "price": 3.99,
+     "touches": 1,
+     "strength": 1.98
     }
    ],
    "resistance": [
@@ -127,28 +122,28 @@
    ],
    "plan": {
     "side": "Short",
-    "order": "Sell stop 4.080, valid 3 sessions; trail it to 1 tick beyond each new day's low if not filled",
-    "entry": 4.08,
+    "order": "Sell stop 4.100, valid 3 sessions; trail it to 1 tick beyond each new day's low if not filled",
+    "entry": 4.1,
     "stop": 4.17,
-    "t1": 3.9,
-    "t2": 3.81,
-    "risk_per_share": 0.09,
-    "rr1": 2.0,
-    "rr2": 3.0,
-    "qty": 11100,
-    "cash_risk": 999.0,
+    "t1": 3.99,
+    "t2": 3.96,
+    "risk_per_share": 0.07,
+    "rr1": 1.57,
+    "rr2": 2.0,
+    "qty": 14200,
+    "cash_risk": 994.0,
     "grade": "B",
-    "stop_pct": 2.21
+    "stop_pct": 1.71
    },
    "notes": []
   },
   {
-   "ticker": "G13.SI",
-   "code": "G13",
-   "name": "Genting Singapore",
-   "date": "2026-10-29",
-   "close": 0.6,
-   "chg_pct": 1.69,
+   "ticker": "U96.SI",
+   "code": "U96",
+   "name": "Sembcorp Industries",
+   "date": "2026-10-30",
+   "close": 5.85,
+   "chg_pct": 0.52,
    "status": "Short setup",
    "wave": "Rally",
    "tide": {
@@ -159,62 +154,74 @@
     "impulse": "red",
     "strong": true
    },
-   "ema20": 0.605,
-   "ema50": 0.614,
-   "rsi": 41.2,
-   "fi2": 93939.0,
-   "atr": 0.011,
-   "macd": -0.0064,
-   "macd_hist": -0.001,
+   "ema20": 5.914,
+   "ema50": 5.924,
+   "rsi": 44.8,
+   "fi2": 28565.0,
+   "atr": 0.124,
+   "macd": -0.0178,
+   "macd_hist": -0.0149,
    "macd_hist_rising": true,
    "support": [
     {
-     "price": 0.58,
+     "price": 5.837,
+     "touches": 6,
+     "strength": 6.91
+    },
+    {
+     "price": 5.6,
      "touches": 1,
-     "strength": 1.55
+     "strength": 1.34
+    },
+    {
+     "price": 5.5,
+     "touches": 1,
+     "strength": 1.78
     }
    ],
    "resistance": [
     {
-     "price": 0.606,
-     "touches": 18,
-     "strength": 18.96
+     "price": 6.127,
+     "touches": 11,
+     "strength": 11.98
     },
     {
-     "price": 0.623,
-     "touches": 19,
-     "strength": 19.94
+     "price": 6.38,
+     "touches": 2,
+     "strength": 2.3
     },
     {
-     "price": 0.64,
-     "touches": 6,
-     "strength": 6.76
+     "price": 6.46,
+     "touches": 2,
+     "strength": 2.57
     }
    ],
    "plan": {
     "side": "Short",
-    "order": "Sell stop 0.580, valid 3 sessions; trail it to 1 tick beyond each new day's low if not filled",
-    "entry": 0.58,
-    "stop": 0.61,
-    "t1": 0.52,
-    "t2": 0.49,
-    "risk_per_share": 0.03,
-    "rr1": 2.0,
-    "rr2": 3.0,
-    "qty": 33300,
-    "cash_risk": 999.0,
+    "order": "Sell stop 5.770, valid 3 sessions; trail it to 1 tick beyond each new day's low if not filled",
+    "entry": 5.77,
+    "stop": 5.9,
+    "t1": 5.6,
+    "t2": 5.5,
+    "risk_per_share": 0.13,
+    "rr1": 1.31,
+    "rr2": 2.08,
+    "qty": 7600,
+    "cash_risk": 988.0,
     "grade": "C",
-    "stop_pct": 5.17
+    "stop_pct": 2.25
    },
-   "notes": []
+   "notes": [
+    "Reward:risk to T1 below 1.5 - consider skipping"
+   ]
   },
   {
    "ticker": "5E2.SI",
    "code": "5E2",
    "name": "Seatrium",
-   "date": "2026-10-29",
-   "close": 1.84,
-   "chg_pct": 0.55,
+   "date": "2026-10-30",
+   "close": 1.83,
+   "chg_pct": -0.54,
    "status": "Short watch",
    "wave": "Extended",
    "tide": {
@@ -225,36 +232,36 @@
     "impulse": "red",
     "strong": true
    },
-   "ema20": 1.893,
-   "ema50": 1.987,
-   "rsi": 35.1,
-   "fi2": 110641.0,
-   "atr": 0.046,
-   "macd": -0.0661,
-   "macd_hist": 0.0014,
+   "ema20": 1.887,
+   "ema50": 1.981,
+   "rsi": 33.9,
+   "fi2": -20292.0,
+   "atr": 0.044,
+   "macd": -0.063,
+   "macd_hist": 0.0036,
    "macd_hist_rising": true,
    "support": [
     {
      "price": 1.77,
      "touches": 1,
-     "strength": 1.0
+     "strength": 1.98
     }
    ],
    "resistance": [
     {
      "price": 1.927,
      "touches": 7,
-     "strength": 7.68
+     "strength": 7.67
     },
     {
      "price": 2.013,
      "touches": 3,
-     "strength": 3.69
+     "strength": 3.68
     },
     {
      "price": 2.052,
      "touches": 8,
-     "strength": 8.89
+     "strength": 8.88
     }
    ],
    "plan": null,
@@ -266,9 +273,9 @@
    "ticker": "9CI.SI",
    "code": "9CI",
    "name": "CapitaLand Investment",
-   "date": "2026-10-29",
-   "close": 2.37,
-   "chg_pct": 0.42,
+   "date": "2026-10-30",
+   "close": 2.4,
+   "chg_pct": 1.27,
    "status": "Short watch",
    "wave": "Rally",
    "tide": {
@@ -279,26 +286,26 @@
     "impulse": "red",
     "strong": true
    },
-   "ema20": 2.413,
-   "ema50": 2.496,
-   "rsi": 38.5,
-   "fi2": 11969.0,
+   "ema20": 2.412,
+   "ema50": 2.492,
+   "rsi": 44.2,
+   "fi2": 140309.0,
    "atr": 0.047,
-   "macd": -0.0519,
-   "macd_hist": 0.0065,
+   "macd": -0.0467,
+   "macd_hist": 0.0094,
    "macd_hist_rising": true,
    "support": [
     {
      "price": 2.29,
      "touches": 2,
-     "strength": 2.98
+     "strength": 2.97
     }
    ],
    "resistance": [
     {
      "price": 2.46,
      "touches": 4,
-     "strength": 4.73
+     "strength": 4.72
     },
     {
      "price": 2.55,
@@ -308,21 +315,21 @@
     {
      "price": 2.594,
      "touches": 10,
-     "strength": 10.87
+     "strength": 10.86
     }
    ],
    "plan": null,
    "notes": [
-    "Passed screens 1-2 but T1 (2.290) is only 0.7R away: resistance too close, no trade"
+    "Passed screens 1-2 but T1 (2.290) is only 0.6R away: resistance too close, no trade"
    ]
   },
   {
-   "ticker": "C07.SI",
-   "code": "C07",
-   "name": "Jardine Cycle & Carriage",
-   "date": "2026-10-29",
-   "close": 22.96,
-   "chg_pct": -1.08,
+   "ticker": "BN4.SI",
+   "code": "BN4",
+   "name": "Keppel",
+   "date": "2026-10-30",
+   "close": 10.09,
+   "chg_pct": -1.46,
    "status": "Short watch",
    "wave": "Extended",
    "tide": {
@@ -333,19 +340,83 @@
     "impulse": "red",
     "strong": true
    },
-   "ema20": 24.098,
-   "ema50": 25.485,
-   "rsi": 39.2,
-   "fi2": -41321.0,
-   "atr": 0.803,
-   "macd": -0.9473,
-   "macd_hist": -0.0593,
+   "ema20": 10.35,
+   "ema50": 10.736,
+   "rsi": 33.4,
+   "fi2": -344406.0,
+   "atr": 0.199,
+   "macd": -0.2575,
+   "macd_hist": 0.023,
+   "macd_hist_rising": true,
+   "support": [
+    {
+     "price": 9.993,
+     "touches": 3,
+     "strength": 3.98
+    },
+    {
+     "price": 9.81,
+     "touches": 1,
+     "strength": 1.05
+    }
+   ],
+   "resistance": [
+    {
+     "price": 10.355,
+     "touches": 2,
+     "strength": 2.59
+    },
+    {
+     "price": 10.68,
+     "touches": 3,
+     "strength": 3.67
+    },
+    {
+     "price": 11.078,
+     "touches": 5,
+     "strength": 5.88
+    }
+   ],
+   "plan": null,
+   "notes": [
+    "Extended below EMA20: wait for a rally"
+   ]
+  },
+  {
+   "ticker": "C07.SI",
+   "code": "C07",
+   "name": "Jardine Cycle & Carriage",
+   "date": "2026-10-30",
+   "close": 22.87,
+   "chg_pct": -0.39,
+   "status": "Short watch",
+   "wave": "Extended",
+   "tide": {
+    "tide": "Down",
+    "hist_rising": false,
+    "ema26_rising": false,
+    "above_ema26": false,
+    "impulse": "red",
+    "strong": true
+   },
+   "ema20": 23.981,
+   "ema50": 25.382,
+   "rsi": 38.8,
+   "fi2": -26443.0,
+   "atr": 0.765,
+   "macd": -0.9285,
+   "macd_hist": -0.0325,
    "macd_hist_rising": true,
    "support": [
     {
      "price": 22.868,
      "touches": 1,
-     "strength": 1.93
+     "strength": 1.92
+    },
+    {
+     "price": 22.21,
+     "touches": 1,
+     "strength": 1.98
     }
    ],
    "resistance": [
@@ -357,7 +428,7 @@
     {
      "price": 27.935,
      "touches": 4,
-     "strength": 4.85
+     "strength": 4.84
     },
     {
      "price": 29.34,
@@ -374,9 +445,9 @@
    "ticker": "F34.SI",
    "code": "F34",
    "name": "Wilmar International",
-   "date": "2026-10-29",
-   "close": 3.11,
-   "chg_pct": -4.89,
+   "date": "2026-10-30",
+   "close": 3.01,
+   "chg_pct": -3.22,
    "status": "Short watch",
    "wave": "Extended",
    "tide": {
@@ -387,36 +458,36 @@
     "impulse": "red",
     "strong": true
    },
-   "ema20": 3.398,
-   "ema50": 3.541,
-   "rsi": 22.5,
-   "fi2": -1124056.0,
-   "atr": 0.086,
-   "macd": -0.109,
-   "macd_hist": -0.022,
+   "ema20": 3.361,
+   "ema50": 3.52,
+   "rsi": 19.4,
+   "fi2": -1242278.0,
+   "atr": 0.087,
+   "macd": -0.1263,
+   "macd_hist": -0.0315,
    "macd_hist_rising": false,
    "support": [
     {
-     "price": 3.023,
-     "touches": 7,
-     "strength": 7.17
+     "price": 3.0,
+     "touches": 1,
+     "strength": 1.0
     }
    ],
    "resistance": [
     {
+     "price": 3.023,
+     "touches": 7,
+     "strength": 7.17
+    },
+    {
      "price": 3.13,
      "touches": 5,
-     "strength": 5.57
+     "strength": 5.56
     },
     {
      "price": 3.313,
      "touches": 6,
      "strength": 6.59
-    },
-    {
-     "price": 3.43,
-     "touches": 2,
-     "strength": 2.92
     }
    ],
    "plan": null,
@@ -425,12 +496,66 @@
    ]
   },
   {
+   "ticker": "G13.SI",
+   "code": "G13",
+   "name": "Genting Singapore",
+   "date": "2026-10-30",
+   "close": 0.6,
+   "chg_pct": 0.0,
+   "status": "Short watch",
+   "wave": "Rally",
+   "tide": {
+    "tide": "Down",
+    "hist_rising": false,
+    "ema26_rising": false,
+    "above_ema26": false,
+    "impulse": "red",
+    "strong": true
+   },
+   "ema20": 0.605,
+   "ema50": 0.614,
+   "rsi": 41.2,
+   "fi2": 31313.0,
+   "atr": 0.01,
+   "macd": -0.006,
+   "macd_hist": -0.0005,
+   "macd_hist_rising": true,
+   "support": [
+    {
+     "price": 0.58,
+     "touches": 1,
+     "strength": 1.54
+    }
+   ],
+   "resistance": [
+    {
+     "price": 0.606,
+     "touches": 18,
+     "strength": 18.95
+    },
+    {
+     "price": 0.623,
+     "touches": 19,
+     "strength": 19.94
+    },
+    {
+     "price": 0.64,
+     "touches": 6,
+     "strength": 6.75
+    }
+   ],
+   "plan": null,
+   "notes": [
+    "Passed screens 1-2 but T1 (0.580) is only 0.5R away: resistance too close, no trade"
+   ]
+  },
+  {
    "ticker": "ME8U.SI",
    "code": "ME8U",
    "name": "Mapletree Industrial Trust",
-   "date": "2026-10-29",
+   "date": "2026-10-30",
    "close": 1.73,
-   "chg_pct": -0.57,
+   "chg_pct": 0.0,
    "status": "Short watch",
    "wave": "Extended",
    "tide": {
@@ -441,19 +566,19 @@
     "impulse": "red",
     "strong": true
    },
-   "ema20": 1.795,
-   "ema50": 1.844,
+   "ema20": 1.789,
+   "ema50": 1.84,
    "rsi": 28.9,
-   "fi2": -179108.0,
+   "fi2": -59703.0,
    "atr": 0.037,
-   "macd": -0.0329,
-   "macd_hist": -0.0018,
+   "macd": -0.034,
+   "macd_hist": -0.0024,
    "macd_hist_rising": false,
    "support": [
     {
      "price": 1.72,
      "touches": 2,
-     "strength": 2.98
+     "strength": 2.97
     }
    ],
    "resistance": [
@@ -465,66 +590,12 @@
     {
      "price": 1.928,
      "touches": 37,
-     "strength": 37.9
+     "strength": 37.89
     },
     {
      "price": 2.013,
      "touches": 11,
-     "strength": 11.38
-    }
-   ],
-   "plan": null,
-   "notes": [
-    "Extended below EMA20: wait for a rally"
-   ]
-  },
-  {
-   "ticker": "N2IU.SI",
-   "code": "N2IU",
-   "name": "Mapletree Pan Asia Commercial Trust",
-   "date": "2026-10-29",
-   "close": 1.13,
-   "chg_pct": -0.88,
-   "status": "Short watch",
-   "wave": "Extended",
-   "tide": {
-    "tide": "Down",
-    "hist_rising": false,
-    "ema26_rising": false,
-    "above_ema26": false,
-    "impulse": "red",
-    "strong": true
-   },
-   "ema20": 1.164,
-   "ema50": 1.2,
-   "rsi": 34.6,
-   "fi2": -151687.0,
-   "atr": 0.027,
-   "macd": -0.0191,
-   "macd_hist": -0.0,
-   "macd_hist_rising": false,
-   "support": [
-    {
-     "price": 1.12,
-     "touches": 2,
-     "strength": 2.98
-    }
-   ],
-   "resistance": [
-    {
-     "price": 1.188,
-     "touches": 5,
-     "strength": 5.92
-    },
-    {
-     "price": 1.228,
-     "touches": 6,
-     "strength": 6.94
-    },
-    {
-     "price": 1.25,
-     "touches": 3,
-     "strength": 3.8
+     "strength": 11.37
     }
    ],
    "plan": null,
@@ -536,11 +607,11 @@
    "ticker": "S63.SI",
    "code": "S63",
    "name": "ST Engineering",
-   "date": "2026-10-29",
-   "close": 10.14,
-   "chg_pct": -0.39,
+   "date": "2026-10-30",
+   "close": 10.15,
+   "chg_pct": 0.1,
    "status": "Short watch",
-   "wave": "Extended",
+   "wave": "Falling",
    "tide": {
     "tide": "Down",
     "hist_rising": false,
@@ -549,13 +620,13 @@
     "impulse": "red",
     "strong": true
    },
-   "ema20": 10.37,
-   "ema50": 10.492,
-   "rsi": 36.1,
-   "fi2": -82559.0,
-   "atr": 0.216,
-   "macd": -0.1274,
-   "macd_hist": -0.0343,
+   "ema20": 10.349,
+   "ema50": 10.478,
+   "rsi": 36.8,
+   "fi2": -7806.0,
+   "atr": 0.208,
+   "macd": -0.1285,
+   "macd_hist": -0.0283,
    "macd_hist_rising": true,
    "support": [
     {
@@ -583,7 +654,7 @@
     {
      "price": 10.483,
      "touches": 3,
-     "strength": 3.98
+     "strength": 3.97
     },
     {
      "price": 10.815,
@@ -593,80 +664,16 @@
    ],
    "plan": null,
    "notes": [
-    "Extended below EMA20: wait for a rally"
-   ]
-  },
-  {
-   "ticker": "U96.SI",
-   "code": "U96",
-   "name": "Sembcorp Industries",
-   "date": "2026-10-29",
-   "close": 5.82,
-   "chg_pct": -0.51,
-   "status": "Short watch",
-   "wave": "Falling",
-   "tide": {
-    "tide": "Down",
-    "hist_rising": false,
-    "ema26_rising": false,
-    "above_ema26": false,
-    "impulse": "red",
-    "strong": true
-   },
-   "ema20": 5.92,
-   "ema50": 5.927,
-   "rsi": 42.4,
-   "fi2": -90727.0,
-   "atr": 0.127,
-   "macd": -0.0141,
-   "macd_hist": -0.0149,
-   "macd_hist_rising": false,
-   "support": [
-    {
-     "price": 5.6,
-     "touches": 1,
-     "strength": 1.35
-    },
-    {
-     "price": 5.5,
-     "touches": 1,
-     "strength": 1.78
-    },
-    {
-     "price": 5.22,
-     "touches": 1,
-     "strength": 1.73
-    }
-   ],
-   "resistance": [
-    {
-     "price": 5.837,
-     "touches": 6,
-     "strength": 6.92
-    },
-    {
-     "price": 6.127,
-     "touches": 11,
-     "strength": 11.98
-    },
-    {
-     "price": 6.38,
-     "touches": 2,
-     "strength": 2.3
-    }
-   ],
-   "plan": null,
-   "notes": [
     "Wait for Force Index(2) > 0 or RSI >= 55"
    ]
   },
   {
-   "ticker": "V03.SI",
-   "code": "V03",
-   "name": "Venture Corp",
-   "date": "2026-10-29",
-   "close": 15.15,
-   "chg_pct": -1.17,
+   "ticker": "S68.SI",
+   "code": "S68",
+   "name": "SGX Group",
+   "date": "2026-10-30",
+   "close": 20.21,
+   "chg_pct": -1.65,
    "status": "Short watch",
    "wave": "Extended",
    "tide": {
@@ -677,19 +684,83 @@
     "impulse": "red",
     "strong": true
    },
-   "ema20": 15.741,
-   "ema50": 16.179,
-   "rsi": 35.3,
-   "fi2": -39248.0,
-   "atr": 0.315,
-   "macd": -0.364,
-   "macd_hist": -0.0642,
+   "ema20": 21.042,
+   "ema50": 22.025,
+   "rsi": 29.5,
+   "fi2": -778170.0,
+   "atr": 0.419,
+   "macd": -0.5275,
+   "macd_hist": 0.0516,
+   "macd_hist_rising": false,
+   "support": [
+    {
+     "price": 19.69,
+     "touches": 1,
+     "strength": 1.37
+    },
+    {
+     "price": 19.2,
+     "touches": 1,
+     "strength": 1.28
+    },
+    {
+     "price": 18.18,
+     "touches": 1,
+     "strength": 1.25
+    }
+   ],
+   "resistance": [
+    {
+     "price": 20.43,
+     "touches": 2,
+     "strength": 2.94
+    },
+    {
+     "price": 21.27,
+     "touches": 3,
+     "strength": 3.97
+    },
+    {
+     "price": 21.65,
+     "touches": 1,
+     "strength": 1.95
+    }
+   ],
+   "plan": null,
+   "notes": [
+    "Extended below EMA20: wait for a rally"
+   ]
+  },
+  {
+   "ticker": "V03.SI",
+   "code": "V03",
+   "name": "Venture Corp",
+   "date": "2026-10-30",
+   "close": 15.07,
+   "chg_pct": -0.53,
+   "status": "Short watch",
+   "wave": "Extended",
+   "tide": {
+    "tide": "Down",
+    "hist_rising": false,
+    "ema26_rising": false,
+    "above_ema26": false,
+    "impulse": "red",
+    "strong": true
+   },
+   "ema20": 15.677,
+   "ema50": 16.136,
+   "rsi": 34.2,
+   "fi2": -58057.0,
+   "atr": 0.309,
+   "macd": -0.3719,
+   "macd_hist": -0.0576,
    "macd_hist_rising": true,
    "support": [
     {
      "price": 14.76,
      "touches": 3,
-     "strength": 3.33
+     "strength": 3.32
     },
     {
      "price": 14.41,
@@ -701,7 +772,7 @@
     {
      "price": 15.173,
      "touches": 6,
-     "strength": 6.42
+     "strength": 6.41
     },
     {
      "price": 15.51,
@@ -711,51 +782,7 @@
     {
      "price": 15.75,
      "touches": 1,
-     "strength": 1.26
-    }
-   ],
-   "plan": null,
-   "notes": [
-    "Extended below EMA20: wait for a rally"
-   ]
-  },
-  {
-   "ticker": "Y92.SI",
-   "code": "Y92",
-   "name": "Thai Beverage",
-   "date": "2026-10-29",
-   "close": 0.415,
-   "chg_pct": 0.0,
-   "status": "Short watch",
-   "wave": "Extended",
-   "tide": {
-    "tide": "Down",
-    "hist_rising": false,
-    "ema26_rising": false,
-    "above_ema26": false,
-    "impulse": "red",
-    "strong": true
-   },
-   "ema20": 0.428,
-   "ema50": 0.435,
-   "rsi": 35.6,
-   "fi2": -81535.0,
-   "atr": 0.011,
-   "macd": -0.0044,
-   "macd_hist": -0.0003,
-   "macd_hist_rising": false,
-   "support": [
-    {
-     "price": 0.41,
-     "touches": 1,
-     "strength": 1.0
-    }
-   ],
-   "resistance": [
-    {
-     "price": 0.45,
-     "touches": 102,
-     "strength": 102.98
+     "strength": 1.25
     }
    ],
    "plan": null,
@@ -767,9 +794,9 @@
    "ticker": "A17U.SI",
    "code": "A17U",
    "name": "CapitaLand Ascendas REIT",
-   "date": "2026-10-29",
-   "close": 2.18,
-   "chg_pct": 0.0,
+   "date": "2026-10-30",
+   "close": 2.21,
+   "chg_pct": 1.38,
    "status": "No trade",
    "wave": "-",
    "tide": {
@@ -780,14 +807,14 @@
     "impulse": "blue",
     "strong": false
    },
-   "ema20": 2.211,
-   "ema50": 2.28,
-   "rsi": 38.3,
-   "fi2": -184341.0,
-   "atr": 0.038,
-   "macd": -0.0268,
-   "macd_hist": 0.0073,
-   "macd_hist_rising": false,
+   "ema20": 2.21,
+   "ema50": 2.277,
+   "rsi": 46.4,
+   "fi2": 475537.0,
+   "atr": 0.039,
+   "macd": -0.0238,
+   "macd_hist": 0.0082,
+   "macd_hist_rising": true,
    "support": [
     {
      "price": 2.14,
@@ -804,12 +831,12 @@
     {
      "price": 2.35,
      "touches": 2,
-     "strength": 2.9
+     "strength": 2.89
     },
     {
      "price": 2.448,
      "touches": 10,
-     "strength": 10.81
+     "strength": 10.8
     }
    ],
    "plan": null,
@@ -821,9 +848,9 @@
    "ticker": "AJBU.SI",
    "code": "AJBU",
    "name": "Keppel DC REIT",
-   "date": "2026-10-29",
-   "close": 2.1,
-   "chg_pct": 0.96,
+   "date": "2026-10-30",
+   "close": 2.11,
+   "chg_pct": 0.48,
    "status": "No trade",
    "wave": "-",
    "tide": {
@@ -834,13 +861,13 @@
     "impulse": "blue",
     "strong": false
    },
-   "ema20": 2.097,
-   "ema50": 2.134,
-   "rsi": 48.8,
-   "fi2": 97146.0,
+   "ema20": 2.099,
+   "ema50": 2.133,
+   "rsi": 50.8,
+   "fi2": 83330.0,
    "atr": 0.042,
-   "macd": -0.0149,
-   "macd_hist": 0.0051,
+   "macd": -0.0122,
+   "macd_hist": 0.0063,
    "macd_hist_rising": true,
    "support": [
     {
@@ -851,14 +878,14 @@
     {
      "price": 2.01,
      "touches": 1,
-     "strength": 1.97
+     "strength": 1.96
     }
    ],
    "resistance": [
     {
-     "price": 2.236,
-     "touches": 50,
-     "strength": 50.94
+     "price": 2.234,
+     "touches": 51,
+     "strength": 51.98
     },
     {
      "price": 2.36,
@@ -868,66 +895,7 @@
     {
      "price": 2.425,
      "touches": 2,
-     "strength": 2.47
-    }
-   ],
-   "plan": null,
-   "notes": [
-    "Weekly tide is mixed: stand aside"
-   ]
-  },
-  {
-   "ticker": "BN4.SI",
-   "code": "BN4",
-   "name": "Keppel",
-   "date": "2026-10-29",
-   "close": 10.24,
-   "chg_pct": 1.09,
-   "status": "No trade",
-   "wave": "-",
-   "tide": {
-    "tide": "Mixed",
-    "hist_rising": true,
-    "ema26_rising": false,
-    "above_ema26": false,
-    "impulse": "blue",
-    "strong": false
-   },
-   "ema20": 10.378,
-   "ema50": 10.763,
-   "rsi": 38.0,
-   "fi2": 291954.0,
-   "atr": 0.182,
-   "macd": -0.267,
-   "macd_hist": 0.0193,
-   "macd_hist_rising": true,
-   "support": [
-    {
-     "price": 10.025,
-     "touches": 2,
-     "strength": 2.54
-    },
-    {
-     "price": 9.81,
-     "touches": 1,
-     "strength": 1.06
-    }
-   ],
-   "resistance": [
-    {
-     "price": 10.355,
-     "touches": 2,
-     "strength": 2.59
-    },
-    {
-     "price": 10.68,
-     "touches": 3,
-     "strength": 3.67
-    },
-    {
-     "price": 11.078,
-     "touches": 5,
-     "strength": 5.88
+     "strength": 2.46
     }
    ],
    "plan": null,
@@ -939,9 +907,9 @@
    "ticker": "BS6.SI",
    "code": "BS6",
    "name": "Yangzijiang Shipbuilding",
-   "date": "2026-10-29",
-   "close": 4.62,
-   "chg_pct": -3.55,
+   "date": "2026-10-30",
+   "close": 4.55,
+   "chg_pct": -1.52,
    "status": "No trade",
    "wave": "-",
    "tide": {
@@ -952,32 +920,37 @@
     "impulse": "red",
     "strong": false
    },
-   "ema20": 4.946,
-   "ema50": 4.867,
-   "rsi": 32.5,
-   "fi2": -3209689.0,
+   "ema20": 4.908,
+   "ema50": 4.854,
+   "rsi": 30.2,
+   "fi2": -2080981.0,
    "atr": 0.147,
-   "macd": -0.0644,
-   "macd_hist": -0.0547,
+   "macd": -0.0869,
+   "macd_hist": -0.0617,
    "macd_hist_rising": false,
    "support": [
+    {
+     "price": 4.1,
+     "touches": 2,
+     "strength": 2.72
+    },
+    {
+     "price": 3.88,
+     "touches": 1,
+     "strength": 1.36
+    },
+    {
+     "price": 3.758,
+     "touches": 5,
+     "strength": 5.74
+    }
+   ],
+   "resistance": [
     {
      "price": 4.583,
      "touches": 3,
      "strength": 3.84
     },
-    {
-     "price": 4.1,
-     "touches": 2,
-     "strength": 2.73
-    },
-    {
-     "price": 3.88,
-     "touches": 1,
-     "strength": 1.37
-    }
-   ],
-   "resistance": [
     {
      "price": 4.885,
      "touches": 2,
@@ -987,11 +960,6 @@
      "price": 5.26,
      "touches": 2,
      "strength": 2.96
-    },
-    {
-     "price": 5.41,
-     "touches": 1,
-     "strength": 1.9
     }
    ],
    "plan": null,
@@ -1003,8 +971,8 @@
    "ticker": "BUOU.SI",
    "code": "BUOU",
    "name": "Frasers Logistics & Commercial Trust",
-   "date": "2026-10-29",
-   "close": 0.89,
+   "date": "2026-10-30",
+   "close": 0.895,
    "chg_pct": 0.56,
    "status": "No trade",
    "wave": "-",
@@ -1016,12 +984,12 @@
     "impulse": "blue",
     "strong": false
    },
-   "ema20": 0.887,
+   "ema20": 0.888,
    "ema50": 0.9,
-   "rsi": 50.9,
-   "fi2": 14082.0,
-   "atr": 0.016,
-   "macd": -0.0004,
+   "rsi": 53.8,
+   "fi2": 30129.0,
+   "atr": 0.015,
+   "macd": 0.0002,
    "macd_hist": 0.0027,
    "macd_hist_rising": false,
    "support": [
@@ -1040,12 +1008,12 @@
     {
      "price": 0.9,
      "touches": 1,
-     "strength": 1.9
+     "strength": 1.89
     },
     {
      "price": 0.923,
      "touches": 3,
-     "strength": 3.54
+     "strength": 3.53
     },
     {
      "price": 0.948,
@@ -1062,9 +1030,9 @@
    "ticker": "C09.SI",
    "code": "C09",
    "name": "City Developments",
-   "date": "2026-10-29",
-   "close": 7.18,
-   "chg_pct": 0.42,
+   "date": "2026-10-30",
+   "close": 7.34,
+   "chg_pct": 2.23,
    "status": "No trade",
    "wave": "-",
    "tide": {
@@ -1075,19 +1043,19 @@
     "impulse": "blue",
     "strong": false
    },
-   "ema20": 7.212,
-   "ema50": 7.519,
-   "rsi": 43.5,
-   "fi2": 17751.0,
-   "atr": 0.146,
-   "macd": -0.1503,
-   "macd_hist": 0.0532,
+   "ema20": 7.224,
+   "ema50": 7.512,
+   "rsi": 52.0,
+   "fi2": 266920.0,
+   "atr": 0.149,
+   "macd": -0.1228,
+   "macd_hist": 0.0645,
    "macd_hist_rising": true,
    "support": [
     {
      "price": 7.12,
      "touches": 1,
-     "strength": 1.11
+     "strength": 1.1
     },
     {
      "price": 6.983,
@@ -1121,9 +1089,9 @@
    "ticker": "C38U.SI",
    "code": "C38U",
    "name": "CapitaLand Integrated Commercial Trust",
-   "date": "2026-10-29",
+   "date": "2026-10-30",
    "close": 2.28,
-   "chg_pct": 0.88,
+   "chg_pct": 0.0,
    "status": "No trade",
    "wave": "-",
    "tide": {
@@ -1134,36 +1102,36 @@
     "impulse": "blue",
     "strong": false
    },
-   "ema20": 2.255,
+   "ema20": 2.258,
    "ema50": 2.284,
    "rsi": 54.7,
-   "fi2": 313296.0,
-   "atr": 0.044,
-   "macd": -0.0012,
-   "macd_hist": 0.0095,
-   "macd_hist_rising": true,
+   "fi2": 104432.0,
+   "atr": 0.043,
+   "macd": 0.0006,
+   "macd_hist": 0.0091,
+   "macd_hist_rising": false,
    "support": [
     {
      "price": 2.212,
      "touches": 9,
-     "strength": 9.98
+     "strength": 9.97
     }
    ],
    "resistance": [
     {
      "price": 2.308,
-     "touches": 17,
-     "strength": 17.94
+     "touches": 18,
+     "strength": 18.98
     },
     {
      "price": 2.407,
      "touches": 11,
-     "strength": 11.85
+     "strength": 11.84
     },
     {
      "price": 2.508,
      "touches": 5,
-     "strength": 5.78
+     "strength": 5.77
     }
    ],
    "plan": null,
@@ -1175,9 +1143,9 @@
    "ticker": "C6L.SI",
    "code": "C6L",
    "name": "Singapore Airlines",
-   "date": "2026-10-29",
-   "close": 6.63,
-   "chg_pct": 0.15,
+   "date": "2026-10-30",
+   "close": 6.69,
+   "chg_pct": 0.9,
    "status": "No trade",
    "wave": "-",
    "tide": {
@@ -1188,19 +1156,19 @@
     "impulse": "blue",
     "strong": false
    },
-   "ema20": 6.603,
-   "ema50": 6.718,
-   "rsi": 50.8,
-   "fi2": 31369.0,
-   "atr": 0.087,
-   "macd": -0.0234,
-   "macd_hist": 0.0181,
+   "ema20": 6.612,
+   "ema50": 6.717,
+   "rsi": 57.3,
+   "fi2": 215576.0,
+   "atr": 0.088,
+   "macd": -0.0142,
+   "macd_hist": 0.0219,
    "macd_hist_rising": true,
    "support": [
     {
      "price": 6.525,
      "touches": 4,
-     "strength": 4.43
+     "strength": 4.42
     },
     {
      "price": 6.449,
@@ -1222,7 +1190,7 @@
     {
      "price": 6.81,
      "touches": 2,
-     "strength": 2.91
+     "strength": 2.9
     },
     {
      "price": 7.072,
@@ -1239,9 +1207,9 @@
    "ticker": "D05.SI",
    "code": "D05",
    "name": "DBS Group",
-   "date": "2026-10-29",
-   "close": 73.8,
-   "chg_pct": -0.26,
+   "date": "2026-10-30",
+   "close": 73.13,
+   "chg_pct": -0.91,
    "status": "No trade",
    "wave": "-",
    "tide": {
@@ -1252,20 +1220,15 @@
     "impulse": "red",
     "strong": false
    },
-   "ema20": 74.832,
-   "ema50": 75.052,
-   "rsi": 37.5,
-   "fi2": -491119.0,
-   "atr": 0.977,
-   "macd": -0.6911,
-   "macd_hist": -0.0395,
-   "macd_hist_rising": true,
+   "ema20": 74.67,
+   "ema50": 74.977,
+   "rsi": 33.2,
+   "fi2": -3045500.0,
+   "atr": 0.979,
+   "macd": -0.74,
+   "macd_hist": -0.0707,
+   "macd_hist_rising": false,
    "support": [
-    {
-     "price": 73.36,
-     "touches": 1,
-     "strength": 1.76
-    },
     {
      "price": 72.5,
      "touches": 1,
@@ -1274,24 +1237,29 @@
     {
      "price": 71.37,
      "touches": 1,
-     "strength": 1.72
+     "strength": 1.71
+    },
+    {
+     "price": 67.0,
+     "touches": 1,
+     "strength": 1.63
     }
    ],
    "resistance": [
     {
+     "price": 73.36,
+     "touches": 1,
+     "strength": 1.75
+    },
+    {
      "price": 75.035,
      "touches": 4,
-     "strength": 4.98
+     "strength": 4.97
     },
     {
      "price": 76.31,
      "touches": 1,
      "strength": 1.88
-    },
-    {
-     "price": 78.52,
-     "touches": 4,
-     "strength": 4.93
     }
    ],
    "plan": null,
@@ -1303,9 +1271,9 @@
    "ticker": "H78.SI",
    "code": "H78",
    "name": "Hongkong Land",
-   "date": "2026-10-29",
+   "date": "2026-10-30",
    "close": 8.3,
-   "chg_pct": -0.24,
+   "chg_pct": 0.0,
    "status": "No trade",
    "wave": "-",
    "tide": {
@@ -1316,19 +1284,19 @@
     "impulse": "blue",
     "strong": false
    },
-   "ema20": 8.24,
-   "ema50": 8.209,
+   "ema20": 8.246,
+   "ema50": 8.213,
    "rsi": 52.0,
-   "fi2": -15400.0,
-   "atr": 0.196,
-   "macd": 0.0135,
-   "macd_hist": 0.0302,
+   "fi2": -5133.0,
+   "atr": 0.194,
+   "macd": 0.0163,
+   "macd_hist": 0.0264,
    "macd_hist_rising": false,
    "support": [
     {
      "price": 8.165,
      "touches": 4,
-     "strength": 4.88
+     "strength": 4.87
     },
     {
      "price": 7.828,
@@ -1367,9 +1335,9 @@
    "ticker": "J36.SI",
    "code": "J36",
    "name": "Jardine Matheson",
-   "date": "2026-10-29",
-   "close": 58.11,
-   "chg_pct": -1.73,
+   "date": "2026-10-30",
+   "close": 57.67,
+   "chg_pct": -0.76,
    "status": "No trade",
    "wave": "-",
    "tide": {
@@ -1381,12 +1349,12 @@
     "strong": false
    },
    "ema20": 57.671,
-   "ema50": 58.317,
-   "rsi": 52.1,
-   "fi2": -356230.0,
-   "atr": 1.711,
-   "macd": 0.394,
-   "macd_hist": 0.3386,
+   "ema50": 58.292,
+   "rsi": 50.1,
+   "fi2": -251912.0,
+   "atr": 1.632,
+   "macd": 0.3365,
+   "macd_hist": 0.2249,
    "macd_hist_rising": false,
    "support": [
     {
@@ -1397,7 +1365,7 @@
     {
      "price": 54.5,
      "touches": 1,
-     "strength": 1.97
+     "strength": 1.96
     },
     {
      "price": 52.85,
@@ -1409,12 +1377,12 @@
     {
      "price": 59.515,
      "touches": 6,
-     "strength": 6.96
+     "strength": 6.95
     },
     {
      "price": 62.15,
      "touches": 1,
-     "strength": 1.06
+     "strength": 1.05
     },
     {
      "price": 63.59,
@@ -1428,12 +1396,12 @@
    ]
   },
   {
-   "ticker": "M44U.SI",
-   "code": "M44U",
-   "name": "Mapletree Logistics Trust",
-   "date": "2026-10-29",
-   "close": 1.07,
-   "chg_pct": 0.0,
+   "ticker": "J69U.SI",
+   "code": "J69U",
+   "name": "Frasers Centrepoint Trust",
+   "date": "2026-10-30",
+   "close": 2.1,
+   "chg_pct": 1.45,
    "status": "No trade",
    "wave": "-",
    "tide": {
@@ -1444,15 +1412,74 @@
     "impulse": "blue",
     "strong": false
    },
-   "ema20": 1.084,
-   "ema50": 1.111,
-   "rsi": 41.5,
-   "fi2": -25788.0,
-   "atr": 0.02,
-   "macd": -0.01,
-   "macd_hist": 0.0017,
+   "ema20": 2.099,
+   "ema50": 2.116,
+   "rsi": 50.1,
+   "fi2": 43072.0,
+   "atr": 0.038,
+   "macd": 0.0034,
+   "macd_hist": 0.0044,
    "macd_hist_rising": false,
    "support": [
+    {
+     "price": 2.05,
+     "touches": 5,
+     "strength": 5.97
+    }
+   ],
+   "resistance": [
+    {
+     "price": 2.13,
+     "touches": 2,
+     "strength": 2.93
+    },
+    {
+     "price": 2.254,
+     "touches": 53,
+     "strength": 53.98
+    },
+    {
+     "price": 2.37,
+     "touches": 1,
+     "strength": 1.49
+    }
+   ],
+   "plan": null,
+   "notes": [
+    "Weekly tide is mixed: stand aside"
+   ]
+  },
+  {
+   "ticker": "M44U.SI",
+   "code": "M44U",
+   "name": "Mapletree Logistics Trust",
+   "date": "2026-10-30",
+   "close": 1.1,
+   "chg_pct": 2.8,
+   "status": "No trade",
+   "wave": "-",
+   "tide": {
+    "tide": "Mixed",
+    "hist_rising": true,
+    "ema26_rising": false,
+    "above_ema26": false,
+    "impulse": "blue",
+    "strong": false
+   },
+   "ema20": 1.086,
+   "ema50": 1.11,
+   "rsi": 53.3,
+   "fi2": 365566.0,
+   "atr": 0.021,
+   "macd": -0.0076,
+   "macd_hist": 0.0033,
+   "macd_hist_rising": true,
+   "support": [
+    {
+     "price": 1.083,
+     "touches": 7,
+     "strength": 7.93
+    },
     {
      "price": 1.06,
      "touches": 4,
@@ -1461,11 +1488,6 @@
    ],
    "resistance": [
     {
-     "price": 1.083,
-     "touches": 7,
-     "strength": 7.94
-    },
-    {
      "price": 1.17,
      "touches": 22,
      "strength": 22.94
@@ -1473,7 +1495,66 @@
     {
      "price": 1.265,
      "touches": 15,
-     "strength": 15.74
+     "strength": 15.73
+    },
+    {
+     "price": 1.3,
+     "touches": 6,
+     "strength": 6.32
+    }
+   ],
+   "plan": null,
+   "notes": [
+    "Weekly tide is mixed: stand aside"
+   ]
+  },
+  {
+   "ticker": "N2IU.SI",
+   "code": "N2IU",
+   "name": "Mapletree Pan Asia Commercial Trust",
+   "date": "2026-10-30",
+   "close": 1.15,
+   "chg_pct": 1.77,
+   "status": "No trade",
+   "wave": "-",
+   "tide": {
+    "tide": "Mixed",
+    "hist_rising": true,
+    "ema26_rising": false,
+    "above_ema26": false,
+    "impulse": "blue",
+    "strong": false
+   },
+   "ema20": 1.163,
+   "ema50": 1.198,
+   "rsi": 42.7,
+   "fi2": 150442.0,
+   "atr": 0.027,
+   "macd": -0.018,
+   "macd_hist": 0.0009,
+   "macd_hist_rising": true,
+   "support": [
+    {
+     "price": 1.12,
+     "touches": 2,
+     "strength": 2.97
+    }
+   ],
+   "resistance": [
+    {
+     "price": 1.187,
+     "touches": 6,
+     "strength": 6.98
+    },
+    {
+     "price": 1.228,
+     "touches": 6,
+     "strength": 6.93
+    },
+    {
+     "price": 1.25,
+     "touches": 3,
+     "strength": 3.79
     }
    ],
    "plan": null,
@@ -1485,9 +1566,9 @@
    "ticker": "O39.SI",
    "code": "O39",
    "name": "OCBC Bank",
-   "date": "2026-10-29",
-   "close": 29.34,
-   "chg_pct": 1.07,
+   "date": "2026-10-30",
+   "close": 29.29,
+   "chg_pct": -0.17,
    "status": "No trade",
    "wave": "-",
    "tide": {
@@ -1498,24 +1579,24 @@
     "impulse": "red",
     "strong": false
    },
-   "ema20": 29.553,
-   "ema50": 29.91,
-   "rsi": 42.5,
-   "fi2": 1285752.0,
-   "atr": 0.512,
-   "macd": -0.5205,
-   "macd_hist": 0.0407,
+   "ema20": 29.528,
+   "ema50": 29.886,
+   "rsi": 41.7,
+   "fi2": 251680.0,
+   "atr": 0.505,
+   "macd": -0.4772,
+   "macd_hist": 0.0672,
    "macd_hist_rising": true,
    "support": [
     {
      "price": 29.28,
      "touches": 1,
-     "strength": 1.98
+     "strength": 1.97
     },
     {
      "price": 28.52,
      "touches": 2,
-     "strength": 2.97
+     "strength": 2.96
     },
     {
      "price": 25.32,
@@ -1527,12 +1608,12 @@
     {
      "price": 29.78,
      "touches": 1,
-     "strength": 1.74
+     "strength": 1.73
     },
     {
      "price": 30.21,
      "touches": 1,
-     "strength": 1.8
+     "strength": 1.79
     },
     {
      "price": 30.98,
@@ -1549,9 +1630,9 @@
    "ticker": "S58.SI",
    "code": "S58",
    "name": "SATS",
-   "date": "2026-10-29",
-   "close": 3.62,
-   "chg_pct": -2.16,
+   "date": "2026-10-30",
+   "close": 3.66,
+   "chg_pct": 1.1,
    "status": "No trade",
    "wave": "-",
    "tide": {
@@ -1562,19 +1643,19 @@
     "impulse": "blue",
     "strong": false
    },
-   "ema20": 3.675,
-   "ema50": 3.838,
-   "rsi": 39.2,
-   "fi2": -152619.0,
-   "atr": 0.072,
-   "macd": -0.0671,
-   "macd_hist": 0.0157,
-   "macd_hist_rising": false,
+   "ema20": 3.674,
+   "ema50": 3.831,
+   "rsi": 44.3,
+   "fi2": 74911.0,
+   "atr": 0.073,
+   "macd": -0.0607,
+   "macd_hist": 0.0178,
+   "macd_hist_rising": true,
    "support": [
     {
-     "price": 3.515,
-     "touches": 4,
-     "strength": 4.96
+     "price": 3.518,
+     "touches": 5,
+     "strength": 5.98
     },
     {
      "price": 3.395,
@@ -1596,76 +1677,12 @@
     {
      "price": 3.856,
      "touches": 16,
-     "strength": 16.91
+     "strength": 16.9
     },
     {
      "price": 4.063,
      "touches": 3,
-     "strength": 3.86
-    }
-   ],
-   "plan": null,
-   "notes": [
-    "Weekly tide is mixed: stand aside"
-   ]
-  },
-  {
-   "ticker": "S68.SI",
-   "code": "S68",
-   "name": "SGX Group",
-   "date": "2026-10-29",
-   "close": 20.55,
-   "chg_pct": -1.2,
-   "status": "No trade",
-   "wave": "-",
-   "tide": {
-    "tide": "Mixed",
-    "hist_rising": true,
-    "ema26_rising": false,
-    "above_ema26": false,
-    "impulse": "blue",
-    "strong": false
-   },
-   "ema20": 21.13,
-   "ema50": 22.099,
-   "rsi": 33.4,
-   "fi2": -434135.0,
-   "atr": 0.419,
-   "macd": -0.5144,
-   "macd_hist": 0.0776,
-   "macd_hist_rising": false,
-   "support": [
-    {
-     "price": 20.43,
-     "touches": 2,
-     "strength": 2.94
-    },
-    {
-     "price": 19.69,
-     "touches": 1,
-     "strength": 1.37
-    },
-    {
-     "price": 19.2,
-     "touches": 1,
-     "strength": 1.28
-    }
-   ],
-   "resistance": [
-    {
-     "price": 21.27,
-     "touches": 3,
-     "strength": 3.98
-    },
-    {
-     "price": 21.65,
-     "touches": 1,
-     "strength": 1.95
-    },
-    {
-     "price": 21.985,
-     "touches": 2,
-     "strength": 2.88
+     "strength": 3.85
     }
    ],
    "plan": null,
@@ -1677,9 +1694,9 @@
    "ticker": "U11.SI",
    "code": "U11",
    "name": "UOB",
-   "date": "2026-10-29",
-   "close": 41.5,
-   "chg_pct": -0.1,
+   "date": "2026-10-30",
+   "close": 41.37,
+   "chg_pct": -0.31,
    "status": "No trade",
    "wave": "-",
    "tide": {
@@ -1687,17 +1704,17 @@
     "hist_rising": false,
     "ema26_rising": true,
     "above_ema26": true,
-    "impulse": "blue",
+    "impulse": "red",
     "strong": false
    },
-   "ema20": 41.648,
-   "ema50": 41.709,
-   "rsi": 47.7,
-   "fi2": 5027.0,
-   "atr": 0.736,
-   "macd": -0.1387,
-   "macd_hist": -0.0011,
-   "macd_hist_rising": true,
+   "ema20": 41.622,
+   "ema50": 41.696,
+   "rsi": 46.3,
+   "fi2": -177443.0,
+   "atr": 0.715,
+   "macd": -0.1434,
+   "macd_hist": -0.0047,
+   "macd_hist_rising": false,
    "support": [
     {
      "price": 40.93,
@@ -1712,24 +1729,24 @@
     {
      "price": 38.95,
      "touches": 1,
-     "strength": 1.58
+     "strength": 1.57
     }
    ],
    "resistance": [
     {
-     "price": 42.273,
-     "touches": 4,
-     "strength": 4.98
+     "price": 41.84,
+     "touches": 1,
+     "strength": 1.7
+    },
+    {
+     "price": 42.417,
+     "touches": 3,
+     "strength": 3.97
     },
     {
      "price": 43.845,
      "touches": 2,
      "strength": 2.92
-    },
-    {
-     "price": 45.15,
-     "touches": 1,
-     "strength": 1.7
     }
    ],
    "plan": null,
@@ -1741,8 +1758,8 @@
    "ticker": "U14.SI",
    "code": "U14",
    "name": "UOL Group",
-   "date": "2026-10-29",
-   "close": 7.84,
+   "date": "2026-10-30",
+   "close": 7.9,
    "chg_pct": 0.77,
    "status": "No trade",
    "wave": "-",
@@ -1754,13 +1771,13 @@
     "impulse": "blue",
     "strong": false
    },
-   "ema20": 7.93,
-   "ema50": 8.358,
-   "rsi": 40.9,
-   "fi2": 25416.0,
-   "atr": 0.15,
-   "macd": -0.1681,
-   "macd_hist": 0.0481,
+   "ema20": 7.927,
+   "ema50": 8.34,
+   "rsi": 44.1,
+   "fi2": 51904.0,
+   "atr": 0.149,
+   "macd": -0.1514,
+   "macd_hist": 0.0519,
    "macd_hist_rising": true,
    "support": [
     {
@@ -1773,12 +1790,12 @@
     {
      "price": 8.345,
      "touches": 2,
-     "strength": 2.11
+     "strength": 2.1
     },
     {
      "price": 8.775,
      "touches": 4,
-     "strength": 4.9
+     "strength": 4.89
     },
     {
      "price": 9.11,
