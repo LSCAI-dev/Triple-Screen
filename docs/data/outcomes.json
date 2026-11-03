@@ -1,6 +1,20 @@
 {
  "rows": [
   {
+   "date": "2026-11-02",
+   "code": "U96",
+   "name": "Sembcorp Industries",
+   "side": "Short",
+   "grade": "A",
+   "entry": 5.79,
+   "stop": 5.9,
+   "t1": 5.61,
+   "outcome": "Pending",
+   "filled": "",
+   "closed": "",
+   "r": null
+  },
+  {
    "date": "2026-10-30",
    "code": "U96",
    "name": "Sembcorp Industries",
@@ -37,10 +51,10 @@
    "entry": 4.1,
    "stop": 4.17,
    "t1": 3.99,
-   "outcome": "Pending",
-   "filled": "",
+   "outcome": "Open",
+   "filled": "2026-11-02",
    "closed": "",
-   "r": null
+   "r": -0.14
   },
   {
    "date": "2026-10-29",
@@ -93,7 +107,7 @@
    "entry": 8.41,
    "stop": 8.25,
    "t1": 8.76,
-   "outcome": "Pending",
+   "outcome": "Not filled",
    "filled": "",
    "closed": "",
    "r": null
@@ -110,7 +124,7 @@
    "outcome": "Open",
    "filled": "2026-10-29",
    "closed": "",
-   "r": -0.36
+   "r": -0.09
   },
   {
    "date": "2026-10-27",
@@ -124,7 +138,7 @@
    "outcome": "Open",
    "filled": "2026-10-29",
    "closed": "",
-   "r": -0.36
+   "r": -0.09
   },
   {
    "date": "2026-10-27",
@@ -422,8 +436,8 @@
   }
  ],
  "summary": {
-  "signals": 30,
-  "filled": 12,
+  "signals": 31,
+  "filled": 13,
   "closed": 6,
   "wins": 3,
   "win_rate": 50.0,
