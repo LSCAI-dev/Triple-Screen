@@ -12,7 +12,7 @@
    "outcome": "Open",
    "filled": "2026-11-03",
    "closed": "",
-   "r": 0.18
+   "r": -0.73
   },
   {
    "date": "2026-10-30",
@@ -26,7 +26,7 @@
    "outcome": "Open",
    "filled": "2026-11-03",
    "closed": "",
-   "r": 0.0
+   "r": -0.77
   },
   {
    "date": "2026-10-30",
@@ -37,7 +37,7 @@
    "entry": 0.405,
    "stop": 0.435,
    "t1": 0.345,
-   "outcome": "Pending",
+   "outcome": "Not filled",
    "filled": "",
    "closed": "",
    "r": null
@@ -51,10 +51,10 @@
    "entry": 4.1,
    "stop": 4.17,
    "t1": 3.99,
-   "outcome": "Open",
+   "outcome": "Stopped",
    "filled": "2026-11-02",
-   "closed": "",
-   "r": -0.14
+   "closed": "2026-11-04",
+   "r": -1.0
   },
   {
    "date": "2026-10-29",
@@ -93,10 +93,10 @@
    "entry": 4.08,
    "stop": 4.17,
    "t1": 3.9,
-   "outcome": "Open",
+   "outcome": "Stopped",
    "filled": "2026-11-03",
-   "closed": "",
-   "r": -0.33
+   "closed": "2026-11-04",
+   "r": -1.0
   },
   {
    "date": "2026-10-28",
@@ -124,7 +124,7 @@
    "outcome": "Open",
    "filled": "2026-10-29",
    "closed": "",
-   "r": 0.36
+   "r": -0.55
   },
   {
    "date": "2026-10-27",
@@ -138,7 +138,7 @@
    "outcome": "Open",
    "filled": "2026-10-29",
    "closed": "",
-   "r": 0.36
+   "r": -0.55
   },
   {
    "date": "2026-10-27",
@@ -152,7 +152,7 @@
    "outcome": "Open",
    "filled": "2026-10-29",
    "closed": "",
-   "r": -0.33
+   "r": -0.44
   },
   {
    "date": "2026-10-23",
@@ -208,7 +208,7 @@
    "outcome": "Open",
    "filled": "2026-10-22",
    "closed": "",
-   "r": -0.0
+   "r": -0.25
   },
   {
    "date": "2026-10-21",
@@ -292,7 +292,7 @@
    "outcome": "Open",
    "filled": "2026-10-13",
    "closed": "",
-   "r": 0.2
+   "r": -0.0
   },
   {
    "date": "2026-10-08",
@@ -306,7 +306,7 @@
    "outcome": "Open",
    "filled": "2026-10-13",
    "closed": "",
-   "r": 0.2
+   "r": -0.0
   },
   {
    "date": "2026-10-08",
@@ -438,9 +438,9 @@
  "summary": {
   "signals": 31,
   "filled": 16,
-  "closed": 6,
+  "closed": 8,
   "wins": 3,
-  "win_rate": 50.0,
-  "expectancy_r": 0.07
+  "win_rate": 37.5,
+  "expectancy_r": -0.2
  }
 }
