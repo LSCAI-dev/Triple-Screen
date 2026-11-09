@@ -1,6 +1,20 @@
 {
  "rows": [
   {
+   "date": "2026-11-06",
+   "code": "ME8U",
+   "name": "Mapletree Industrial Trust",
+   "side": "Short",
+   "grade": "B",
+   "entry": 1.72,
+   "stop": 1.8,
+   "t1": 1.56,
+   "outcome": "Pending",
+   "filled": "",
+   "closed": "",
+   "r": null
+  },
+  {
    "date": "2026-11-05",
    "code": "U96",
    "name": "Sembcorp Industries",
@@ -9,10 +23,10 @@
    "entry": 5.83,
    "stop": 5.94,
    "t1": 5.61,
-   "outcome": "Pending",
-   "filled": "",
+   "outcome": "Open",
+   "filled": "2026-11-06",
    "closed": "",
-   "r": null
+   "r": 1.36
   },
   {
    "date": "2026-11-02",
@@ -166,7 +180,7 @@
    "outcome": "Open",
    "filled": "2026-10-29",
    "closed": "",
-   "r": -0.67
+   "r": -0.56
   },
   {
    "date": "2026-10-23",
@@ -306,7 +320,7 @@
    "outcome": "Open",
    "filled": "2026-10-13",
    "closed": "",
-   "r": -0.8
+   "r": -0.2
   },
   {
    "date": "2026-10-08",
@@ -320,7 +334,7 @@
    "outcome": "Open",
    "filled": "2026-10-13",
    "closed": "",
-   "r": -0.8
+   "r": -0.2
   },
   {
    "date": "2026-10-08",
@@ -450,8 +464,8 @@
   }
  ],
  "summary": {
-  "signals": 32,
-  "filled": 16,
+  "signals": 33,
+  "filled": 17,
   "closed": 13,
   "wins": 3,
   "win_rate": 23.1,
