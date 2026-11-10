@@ -1,7 +1,7 @@
 {
  "meta": {
   "as_of": "2026-11-06",
-  "generated": "2026-11-10 04:54",
+  "generated": "2026-11-11 02:03",
   "source": "Yahoo Finance via yfinance (unadjusted daily OHLC)",
   "demo": false,
   "universe": 30,
