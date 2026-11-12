@@ -1,6 +1,20 @@
 {
  "rows": [
   {
+   "date": "2026-11-11",
+   "code": "C38U",
+   "name": "CapitaLand Integrated Commercial Trust",
+   "side": "Long",
+   "grade": "B",
+   "entry": 2.36,
+   "stop": 2.28,
+   "t1": 2.5,
+   "outcome": "Pending",
+   "filled": "",
+   "closed": "",
+   "r": null
+  },
+  {
    "date": "2026-11-06",
    "code": "ME8U",
    "name": "Mapletree Industrial Trust",
@@ -9,10 +23,10 @@
    "entry": 1.72,
    "stop": 1.8,
    "t1": 1.56,
-   "outcome": "Pending",
-   "filled": "",
+   "outcome": "Open",
+   "filled": "2026-11-11",
    "closed": "",
-   "r": null
+   "r": -0.13
   },
   {
    "date": "2026-11-05",
@@ -26,7 +40,7 @@
    "outcome": "Open",
    "filled": "2026-11-06",
    "closed": "",
-   "r": 0.82
+   "r": 0.27
   },
   {
    "date": "2026-11-02",
@@ -464,8 +478,8 @@
   }
  ],
  "summary": {
-  "signals": 33,
-  "filled": 17,
+  "signals": 34,
+  "filled": 18,
   "closed": 13,
   "wins": 3,
   "win_rate": 23.1,
