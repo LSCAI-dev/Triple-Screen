@@ -15,6 +15,7 @@ from sgx_ts import data
 from sgx_ts.screens import analyse, sort_key, enrich_weekly, weekly_tide
 from sgx_ts.history import save_run, evaluate
 from sgx_ts.site import build
+from sgx_ts import dualscore as ds
 
 
 def main():
@@ -41,6 +42,18 @@ def main():
                 print(f"{t}: {e}")
     results.sort(key=sort_key)
 
+    # Dual score (Smart Money + Triple Screen score) - see sgx_ts/dualscore.py
+    hourly = {} if a.demo else data.fetch_hourly([r["ticker"] for r in results])
+    sti_raw = prices.get(C.MARKET_INDEX[0])
+    dp = ds.Params()
+    for r in results:
+        try:
+            r["dual"] = ds.evaluate(r["ticker"], prices[r["ticker"]], hourly=hourly.get(r["ticker"]),
+                                    sti_daily=sti_raw, equity=C.ACCOUNT_SIZE_SGD, p=dp)
+        except Exception as e:
+            print(f"{r['ticker']} dual score: {e}")
+            r["dual"] = None
+
     sti = {"tide": "Mixed"}
     if C.MARKET_INDEX[0] in prices:
         sti = weekly_tide(enrich_weekly(prices[C.MARKET_INDEX[0]]))
@@ -52,6 +65,7 @@ def main():
         "source": "Synthetic demo data" if a.demo else "Yahoo Finance via yfinance (unadjusted daily OHLC)",
         "demo": a.demo, "universe": len(C.UNIVERSE), "analysed": len(results), "missing": missing,
         "sti_tide": sti["tide"],
+        "hourly_ok": len(hourly), "dual_thresholds": {"ts": dp.ts_buy, "sm": dp.sm_buy},
     }
     build(out, meta, results, sti)
     save_run(out, meta, results)
@@ -63,6 +77,7 @@ def main():
             p = r["plan"]
             print(f"  {r['code']:6} {r['status']:12} {p['grade']}  entry {p['entry']:.3f}  stop {p['stop']:.3f}"
                   f"  T1 {p['t1']:.3f}  T2 {p['t2']:.3f}  R:R {p['rr1']}")
+    print("Dual score BUY:", [r["code"] for r in results if (r.get("dual") or {}).get("decision") == "BUY"] or "none")
     print("Track record:", ev["summary"])
     print("Site written to", out.resolve())
 
