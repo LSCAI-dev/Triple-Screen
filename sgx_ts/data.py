@@ -25,6 +25,27 @@ def fetch(tickers, period="2y", retries=2):
     return out
 
 
+def fetch_hourly(tickers, period="60d"):
+    """60-minute bars for the Smart Money bid/ask proxy. Failure is non-fatal."""
+    import yfinance as yf
+    out = {}
+    try:
+        raw = yf.download(list(tickers), period=period, interval="60m", group_by="ticker",
+                          auto_adjust=False, progress=False, threads=True)
+    except Exception as e:
+        print(f"hourly download failed ({e})")
+        return out
+    for t in tickers:
+        try:
+            df = raw[t][COLS].dropna(subset=["Close"]).copy()
+        except (KeyError, TypeError):
+            continue
+        df.index = pd.to_datetime(df.index).tz_localize(None)
+        if len(df) > 40:
+            out[t] = df
+    return out
+
+
 def _parse(raw, tickers):
     out = {}
     for t in tickers:

@@ -7,7 +7,7 @@ import config as C
 from .screens import SETUP_LONG, SETUP_SHORT
 
 LOG_COLS = ["date", "ticker", "code", "name", "status", "grade", "close", "entry", "stop",
-            "t1", "t2", "rr1", "rsi", "tide", "wave"]
+            "t1", "t2", "rr1", "rsi", "tide", "wave", "dual", "sm", "ts"]
 
 
 def public(r: dict) -> dict:
@@ -30,11 +30,14 @@ def save_run(out_dir: Path, meta: dict, results: list):
                      "status": r["status"], "grade": p.get("grade", ""), "close": r["close"],
                      "entry": p.get("entry", ""), "stop": p.get("stop", ""), "t1": p.get("t1", ""),
                      "t2": p.get("t2", ""), "rr1": p.get("rr1", ""), "rsi": r["rsi"],
-                     "tide": r["tide"]["tide"], "wave": r["wave"]})
+                     "tide": r["tide"]["tide"], "wave": r["wave"],
+                     "dual": (r.get("dual") or {}).get("decision", ""),
+                     "sm": ((r.get("dual") or {}).get("sm") or {}).get("score", ""),
+                     "ts": ((r.get("dual") or {}).get("ts") or {}).get("score", "")})
     log = out_dir / "data" / "signals_log.csv"
     new = pd.DataFrame(rows, columns=LOG_COLS)
     if log.exists():
-        old = pd.read_csv(log, dtype=str)
+        old = pd.read_csv(log, dtype=str).reindex(columns=LOG_COLS)
         old = old[old["date"] != meta["as_of"]]          # re-runs replace the same day
         new = pd.concat([old, new.astype(str)], ignore_index=True)
     new.sort_values(["date", "code"]).to_csv(log, index=False)

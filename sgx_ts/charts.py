@@ -9,6 +9,7 @@ EMA20_C, EMA50_C, EMA13_C, EMA26_C = "#2F5FA7", "#B7862B", "#2F5FA7", "#B7862B"
 SUP_C, RES_C = "#127A5F", "#B23A3A"
 ENTRY_C, STOP_C, TGT_C = "#2F5FA7", "#B23A3A", "#127A5F"
 GRID = "rgba(120,135,140,0.18)"
+DS_C = "#7A4FB0"   # dual-score plan lines
 
 
 def _layout(fig, height):
@@ -53,6 +54,14 @@ def daily_chart(r: dict):
         _hline(fig, p["stop"], STOP_C, f"Stop {p['stop']:.3f}", dash="solid", width=1.6)
         _hline(fig, p["t1"], TGT_C, f"T1 {p['t1']:.3f}", dash="dash", width=1.6)
         _hline(fig, p["t2"], TGT_C, f"T2 {p['t2']:.3f}", dash="dash", width=1.2)
+
+    dl = r.get("dual") or {}
+    dp = dl.get("plan")
+    if dp and dl.get("decision") in ("BUY", "WATCH"):
+        tag = "DS " + dl["decision"]
+        _hline(fig, dp["entry_buy_stop"], DS_C, f"{tag} entry {dp['entry_buy_stop']:.3f}", dash="dashdot", width=1.4)
+        _hline(fig, dp["stop"], DS_C, f"{tag} stop {dp['stop']:.3f}", dash="dashdot", width=1.2)
+        _hline(fig, dp["target1"], DS_C, f"{tag} T1 {dp['target1']:.3f}", dash="dashdot", width=1.2)
 
     hcol = [UP if v >= 0 else DN for v in d["MACDhist"]]
     fig.add_trace(go.Bar(x=x, y=d["MACDhist"], marker_color=hcol, name="MACD hist", showlegend=False), 2, 1)

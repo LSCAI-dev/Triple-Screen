@@ -7,6 +7,11 @@ from .assets import CSS, THEME_JS
 from .charts import daily_chart, weekly_chart, to_div
 from .screens import SETUP_LONG, SETUP_SHORT, WATCH_LONG, WATCH_SHORT
 
+LABELS = {"bid_ask": "Successful bid/ask", "price_volume": "Price-volume", "block_trades": "Block trades",
+          "vwap": "VWAP", "obv": "OBV", "closing_strength": "Closing strength",
+          "trend_alignment": "Trend alignment", "pullback_quality": "Pullback quality",
+          "entry_confirmation": "Entry confirmation", "liquidity": "Turnover", "reward_risk": "R:R",
+          "atr_band": "ATR band", "stop_width": "Stop width", "no_event_5d": "No event 5d", "bid/ask below floor": "bid/ask under half marks"}
 PLOTLY = "https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.35.2/plotly.min.js"
 CLS = {SETUP_LONG: "st-long", SETUP_SHORT: "st-short", WATCH_LONG: "st-lwatch", WATCH_SHORT: "st-swatch"}
 
@@ -33,6 +38,20 @@ INDEX = """{% extends "base" %}{% block body %}
 <span><strong>{{ counts.w }}</strong>on watch</span><span><strong>{{ counts.n }}</strong>no trade</span></span></div>
 {% if sti.tide == 'Down' %}<p class="warn">The index tide is falling. Elder's rule: longs against a falling market tide need extra confirmation; consider half size.</p>{% endif %}
 
+<h2>Dual score: disciplined buys</h2>
+<p class="note">BUY needs Triple Screen &ge; {{ thr.ts }} and Smart Money &ge; {{ thr.sm }} (both +10 when the STI is below a falling 50-day EMA{% if dual_bear %}, <b>as it is now</b>{% endif %}), bid/ask &ge; half marks, and every gate: turnover &ge; S$1M, R:R &ge; 2, ATR 0.8&ndash;6%, stop &le; 2.5 ATR. Hourly bars for the bid/ask estimate: {{ meta.hourly_ok }} of {{ results|length }} stocks.</p>
+{% if dual_rows %}<table class="t stack"><thead><tr><th class="l">Stock</th><th class="l">Decision</th><th>Smart Money</th><th>Triple Screen</th><th>Entry</th><th>Stop</th><th>T1</th><th>R:R</th><th>Qty</th><th class="l">Blocked by</th></tr></thead><tbody>
+{% for r in dual_rows %}{% set dl = r.dual %}{% set p = dl.plan %}<tr>
+<td><a href="stocks/{{ r.code }}.html"><b>{{ r.code }}</b></a> {{ r.name }}</td>
+<td class="l" data-h="Decision"><b class="dec-{{ dl.decision }}">{{ dl.decision }}</b></td>
+<td data-h="Smart Money">{{ dl.sm.score }}</td><td data-h="Triple Screen">{{ dl.ts.score }}</td>
+<td data-h="Entry"><b>{{ '%.3f'|format(p.entry_buy_stop) }}</b></td><td data-h="Stop">{{ '%.3f'|format(p.stop) }}</td>
+<td data-h="T1">{{ '%.3f'|format(p.target1) }}</td><td data-h="R:R">{{ p.rr_t1 }}</td><td data-h="Qty">{{ '{:,}'.format(p.shares or 0) }}</td>
+<td class="l" data-h="Blocked by">{% for b in dl.blocked_by %}{{ labels.get(b, b)|e }}{{ ', ' if not loop.last }}{% else %}-{% endfor %}</td></tr>{% endfor %}
+</tbody></table>
+<p class="note">Shows every BUY and WATCH, then the stocks closest to qualifying. Full score breakdown on each stock page.</p>
+{% else %}<div class="empty">Dual scores not available in this run.</div>{% endif %}
+
 <h2>Setups for the next session</h2>
 {% if setups %}
 <table class="t stack"><thead><tr><th class="l">Stock</th><th>Grade</th><th>Close</th><th>Entry</th><th>Stop</th><th>T1</th><th>T2</th><th>R:R T1</th><th>Stop %</th><th>Qty</th></tr></thead><tbody>
@@ -50,7 +69,7 @@ INDEX = """{% extends "base" %}{% block body %}
 <div class="board">{% for r in results %}<a class="tile {{ cls.get(r.status,'') }}" href="stocks/{{ r.code }}.html">
 <div class="c">{{ r.code }}</div><div class="n">{{ r.name }}</div>
 <div class="p">{{ '%.3f'|format(r.close) }} <span class="{{ 'up' if r.chg_pct>=0 else 'dn' }}">{{ '%+.1f'|format(r.chg_pct) }}%</span></div>
-<div class="s">{{ r.status }}</div></a>{% endfor %}</div>
+<div class="s">{{ r.status }}</div>{% if r.dual and r.dual.sm %}<div class="ds">SM {{ r.dual.sm.score|round|int }} · TS {{ r.dual.ts.score|round|int }} <b class="dec-{{ r.dual.decision }}">{{ r.dual.decision }}</b></div>{% endif %}</a>{% endfor %}</div>
 
 <h2>Screen readings</h2>
 <table class="t stack"><thead><tr><th class="l">Stock</th><th class="l">Weekly tide</th><th class="l">Daily wave</th><th>RSI</th><th>Force(2)</th><th>MACD-H</th><th>EMA20</th><th>EMA50</th><th>Support</th><th>Resistance</th></tr></thead><tbody>
@@ -87,6 +106,27 @@ STOCK = """{% extends "base" %}{% block body %}
 <div><span>Cash at risk</span><b>S${{ '{:,.0f}'.format(p.cash_risk) }}</b></div>
 </div><p class="note">{{ p.order }}. Take part profit at T1 and move the stop to entry; let the rest run to T2.</p>{% endif %}
 {% for n in r.notes %}<p class="warn">{{ n }}</p>{% endfor %}
+
+{% set dl = r.dual %}{% if dl and dl.sm %}{% set bump = 10 if dl.regime_bearish else 0 %}{% set q = dl.plan %}
+<h2>Dual score</h2>
+<div class="dual"><div class="hd"><b class="dec dec-{{ dl.decision }}">{{ dl.decision }}</b>
+<span>Smart Money <b>{{ dl.sm.score }}</b> / needs {{ thr.sm + bump }}</span>
+<span>Triple Screen <b>{{ dl.ts.score }}</b> / needs {{ thr.ts + bump }}</span>
+<span>SM measured on real data: {{ (dl.sm.confidence * 100)|round|int }}%</span></div>
+{% if dl.blocked_by %}<p class="note">Blocked by: {% for b in dl.blocked_by %}{{ labels.get(b, b)|e }}{{ ', ' if not loop.last }}{% endfor %}{% if dl.regime_bearish %}. STI below a falling 50-day EMA, so thresholds are raised by 10.{% endif %}</p>{% endif %}
+<div class="sc"><div><h3>Smart Money</h3>{% for k, c in dl.sm.components.items() %}<div class="bar"><div class="lb"><span>{{ labels.get(k, k) }}{% if c.tier.endswith('proxy') %} (estimated){% elif c.tier == 'missing' %} (no data){% endif %}</span></div>
+<div class="tr"><div class="fl" style="width:{{ (100 * (c.pts or 0) / c.max)|round|int }}%"></div></div><span>{{ c.pts if c.pts is not none else '-' }} / {{ c.max }}</span></div>{% endfor %}</div>
+<div><h3>Triple Screen</h3>{% for k, c in dl.ts.components.items() %}<div class="bar"><div class="lb"><span>{{ labels.get(k, k) }}</span></div>
+<div class="tr"><div class="fl" style="width:{{ (100 * c.pts / c.max)|round|int }}%"></div></div><span>{{ c.pts }} / {{ c.max }}</span></div>{% endfor %}</div></div>
+<div class="chips">{% for k, g in dl.gates.items() %}<span class="chip {{ '' if g['pass'] else 'no' }}">{{ labels.get(k, k) }}: {{ g.value }}</span>{% endfor %}</div>
+<div class="plan"><div><span>Buy stop</span><b>{{ '%.3f'|format(q.entry_buy_stop) }}</b></div>
+<div><span>Stop</span><b class="dn">{{ '%.3f'|format(q.stop) }}</b></div>
+<div><span>Target 1</span><b class="up">{{ '%.3f'|format(q.target1) }}</b></div>
+<div><span>Target 2</span><b class="up">{{ '%.3f'|format(q.target2) }}</b></div>
+<div><span>R:R to T1</span><b>{{ q.rr_t1 }}</b></div>
+<div><span>Qty ({{ risk_pct }}% risk)</span><b>{{ '{:,}'.format(q.shares or 0) }}</b></div></div>
+<p class="note">Dual-score plan (purple dash-dot lines on the chart when BUY or WATCH): buy stop valid 2 sessions; stop to breakeven at +1R; sell half at T1 and trail the rest under EMA20; exit after 7 sessions if under +0.5R.</p></div>
+{% endif %}
 
 <div class="screens">
 <div><h3>Screen 1, weekly tide</h3><p><b>{{ r.tide.tide }}</b>. MACD-H {{ 'rising' if r.tide.hist_rising else 'falling' }}, EMA26w {{ 'rising' if r.tide.ema26_rising else 'falling' }}, price {{ 'above' if r.tide.above_ema26 else 'below' }} EMA26w. Impulse {{ r.tide.impulse }}.</p></div>
@@ -167,7 +207,14 @@ def build(out: Path, meta: dict, results: list, sti: dict):
     (out / ".nojekyll").write_text("")
     env = _env()
     common = dict(site=C.SITE_TITLE, meta=meta, cls=CLS, risk_pct=C.RISK_PER_TRADE_PCT,
-                  acct=C.ACCOUNT_SIZE_SGD, lot=C.BOARD_LOT, valid=C.ORDER_VALID_SESSIONS)
+                  acct=C.ACCOUNT_SIZE_SGD, lot=C.BOARD_LOT, valid=C.ORDER_VALID_SESSIONS,
+                  thr=meta.get("dual_thresholds", {"ts": 70, "sm": 65}), labels=LABELS)
+    scored = [r for r in results if (r.get("dual") or {}).get("sm")]
+    order = {"BUY": 0, "WATCH": 1, "AVOID": 2}
+    scored.sort(key=lambda r: (order.get(r["dual"]["decision"], 3), -r["dual"]["combined"]))
+    keep = [r for r in scored if r["dual"]["decision"] != "AVOID"]
+    dual_rows = keep + [r for r in scored if r["dual"]["decision"] == "AVOID"][:max(0, 8 - len(keep))]
+    dual_bear = any(r["dual"].get("regime_bearish") for r in scored)
 
     setups = [r for r in results if r.get("plan")]
     counts = dict(ls=sum(r["status"] == SETUP_LONG for r in results),
@@ -177,7 +224,8 @@ def build(out: Path, meta: dict, results: list, sti: dict):
     html = env.from_string(INDEX).render(title=f"{C.SITE_TITLE} {meta['as_of']}", root="", page="home",
                                          plotly=None, results=results, setups=setups, counts=counts, sti=sti,
                                          rsi_l=C.RSI_PULLBACK_LONG, min_atr=C.MIN_STOP_ATR, win=C.SR_PIVOT_WINDOW,
-                                         lb=C.SR_LOOKBACK, cl=C.SR_CLUSTER_ATR, **common)
+                                         lb=C.SR_LOOKBACK, cl=C.SR_CLUSTER_ATR,
+                                         dual_rows=dual_rows, dual_bear=dual_bear, **common)
     (out / "index.html").write_text(html)
 
     tpl = env.from_string(STOCK)
