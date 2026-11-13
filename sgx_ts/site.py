@@ -22,7 +22,9 @@ BASE = """<!doctype html><html lang="en"><head><meta charset="utf-8">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{{ root }}assets/style.css">
-{% if plotly %}<script src="{{ plotly }}"></script>{% endif %}
+{% if plotly %}<script src="{{ plotly }}"></script>
+<script>window.Plotly||document.write('<script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2.35.2/plotly.min.js"><\/script>')</script>
+<script>window.Plotly||document.write('<script src="https://cdn.plot.ly/plotly-2.35.2.min.js"><\/script>')</script>{% endif %}
 </head><body><div class="wrap">
 <header class="top"><h1>{{ site }}</h1>
 <nav><a href="{{ root }}index.html" {% if page=='home' %}aria-current="page"{% endif %}>Today</a><a href="{{ root }}archive.html" {% if page=='archive' %}aria-current="page"{% endif %}>Saved runs</a></nav></header>
