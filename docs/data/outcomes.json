@@ -1,6 +1,20 @@
 {
  "rows": [
   {
+   "date": "2026-11-13",
+   "code": "C38U",
+   "name": "CapitaLand Integrated Commercial Trust",
+   "side": "Long",
+   "grade": "C",
+   "entry": 2.35,
+   "stop": 2.29,
+   "t1": 2.41,
+   "outcome": "Pending",
+   "filled": "",
+   "closed": "",
+   "r": null
+  },
+  {
    "date": "2026-11-11",
    "code": "C38U",
    "name": "CapitaLand Integrated Commercial Trust",
@@ -26,7 +40,7 @@
    "outcome": "Open",
    "filled": "2026-11-11",
    "closed": "",
-   "r": -0.13
+   "r": 0.12
   },
   {
    "date": "2026-11-05",
@@ -40,7 +54,7 @@
    "outcome": "Open",
    "filled": "2026-11-06",
    "closed": "",
-   "r": 0.27
+   "r": 0.82
   },
   {
    "date": "2026-11-02",
@@ -194,7 +208,7 @@
    "outcome": "Open",
    "filled": "2026-10-29",
    "closed": "",
-   "r": -0.56
+   "r": -0.33
   },
   {
    "date": "2026-10-23",
@@ -331,10 +345,10 @@
    "entry": 0.605,
    "stop": 0.63,
    "t1": 0.58,
-   "outcome": "Open",
+   "outcome": "T1 hit",
    "filled": "2026-10-13",
-   "closed": "",
-   "r": -0.4
+   "closed": "2026-11-13",
+   "r": 1.0
   },
   {
    "date": "2026-10-08",
@@ -345,10 +359,10 @@
    "entry": 0.605,
    "stop": 0.63,
    "t1": 0.58,
-   "outcome": "Open",
+   "outcome": "T1 hit",
    "filled": "2026-10-13",
-   "closed": "",
-   "r": -0.4
+   "closed": "2026-11-13",
+   "r": 1.0
   },
   {
    "date": "2026-10-08",
@@ -478,11 +492,11 @@
   }
  ],
  "summary": {
-  "signals": 34,
+  "signals": 35,
   "filled": 18,
-  "closed": 13,
-  "wins": 3,
-  "win_rate": 23.1,
-  "expectancy_r": -0.51
+  "closed": 15,
+  "wins": 5,
+  "win_rate": 33.3,
+  "expectancy_r": -0.31
  }
 }
