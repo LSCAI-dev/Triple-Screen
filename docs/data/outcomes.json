@@ -23,10 +23,10 @@
    "entry": 8.38,
    "stop": 8.13,
    "t1": 8.76,
-   "outcome": "Pending",
-   "filled": "",
+   "outcome": "Open",
+   "filled": "2026-11-13",
    "closed": "",
-   "r": null
+   "r": -0.64
   },
   {
    "date": "2026-11-11",
@@ -54,7 +54,7 @@
    "outcome": "Open",
    "filled": "2026-11-11",
    "closed": "",
-   "r": -0.13
+   "r": 0.12
   },
   {
    "date": "2026-11-05",
@@ -68,7 +68,7 @@
    "outcome": "Open",
    "filled": "2026-11-06",
    "closed": "",
-   "r": 0.64
+   "r": 0.82
   },
   {
    "date": "2026-11-02",
@@ -222,7 +222,7 @@
    "outcome": "Open",
    "filled": "2026-10-29",
    "closed": "",
-   "r": -0.44
+   "r": -0.33
   },
   {
    "date": "2026-10-23",
@@ -359,10 +359,10 @@
    "entry": 0.605,
    "stop": 0.63,
    "t1": 0.58,
-   "outcome": "Open",
+   "outcome": "T1 hit",
    "filled": "2026-10-13",
-   "closed": "",
-   "r": -0.2
+   "closed": "2026-11-13",
+   "r": 1.0
   },
   {
    "date": "2026-10-08",
@@ -373,10 +373,10 @@
    "entry": 0.605,
    "stop": 0.63,
    "t1": 0.58,
-   "outcome": "Open",
+   "outcome": "T1 hit",
    "filled": "2026-10-13",
-   "closed": "",
-   "r": -0.2
+   "closed": "2026-11-13",
+   "r": 1.0
   },
   {
    "date": "2026-10-08",
@@ -507,10 +507,10 @@
  ],
  "summary": {
   "signals": 36,
-  "filled": 18,
-  "closed": 13,
-  "wins": 3,
-  "win_rate": 23.1,
-  "expectancy_r": -0.51
+  "filled": 19,
+  "closed": 15,
+  "wins": 5,
+  "win_rate": 33.3,
+  "expectancy_r": -0.31
  }
 }
