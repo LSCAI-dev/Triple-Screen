@@ -15,20 +15,6 @@
    "r": null
   },
   {
-   "date": "2026-11-16",
-   "code": "O39",
-   "name": "OCBC Bank",
-   "side": "Long",
-   "grade": "C",
-   "entry": 28.71,
-   "stop": 28.19,
-   "t1": 29.28,
-   "outcome": "Pending",
-   "filled": "",
-   "closed": "",
-   "r": null
-  },
-  {
    "date": "2026-11-13",
    "code": "C38U",
    "name": "CapitaLand Integrated Commercial Trust",
@@ -40,7 +26,7 @@
    "outcome": "Open",
    "filled": "2026-11-16",
    "closed": "",
-   "r": -0.33
+   "r": -0.17
   },
   {
    "date": "2026-11-12",
@@ -54,7 +40,7 @@
    "outcome": "Open",
    "filled": "2026-11-13",
    "closed": "",
-   "r": -0.28
+   "r": -0.32
   },
   {
    "date": "2026-11-11",
@@ -82,7 +68,7 @@
    "outcome": "Open",
    "filled": "2026-11-11",
    "closed": "",
-   "r": 0.12
+   "r": -0.0
   },
   {
    "date": "2026-11-05",
@@ -96,7 +82,7 @@
    "outcome": "Open",
    "filled": "2026-11-06",
    "closed": "",
-   "r": 1.0
+   "r": 1.36
   },
   {
    "date": "2026-11-02",
@@ -534,7 +520,7 @@
   }
  ],
  "summary": {
-  "signals": 38,
+  "signals": 37,
   "filled": 20,
   "closed": 15,
   "wins": 5,

@@ -18,6 +18,9 @@ border-bottom:2px solid var(--ink);padding-bottom:10px}
 header.top h1{font-size:30px;line-height:1.1;margin:0;font-weight:700;letter-spacing:-.01em}
 header.top nav a{margin-left:18px;text-decoration:none;color:var(--muted);font-weight:600}
 header.top nav a[aria-current]{color:var(--ink);border-bottom:2px solid var(--ink)}
+.jump{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 4px}
+.jump a{padding:6px 12px;border:1px solid var(--rule);border-radius:16px;text-decoration:none;color:var(--ink);font-weight:600;font-size:14px}
+h2[id]{scroll-margin-top:12px}
 .stamp{color:var(--muted);font-size:14px;margin:8px 0 0}
 .tide{display:flex;flex-wrap:wrap;gap:4px 28px;margin:22px 0 6px;align-items:baseline}
 .tide b{font-size:40px;line-height:1;font-weight:700}
