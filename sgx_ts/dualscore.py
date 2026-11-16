@@ -13,8 +13,15 @@ Every input is used in exactly ONE place:
   * Price/oscillator signals live ONLY in Triple Screen.
   * Inside Triple Screen each indicator appears once:
       Screen 1 (trend)   : weekly MACD-hist slope, weekly 26-EMA slope, daily 50-EMA
-      Screen 2 (pullback): RSI(14), 20-EMA value zone (ATR-scaled), Fibonacci retracement depth
-      Screen 3 (trigger) : prior-high take-out, daily MACD-hist uptick, Heikin-Ashi candle
+      Screen 2 (pullback): RSI(14), value zone (v1.2: daily 13-26 EMA band; v1.1: 20-EMA +/- ATR),
+                           Fibonacci retracement depth, Elder-ray Bear Power turn (v1.2)
+      Screen 3 (trigger) : prior-high take-out, daily MACD-hist uptick (v1.1 also Heikin-Ashi)
+  * Gates are pass/fail filters, not scored: weekly Impulse veto (v1.2), liquidity, R:R,
+    ATR band, stop width, event window, Elder 6% monthly rule (v1.2, needs portfolio inputs).
+  * Elder's Force Index uses volume, so under this rule it is NOT used in TS; Bear Power
+    (Low - 13-EMA, price only) is Elder's other Screen-2 tool and is used instead.
+
+Version switch: Params() = v1.2 (default); Params.v11() reproduces v1.1 exactly.
   * Closing-location value (CLV) is used only in SM 'Closing strength' (and to sign
     block-trade proxy days), never in TS.
 
@@ -71,7 +78,29 @@ class Params:
     pivot_k: int = 3                      # bars each side for a swing high/low to count
     pivot_lookback: int = 250             # ~1 year of resistance history
     min_res_atr: float = 1.0              # ignore resistance closer than this (ATR) above entry
+    # ---- v1.2 (Elder's later refinements). Params.v11() switches all of these off.
+    version: str = "1.2"
+    impulse_veto: bool = True             # gate: no BUY while the WEEKLY Impulse is red
+    bear_power: bool = True               # Screen 2: Elder-ray Bear Power turning up from below 0
+    value_zone: str = "13-26"             # "13-26" EMA band (Elder) | "20atr" (v1.1)
+    stop_method: str = "safezone"         # "safezone" (Elder) | "swing5" (v1.1: 5-day low - 1 tick)
+    safezone_lookback: int = 10
+    safezone_coef: float = 2.5            # Elder: 2-3x average downside penetration
+    min_stop_atr: float = 0.75            # SafeZone stop never closer than this to entry
+    channel_t2: bool = True               # T2 = nearer of 2nd resistance / upper autoenvelope
+    channel_len: int = 22
+    channel_cover: float = 0.95           # envelope holds ~95% of last 100 bars' highs/lows
+    channel_lookback: int = 100
+    drop_ha: bool = True                  # Screen 3: Heikin-Ashi removed (overlaps take-out)
+    max_month_risk_pct: float = 6.0       # Elder 6% rule: open risk + month's losses cap
     extra: dict = field(default_factory=dict)
+
+    @classmethod
+    def v11(cls, **kw):
+        base = dict(version="1.1", impulse_veto=False, bear_power=False, value_zone="20atr",
+                    stop_method="swing5", channel_t2=False, drop_ha=False)
+        base.update(kw)
+        return cls(**base)
 
 
 P = Params()
@@ -157,6 +186,36 @@ def to_weekly(df: pd.DataFrame) -> pd.DataFrame:
     return df.resample("W-FRI").agg(
         {"Open": "first", "High": "max", "Low": "min", "Close": "last", "Volume": "sum"}
     ).dropna()
+
+
+def impulse(close: pd.Series) -> str:
+    """Elder Impulse System: green = 13-EMA AND MACD-hist rising, red = both falling, else blue."""
+    e = ema(close, 13)
+    h = macd_hist(close)
+    up_e, up_h = e.iloc[-1] > e.iloc[-2], h.iloc[-1] > h.iloc[-2]
+    dn_e, dn_h = e.iloc[-1] < e.iloc[-2], h.iloc[-1] < h.iloc[-2]
+    return "green" if (up_e and up_h) else "red" if (dn_e and dn_h) else "blue"
+
+
+def safezone_long(daily: pd.DataFrame, lookback=10, coef=2.5) -> float:
+    """Elder SafeZone long stop: last low minus coef x average downside penetration
+    (prior low - low, on days the low was undercut) over `lookback` bars."""
+    lo = daily["Low"].iloc[-(lookback + 1):]
+    pen = (lo.shift() - lo).iloc[1:]
+    pen = pen[pen > 0]
+    avg = float(pen.mean()) if len(pen) else 0.0
+    return float(daily["Low"].iloc[-1] - coef * avg)
+
+
+def autoenvelope(daily: pd.DataFrame, n=22, cover=0.95, lookback=100):
+    """Elder autoenvelope: EMA(n) +/- the % width that contains `cover` of recent highs/lows."""
+    e = ema(daily["Close"], n)
+    d = daily.iloc[-lookback:]
+    ee = e.iloc[-lookback:]
+    dev = pd.concat([d["High"] / ee - 1, 1 - d["Low"] / ee])
+    w = float(dev.quantile(cover))
+    mid = float(e.iloc[-1])
+    return mid * (1 + w), mid * (1 - w), mid
 
 
 def lee_ready(ticks: pd.DataFrame) -> pd.Series:
@@ -320,33 +379,63 @@ def _swing(daily):
     return daily["High"].loc[hi_idx], lo, pull_low, pos
 
 
-def screen2_pullback(daily):
-    """Pullback quality (35). RSI dip, 20-EMA value zone, Fib depth."""
+def screen2_pullback(daily, p=P):
+    """Pullback quality (35).
+    v1.1: RSI 12 + 20-EMA zone 12 + Fib 11.
+    v1.2: RSI 9 + 13-26 EMA value zone 10 + Fib 8 + Bear Power turn 8."""
     r = rsi(daily["Close"])
     r_min5, r_max20 = r.iloc[-5:].min(), r.iloc[-20:].max()
     f_rsi = band(r_min5, 38, 52, 28, 62) * (1.0 if r_max20 >= 58 else 0.5)
-    e20 = ema(daily["Close"], 20)
     a = atr(daily).iloc[-1]
     low3 = daily["Low"].iloc[-3:].min()
-    zone = (low3 - e20.iloc[-1]) / a
-    f_zone = band(zone, -1.0, 0.5, -2.0, 1.5)
+    detail = {"rsi_min5": round(r_min5, 1), "rsi_max20": round(r_max20, 1)}
+    if p.value_zone == "13-26":
+        e13, e26 = ema(daily["Close"], 13).iloc[-1], ema(daily["Close"], 26).iloc[-1]
+        top, bot = max(e13, e26), min(e13, e26)
+        # full marks when the 3-day low reached the band (<= top) without closing far below it
+        if bot - 0.5 * a <= low3 <= top:
+            f_zone = 1.0
+        elif low3 > top:
+            f_zone = 1.0 - lin((low3 - top) / a, 0.0, 1.5)
+        else:
+            f_zone = 1.0 - lin((bot - 0.5 * a - low3) / a, 0.0, 1.0)
+        zone = (low3 - top) / a
+        detail.update({"value_zone": f"{bot:.3f}-{top:.3f}", "low3_vs_zone_top_atr": round(zone, 2)})
+    else:
+        e20 = ema(daily["Close"], 20)
+        zone = (low3 - e20.iloc[-1]) / a
+        f_zone = band(zone, -1.0, 0.5, -2.0, 1.5)
+        detail["dist_ema20_atr"] = round(zone, 2)
     sh, sl, pl, pos = _swing(daily)
     has_pull = pos < len(daily) - 1 and pl < sh
     retr = (sh - pl) / (sh - sl) if (sh - sl) > 0 and has_pull else float("nan")
     f_fib = band(retr, 0.382, 0.618, 0.20, 0.786) if has_pull else 0.0
-    frac = (12 * f_rsi + 12 * f_zone + 11 * f_fib) / 35
-    detail = {"rsi_min5": round(r_min5, 1), "rsi_max20": round(r_max20, 1),
-              "dist_ema20_atr": round(zone, 2), "fib_retrace": None if math.isnan(retr) else round(retr, 3)}
+    detail["fib_retrace"] = None if math.isnan(retr) else round(retr, 3)
+    if p.bear_power:
+        bp = (daily["Low"] - ema(daily["Close"], 13)) / a
+        neg5 = bool((bp.iloc[-5:] < 0).any())
+        rising = bool(bp.iloc[-1] > bp.iloc[-2])
+        # Elder: in an up-tide buy when Bear Power is negative but turning up
+        f_bp = 1.0 if (neg5 and rising) else 0.4 if neg5 else 0.0
+        detail.update({"bear_power_atr": round(float(bp.iloc[-1]), 2), "bear_power_turn_up": neg5 and rising})
+        frac = (9 * f_rsi + 10 * f_zone + 8 * f_fib + 8 * f_bp) / 35
+    else:
+        frac = (12 * f_rsi + 12 * f_zone + 11 * f_fib) / 35
     return frac, detail
 
 
-def screen3_trigger(daily):
-    """Entry confirmation (25). Take-out of prior high, MACD-hist uptick, HA candle."""
+def screen3_trigger(daily, p=P):
+    """Entry confirmation (25). v1.1: take-out 10 + MACD-hist uptick 8 + Heikin-Ashi 7.
+    v1.2: take-out 14 + MACD-hist uptick 11 (HA dropped: it largely repeats the take-out)."""
     c, h = daily["Close"], daily["High"]
     f_take = 1.0 if c.iloc[-1] > h.iloc[-2] else 0.4 if c.iloc[-1] > c.iloc[-2] else 0.0
     mh = macd_hist(c)
     up1, up2 = mh.iloc[-1] > mh.iloc[-2], mh.iloc[-2] > mh.iloc[-3]
     f_macd = 1.0 if (up1 and up2) else 0.6 if up1 else 0.0
+    if p.drop_ha:
+        return (14 * f_take + 11 * f_macd) / 25, {
+            "close_above_prior_high": bool(c.iloc[-1] > h.iloc[-2]),
+            "d_macd_hist_upticks": int(up1) + int(up1 and up2)}
     ha = heikin_ashi(daily.iloc[-60:])
     green = ha["Close"].iloc[-1] > ha["Open"].iloc[-1]
     no_lower = abs(ha["Low"].iloc[-1] - min(ha["Open"].iloc[-1], ha["Close"].iloc[-1])) < 1e-9
@@ -359,8 +448,8 @@ def screen3_trigger(daily):
 
 def triple_screen(daily, p=P):
     f1, d1 = screen1_trend(daily)
-    f2, d2 = screen2_pullback(daily)
-    f3, d3 = screen3_trigger(daily)
+    f2, d2 = screen2_pullback(daily, p)
+    f3, d3 = screen3_trigger(daily, p)
     score = p.w_s1 * f1 + p.w_s2 * f2 + p.w_s3 * f3
     return {"score": round(score, 1),
             "components": {"trend_alignment": {"pts": round(p.w_s1 * f1, 1), "max": p.w_s1, **d1},
@@ -399,7 +488,11 @@ def trade_plan(daily, p=P, equity=None):
     last = daily.iloc[-1]
     entry = round_tick(last["High"] + sgx_tick(last["High"]), up=True)          # buy-stop above today's high
     pull_low = daily["Low"].iloc[-5:].min()
-    stop = round_tick(pull_low - sgx_tick(pull_low), up=False)
+    if p.stop_method == "safezone":
+        sz = min(safezone_long(daily, p.safezone_lookback, p.safezone_coef), entry - p.min_stop_atr * a)
+        stop = round_tick(sz - sgx_tick(sz), up=False)
+    else:
+        stop = round_tick(pull_low - sgx_tick(pull_low), up=False)
     stop_atr = (entry - stop) / a
     hs, ls = pivots(daily, p.pivot_lookback, p.pivot_k)
     yr_high = float(daily["High"].iloc[-250:].max())
@@ -408,10 +501,21 @@ def trade_plan(daily, p=P, equity=None):
     risk = entry - stop
     t1 = round_tick(res[0] - sgx_tick(res[0]), up=False) if res else round_tick(entry + 2 * risk, up=False)
     t2 = round_tick(res[1] - sgx_tick(res[1]), up=False) if len(res) > 1 else round_tick(entry + 3 * risk, up=False)
+    chan = None
+    if p.channel_t2:
+        up_c, lo_c, mid_c = autoenvelope(daily, p.channel_len, p.channel_cover, p.channel_lookback)
+        chan = {"upper": round(up_c, 3), "lower": round(lo_c, 3), "ema": round(mid_c, 3)}
+        cands = [x for x in ([round_tick(res[1] - sgx_tick(res[1]), up=False)] if len(res) > 1 else [])
+                 + [round_tick(up_c - sgx_tick(up_c), up=False)] if x >= t1 + 0.5 * a]
+        t2 = min(cands) if cands else round_tick(max(entry + 3 * risk, t1 + 0.5 * a), up=False)
+        h_c = up_c - lo_c
+        chan["height"] = round(h_c, 3)
+        chan["t1_grade_pct"] = round(100 * (t1 - entry) / h_c, 1) if h_c > 0 else None  # Elder: >=30% = A
     rr = (t1 - entry) / risk if risk > 0 else 0
     plan = {"entry_buy_stop": entry, "stop": stop, "risk_per_share": round(risk, 3),
             "stop_in_atr": round(stop_atr, 2), "target1": t1, "target2": t2, "rr_t1": round(rr, 2),
             "supports": sup[-3:], "resistances": res[:3], "atr": round(a, 4),
+            "stop_method": p.stop_method, "channel": chan,
             "management": ["Order valid 2 sessions; cancel if not filled",
                            "At +1R: move stop to breakeven",
                            "At T1: sell half; trail rest under 20-EMA or 2-bar low",
@@ -426,7 +530,8 @@ def trade_plan(daily, p=P, equity=None):
 # ---------------------------------------------------------------- GATES & DECISION
 
 
-def gates(daily, plan, p=P, sti_daily=None, days_to_event=None):
+def gates(daily, plan, p=P, sti_daily=None, days_to_event=None, equity=None,
+          open_risk=None, month_pnl=None):
     a_pct = plan["atr"] / daily["Close"].iloc[-1] * 100
     val = (daily["Close"] * daily["Volume"]).iloc[-20:].mean()
     g = {
@@ -435,6 +540,14 @@ def gates(daily, plan, p=P, sti_daily=None, days_to_event=None):
         "atr_band": (p.atr_pct_range[0] <= a_pct <= p.atr_pct_range[1], f"ATR {a_pct:.2f}%"),
         "stop_width": (plan["stop_in_atr"] <= p.max_stop_atr, f"{plan['stop_in_atr']} ATR"),
     }
+    if p.impulse_veto:              # Elder "censorship": weekly Impulse red forbids buying
+        imp = impulse(to_weekly(daily)["Close"])
+        g["weekly_impulse"] = (imp != "red", f"weekly {imp}")
+    if equity and (open_risk is not None or month_pnl is not None) and p.max_month_risk_pct:
+        new_risk = plan.get("shares", 0) * plan["risk_per_share"]
+        used = (open_risk or 0) + max(0.0, -(month_pnl or 0))
+        cap = equity * p.max_month_risk_pct / 100
+        g["six_pct_rule"] = (used + new_risk <= cap, f"{100 * (used + new_risk) / equity:.1f}% of {p.max_month_risk_pct:g}%")
     if days_to_event is not None:   # results / ex-div within 5 sessions -> stand aside
         g["no_event_5d"] = (days_to_event > 5, f"{days_to_event} sessions to event")
     regime_bear = False
@@ -445,14 +558,16 @@ def gates(daily, plan, p=P, sti_daily=None, days_to_event=None):
 
 
 def evaluate(symbol, daily, hourly=None, ticks=None, sti_daily=None, equity=None,
-             days_to_event=None, p=P):
+             days_to_event=None, p=P, open_risk=None, month_pnl=None):
+    """open_risk = S$ currently at risk in open trades; month_pnl = S$ realised P&L this
+    calendar month. Pass either to enforce Elder's 6% rule as a gate."""
     daily = daily.dropna().copy()
     if len(daily) < 200:
         return {"symbol": symbol, "decision": "INSUFFICIENT_DATA"}
     sm = smart_money(daily, hourly, ticks, p)
     ts = triple_screen(daily, p)
     plan = trade_plan(daily, p, equity)
-    g, bear = gates(daily, plan, p, sti_daily, days_to_event)
+    g, bear = gates(daily, plan, p, sti_daily, days_to_event, equity, open_risk, month_pnl)
     bump = p.regime_penalty if bear else 0
     ts_ok = ts["score"] >= p.ts_buy + bump
     sm_ok = sm["score"] >= p.sm_buy + bump
@@ -470,7 +585,7 @@ def evaluate(symbol, daily, hourly=None, ticks=None, sti_daily=None, equity=None
     if not sm_ok: reasons.append(f"SM<{p.sm_buy + bump}")
     if not ba_ok: reasons.append("bid/ask below floor")
     return {"symbol": symbol, "date": str(daily.index[-1].date()), "close": float(daily["Close"].iloc[-1]),
-            "decision": decision, "blocked_by": reasons, "regime_bearish": bear,
+            "decision": decision, "blocked_by": reasons, "regime_bearish": bear, "version": p.version,
             "combined": round(0.5 * sm["score"] + 0.5 * ts["score"], 1),
             "sm": sm, "ts": ts, "gates": {k: {"pass": bool(v[0]), "value": v[1]} for k, v in g.items()},
             "plan": plan}

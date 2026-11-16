@@ -13,7 +13,7 @@ from zoneinfo import ZoneInfo
 import config as C
 from sgx_ts import data
 from sgx_ts.screens import analyse, sort_key, enrich_weekly, weekly_tide
-from sgx_ts.history import save_run, evaluate
+from sgx_ts.history import save_run, evaluate, save_prices, evaluate_dual
 from sgx_ts.site import build
 from sgx_ts import dualscore as ds
 
@@ -70,6 +70,8 @@ def main():
     build(out, meta, results, sti)
     save_run(out, meta, results)
     ev = evaluate(out, prices)
+    n_px = save_prices(out, prices, {**C.UNIVERSE, C.MARKET_INDEX[0]: C.MARKET_INDEX[1]})
+    dev = evaluate_dual(out, prices)
 
     print(f"As of {as_of}: {len(results)} analysed, STI tide {sti['tide']}")
     for r in results:
@@ -79,6 +81,7 @@ def main():
                   f"  T1 {p['t1']:.3f}  T2 {p['t2']:.3f}  R:R {p['rr1']}")
     print("Dual score BUY:", [r["code"] for r in results if (r.get("dual") or {}).get("decision") == "BUY"] or "none")
     print("Track record:", ev["summary"])
+    print("Dual-score replay:", dev["summary"], f"| price snapshots written: {n_px}")
     print("Site written to", out.resolve())
 
 

@@ -11,7 +11,7 @@ LABELS = {"bid_ask": "Successful bid/ask", "price_volume": "Price-volume", "bloc
           "vwap": "VWAP", "obv": "OBV", "closing_strength": "Closing strength",
           "trend_alignment": "Trend alignment", "pullback_quality": "Pullback quality",
           "entry_confirmation": "Entry confirmation", "liquidity": "Turnover", "reward_risk": "R:R",
-          "atr_band": "ATR band", "stop_width": "Stop width", "no_event_5d": "No event 5d", "bid/ask below floor": "bid/ask under half marks"}
+          "atr_band": "ATR band", "stop_width": "Stop width", "no_event_5d": "No event 5d", "weekly_impulse": "Weekly Impulse", "six_pct_rule": "6% rule", "bid/ask below floor": "bid/ask under half marks"}
 PLOTLY = "https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.35.2/plotly.min.js"
 CLS = {SETUP_LONG: "st-long", SETUP_SHORT: "st-short", WATCH_LONG: "st-lwatch", WATCH_SHORT: "st-swatch"}
 
@@ -23,8 +23,8 @@ BASE = """<!doctype html><html lang="en"><head><meta charset="utf-8">
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{{ root }}assets/style.css">
 {% if plotly %}<script src="{{ plotly }}"></script>
-<script>window.Plotly||document.write('<script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2.35.2/plotly.min.js"><\/script>')</script>
-<script>window.Plotly||document.write('<script src="https://cdn.plot.ly/plotly-2.35.2.min.js"><\/script>')</script>{% endif %}
+<script>window.Plotly||document.write('<script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2.35.2/plotly.min.js"><\\/script>')</script>
+<script>window.Plotly||document.write('<script src="https://cdn.plot.ly/plotly-2.35.2.min.js"><\\/script>')</script>{% endif %}
 </head><body><div class="wrap">
 <header class="top"><h1>{{ site }}</h1>
 <nav><a href="{{ root }}index.html" {% if page=='home' %}aria-current="page"{% endif %}>Today</a><a href="{{ root }}archive.html" {% if page=='archive' %}aria-current="page"{% endif %}>Saved runs</a></nav></header>
@@ -41,7 +41,7 @@ INDEX = """{% extends "base" %}{% block body %}
 {% if sti.tide == 'Down' %}<p class="warn">The index tide is falling. Elder's rule: longs against a falling market tide need extra confirmation; consider half size.</p>{% endif %}
 
 <h2>Dual score: disciplined buys</h2>
-<p class="note">BUY needs Triple Screen &ge; {{ thr.ts }} and Smart Money &ge; {{ thr.sm }} (both +10 when the STI is below a falling 50-day EMA{% if dual_bear %}, <b>as it is now</b>{% endif %}), bid/ask &ge; half marks, and every gate: turnover &ge; S$1M, R:R &ge; 2, ATR 0.8&ndash;6%, stop &le; 2.5 ATR. Hourly bars for the bid/ask estimate: {{ meta.hourly_ok }} of {{ results|length }} stocks.</p>
+<p class="note">BUY needs Triple Screen &ge; {{ thr.ts }} and Smart Money &ge; {{ thr.sm }} (both +10 when the STI is below a falling 50-day EMA{% if dual_bear %}, <b>as it is now</b>{% endif %}), bid/ask &ge; half marks, and every gate: turnover &ge; S$1M, R:R &ge; 2, ATR 0.8&ndash;6%, stop &le; 2.5 ATR, weekly Impulse not red (spec v1.2). Hourly bars for the bid/ask estimate: {{ meta.hourly_ok }} of {{ results|length }} stocks.</p>
 {% if dual_rows %}<table class="t stack"><thead><tr><th class="l">Stock</th><th class="l">Decision</th><th>Smart Money</th><th>Triple Screen</th><th>Entry</th><th>Stop</th><th>T1</th><th>R:R</th><th>Qty</th><th class="l">Blocked by</th></tr></thead><tbody>
 {% for r in dual_rows %}{% set dl = r.dual %}{% set p = dl.plan %}<tr>
 <td><a href="stocks/{{ r.code }}.html"><b>{{ r.code }}</b></a> {{ r.name }}</td>
@@ -153,9 +153,15 @@ ARCHIVE = """{% extends "base" %}{% block body %}
 <div style="overflow-x:auto;margin-top:10px"><table class="t stack" id="outcomes"><thead><tr><th class="l">Signal</th><th class="l">Side</th><th>Grade</th><th>Entry</th><th>Stop</th><th>T1</th><th class="l">Outcome</th><th>Filled</th><th>Closed</th><th>R</th></tr></thead><tbody></tbody></table></div>
 <p class="note">Outcomes replay each setup against later daily bars: a fill needs the stop price traded within {{ valid }} sessions; if stop and T1 fall in the same bar the trade is counted as stopped.</p>
 
+<h2>Dual-score plans: what happened</h2>
+<div id="dsum"></div>
+<div style="overflow-x:auto;margin-top:10px"><table class="t stack" id="dual"><thead><tr><th class="l">Signal</th><th class="l">Decision</th><th>SM / TS</th><th>Entry</th><th>Stop</th><th>T1</th><th class="l">Outcome</th><th>Filled</th><th>Closed</th><th>Days</th><th>R</th><th>MFE</th><th>MAE</th></tr></thead><tbody></tbody></table></div>
+<p class="note" id="drules"></p>
+<p class="note">WATCH plans were not buy signals; their rows show what would have happened if taken. One position per stock at a time. Only runs saved since dual scoring began (13 Nov 2026) appear here.</p>
+
 <h2>Open a saved run</h2>
-<p><select id="runs" aria-label="Run date"></select> &nbsp;<a id="dl-json" href="#">Download JSON</a> &nbsp;<a href="data/signals_log.csv" download>Download full CSV log</a></p>
-<div style="overflow-x:auto"><table class="t stack" id="run"><thead><tr><th class="l">Stock</th><th class="l">Status</th><th>Grade</th><th>Close</th><th>Entry</th><th>Stop</th><th>T1</th><th>T2</th><th>RSI</th><th class="l">Tide</th></tr></thead><tbody></tbody></table></div>
+<p><select id="runs" aria-label="Run date"></select> &nbsp;<a id="dl-json" href="#">Download JSON</a> &nbsp;<a id="dl-px" href="#">Prices (OHLCV) CSV</a> &nbsp;<a href="data/signals_log.csv" download>Download full CSV log</a></p>
+<div style="overflow-x:auto"><table class="t stack" id="run"><thead><tr><th class="l">Stock</th><th class="l">Status</th><th>Grade</th><th>Open</th><th>High</th><th>Low</th><th>Close</th><th>Entry</th><th>Stop</th><th>T1</th><th>T2</th><th>RSI</th><th class="l">Tide</th><th class="l">Dual</th></tr></thead><tbody></tbody></table></div>
 <script>
 const f = v => (v===null||v===undefined||v==='') ? '' : Number(v).toFixed(3);
 function cell(h,v,cls){return `<td data-h="${h}"${cls?` class="${cls}"`:''}>${v}</td>`}
@@ -174,16 +180,41 @@ async function loadOutcomes(){
       || '<tr><td colspan="10">No setups logged yet. They appear here after the first run.</td></tr>';
   }catch(e){document.getElementById('summary').textContent='Track record not available yet: data/outcomes.json is created by the first run.';}
 }
+async function loadDual(){
+  try{
+    const o = await (await fetch('data/dual_outcomes.json',{cache:'no-store'})).json();
+    const box = k=>{const s=(o.summary||{})[k]||{}; return `<div class="counts"><span><strong>${k}</strong>plans</span>`+
+      `<span><strong>${s.plans??0}</strong>logged</span><span><strong>${s.filled??0}</strong>filled</span><span><strong>${s.closed??0}</strong>closed</span>`+
+      `<span><strong>${s.win_rate??'-'}${s.win_rate!=null?'%':''}</strong>winners</span><span><strong>${s.avg_r??'-'}</strong>avg R</span>`+
+      `<span><strong>${s.avg_mfe_r??'-'} / ${s.avg_mae_r??'-'}</strong>avg MFE / MAE (R)</span><span><strong>${s.avg_days??'-'}</strong>avg days</span></div>`};
+    document.getElementById('dsum').innerHTML = box('BUY') + box('WATCH');
+    document.getElementById('drules').textContent = 'Rules: ' + (o.rules||'');
+    const cls = x => /trail|T1/.test(x)?'up':/Stopped|Time/.test(x)?'dn':'';
+    document.querySelector('#dual tbody').innerHTML = (o.rows||[]).map(r=>`<tr><td>${r.date} <a href="stocks/${r.code}.html"><b>${r.code}</b></a> <small>v${r.version}</small></td>`+
+      cell('Decision',`<b class="dec-${r.decision}">${r.decision}</b>`,'l')+cell('SM / TS',`${Math.round(r.sm)} / ${Math.round(r.ts)}`)+
+      cell('Entry',f(r.entry))+cell('Stop',f(r.stop))+cell('T1',f(r.t1))+cell('Outcome',r.outcome,'l '+cls(r.outcome))+
+      cell('Filled',r.filled||'')+cell('Closed',r.closed||'')+cell('Days',r.days??'')+cell('R',r.r??'')+cell('MFE',r.mfe_r??'')+cell('MAE',r.mae_r??'')+'</tr>').join('')
+      || '<tr><td colspan="13">No BUY or WATCH plans logged yet.</td></tr>';
+  }catch(e){document.getElementById('dsum').textContent='Dual-score replay not available yet: data/dual_outcomes.json is created by the next run.';}
+}
 async function loadRun(d){
   document.getElementById('dl-json').href = `data/runs/${d}.json`;
   document.getElementById('dl-json').setAttribute('download', `triple-screen-${d}.json`);
+  document.getElementById('dl-px').href = `data/prices/${d}.csv`;
+  document.getElementById('dl-px').setAttribute('download', `prices-${d}.csv`);
   const j = await (await fetch(`data/runs/${d}.json`)).json();
-  document.querySelector('#run tbody').innerHTML = j.results.map(r=>{const p=r.plan||{};
-    return `<tr><td><b>${r.code}</b> ${r.name}</td>`+cell('Status',r.status,'l')+cell('Grade',p.grade||'')+cell('Close',f(r.close))+
-    cell('Entry',f(p.entry))+cell('Stop',f(p.stop))+cell('T1',f(p.t1))+cell('T2',f(p.t2))+cell('RSI',r.rsi)+cell('Tide',r.tide.tide,'l')+'</tr>'}).join('');
+  let px = {};
+  try{ const t = await (await fetch(`data/prices/${d}.csv`)).text();
+       const L = t.trim().split(/\\r?\\n/); const H = L[0].split(',');
+       L.slice(1).forEach(l=>{const v=l.split(','); const o={}; H.forEach((h,i)=>o[h]=v[i]); px[o.ticker]=o;}); }catch(e){}
+  document.querySelector('#run tbody').innerHTML = j.results.map(r=>{const p=r.plan||{}; const b=px[r.ticker]||{}; const dl=r.dual||{};
+    return `<tr><td><b>${r.code}</b> ${r.name}</td>`+cell('Status',r.status,'l')+cell('Grade',p.grade||'')+
+    cell('Open',f(b.open))+cell('High',f(b.high))+cell('Low',f(b.low))+cell('Close',f(r.close))+
+    cell('Entry',f(p.entry))+cell('Stop',f(p.stop))+cell('T1',f(p.t1))+cell('T2',f(p.t2))+cell('RSI',r.rsi)+cell('Tide',r.tide.tide,'l')+
+    cell('Dual',dl.decision?`<b class="dec-${dl.decision}">${dl.decision}</b>`:'','l')+'</tr>'}).join('');
 }
 (async()=>{
-  loadOutcomes();
+  loadOutcomes(); loadDual();
   try{
     const dates = await (await fetch('data/runs/index.json',{cache:'no-store'})).json();
     const sel = document.getElementById('runs');
