@@ -2,7 +2,8 @@ name: SGX Triple Screen
 
 on:
   schedule:
-    - cron: "30 10 * * 1-5"   # 18:30 SGT Mon-Fri, after SGX close and Yahoo's EOD update
+    - cron: "47 10 * * 1-5"   # 18:47 SGT Mon-Fri
+    - cron: "47 11 * * 1-5"   # 19:47 backup
   workflow_dispatch:           # "Run workflow" button for a manual run
 
 permissions:
