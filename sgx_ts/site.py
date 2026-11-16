@@ -27,7 +27,7 @@ BASE = """<!doctype html><html lang="en"><head><meta charset="utf-8">
 <script>window.Plotly||document.write('<script src="https://cdn.plot.ly/plotly-2.35.2.min.js"><\\/script>')</script>{% endif %}
 </head><body><div class="wrap">
 <header class="top"><h1>{{ site }}</h1>
-<nav><a href="{{ root }}index.html" {% if page=='home' %}aria-current="page"{% endif %}>Today</a><a href="{{ root }}archive.html" {% if page=='archive' %}aria-current="page"{% endif %}>Saved runs</a></nav></header>
+<nav><a href="{{ root }}index.html" {% if page=='home' %}aria-current="page"{% endif %}>Today</a><a href="{{ root }}archive.html" {% if page=='archive' %}aria-current="page"{% endif %}>Saved runs</a><a href="https://github.com/LSCAI-dev/Triple-Screen/actions/workflows/triple-screen.yml" target="_blank" rel="noopener" title="Opens GitHub: tap Run workflow, wait 2-3 min, then refresh Today">Update now&nbsp;&#8599;</a></nav></header>
 {% block body %}{% endblock %}
 <footer>Source: {{ meta.source }}. Daily bars to {{ meta.as_of }}; generated {{ meta.generated }} SGT.
 Prices are end-of-day and may differ from your broker. Verify every level on your broker terminal before placing an order. Not investment advice.</footer>
@@ -148,20 +148,22 @@ STOCK = """{% extends "base" %}{% block body %}
 
 ARCHIVE = """{% extends "base" %}{% block body %}
 <p class="stamp">Every run is saved in this repository as data/runs/YYYY-MM-DD.json, and all signals are appended to data/signals_log.csv.</p>
-<h2>Track record of past setups</h2>
-<div id="summary" class="counts"></div>
-<div style="overflow-x:auto;margin-top:10px"><table class="t stack" id="outcomes"><thead><tr><th class="l">Signal</th><th class="l">Side</th><th>Grade</th><th>Entry</th><th>Stop</th><th>T1</th><th class="l">Outcome</th><th>Filled</th><th>Closed</th><th>R</th></tr></thead><tbody></tbody></table></div>
-<p class="note">Outcomes replay each setup against later daily bars: a fill needs the stop price traded within {{ valid }} sessions; if stop and T1 fall in the same bar the trade is counted as stopped.</p>
+<p class="jump"><a href="#saved">Prices &amp; saved runs</a><a href="#dualplans">Dual plans</a><a href="#track">Track record</a></p>
+<h2 id="saved">Open a saved run</h2>
+<p><select id="runs" aria-label="Run date"></select> &nbsp;<a id="dl-json" href="#">Download JSON</a> &nbsp;<a id="dl-px" href="#">Prices (OHLCV) CSV</a> &nbsp;<a href="data/signals_log.csv" download>Download full CSV log</a></p>
+<div style="overflow-x:auto"><table class="t stack" id="run"><thead><tr><th class="l">Stock</th><th class="l">Status</th><th>Grade</th><th>Open</th><th>High</th><th>Low</th><th>Close</th><th>Entry</th><th>Stop</th><th>T1</th><th>T2</th><th>RSI</th><th class="l">Tide</th><th class="l">Dual</th></tr></thead><tbody></tbody></table></div>
 
-<h2>Dual-score plans: what happened</h2>
+<h2 id="dualplans">Dual-score plans: what happened</h2>
 <div id="dsum"></div>
 <div style="overflow-x:auto;margin-top:10px"><table class="t stack" id="dual"><thead><tr><th class="l">Signal</th><th class="l">Decision</th><th>SM / TS</th><th>Entry</th><th>Stop</th><th>T1</th><th class="l">Outcome</th><th>Filled</th><th>Closed</th><th>Days</th><th>R</th><th>MFE</th><th>MAE</th></tr></thead><tbody></tbody></table></div>
 <p class="note" id="drules"></p>
 <p class="note">WATCH plans were not buy signals; their rows show what would have happened if taken. One position per stock at a time. Only runs saved since dual scoring began (13 Nov 2026) appear here.</p>
 
-<h2>Open a saved run</h2>
-<p><select id="runs" aria-label="Run date"></select> &nbsp;<a id="dl-json" href="#">Download JSON</a> &nbsp;<a id="dl-px" href="#">Prices (OHLCV) CSV</a> &nbsp;<a href="data/signals_log.csv" download>Download full CSV log</a></p>
-<div style="overflow-x:auto"><table class="t stack" id="run"><thead><tr><th class="l">Stock</th><th class="l">Status</th><th>Grade</th><th>Open</th><th>High</th><th>Low</th><th>Close</th><th>Entry</th><th>Stop</th><th>T1</th><th>T2</th><th>RSI</th><th class="l">Tide</th><th class="l">Dual</th></tr></thead><tbody></tbody></table></div>
+<h2 id="track">Track record of past setups</h2>
+<div id="summary" class="counts"></div>
+<div style="overflow-x:auto;margin-top:10px"><table class="t stack" id="outcomes"><thead><tr><th class="l">Signal</th><th class="l">Side</th><th>Grade</th><th>Entry</th><th>Stop</th><th>T1</th><th class="l">Outcome</th><th>Filled</th><th>Closed</th><th>R</th></tr></thead><tbody></tbody></table></div>
+<p class="note">Outcomes replay each setup against later daily bars: a fill needs the stop price traded within {{ valid }} sessions; if stop and T1 fall in the same bar the trade is counted as stopped.</p>
+
 <script>
 const f = v => (v===null||v===undefined||v==='') ? '' : Number(v).toFixed(3);
 function cell(h,v,cls){return `<td data-h="${h}"${cls?` class="${cls}"`:''}>${v}</td>`}
