@@ -779,33 +779,33 @@ date,ticker,code,name,status,grade,close,entry,stop,t1,t2,rr1,rsi,tide,wave,dual
 2026-11-13,V03.SI,V03,Venture Corp,No trade,,14.7,,,,,,41.9,Mixed,-,AVOID,14.0,31.3,,,,,,,
 2026-11-13,Y92.SI,Y92,Thai Beverage,Short watch,,0.425,,,,,,44.8,Down,Rally,AVOID,59.9,24.3,,,,,,,
 2026-11-13,Z74.SI,Z74,Singtel,No trade,,4.11,,,,,,43.2,Mixed,-,AVOID,43.2,30.3,,,,,,,
-2026-11-16,5E2.SI,5E2,Seatrium,No trade,,1.76,,,,,,35.8,Mixed,-,AVOID,51.5,17.9,1.82,1.67,2.0,2.17,1.2,6600,1.2
-2026-11-16,9CI.SI,9CI,CapitaLand Investment,No trade,,2.35,,,,,,40.8,Mixed,-,AVOID,25.1,26.2,2.4,2.26,2.47,2.51,0.5,7100,1.2
-2026-11-16,A17U.SI,A17U,CapitaLand Ascendas REIT,No trade,,2.25,,,,,,52.9,Mixed,-,AVOID,75.1,50.1,2.27,2.14,2.31,2.54,0.31,7600,1.2
-2026-11-16,AJBU.SI,AJBU,Keppel DC REIT,Long watch,,2.19,,,,,,60.9,Up,Extended,WATCH,83.7,66.7,2.22,2.1,2.27,2.4,0.42,8300,1.2
-2026-11-16,BN4.SI,BN4,Keppel,No trade,,9.55,,,,,,33.2,Mixed,-,AVOID,17.1,15.9,9.86,9.04,10.43,10.6,0.7,1200,1.2
-2026-11-16,BS6.SI,BS6,Yangzijiang Shipbuilding,Short watch,,4.43,,,,,,39.7,Down,Extended,AVOID,35.5,25.7,4.48,3.82,4.86,5.18,0.58,1500,1.2
-2026-11-16,BUOU.SI,BUOU,Frasers Logistics & Commercial Trust,Short watch,,0.885,,,,,,45.9,Down,Rally,AVOID,31.3,19.6,0.9,0.835,0.93,0.985,0.46,15300,1.2
+2026-11-16,5E2.SI,5E2,Seatrium,No trade,,1.76,,,,,,35.8,Mixed,-,AVOID,30.1,17.9,1.82,1.67,2.0,2.17,1.2,6600,1.2
+2026-11-16,9CI.SI,9CI,CapitaLand Investment,No trade,,2.35,,,,,,40.8,Mixed,-,AVOID,19.7,26.2,2.4,2.26,2.47,2.51,0.5,7100,1.2
+2026-11-16,A17U.SI,A17U,CapitaLand Ascendas REIT,No trade,,2.25,,,,,,52.9,Mixed,-,AVOID,74.7,50.1,2.27,2.14,2.31,2.54,0.31,7600,1.2
+2026-11-16,AJBU.SI,AJBU,Keppel DC REIT,Long watch,,2.19,,,,,,60.9,Up,Extended,WATCH,82.0,66.7,2.22,2.1,2.27,2.4,0.42,8300,1.2
+2026-11-16,BN4.SI,BN4,Keppel,No trade,,9.55,,,,,,33.2,Mixed,-,AVOID,9.4,15.9,9.86,9.04,10.43,10.6,0.7,1200,1.2
+2026-11-16,BS6.SI,BS6,Yangzijiang Shipbuilding,Short watch,,4.43,,,,,,39.7,Down,Extended,AVOID,17.3,25.7,4.48,3.82,4.86,5.18,0.58,1500,1.2
+2026-11-16,BUOU.SI,BUOU,Frasers Logistics & Commercial Trust,Short watch,,0.885,,,,,,45.9,Down,Rally,AVOID,33.9,19.6,0.9,0.835,0.93,0.985,0.46,15300,1.2
 2026-11-16,C07.SI,C07,Jardine Cycle & Carriage,No trade,,24.61,,,,,,53.9,Mixed,-,AVOID,52.1,51.7,24.81,23.58,26.48,27.83,1.36,800,1.2
 2026-11-16,C09.SI,C09,City Developments,Short watch,,6.59,,,,,,27.7,Down,Extended,AVOID,0.5,3.2,6.67,6.15,7.35,7.6,1.31,1900,1.2
-2026-11-16,C38U.SI,C38U,CapitaLand Integrated Commercial Trust,Long watch,,2.34,,,,,,57.9,Up,Rising,AVOID,78.6,59.2,2.37,2.27,2.49,2.56,1.2,9900,1.2
-2026-11-16,C6L.SI,C6L,Singapore Airlines,Long watch,,7.22,,,,,,70.7,Up,Extended,AVOID,94.1,47.7,7.23,6.97,7.74,7.91,1.96,3800,1.2
+2026-11-16,C38U.SI,C38U,CapitaLand Integrated Commercial Trust,Long watch,,2.34,,,,,,57.9,Up,Rising,AVOID,66.8,59.2,2.37,2.27,2.49,2.56,1.2,9900,1.2
+2026-11-16,C6L.SI,C6L,Singapore Airlines,Long watch,,7.22,,,,,,70.7,Up,Extended,AVOID,98.1,47.7,7.23,6.97,7.74,7.91,1.96,3800,1.2
 2026-11-16,D05.SI,D05,DBS Group,Short watch,,69.3,,,,,,27.5,Down,Extended,AVOID,6.4,6.2,70.06,67.19,73.54,75.02,1.21,300,1.2
 2026-11-16,F34.SI,F34,Wilmar International,No trade,,2.9,,,,,,23.2,Mixed,-,AVOID,1.6,23.2,2.97,2.78,3.11,3.2,0.74,5200,1.2
 2026-11-16,G13.SI,G13,Genting Singapore,Short watch,,0.56,,,,,,27.5,Down,Extended,AVOID,10.4,3.2,0.575,0.495,0.595,0.615,0.25,12500,1.2
-2026-11-16,H78.SI,H78,Hongkong Land,Long setup,B,8.3,8.4,8.21,8.75,9.12,1.84,50.2,Up,Pullback,WATCH,67.4,61.2,8.4,8.09,8.65,9.11,0.81,3200,1.2
+2026-11-16,H78.SI,H78,Hongkong Land,Long setup,B,8.3,8.4,8.21,8.75,9.12,1.84,50.2,Up,Pullback,WATCH,79.4,61.2,8.4,8.09,8.65,9.11,0.81,3200,1.2
 2026-11-16,J36.SI,J36,Jardine Matheson,No trade,,59.77,,,,,,52.5,Mixed,-,AVOID,41.0,46.8,60.63,58.22,63.07,65.59,1.01,400,1.2
-2026-11-16,J69U.SI,J69U,Frasers Centrepoint Trust,No trade,,2.16,,,,,,57.1,Mixed,-,AVOID,76.9,52.0,2.19,2.08,2.28,2.36,0.82,9000,1.2
-2026-11-16,M44U.SI,M44U,Mapletree Logistics Trust,No trade,,1.09,,,,,,46.9,Mixed,-,AVOID,64.9,35.6,1.13,1.05,1.16,1.19,0.38,12500,1.2
-2026-11-16,ME8U.SI,ME8U,Mapletree Industrial Trust,No trade,,1.72,,,,,,37.3,Mixed,-,AVOID,30.0,36.1,1.76,1.66,1.81,1.88,0.5,9900,1.2
-2026-11-16,N2IU.SI,N2IU,Mapletree Pan Asia Commercial Trust,No trade,,1.16,,,,,,47.0,Mixed,-,AVOID,41.9,36.0,1.18,1.07,1.21,1.25,0.27,9000,1.2
-2026-11-16,O39.SI,O39,OCBC Bank,No trade,,28.31,,,,,,39.9,Mixed,-,AVOID,13.7,27.5,28.71,27.22,29.52,31.24,0.54,600,1.2
-2026-11-16,S58.SI,S58,SATS,Long watch,,4.05,,,,,,65.3,Up,Extended,AVOID,61.8,37.3,4.13,3.91,4.58,4.78,2.05,4500,1.2
+2026-11-16,J69U.SI,J69U,Frasers Centrepoint Trust,No trade,,2.16,,,,,,57.1,Mixed,-,AVOID,87.0,52.0,2.19,2.08,2.28,2.36,0.82,9000,1.2
+2026-11-16,M44U.SI,M44U,Mapletree Logistics Trust,No trade,,1.09,,,,,,46.9,Mixed,-,AVOID,68.2,35.6,1.13,1.05,1.16,1.19,0.38,12500,1.2
+2026-11-16,ME8U.SI,ME8U,Mapletree Industrial Trust,No trade,,1.72,,,,,,37.3,Mixed,-,AVOID,44.9,36.1,1.76,1.66,1.81,1.88,0.5,9900,1.2
+2026-11-16,N2IU.SI,N2IU,Mapletree Pan Asia Commercial Trust,No trade,,1.16,,,,,,47.0,Mixed,-,AVOID,52.4,36.0,1.18,1.07,1.21,1.25,0.27,9000,1.2
+2026-11-16,O39.SI,O39,OCBC Bank,No trade,,28.31,,,,,,39.9,Mixed,-,AVOID,12.4,27.5,28.71,27.22,29.52,31.24,0.54,600,1.2
+2026-11-16,S58.SI,S58,SATS,Long watch,,4.05,,,,,,65.3,Up,Extended,AVOID,82.9,37.3,4.13,3.91,4.58,4.78,2.05,4500,1.2
 2026-11-16,S63.SI,S63,ST Engineering,Short watch,,9.03,,,,,,26.8,Down,Extended,AVOID,1.6,3.2,9.71,8.21,10.19,10.42,0.32,600,1.2
-2026-11-16,S68.SI,S68,SGX Group,No trade,,20.49,,,,,,41.1,Mixed,-,AVOID,28.2,26.0,20.97,20.03,21.74,22.34,0.82,1000,1.2
-2026-11-16,U11.SI,U11,UOB,Short watch,,37.38,,,,,,28.4,Down,Extended,AVOID,22.8,19.0,37.9,35.75,39.35,42.32,0.67,400,1.2
-2026-11-16,U14.SI,U14,UOL Group,No trade,,7.77,,,,,,42.3,Mixed,-,AVOID,28.6,22.1,7.86,7.5,8.16,8.37,0.83,2700,1.2
-2026-11-16,U96.SI,U96,Sembcorp Industries,Short watch,,5.68,,,,,,39.4,Down,Extended,AVOID,28.7,18.7,5.78,5.43,5.9,6.15,0.34,2800,1.2
+2026-11-16,S68.SI,S68,SGX Group,No trade,,20.49,,,,,,41.1,Mixed,-,AVOID,17.0,26.0,20.97,20.03,21.74,22.34,0.82,1000,1.2
+2026-11-16,U11.SI,U11,UOB,Short watch,,37.38,,,,,,28.4,Down,Extended,AVOID,13.9,19.0,37.9,35.75,39.35,42.32,0.67,400,1.2
+2026-11-16,U14.SI,U14,UOL Group,No trade,,7.77,,,,,,42.3,Mixed,-,AVOID,28.5,22.1,7.86,7.5,8.16,8.37,0.83,2700,1.2
+2026-11-16,U96.SI,U96,Sembcorp Industries,Short watch,,5.68,,,,,,39.4,Down,Extended,AVOID,41.4,18.7,5.78,5.43,5.9,6.15,0.34,2800,1.2
 2026-11-16,V03.SI,V03,Venture Corp,Short watch,,14.4,,,,,,38.8,Down,Extended,AVOID,12.2,11.2,14.75,13.75,15.24,15.92,0.49,1000,1.2
-2026-11-16,Y92.SI,Y92,Thai Beverage,No trade,,0.425,,,,,,44.8,Mixed,-,AVOID,76.6,27.2,0.44,0.4,0.455,0.56,0.38,25000,1.2
-2026-11-16,Z74.SI,Z74,Singtel,Short watch,,4.0,,,,,,34.5,Down,Extended,AVOID,22.7,6.9,4.09,3.83,4.25,4.5,0.62,3800,1.2
+2026-11-16,Y92.SI,Y92,Thai Beverage,No trade,,0.425,,,,,,44.8,Mixed,-,AVOID,79.6,27.2,0.44,0.4,0.455,0.56,0.38,25000,1.2
+2026-11-16,Z74.SI,Z74,Singtel,Short watch,,4.0,,,,,,34.5,Down,Extended,AVOID,38.0,6.9,4.09,3.83,4.25,4.5,0.62,3800,1.2
