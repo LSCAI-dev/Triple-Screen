@@ -1,7 +1,7 @@
 {
  "meta": {
   "as_of": "2026-11-13",
-  "generated": "2026-11-15 22:16",
+  "generated": "2026-11-17 05:16",
   "source": "Yahoo Finance via yfinance (unadjusted daily OHLC)",
   "demo": false,
   "universe": 30,
@@ -93,17 +93,19 @@
     "close": 2.3299999237060547,
     "decision": "AVOID",
     "blocked_by": [
+     "reward_risk",
      "TS<80",
      "SM<75",
      "bid/ask below floor"
     ],
     "regime_bearish": true,
-    "combined": 55.8,
+    "version": "1.2",
+    "combined": 57.7,
     "sm": {
-     "score": 59.8,
+     "score": 67.1,
      "components": {
       "bid_ask": {
-       "pts": 0.0,
+       "pts": 7.3,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -137,7 +139,7 @@
      "weight_measured": 1.0
     },
     "ts": {
-     "score": 51.8,
+     "score": 48.3,
      "components": {
       "trend_alignment": {
        "pts": 21.9,
@@ -148,20 +150,21 @@
        "ema50_rising": true
       },
       "pullback_quality": {
-       "pts": 29.9,
+       "pts": 26.4,
        "max": 35,
        "rsi_min5": 56.3,
        "rsi_max20": 70.3,
-       "dist_ema20_atr": -0.12,
-       "fib_retrace": 0.545
+       "value_zone": "2.299-2.320",
+       "low3_vs_zone_top_atr": -0.41,
+       "fib_retrace": 0.545,
+       "bear_power_atr": -0.21,
+       "bear_power_turn_up": false
       },
       "entry_confirmation": {
        "pts": 0.0,
        "max": 25,
        "close_above_prior_high": false,
-       "d_macd_hist_upticks": 0,
-       "ha_green": false,
-       "ha_no_lower_wick": false
+       "d_macd_hist_upticks": 0
       }
      }
     },
@@ -171,8 +174,8 @@
       "value": "S$83.50M/day"
      },
      "reward_risk": {
-      "pass": true,
-      "value": "2.0R to T1"
+      "pass": false,
+      "value": "1.4R to T1"
      },
      "atr_band": {
       "pass": true,
@@ -180,17 +183,21 @@
      },
      "stop_width": {
       "pass": true,
-      "value": "1.45 ATR"
+      "value": "2.08 ATR"
+     },
+     "weekly_impulse": {
+      "pass": true,
+      "value": "weekly green"
      }
     },
     "plan": {
      "entry_buy_stop": 2.35,
-     "stop": 2.28,
-     "risk_per_share": 0.07,
-     "stop_in_atr": 1.45,
+     "stop": 2.25,
+     "risk_per_share": 0.1,
+     "stop_in_atr": 2.08,
      "target1": 2.49,
      "target2": 2.56,
-     "rr_t1": 2.0,
+     "rr_t1": 1.4,
      "supports": [
       2.226,
       2.347
@@ -200,14 +207,22 @@
       2.57
      ],
      "atr": 0.0482,
+     "stop_method": "safezone",
+     "channel": {
+      "upper": 2.387,
+      "lower": 2.219,
+      "ema": 2.303,
+      "height": 0.168,
+      "t1_grade_pct": 83.3
+     },
      "management": [
       "Order valid 2 sessions; cancel if not filled",
       "At +1R: move stop to breakeven",
       "At T1: sell half; trail rest under 20-EMA or 2-bar low",
       "Time stop: exit if < +0.5R after 7 sessions"
      ],
-     "shares": 14200,
-     "capital": 33370.0
+     "shares": 9900,
+     "capital": 23265.0
     }
    }
   },
@@ -281,16 +296,16 @@
     "decision": "AVOID",
     "blocked_by": [
      "reward_risk",
-     "stop_width",
      "TS<80"
     ],
     "regime_bearish": true,
-    "combined": 62.2,
+    "version": "1.2",
+    "combined": 63.6,
     "sm": {
-     "score": 94.7,
+     "score": 97.8,
      "components": {
       "bid_ask": {
-       "pts": 30.0,
+       "pts": 33.1,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -324,7 +339,7 @@
      "weight_measured": 1.0
     },
     "ts": {
-     "score": 29.7,
+     "score": 29.3,
      "components": {
       "trend_alignment": {
        "pts": 22.8,
@@ -335,20 +350,21 @@
        "ema50_rising": true
       },
       "pullback_quality": {
-       "pts": 3.0,
+       "pts": 6.5,
        "max": 35,
        "rsi_min5": 65.9,
        "rsi_max20": 76.0,
-       "dist_ema20_atr": 1.45,
-       "fib_retrace": 0.241
+       "value_zone": "6.837-6.959",
+       "low3_vs_zone_top_atr": 0.8,
+       "fib_retrace": 0.241,
+       "bear_power_atr": 0.8,
+       "bear_power_turn_up": false
       },
       "entry_confirmation": {
-       "pts": 3.9,
+       "pts": 0.0,
        "max": 25,
        "close_above_prior_high": false,
-       "d_macd_hist_upticks": 0,
-       "ha_green": true,
-       "ha_no_lower_wick": false
+       "d_macd_hist_upticks": 0
       }
      }
     },
@@ -359,25 +375,29 @@
      },
      "reward_risk": {
       "pass": false,
-      "value": "1.27R to T1"
+      "value": "1.82R to T1"
      },
      "atr_band": {
       "pass": true,
       "value": "ATR 1.77%"
      },
      "stop_width": {
-      "pass": false,
-      "value": "3.16 ATR"
+      "pass": true,
+      "value": "2.21 ATR"
+     },
+     "weekly_impulse": {
+      "pass": true,
+      "value": "weekly green"
      }
     },
     "plan": {
      "entry_buy_stop": 7.23,
-     "stop": 6.83,
-     "risk_per_share": 0.4,
-     "stop_in_atr": 3.16,
+     "stop": 6.95,
+     "risk_per_share": 0.28,
+     "stop_in_atr": 2.21,
      "target1": 7.74,
      "target2": 7.91,
-     "rr_t1": 1.27,
+     "rr_t1": 1.82,
      "supports": [
       6.514,
       6.753,
@@ -388,14 +408,22 @@
       7.92
      ],
      "atr": 0.1265,
+     "stop_method": "safezone",
+     "channel": {
+      "upper": 7.265,
+      "lower": 6.455,
+      "ema": 6.86,
+      "height": 0.81,
+      "t1_grade_pct": 63.0
+     },
      "management": [
       "Order valid 2 sessions; cancel if not filled",
       "At +1R: move stop to breakeven",
       "At T1: sell half; trail rest under 20-EMA or 2-bar low",
       "Time stop: exit if < +0.5R after 7 sessions"
      ],
-     "shares": 2400,
-     "capital": 17352.0
+     "shares": 3500,
+     "capital": 25305.0
     }
    }
   },
@@ -473,12 +501,13 @@
      "TS<80"
     ],
     "regime_bearish": true,
-    "combined": 75.7,
+    "version": "1.2",
+    "combined": 72.7,
     "sm": {
-     "score": 90.2,
+     "score": 84.5,
      "components": {
       "bid_ask": {
-       "pts": 26.9,
+       "pts": 21.1,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -512,7 +541,7 @@
      "weight_measured": 1.0
     },
     "ts": {
-     "score": 61.2,
+     "score": 60.9,
      "components": {
       "trend_alignment": {
        "pts": 19.0,
@@ -523,20 +552,21 @@
        "ema50_rising": true
       },
       "pullback_quality": {
-       "pts": 30.3,
+       "pts": 30.9,
        "max": 35,
        "rsi_min5": 53.4,
        "rsi_max20": 74.9,
-       "dist_ema20_atr": 0.75,
-       "fib_retrace": 0.432
+       "value_zone": "3.781-3.834",
+       "low3_vs_zone_top_atr": 0.42,
+       "fib_retrace": 0.432,
+       "bear_power_atr": 0.87,
+       "bear_power_turn_up": true
       },
       "entry_confirmation": {
-       "pts": 11.9,
+       "pts": 11.0,
        "max": 25,
        "close_above_prior_high": false,
-       "d_macd_hist_upticks": 2,
-       "ha_green": true,
-       "ha_no_lower_wick": false
+       "d_macd_hist_upticks": 2
       }
      }
     },
@@ -547,7 +577,7 @@
      },
      "reward_risk": {
       "pass": false,
-      "value": "0.55R to T1"
+      "value": "0.95R to T1"
      },
      "atr_band": {
       "pass": true,
@@ -555,17 +585,21 @@
      },
      "stop_width": {
       "pass": false,
-      "value": "5.02 ATR"
+      "value": "2.92 ATR"
+     },
+     "weekly_impulse": {
+      "pass": true,
+      "value": "weekly green"
      }
     },
     "plan": {
      "entry_buy_stop": 4.21,
-     "stop": 3.54,
-     "risk_per_share": 0.67,
-     "stop_in_atr": 5.02,
+     "stop": 3.82,
+     "risk_per_share": 0.39,
+     "stop_in_atr": 2.92,
      "target1": 4.58,
      "target2": 4.78,
-     "rr_t1": 0.55,
+     "rr_t1": 0.95,
      "supports": [
       3.42,
       3.786,
@@ -577,14 +611,22 @@
       4.96
      ],
      "atr": 0.1335,
+     "stop_method": "safezone",
+     "channel": {
+      "upper": 4.17,
+      "lower": 3.4,
+      "ema": 3.785,
+      "height": 0.771,
+      "t1_grade_pct": 48.0
+     },
      "management": [
       "Order valid 2 sessions; cancel if not filled",
       "At +1R: move stop to breakeven",
       "At T1: sell half; trail rest under 20-EMA or 2-bar low",
       "Time stop: exit if < +0.5R after 7 sessions"
      ],
-     "shares": 1400,
-     "capital": 5894.0
+     "shares": 2500,
+     "capital": 10525.0
     }
    }
   },
@@ -658,17 +700,20 @@
     "decision": "AVOID",
     "blocked_by": [
      "reward_risk",
+     "stop_width",
+     "weekly_impulse",
      "TS<80",
      "SM<75",
      "bid/ask below floor"
     ],
     "regime_bearish": true,
-    "combined": 10.4,
+    "version": "1.2",
+    "combined": 14.9,
     "sm": {
-     "score": 12.0,
+     "score": 18.7,
      "components": {
       "bid_ask": {
-       "pts": 3.8,
+       "pts": 10.4,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -702,10 +747,10 @@
      "weight_measured": 1.0
     },
     "ts": {
-     "score": 8.8,
+     "score": 11.1,
      "components": {
       "trend_alignment": {
-       "pts": 5.4,
+       "pts": 5.3,
        "max": 40,
        "wk_macd_hist_rising": false,
        "wk_ema26_slope_pct": 0.43,
@@ -713,20 +758,21 @@
        "ema50_rising": false
       },
       "pullback_quality": {
-       "pts": 3.4,
+       "pts": 5.8,
        "max": 35,
        "rsi_min5": 30.9,
        "rsi_max20": 59.3,
-       "dist_ema20_atr": -2.14,
-       "fib_retrace": 1.697
+       "value_zone": "4.599-4.732",
+       "low3_vs_zone_top_atr": -2.37,
+       "fib_retrace": 1.697,
+       "bear_power_atr": -1.72,
+       "bear_power_turn_up": false
       },
       "entry_confirmation": {
        "pts": 0.0,
        "max": 25,
        "close_above_prior_high": false,
-       "d_macd_hist_upticks": 0,
-       "ha_green": false,
-       "ha_no_lower_wick": false
+       "d_macd_hist_upticks": 0
       }
      }
     },
@@ -737,25 +783,29 @@
      },
      "reward_risk": {
       "pass": false,
-      "value": "1.18R to T1"
+      "value": "0.63R to T1"
      },
      "atr_band": {
       "pass": true,
       "value": "ATR 4.70%"
      },
      "stop_width": {
-      "pass": true,
-      "value": "1.68 ATR"
+      "pass": false,
+      "value": "3.1 ATR"
+     },
+     "weekly_impulse": {
+      "pass": false,
+      "value": "weekly red"
      }
     },
     "plan": {
      "entry_buy_stop": 4.46,
-     "stop": 4.12,
-     "risk_per_share": 0.34,
-     "stop_in_atr": 1.68,
+     "stop": 3.83,
+     "risk_per_share": 0.63,
+     "stop_in_atr": 3.1,
      "target1": 4.86,
-     "target2": 5.3,
-     "rr_t1": 1.18,
+     "target2": 5.21,
+     "rr_t1": 0.63,
      "supports": [
       3.317,
       3.85,
@@ -766,14 +816,22 @@
       5.315
      ],
      "atr": 0.2029,
+     "stop_method": "safezone",
+     "channel": {
+      "upper": 5.225,
+      "lower": 4.18,
+      "ema": 4.703,
+      "height": 1.045,
+      "t1_grade_pct": 38.3
+     },
      "management": [
       "Order valid 2 sessions; cancel if not filled",
       "At +1R: move stop to breakeven",
       "At T1: sell half; trail rest under 20-EMA or 2-bar low",
       "Time stop: exit if < +0.5R after 7 sessions"
      ],
-     "shares": 2900,
-     "capital": 12934.0
+     "shares": 1500,
+     "capital": 6690.0
     }
    }
   },
@@ -837,17 +895,20 @@
     "decision": "AVOID",
     "blocked_by": [
      "reward_risk",
+     "stop_width",
+     "weekly_impulse",
      "TS<80",
      "SM<75",
      "bid/ask below floor"
     ],
     "regime_bearish": true,
-    "combined": 2.5,
+    "version": "1.2",
+    "combined": 5.4,
     "sm": {
-     "score": 4.6,
+     "score": 2.6,
      "components": {
       "bid_ask": {
-       "pts": 2.0,
+       "pts": 0.0,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -881,7 +942,7 @@
      "weight_measured": 1.0
     },
     "ts": {
-     "score": 0.4,
+     "score": 8.3,
      "components": {
       "trend_alignment": {
        "pts": 0.0,
@@ -892,20 +953,21 @@
        "ema50_rising": false
       },
       "pullback_quality": {
-       "pts": 0.4,
+       "pts": 8.3,
        "max": 35,
        "rsi_min5": 28.7,
        "rsi_max20": 57.8,
-       "dist_ema20_atr": -3.78,
-       "fib_retrace": 1.917
+       "value_zone": "7.070-7.188",
+       "low3_vs_zone_top_atr": -4.06,
+       "fib_retrace": 1.917,
+       "bear_power_atr": -2.22,
+       "bear_power_turn_up": true
       },
       "entry_confirmation": {
        "pts": 0.0,
        "max": 25,
        "close_above_prior_high": false,
-       "d_macd_hist_upticks": 0,
-       "ha_green": false,
-       "ha_no_lower_wick": false
+       "d_macd_hist_upticks": 0
       }
      }
     },
@@ -916,25 +978,29 @@
      },
      "reward_risk": {
       "pass": false,
-      "value": "1.46R to T1"
+      "value": "1.0R to T1"
      },
      "atr_band": {
       "pass": true,
       "value": "ATR 2.92%"
      },
      "stop_width": {
-      "pass": true,
-      "value": "2.01 ATR"
+      "pass": false,
+      "value": "2.94 ATR"
+     },
+     "weekly_impulse": {
+      "pass": false,
+      "value": "weekly red"
      }
     },
     "plan": {
      "entry_buy_stop": 6.78,
-     "stop": 6.39,
-     "risk_per_share": 0.39,
-     "stop_in_atr": 2.01,
+     "stop": 6.21,
+     "risk_per_share": 0.57,
+     "stop_in_atr": 2.94,
      "target1": 7.35,
-     "target2": 7.95,
-     "rr_t1": 1.46,
+     "target2": 7.65,
+     "rr_t1": 1.0,
      "supports": [],
      "resistances": [
       7.362,
@@ -942,14 +1008,22 @@
       8.656
      ],
      "atr": 0.1942,
+     "stop_method": "safezone",
+     "channel": {
+      "upper": 7.663,
+      "lower": 6.64,
+      "ema": 7.151,
+      "height": 1.023,
+      "t1_grade_pct": 55.7
+     },
      "management": [
       "Order valid 2 sessions; cancel if not filled",
       "At +1R: move stop to breakeven",
       "At T1: sell half; trail rest under 20-EMA or 2-bar low",
       "Time stop: exit if < +0.5R after 7 sessions"
      ],
-     "shares": 2500,
-     "capital": 16950.0
+     "shares": 1700,
+     "capital": 11526.0
     }
    }
   },
@@ -1022,12 +1096,15 @@
     "close": 69.9000015258789,
     "decision": "AVOID",
     "blocked_by": [
+     "reward_risk",
+     "weekly_impulse",
      "TS<80",
      "SM<75",
      "bid/ask below floor"
     ],
     "regime_bearish": true,
-    "combined": 7.0,
+    "version": "1.2",
+    "combined": 9.1,
     "sm": {
      "score": 8.4,
      "components": {
@@ -1066,7 +1143,7 @@
      "weight_measured": 1.0
     },
     "ts": {
-     "score": 5.6,
+     "score": 9.8,
      "components": {
       "trend_alignment": {
        "pts": 5.2,
@@ -1077,20 +1154,21 @@
        "ema50_rising": false
       },
       "pullback_quality": {
-       "pts": 0.5,
+       "pts": 4.7,
        "max": 35,
        "rsi_min5": 22.5,
        "rsi_max20": 42.7,
-       "dist_ema20_atr": -1.96,
-       "fib_retrace": 2.362
+       "value_zone": "71.522-72.799",
+       "low3_vs_zone_top_atr": -2.38,
+       "fib_retrace": 2.362,
+       "bear_power_atr": -1.35,
+       "bear_power_turn_up": false
       },
       "entry_confirmation": {
        "pts": 0.0,
        "max": 25,
        "close_above_prior_high": false,
-       "d_macd_hist_upticks": 0,
-       "ha_green": false,
-       "ha_no_lower_wick": false
+       "d_macd_hist_upticks": 0
       }
      }
     },
@@ -1100,8 +1178,8 @@
       "value": "S$382.83M/day"
      },
      "reward_risk": {
-      "pass": true,
-      "value": "2.1R to T1"
+      "pass": false,
+      "value": "1.13R to T1"
      },
      "atr_band": {
       "pass": true,
@@ -1109,17 +1187,21 @@
      },
      "stop_width": {
       "pass": true,
-      "value": "1.18 ATR"
+      "value": "2.18 ATR"
+     },
+     "weekly_impulse": {
+      "pass": false,
+      "value": "weekly red"
      }
     },
     "plan": {
      "entry_buy_stop": 70.46,
-     "stop": 68.99,
-     "risk_per_share": 1.47,
-     "stop_in_atr": 1.18,
+     "stop": 67.73,
+     "risk_per_share": 2.73,
+     "stop_in_atr": 2.18,
      "target1": 73.54,
      "target2": 75.02,
-     "rr_t1": 2.1,
+     "rr_t1": 1.13,
      "supports": [
       61.6,
       65.1,
@@ -1131,14 +1213,22 @@
       78.494
      ],
      "atr": 1.25,
+     "stop_method": "safezone",
+     "channel": {
+      "upper": 76.826,
+      "lower": 68.113,
+      "ema": 72.469,
+      "height": 8.713,
+      "t1_grade_pct": 35.3
+     },
      "management": [
       "Order valid 2 sessions; cancel if not filled",
       "At +1R: move stop to breakeven",
       "At T1: sell half; trail rest under 20-EMA or 2-bar low",
       "Time stop: exit if < +0.5R after 7 sessions"
      ],
-     "shares": 600,
-     "capital": 42276.0
+     "shares": 300,
+     "capital": 21138.0
     }
    }
   },
@@ -1202,17 +1292,19 @@
     "decision": "AVOID",
     "blocked_by": [
      "reward_risk",
+     "weekly_impulse",
      "TS<80",
      "SM<75",
      "bid/ask below floor"
     ],
     "regime_bearish": true,
-    "combined": 4.6,
+    "version": "1.2",
+    "combined": 12.8,
     "sm": {
-     "score": 1.1,
+     "score": 6.5,
      "components": {
       "bid_ask": {
-       "pts": 0.0,
+       "pts": 5.4,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -1246,7 +1338,7 @@
      "weight_measured": 1.0
     },
     "ts": {
-     "score": 8.0,
+     "score": 19.2,
      "components": {
       "trend_alignment": {
        "pts": 0.0,
@@ -1257,20 +1349,21 @@
        "ema50_rising": false
       },
       "pullback_quality": {
-       "pts": 0.0,
+       "pts": 8.2,
        "max": 35,
        "rsi_min5": 24.8,
        "rsi_max20": 35.7,
-       "dist_ema20_atr": -2.54,
-       "fib_retrace": 6.444
+       "value_zone": "3.043-3.184",
+       "low3_vs_zone_top_atr": -3.33,
+       "fib_retrace": 6.444,
+       "bear_power_atr": -1.48,
+       "bear_power_turn_up": true
       },
       "entry_confirmation": {
-       "pts": 8.0,
+       "pts": 11.0,
        "max": 25,
        "close_above_prior_high": false,
-       "d_macd_hist_upticks": 2,
-       "ha_green": false,
-       "ha_no_lower_wick": false
+       "d_macd_hist_upticks": 2
       }
      }
     },
@@ -1281,7 +1374,7 @@
      },
      "reward_risk": {
       "pass": false,
-      "value": "1.71R to T1"
+      "value": "0.63R to T1"
      },
      "atr_band": {
       "pass": true,
@@ -1289,17 +1382,21 @@
      },
      "stop_width": {
       "pass": true,
-      "value": "0.92 ATR"
+      "value": "2.49 ATR"
+     },
+     "weekly_impulse": {
+      "pass": false,
+      "value": "weekly red"
      }
     },
     "plan": {
      "entry_buy_stop": 2.99,
-     "stop": 2.92,
-     "risk_per_share": 0.07,
-     "stop_in_atr": 0.92,
+     "stop": 2.8,
+     "risk_per_share": 0.19,
+     "stop_in_atr": 2.49,
      "target1": 3.11,
      "target2": 3.2,
-     "rr_t1": 1.71,
+     "rr_t1": 0.63,
      "supports": [
       2.92
      ],
@@ -1309,14 +1406,22 @@
       3.28
      ],
      "atr": 0.0764,
+     "stop_method": "safezone",
+     "channel": {
+      "upper": 3.365,
+      "lower": 2.925,
+      "ema": 3.145,
+      "height": 0.44,
+      "t1_grade_pct": 27.3
+     },
      "management": [
       "Order valid 2 sessions; cancel if not filled",
       "At +1R: move stop to breakeven",
       "At T1: sell half; trail rest under 20-EMA or 2-bar low",
       "Time stop: exit if < +0.5R after 7 sessions"
      ],
-     "shares": 14200,
-     "capital": 42458.0
+     "shares": 5200,
+     "capital": 15548.0
     }
    }
   },
@@ -1381,12 +1486,14 @@
     "blocked_by": [
      "reward_risk",
      "stop_width",
+     "weekly_impulse",
      "TS<80",
      "SM<75",
      "bid/ask below floor"
     ],
     "regime_bearish": true,
-    "combined": 9.4,
+    "version": "1.2",
+    "combined": 10.4,
     "sm": {
      "score": 13.7,
      "components": {
@@ -1425,7 +1532,7 @@
      "weight_measured": 1.0
     },
     "ts": {
-     "score": 5.0,
+     "score": 7.0,
      "components": {
       "trend_alignment": {
        "pts": 0.0,
@@ -1436,20 +1543,21 @@
        "ema50_rising": false
       },
       "pullback_quality": {
-       "pts": 5.0,
+       "pts": 7.0,
        "max": 35,
        "rsi_min5": 32.2,
        "rsi_max20": 66.2,
-       "dist_ema20_atr": -2.74,
-       "fib_retrace": 1.444
+       "value_zone": "0.604-0.606",
+       "low3_vs_zone_top_atr": -2.83,
+       "fib_retrace": 1.444,
+       "bear_power_atr": -2.65,
+       "bear_power_turn_up": false
       },
       "entry_confirmation": {
        "pts": 0.0,
        "max": 25,
        "close_above_prior_high": false,
-       "d_macd_hist_upticks": 0,
-       "ha_green": false,
-       "ha_no_lower_wick": false
+       "d_macd_hist_upticks": 0
       }
      }
     },
@@ -1460,7 +1568,7 @@
      },
      "reward_risk": {
       "pass": false,
-      "value": "0.63R to T1"
+      "value": "0.26R to T1"
      },
      "atr_band": {
       "pass": true,
@@ -1468,17 +1576,21 @@
      },
      "stop_width": {
       "pass": false,
-      "value": "2.75 ATR"
+      "value": "6.52 ATR"
+     },
+     "weekly_impulse": {
+      "pass": false,
+      "value": "weekly red"
      }
     },
     "plan": {
      "entry_buy_stop": 0.595,
-     "stop": 0.555,
-     "risk_per_share": 0.04,
-     "stop_in_atr": 2.75,
+     "stop": 0.5,
+     "risk_per_share": 0.095,
+     "stop_in_atr": 6.52,
      "target1": 0.62,
      "target2": 0.65,
-     "rr_t1": 0.63,
+     "rr_t1": 0.26,
      "supports": [
       0.582
      ],
@@ -1488,14 +1600,22 @@
       0.686
      ],
      "atr": 0.0146,
+     "stop_method": "safezone",
+     "channel": {
+      "upper": 0.627,
+      "lower": 0.583,
+      "ema": 0.605,
+      "height": 0.044,
+      "t1_grade_pct": 56.4
+     },
      "management": [
       "Order valid 2 sessions; cancel if not filled",
       "At +1R: move stop to breakeven",
       "At T1: sell half; trail rest under 20-EMA or 2-bar low",
       "Time stop: exit if < +0.5R after 7 sessions"
      ],
-     "shares": 25000,
-     "capital": 14875.0
+     "shares": 10500,
+     "capital": 6247.5
     }
    }
   },
@@ -1559,17 +1679,19 @@
     "decision": "AVOID",
     "blocked_by": [
      "reward_risk",
+     "stop_width",
+     "weekly_impulse",
      "TS<80",
-     "SM<75",
-     "bid/ask below floor"
+     "SM<75"
     ],
     "regime_bearish": true,
-    "combined": 14.4,
+    "version": "1.2",
+    "combined": 25.2,
     "sm": {
-     "score": 19.6,
+     "score": 41.1,
      "components": {
       "bid_ask": {
-       "pts": 9.3,
+       "pts": 30.8,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -1603,7 +1725,7 @@
      "weight_measured": 1.0
     },
     "ts": {
-     "score": 9.2,
+     "score": 9.4,
      "components": {
       "trend_alignment": {
        "pts": 0.0,
@@ -1614,20 +1736,21 @@
        "ema50_rising": false
       },
       "pullback_quality": {
-       "pts": 9.2,
+       "pts": 9.4,
        "max": 35,
        "rsi_min5": 33.9,
        "rsi_max20": 45.5,
-       "dist_ema20_atr": -1.53,
-       "fib_retrace": 1.2
+       "value_zone": "1.742-1.768",
+       "low3_vs_zone_top_atr": -1.86,
+       "fib_retrace": 1.2,
+       "bear_power_atr": -1.14,
+       "bear_power_turn_up": false
       },
       "entry_confirmation": {
        "pts": 0.0,
        "max": 25,
        "close_above_prior_high": false,
-       "d_macd_hist_upticks": 0,
-       "ha_green": false,
-       "ha_no_lower_wick": false
+       "d_macd_hist_upticks": 0
       }
      }
     },
@@ -1638,25 +1761,29 @@
      },
      "reward_risk": {
       "pass": false,
-      "value": "0.5R to T1"
+      "value": "0.3R to T1"
      },
      "atr_band": {
       "pass": true,
       "value": "ATR 2.13%"
      },
      "stop_width": {
-      "pass": true,
-      "value": "1.65 ATR"
+      "pass": false,
+      "value": "2.75 ATR"
+     },
+     "weekly_impulse": {
+      "pass": false,
+      "value": "weekly red"
      }
     },
     "plan": {
      "entry_buy_stop": 1.75,
-     "stop": 1.69,
-     "risk_per_share": 0.06,
-     "stop_in_atr": 1.65,
+     "stop": 1.65,
+     "risk_per_share": 0.1,
+     "stop_in_atr": 2.75,
      "target1": 1.78,
      "target2": 1.81,
-     "rr_t1": 0.5,
+     "rr_t1": 0.3,
      "supports": [
       1.715
      ],
@@ -1666,14 +1793,22 @@
       1.895
      ],
      "atr": 0.0364,
+     "stop_method": "safezone",
+     "channel": {
+      "upper": 1.827,
+      "lower": 1.692,
+      "ema": 1.76,
+      "height": 0.135,
+      "t1_grade_pct": 22.3
+     },
      "management": [
       "Order valid 2 sessions; cancel if not filled",
       "At +1R: move stop to breakeven",
       "At T1: sell half; trail rest under 20-EMA or 2-bar low",
       "Time stop: exit if < +0.5R after 7 sessions"
      ],
-     "shares": 16600,
-     "capital": 29050.0
+     "shares": 9900,
+     "capital": 17325.0
     }
    }
   },
@@ -1748,12 +1883,14 @@
     "blocked_by": [
      "reward_risk",
      "stop_width",
+     "weekly_impulse",
      "TS<80",
      "SM<75",
      "bid/ask below floor"
     ],
     "regime_bearish": true,
-    "combined": 11.5,
+    "version": "1.2",
+    "combined": 14.4,
     "sm": {
      "score": 13.2,
      "components": {
@@ -1792,7 +1929,7 @@
      "weight_measured": 1.0
     },
     "ts": {
-     "score": 9.8,
+     "score": 15.5,
      "components": {
       "trend_alignment": {
        "pts": 0.0,
@@ -1803,20 +1940,21 @@
        "ema50_rising": false
       },
       "pullback_quality": {
-       "pts": 1.8,
+       "pts": 4.5,
        "max": 35,
        "rsi_min5": 18.7,
        "rsi_max20": 44.0,
-       "dist_ema20_atr": -1.85,
-       "fib_retrace": 2.865
+       "value_zone": "9.834-10.044",
+       "low3_vs_zone_top_atr": -2.17,
+       "fib_retrace": 2.865,
+       "bear_power_atr": -1.37,
+       "bear_power_turn_up": false
       },
       "entry_confirmation": {
-       "pts": 8.0,
+       "pts": 11.0,
        "max": 25,
        "close_above_prior_high": false,
-       "d_macd_hist_upticks": 2,
-       "ha_green": false,
-       "ha_no_lower_wick": false
+       "d_macd_hist_upticks": 2
       }
      }
     },
@@ -1827,7 +1965,7 @@
      },
      "reward_risk": {
       "pass": false,
-      "value": "0.51R to T1"
+      "value": "0.37R to T1"
      },
      "atr_band": {
       "pass": true,
@@ -1835,17 +1973,21 @@
      },
      "stop_width": {
       "pass": false,
-      "value": "2.98 ATR"
+      "value": "4.04 ATR"
+     },
+     "weekly_impulse": {
+      "pass": false,
+      "value": "weekly red"
      }
     },
     "plan": {
      "entry_buy_stop": 9.79,
-     "stop": 9.0,
-     "risk_per_share": 0.79,
-     "stop_in_atr": 2.98,
+     "stop": 8.72,
+     "risk_per_share": 1.07,
+     "stop_in_atr": 4.04,
      "target1": 10.19,
      "target2": 10.44,
-     "rr_t1": 0.51,
+     "rr_t1": 0.37,
      "supports": [
       9.01,
       9.3,
@@ -1857,14 +1999,22 @@
       11.189
      ],
      "atr": 0.2651,
+     "stop_method": "safezone",
+     "channel": {
+      "upper": 10.517,
+      "lower": 9.463,
+      "ema": 9.99,
+      "height": 1.055,
+      "t1_grade_pct": 37.9
+     },
      "management": [
       "Order valid 2 sessions; cancel if not filled",
       "At +1R: move stop to breakeven",
       "At T1: sell half; trail rest under 20-EMA or 2-bar low",
       "Time stop: exit if < +0.5R after 7 sessions"
      ],
-     "shares": 1200,
-     "capital": 11748.0
+     "shares": 900,
+     "capital": 8811.0
     }
    }
   },
@@ -1938,16 +2088,19 @@
     "decision": "AVOID",
     "blocked_by": [
      "reward_risk",
+     "weekly_impulse",
      "TS<80",
-     "SM<75"
+     "SM<75",
+     "bid/ask below floor"
     ],
     "regime_bearish": true,
-    "combined": 19.4,
+    "version": "1.2",
+    "combined": 15.6,
     "sm": {
-     "score": 26.5,
+     "score": 16.4,
      "components": {
       "bid_ask": {
-       "pts": 21.5,
+       "pts": 11.4,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -1981,7 +2134,7 @@
      "weight_measured": 1.0
     },
     "ts": {
-     "score": 12.4,
+     "score": 14.7,
      "components": {
       "trend_alignment": {
        "pts": 0.5,
@@ -1992,20 +2145,21 @@
        "ema50_rising": false
       },
       "pullback_quality": {
-       "pts": 0.0,
+       "pts": 3.2,
        "max": 35,
        "rsi_min5": 20.5,
        "rsi_max20": 51.7,
-       "dist_ema20_atr": -2.49,
-       "fib_retrace": 2.01
+       "value_zone": "38.877-39.903",
+       "low3_vs_zone_top_atr": -2.93,
+       "fib_retrace": 2.01,
+       "bear_power_atr": -1.63,
+       "bear_power_turn_up": false
       },
       "entry_confirmation": {
-       "pts": 11.9,
+       "pts": 11.0,
        "max": 25,
        "close_above_prior_high": false,
-       "d_macd_hist_upticks": 2,
-       "ha_green": true,
-       "ha_no_lower_wick": false
+       "d_macd_hist_upticks": 2
       }
      }
     },
@@ -2016,7 +2170,7 @@
      },
      "reward_risk": {
       "pass": false,
-      "value": "0.91R to T1"
+      "value": "0.63R to T1"
      },
      "atr_band": {
       "pass": true,
@@ -2024,17 +2178,21 @@
      },
      "stop_width": {
       "pass": true,
-      "value": "1.74 ATR"
+      "value": "2.5 ATR"
+     },
+     "weekly_impulse": {
+      "pass": false,
+      "value": "weekly red"
      }
     },
     "plan": {
      "entry_buy_stop": 37.99,
-     "stop": 36.49,
-     "risk_per_share": 1.5,
-     "stop_in_atr": 1.74,
+     "stop": 35.84,
+     "risk_per_share": 2.15,
+     "stop_in_atr": 2.5,
      "target1": 39.35,
      "target2": 42.4,
-     "rr_t1": 0.91,
+     "rr_t1": 0.63,
      "supports": [
       34.225,
       36.81
@@ -2045,14 +2203,22 @@
       43.667
      ],
      "atr": 0.8609,
+     "stop_method": "safezone",
+     "channel": {
+      "upper": 42.545,
+      "lower": 36.781,
+      "ema": 39.663,
+      "height": 5.765,
+      "t1_grade_pct": 23.6
+     },
      "management": [
       "Order valid 2 sessions; cancel if not filled",
       "At +1R: move stop to breakeven",
       "At T1: sell half; trail rest under 20-EMA or 2-bar low",
       "Time stop: exit if < +0.5R after 7 sessions"
      ],
-     "shares": 600,
-     "capital": 22794.0
+     "shares": 400,
+     "capital": 15196.0
     }
    }
   },
@@ -2126,17 +2292,19 @@
     "decision": "AVOID",
     "blocked_by": [
      "reward_risk",
+     "stop_width",
+     "weekly_impulse",
      "TS<80",
-     "SM<75",
-     "bid/ask below floor"
+     "SM<75"
     ],
     "regime_bearish": true,
-    "combined": 22.2,
+    "version": "1.2",
+    "combined": 34.5,
     "sm": {
-     "score": 19.5,
+     "score": 43.9,
      "components": {
       "bid_ask": {
-       "pts": 8.5,
+       "pts": 32.8,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -2170,7 +2338,7 @@
      "weight_measured": 1.0
     },
     "ts": {
-     "score": 24.9,
+     "score": 25.1,
      "components": {
       "trend_alignment": {
        "pts": 0.8,
@@ -2181,20 +2349,21 @@
        "ema50_rising": false
       },
       "pullback_quality": {
-       "pts": 16.1,
+       "pts": 13.2,
        "max": 35,
        "rsi_min5": 37.4,
        "rsi_max20": 56.9,
-       "dist_ema20_atr": -1.13,
-       "fib_retrace": 1.333
+       "value_zone": "5.807-5.849",
+       "low3_vs_zone_top_atr": -1.25,
+       "fib_retrace": 1.333,
+       "bear_power_atr": -0.92,
+       "bear_power_turn_up": false
       },
       "entry_confirmation": {
-       "pts": 8.0,
+       "pts": 11.0,
        "max": 25,
        "close_above_prior_high": false,
-       "d_macd_hist_upticks": 2,
-       "ha_green": false,
-       "ha_no_lower_wick": false
+       "d_macd_hist_upticks": 2
       }
      }
     },
@@ -2205,25 +2374,29 @@
      },
      "reward_risk": {
       "pass": false,
-      "value": "0.67R to T1"
+      "value": "0.29R to T1"
      },
      "atr_band": {
       "pass": true,
       "value": "ATR 2.21%"
      },
      "stop_width": {
-      "pass": true,
-      "value": "1.42 ATR"
+      "pass": false,
+      "value": "3.23 ATR"
+     },
+     "weekly_impulse": {
+      "pass": false,
+      "value": "weekly red"
      }
     },
     "plan": {
      "entry_buy_stop": 5.78,
-     "stop": 5.6,
-     "risk_per_share": 0.18,
-     "stop_in_atr": 1.42,
+     "stop": 5.37,
+     "risk_per_share": 0.41,
+     "stop_in_atr": 3.23,
      "target1": 5.9,
      "target2": 6.15,
-     "rr_t1": 0.67,
+     "rr_t1": 0.29,
      "supports": [
       5.22,
       5.5,
@@ -2235,14 +2408,22 @@
       6.42
      ],
      "atr": 0.1268,
+     "stop_method": "safezone",
+     "channel": {
+      "upper": 6.294,
+      "lower": 5.385,
+      "ema": 5.839,
+      "height": 0.909,
+      "t1_grade_pct": 13.2
+     },
      "management": [
       "Order valid 2 sessions; cancel if not filled",
       "At +1R: move stop to breakeven",
       "At T1: sell half; trail rest under 20-EMA or 2-bar low",
       "Time stop: exit if < +0.5R after 7 sessions"
      ],
-     "shares": 5500,
-     "capital": 31790.0
+     "shares": 2400,
+     "capital": 13872.0
     }
    }
   },
@@ -2296,17 +2477,18 @@
     "decision": "AVOID",
     "blocked_by": [
      "reward_risk",
-     "TS<80",
-     "SM<75",
-     "bid/ask below floor"
+     "stop_width",
+     "weekly_impulse",
+     "TS<80"
     ],
     "regime_bearish": true,
-    "combined": 42.1,
+    "version": "1.2",
+    "combined": 53.7,
     "sm": {
-     "score": 59.9,
+     "score": 80.1,
      "components": {
       "bid_ask": {
-       "pts": 14.8,
+       "pts": 35.0,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -2340,7 +2522,7 @@
      "weight_measured": 1.0
     },
     "ts": {
-     "score": 24.3,
+     "score": 27.3,
      "components": {
       "trend_alignment": {
        "pts": 0.3,
@@ -2351,20 +2533,21 @@
        "ema50_rising": false
       },
       "pullback_quality": {
-       "pts": 24.0,
+       "pts": 27.0,
        "max": 35,
        "rsi_min5": 44.8,
        "rsi_max20": 59.8,
-       "dist_ema20_atr": -0.46,
-       "fib_retrace": 1.143
+       "value_zone": "0.430-0.430",
+       "low3_vs_zone_top_atr": -0.51,
+       "fib_retrace": 1.143,
+       "bear_power_atr": -0.46,
+       "bear_power_turn_up": true
       },
       "entry_confirmation": {
        "pts": 0.0,
        "max": 25,
        "close_above_prior_high": false,
-       "d_macd_hist_upticks": 0,
-       "ha_green": false,
-       "ha_no_lower_wick": false
+       "d_macd_hist_upticks": 0
       }
      }
     },
@@ -2375,25 +2558,29 @@
      },
      "reward_risk": {
       "pass": false,
-      "value": "0.75R to T1"
+      "value": "0.43R to T1"
      },
      "atr_band": {
       "pass": true,
       "value": "ATR 2.38%"
      },
      "stop_width": {
-      "pass": true,
-      "value": "1.98 ATR"
+      "pass": false,
+      "value": "3.47 ATR"
+     },
+     "weekly_impulse": {
+      "pass": false,
+      "value": "weekly red"
      }
     },
     "plan": {
      "entry_buy_stop": 0.44,
-     "stop": 0.42,
-     "risk_per_share": 0.02,
-     "stop_in_atr": 1.98,
+     "stop": 0.405,
+     "risk_per_share": 0.035,
+     "stop_in_atr": 3.47,
      "target1": 0.455,
-     "target2": 0.5,
-     "rr_t1": 0.75,
+     "target2": 0.545,
+     "rr_t1": 0.43,
      "supports": [
       0.438
      ],
@@ -2401,14 +2588,22 @@
       0.46
      ],
      "atr": 0.0101,
+     "stop_method": "safezone",
+     "channel": {
+      "upper": 0.446,
+      "lower": 0.414,
+      "ema": 0.43,
+      "height": 0.032,
+      "t1_grade_pct": 46.8
+     },
      "management": [
       "Order valid 2 sessions; cancel if not filled",
       "At +1R: move stop to breakeven",
       "At T1: sell half; trail rest under 20-EMA or 2-bar low",
       "Time stop: exit if < +0.5R after 7 sessions"
      ],
-     "shares": 49900,
-     "capital": 21956.0
+     "shares": 28500,
+     "capital": 12540.0
     }
    }
   },
@@ -2477,7 +2672,8 @@
      "bid/ask below floor"
     ],
     "regime_bearish": true,
-    "combined": 30.5,
+    "version": "1.2",
+    "combined": 29.4,
     "sm": {
      "score": 35.2,
      "components": {
@@ -2516,7 +2712,7 @@
      "weight_measured": 1.0
     },
     "ts": {
-     "score": 25.8,
+     "score": 23.5,
      "components": {
       "trend_alignment": {
        "pts": 9.0,
@@ -2527,20 +2723,21 @@
        "ema50_rising": false
       },
       "pullback_quality": {
-       "pts": 16.8,
+       "pts": 14.5,
        "max": 35,
        "rsi_min5": 37.4,
        "rsi_max20": 55.0,
-       "dist_ema20_atr": -1.07,
-       "fib_retrace": 0.9
+       "value_zone": "1.847-1.880",
+       "low3_vs_zone_top_atr": -1.37,
+       "fib_retrace": 0.9,
+       "bear_power_atr": -0.79,
+       "bear_power_turn_up": false
       },
       "entry_confirmation": {
        "pts": 0.0,
        "max": 25,
        "close_above_prior_high": false,
-       "d_macd_hist_upticks": 0,
-       "ha_green": false,
-       "ha_no_lower_wick": false
+       "d_macd_hist_upticks": 0
       }
      }
     },
@@ -2551,7 +2748,7 @@
      },
      "reward_risk": {
       "pass": false,
-      "value": "1.3R to T1"
+      "value": "0.93R to T1"
      },
      "atr_band": {
       "pass": true,
@@ -2559,17 +2756,21 @@
      },
      "stop_width": {
       "pass": true,
-      "value": "1.7 ATR"
+      "value": "2.38 ATR"
+     },
+     "weekly_impulse": {
+      "pass": true,
+      "value": "weekly blue"
      }
     },
     "plan": {
      "entry_buy_stop": 1.87,
-     "stop": 1.77,
-     "risk_per_share": 0.1,
-     "stop_in_atr": 1.7,
+     "stop": 1.73,
+     "risk_per_share": 0.14,
+     "stop_in_atr": 2.38,
      "target1": 2.0,
      "target2": 2.17,
-     "rr_t1": 1.3,
+     "rr_t1": 0.93,
      "supports": [
       1.78
      ],
@@ -2579,14 +2780,22 @@
       2.3
      ],
      "atr": 0.0589,
+     "stop_method": "safezone",
+     "channel": {
+      "upper": 2.01,
+      "lower": 1.728,
+      "ema": 1.869,
+      "height": 0.282,
+      "t1_grade_pct": 46.0
+     },
      "management": [
       "Order valid 2 sessions; cancel if not filled",
       "At +1R: move stop to breakeven",
       "At T1: sell half; trail rest under 20-EMA or 2-bar low",
       "Time stop: exit if < +0.5R after 7 sessions"
      ],
-     "shares": 9900,
-     "capital": 18513.0
+     "shares": 7100,
+     "capital": 13277.0
     }
    }
   },
@@ -2655,7 +2864,8 @@
      "bid/ask below floor"
     ],
     "regime_bearish": true,
-    "combined": 29.2,
+    "version": "1.2",
+    "combined": 28.1,
     "sm": {
      "score": 24.7,
      "components": {
@@ -2694,7 +2904,7 @@
      "weight_measured": 1.0
     },
     "ts": {
-     "score": 33.7,
+     "score": 31.5,
      "components": {
       "trend_alignment": {
        "pts": 9.0,
@@ -2705,20 +2915,21 @@
        "ema50_rising": false
       },
       "pullback_quality": {
-       "pts": 24.7,
+       "pts": 22.5,
        "max": 35,
        "rsi_min5": 41.6,
        "rsi_max20": 53.9,
-       "dist_ema20_atr": -0.68,
-       "fib_retrace": 0.684
+       "value_zone": "2.386-2.409",
+       "low3_vs_zone_top_atr": -0.93,
+       "fib_retrace": 0.684,
+       "bear_power_atr": -0.49,
+       "bear_power_turn_up": false
       },
       "entry_confirmation": {
        "pts": 0.0,
        "max": 25,
        "close_above_prior_high": false,
-       "d_macd_hist_upticks": 0,
-       "ha_green": false,
-       "ha_no_lower_wick": false
+       "d_macd_hist_upticks": 0
       }
      }
     },
@@ -2729,7 +2940,7 @@
      },
      "reward_risk": {
       "pass": false,
-      "value": "0.75R to T1"
+      "value": "0.46R to T1"
      },
      "atr_band": {
       "pass": true,
@@ -2737,17 +2948,21 @@
      },
      "stop_width": {
       "pass": true,
-      "value": "1.51 ATR"
+      "value": "2.45 ATR"
+     },
+     "weekly_impulse": {
+      "pass": true,
+      "value": "weekly blue"
      }
     },
     "plan": {
      "entry_buy_stop": 2.41,
-     "stop": 2.33,
-     "risk_per_share": 0.08,
-     "stop_in_atr": 1.51,
+     "stop": 2.28,
+     "risk_per_share": 0.13,
+     "stop_in_atr": 2.45,
      "target1": 2.47,
      "target2": 2.52,
-     "rr_t1": 0.75,
+     "rr_t1": 0.46,
      "supports": [
       2.295
      ],
@@ -2757,14 +2972,22 @@
       2.679
      ],
      "atr": 0.053,
+     "stop_method": "safezone",
+     "channel": {
+      "upper": 2.531,
+      "lower": 2.27,
+      "ema": 2.4,
+      "height": 0.262,
+      "t1_grade_pct": 22.9
+     },
      "management": [
       "Order valid 2 sessions; cancel if not filled",
       "At +1R: move stop to breakeven",
       "At T1: sell half; trail rest under 20-EMA or 2-bar low",
       "Time stop: exit if < +0.5R after 7 sessions"
      ],
-     "shares": 12400,
-     "capital": 29884.0
+     "shares": 7600,
+     "capital": 18316.0
     }
    }
   },
@@ -2828,17 +3051,18 @@
     "decision": "AVOID",
     "blocked_by": [
      "reward_risk",
+     "stop_width",
      "TS<80",
-     "SM<75",
-     "bid/ask below floor"
+     "SM<75"
     ],
     "regime_bearish": true,
-    "combined": 36.3,
+    "version": "1.2",
+    "combined": 44.2,
     "sm": {
-     "score": 40.5,
+     "score": 58.4,
      "components": {
       "bid_ask": {
-       "pts": 13.4,
+       "pts": 31.3,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -2872,7 +3096,7 @@
      "weight_measured": 1.0
     },
     "ts": {
-     "score": 32.1,
+     "score": 30.1,
      "components": {
       "trend_alignment": {
        "pts": 9.0,
@@ -2883,20 +3107,21 @@
        "ema50_rising": false
       },
       "pullback_quality": {
-       "pts": 23.1,
+       "pts": 21.1,
        "max": 35,
        "rsi_min5": 45.2,
        "rsi_max20": 65.3,
-       "dist_ema20_atr": -1.08,
-       "fib_retrace": 0.789
+       "value_zone": "2.229-2.232",
+       "low3_vs_zone_top_atr": -1.17,
+       "fib_retrace": 0.789,
+       "bear_power_atr": -0.87,
+       "bear_power_turn_up": true
       },
       "entry_confirmation": {
        "pts": 0.0,
        "max": 25,
        "close_above_prior_high": false,
-       "d_macd_hist_upticks": 0,
-       "ha_green": false,
-       "ha_no_lower_wick": false
+       "d_macd_hist_upticks": 0
       }
      }
     },
@@ -2907,25 +3132,29 @@
      },
      "reward_risk": {
       "pass": false,
-      "value": "1.0R to T1"
+      "value": "0.58R to T1"
      },
      "atr_band": {
       "pass": true,
       "value": "ATR 2.04%"
      },
      "stop_width": {
+      "pass": false,
+      "value": "2.67 ATR"
+     },
+     "weekly_impulse": {
       "pass": true,
-      "value": "1.56 ATR"
+      "value": "weekly blue"
      }
     },
     "plan": {
      "entry_buy_stop": 2.24,
-     "stop": 2.17,
-     "risk_per_share": 0.07,
-     "stop_in_atr": 1.56,
+     "stop": 2.12,
+     "risk_per_share": 0.12,
+     "stop_in_atr": 2.67,
      "target1": 2.31,
      "target2": 2.54,
-     "rr_t1": 1.0,
+     "rr_t1": 0.58,
      "supports": [
       2.15
      ],
@@ -2935,14 +3164,22 @@
       2.72
      ],
      "atr": 0.045,
+     "stop_method": "safezone",
+     "channel": {
+      "upper": 2.316,
+      "lower": 2.142,
+      "ema": 2.229,
+      "height": 0.174,
+      "t1_grade_pct": 40.2
+     },
      "management": [
       "Order valid 2 sessions; cancel if not filled",
       "At +1R: move stop to breakeven",
       "At T1: sell half; trail rest under 20-EMA or 2-bar low",
       "Time stop: exit if < +0.5R after 7 sessions"
      ],
-     "shares": 14200,
-     "capital": 31808.0
+     "shares": 8300,
+     "capital": 18592.0
     }
    }
   },
@@ -3011,16 +3248,17 @@
     "decision": "AVOID",
     "blocked_by": [
      "reward_risk",
-     "TS<80",
-     "SM<75"
+     "stop_width",
+     "TS<80"
     ],
     "regime_bearish": true,
-    "combined": 61.8,
+    "version": "1.2",
+    "combined": 61.5,
     "sm": {
-     "score": 72.8,
+     "score": 76.1,
      "components": {
       "bid_ask": {
-       "pts": 26.4,
+       "pts": 29.7,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -3054,7 +3292,7 @@
      "weight_measured": 1.0
     },
     "ts": {
-     "score": 50.7,
+     "score": 46.9,
      "components": {
       "trend_alignment": {
        "pts": 20.0,
@@ -3065,20 +3303,21 @@
        "ema50_rising": true
       },
       "pullback_quality": {
-       "pts": 30.7,
+       "pts": 27.0,
        "max": 35,
        "rsi_min5": 55.6,
        "rsi_max20": 64.6,
-       "dist_ema20_atr": 0.03,
-       "fib_retrace": 0.476
+       "value_zone": "2.135-2.148",
+       "low3_vs_zone_top_atr": -0.19,
+       "fib_retrace": 0.476,
+       "bear_power_atr": 0.04,
+       "bear_power_turn_up": false
       },
       "entry_confirmation": {
        "pts": 0.0,
        "max": 25,
        "close_above_prior_high": false,
-       "d_macd_hist_upticks": 0,
-       "ha_green": false,
-       "ha_no_lower_wick": false
+       "d_macd_hist_upticks": 0
       }
      }
     },
@@ -3089,25 +3328,29 @@
      },
      "reward_risk": {
       "pass": false,
-      "value": "0.7R to T1"
+      "value": "0.64R to T1"
      },
      "atr_band": {
       "pass": true,
       "value": "ATR 2.01%"
      },
      "stop_width": {
+      "pass": false,
+      "value": "2.53 ATR"
+     },
+     "weekly_impulse": {
       "pass": true,
-      "value": "2.3 ATR"
+      "value": "weekly green"
      }
     },
     "plan": {
      "entry_buy_stop": 2.2,
-     "stop": 2.1,
-     "risk_per_share": 0.1,
-     "stop_in_atr": 2.3,
+     "stop": 2.09,
+     "risk_per_share": 0.11,
+     "stop_in_atr": 2.53,
      "target1": 2.27,
      "target2": 2.4,
-     "rr_t1": 0.7,
+     "rr_t1": 0.64,
      "supports": [
       2.01,
       2.179
@@ -3117,14 +3360,22 @@
       2.413
      ],
      "atr": 0.0435,
+     "stop_method": "safezone",
+     "channel": {
+      "upper": 2.213,
+      "lower": 2.061,
+      "ema": 2.137,
+      "height": 0.152,
+      "t1_grade_pct": 46.2
+     },
      "management": [
       "Order valid 2 sessions; cancel if not filled",
       "At +1R: move stop to breakeven",
       "At T1: sell half; trail rest under 20-EMA or 2-bar low",
       "Time stop: exit if < +0.5R after 7 sessions"
      ],
-     "shares": 9900,
-     "capital": 21780.0
+     "shares": 9000,
+     "capital": 19800.0
     }
    }
   },
@@ -3190,16 +3441,16 @@
      "reward_risk",
      "stop_width",
      "TS<80",
-     "SM<75",
-     "bid/ask below floor"
+     "SM<75"
     ],
     "regime_bearish": true,
-    "combined": 21.3,
+    "version": "1.2",
+    "combined": 26.0,
     "sm": {
-     "score": 18.3,
+     "score": 26.4,
      "components": {
       "bid_ask": {
-       "pts": 11.8,
+       "pts": 19.9,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -3233,7 +3484,7 @@
      "weight_measured": 1.0
     },
     "ts": {
-     "score": 24.3,
+     "score": 25.7,
      "components": {
       "trend_alignment": {
        "pts": 9.0,
@@ -3244,20 +3495,21 @@
        "ema50_rising": false
       },
       "pullback_quality": {
-       "pts": 3.4,
+       "pts": 5.7,
        "max": 35,
        "rsi_min5": 22.8,
        "rsi_max20": 41.1,
-       "dist_ema20_atr": -1.71,
-       "fib_retrace": 2.235
+       "value_zone": "9.930-10.148",
+       "low3_vs_zone_top_atr": -2.12,
+       "fib_retrace": 2.235,
+       "bear_power_atr": -0.68,
+       "bear_power_turn_up": false
       },
       "entry_confirmation": {
-       "pts": 11.9,
+       "pts": 11.0,
        "max": 25,
        "close_above_prior_high": false,
-       "d_macd_hist_upticks": 2,
-       "ha_green": true,
-       "ha_no_lower_wick": false
+       "d_macd_hist_upticks": 2
       }
      }
     },
@@ -3277,6 +3529,10 @@
      "stop_width": {
       "pass": false,
       "value": "2.66 ATR"
+     },
+     "weekly_impulse": {
+      "pass": true,
+      "value": "weekly blue"
      }
     },
     "plan": {
@@ -3285,7 +3541,7 @@
      "risk_per_share": 0.66,
      "stop_in_atr": 2.66,
      "target1": 10.43,
-     "target2": 11.07,
+     "target2": 10.65,
      "rr_t1": 0.73,
      "supports": [
       9.3
@@ -3296,6 +3552,14 @@
       11.675
      ],
      "atr": 0.2485,
+     "stop_method": "safezone",
+     "channel": {
+      "upper": 10.663,
+      "lower": 9.498,
+      "ema": 10.08,
+      "height": 1.165,
+      "t1_grade_pct": 41.2
+     },
      "management": [
       "Order valid 2 sessions; cancel if not filled",
       "At +1R: move stop to breakeven",
@@ -3372,17 +3636,19 @@
     "decision": "AVOID",
     "blocked_by": [
      "reward_risk",
+     "stop_width",
      "TS<80",
      "SM<75",
      "bid/ask below floor"
     ],
     "regime_bearish": true,
-    "combined": 45.6,
+    "version": "1.2",
+    "combined": 40.8,
     "sm": {
-     "score": 54.3,
+     "score": 45.5,
      "components": {
       "bid_ask": {
-       "pts": 11.4,
+       "pts": 2.6,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -3416,7 +3682,7 @@
      "weight_measured": 1.0
     },
     "ts": {
-     "score": 36.8,
+     "score": 36.0,
      "components": {
       "trend_alignment": {
        "pts": 9.8,
@@ -3427,20 +3693,21 @@
        "ema50_rising": false
       },
       "pullback_quality": {
-       "pts": 17.0,
+       "pts": 12.2,
        "max": 35,
        "rsi_min5": 42.9,
        "rsi_max20": 68.2,
-       "dist_ema20_atr": -1.58,
-       "fib_retrace": 0.938
+       "value_zone": "0.894-0.895",
+       "low3_vs_zone_top_atr": -1.64,
+       "fib_retrace": 0.938,
+       "bear_power_atr": -1.37,
+       "bear_power_turn_up": false
       },
       "entry_confirmation": {
-       "pts": 10.0,
+       "pts": 14.0,
        "max": 25,
        "close_above_prior_high": true,
-       "d_macd_hist_upticks": 0,
-       "ha_green": false,
-       "ha_no_lower_wick": false
+       "d_macd_hist_upticks": 0
       }
      }
     },
@@ -3451,25 +3718,29 @@
      },
      "reward_risk": {
       "pass": false,
-      "value": "0.43R to T1"
+      "value": "0.21R to T1"
      },
      "atr_band": {
       "pass": true,
       "value": "ATR 2.07%"
      },
      "stop_width": {
+      "pass": false,
+      "value": "3.8 ATR"
+     },
+     "weekly_impulse": {
       "pass": true,
-      "value": "1.9 ATR"
+      "value": "weekly blue"
      }
     },
     "plan": {
      "entry_buy_stop": 0.895,
-     "stop": 0.86,
-     "risk_per_share": 0.035,
-     "stop_in_atr": 1.9,
+     "stop": 0.825,
+     "risk_per_share": 0.07,
+     "stop_in_atr": 3.8,
      "target1": 0.91,
-     "target2": 0.93,
-     "rr_t1": 0.43,
+     "target2": 0.92,
+     "rr_t1": 0.21,
      "supports": [
       0.873
      ],
@@ -3479,14 +3750,22 @@
       0.992
      ],
      "atr": 0.0184,
+     "stop_method": "safezone",
+     "channel": {
+      "upper": 0.929,
+      "lower": 0.859,
+      "ema": 0.894,
+      "height": 0.07,
+      "t1_grade_pct": 21.4
+     },
      "management": [
       "Order valid 2 sessions; cancel if not filled",
       "At +1R: move stop to breakeven",
       "At T1: sell half; trail rest under 20-EMA or 2-bar low",
       "Time stop: exit if < +0.5R after 7 sessions"
      ],
-     "shares": 28500,
-     "capital": 25507.5
+     "shares": 14200,
+     "capital": 12709.0
     }
    }
   },
@@ -3559,7 +3838,8 @@
      "SM<75"
     ],
     "regime_bearish": true,
-    "combined": 44.7,
+    "version": "1.2",
+    "combined": 45.0,
     "sm": {
      "score": 47.4,
      "components": {
@@ -3598,7 +3878,7 @@
      "weight_measured": 1.0
     },
     "ts": {
-     "score": 42.0,
+     "score": 42.5,
      "components": {
       "trend_alignment": {
        "pts": 9.0,
@@ -3609,20 +3889,21 @@
        "ema50_rising": false
       },
       "pullback_quality": {
-       "pts": 18.0,
+       "pts": 22.5,
        "max": 35,
        "rsi_min5": 46.2,
        "rsi_max20": 51.8,
-       "dist_ema20_atr": -0.28,
-       "fib_retrace": 1.359
+       "value_zone": "23.900-24.158",
+       "low3_vs_zone_top_atr": -0.52,
+       "fib_retrace": 1.359,
+       "bear_power_atr": 0.24,
+       "bear_power_turn_up": true
       },
       "entry_confirmation": {
-       "pts": 15.0,
+       "pts": 11.0,
        "max": 25,
        "close_above_prior_high": false,
-       "d_macd_hist_upticks": 2,
-       "ha_green": true,
-       "ha_no_lower_wick": true
+       "d_macd_hist_upticks": 2
       }
      }
     },
@@ -3633,7 +3914,7 @@
      },
      "reward_risk": {
       "pass": false,
-      "value": "1.14R to T1"
+      "value": "1.74R to T1"
      },
      "atr_band": {
       "pass": true,
@@ -3641,17 +3922,21 @@
      },
      "stop_width": {
       "pass": true,
-      "value": "2.28 ATR"
+      "value": "1.5 ATR"
+     },
+     "weekly_impulse": {
+      "pass": true,
+      "value": "weekly blue"
      }
     },
     "plan": {
      "entry_buy_stop": 24.62,
-     "stop": 22.99,
-     "risk_per_share": 1.63,
-     "stop_in_atr": 2.28,
+     "stop": 23.55,
+     "risk_per_share": 1.07,
+     "stop_in_atr": 1.5,
      "target1": 26.48,
      "target2": 27.83,
-     "rr_t1": 1.14,
+     "rr_t1": 1.74,
      "supports": [
       22.21,
       22.934
@@ -3662,14 +3947,22 @@
       29.34
      ],
      "atr": 0.7145,
+     "stop_method": "safezone",
+     "channel": {
+      "upper": 25.975,
+      "lower": 22.104,
+      "ema": 24.039,
+      "height": 3.871,
+      "t1_grade_pct": 48.1
+     },
      "management": [
       "Order valid 2 sessions; cancel if not filled",
       "At +1R: move stop to breakeven",
       "At T1: sell half; trail rest under 20-EMA or 2-bar low",
       "Time stop: exit if < +0.5R after 7 sessions"
      ],
-     "shares": 600,
-     "capital": 14772.0
+     "shares": 900,
+     "capital": 22158.0
     }
    }
   },
@@ -3742,17 +4035,18 @@
     "close": 8.220000267028809,
     "decision": "AVOID",
     "blocked_by": [
-     "TS<80",
-     "SM<75",
-     "bid/ask below floor"
+     "reward_risk",
+     "weekly_impulse",
+     "TS<80"
     ],
     "regime_bearish": true,
-    "combined": 51.8,
+    "version": "1.2",
+    "combined": 59.1,
     "sm": {
-     "score": 64.0,
+     "score": 78.4,
      "components": {
       "bid_ask": {
-       "pts": 17.3,
+       "pts": 31.7,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -3786,7 +4080,7 @@
      "weight_measured": 1.0
     },
     "ts": {
-     "score": 39.6,
+     "score": 39.8,
      "components": {
       "trend_alignment": {
        "pts": 11.4,
@@ -3797,20 +4091,21 @@
        "ema50_rising": true
       },
       "pullback_quality": {
-       "pts": 28.1,
+       "pts": 28.4,
        "max": 35,
        "rsi_min5": 47.6,
        "rsi_max20": 63.2,
-       "dist_ema20_atr": -0.7,
-       "fib_retrace": 0.723
+       "value_zone": "8.296-8.319",
+       "low3_vs_zone_top_atr": -0.76,
+       "fib_retrace": 0.723,
+       "bear_power_atr": -0.42,
+       "bear_power_turn_up": true
       },
       "entry_confirmation": {
        "pts": 0.0,
        "max": 25,
        "close_above_prior_high": false,
-       "d_macd_hist_upticks": 0,
-       "ha_green": false,
-       "ha_no_lower_wick": false
+       "d_macd_hist_upticks": 0
       }
      }
     },
@@ -3820,8 +4115,8 @@
       "value": "S$13.13M/day"
      },
      "reward_risk": {
-      "pass": true,
-      "value": "2.06R to T1"
+      "pass": false,
+      "value": "1.57R to T1"
      },
      "atr_band": {
       "pass": true,
@@ -3829,17 +4124,21 @@
      },
      "stop_width": {
       "pass": true,
-      "value": "1.35 ATR"
+      "value": "1.78 ATR"
+     },
+     "weekly_impulse": {
+      "pass": false,
+      "value": "weekly red"
      }
     },
     "plan": {
      "entry_buy_stop": 8.45,
-     "stop": 8.13,
-     "risk_per_share": 0.32,
-     "stop_in_atr": 1.35,
+     "stop": 8.03,
+     "risk_per_share": 0.42,
+     "stop_in_atr": 1.78,
      "target1": 9.11,
-     "target2": 9.41,
-     "rr_t1": 2.06,
+     "target2": 9.71,
+     "rr_t1": 1.57,
      "supports": [
       7.45,
       7.959,
@@ -3849,14 +4148,22 @@
       9.12
      ],
      "atr": 0.2364,
+     "stop_method": "safezone",
+     "channel": {
+      "upper": 8.764,
+      "lower": 7.84,
+      "ema": 8.302,
+      "height": 0.923,
+      "t1_grade_pct": 71.5
+     },
      "management": [
       "Order valid 2 sessions; cancel if not filled",
       "At +1R: move stop to breakeven",
       "At T1: sell half; trail rest under 20-EMA or 2-bar low",
       "Time stop: exit if < +0.5R after 7 sessions"
      ],
-     "shares": 3100,
-     "capital": 26195.0
+     "shares": 2300,
+     "capital": 19435.0
     }
    }
   },
@@ -3929,12 +4236,14 @@
     "close": 60.04999923706055,
     "decision": "AVOID",
     "blocked_by": [
+     "reward_risk",
      "TS<80",
      "SM<75",
      "bid/ask below floor"
     ],
     "regime_bearish": true,
-    "combined": 42.3,
+    "version": "1.2",
+    "combined": 40.8,
     "sm": {
      "score": 36.8,
      "components": {
@@ -3973,7 +4282,7 @@
      "weight_measured": 1.0
     },
     "ts": {
-     "score": 47.9,
+     "score": 44.7,
      "components": {
       "trend_alignment": {
        "pts": 19.0,
@@ -3984,20 +4293,21 @@
        "ema50_rising": true
       },
       "pullback_quality": {
-       "pts": 28.9,
+       "pts": 25.7,
        "max": 35,
        "rsi_min5": 53.8,
        "rsi_max20": 65.1,
-       "dist_ema20_atr": 0.16,
-       "fib_retrace": 0.316
+       "value_zone": "59.208-60.094",
+       "low3_vs_zone_top_atr": -0.18,
+       "fib_retrace": 0.316,
+       "bear_power_atr": -0.18,
+       "bear_power_turn_up": false
       },
       "entry_confirmation": {
        "pts": 0.0,
        "max": 25,
        "close_above_prior_high": false,
-       "d_macd_hist_upticks": 0,
-       "ha_green": false,
-       "ha_no_lower_wick": false
+       "d_macd_hist_upticks": 0
       }
      }
     },
@@ -4007,8 +4317,8 @@
       "value": "S$26.41M/day"
      },
      "reward_risk": {
-      "pass": true,
-      "value": "2.14R to T1"
+      "pass": false,
+      "value": "1.11R to T1"
      },
      "atr_band": {
       "pass": true,
@@ -4016,17 +4326,21 @@
      },
      "stop_width": {
       "pass": true,
-      "value": "1.12 ATR"
+      "value": "2.15 ATR"
+     },
+     "weekly_impulse": {
+      "pass": true,
+      "value": "weekly green"
      }
     },
     "plan": {
      "entry_buy_stop": 61.63,
-     "stop": 59.78,
-     "risk_per_share": 1.85,
-     "stop_in_atr": 1.12,
+     "stop": 58.06,
+     "risk_per_share": 3.57,
+     "stop_in_atr": 2.15,
      "target1": 65.59,
      "target2": 67.69,
-     "rr_t1": 2.14,
+     "rr_t1": 1.11,
      "supports": [
       54.5,
       57.248,
@@ -4038,14 +4352,22 @@
       69.813
      ],
      "atr": 1.6574,
+     "stop_method": "safezone",
+     "channel": {
+      "upper": 62.861,
+      "lower": 55.947,
+      "ema": 59.404,
+      "height": 6.914,
+      "t1_grade_pct": 57.3
+     },
      "management": [
       "Order valid 2 sessions; cancel if not filled",
       "At +1R: move stop to breakeven",
       "At T1: sell half; trail rest under 20-EMA or 2-bar low",
       "Time stop: exit if < +0.5R after 7 sessions"
      ],
-     "shares": 500,
-     "capital": 30815.0
+     "shares": 200,
+     "capital": 12326.0
     }
    }
   },
@@ -4109,15 +4431,17 @@
     "decision": "AVOID",
     "blocked_by": [
      "reward_risk",
+     "stop_width",
      "TS<80"
     ],
     "regime_bearish": true,
-    "combined": 69.8,
+    "version": "1.2",
+    "combined": 70.4,
     "sm": {
-     "score": 92.5,
+     "score": 93.6,
      "components": {
       "bid_ask": {
-       "pts": 33.9,
+       "pts": 35.0,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -4151,7 +4475,7 @@
      "weight_measured": 1.0
     },
     "ts": {
-     "score": 47.0,
+     "score": 47.3,
      "components": {
       "trend_alignment": {
        "pts": 21.2,
@@ -4162,20 +4486,21 @@
        "ema50_rising": true
       },
       "pullback_quality": {
-       "pts": 21.8,
+       "pts": 20.5,
        "max": 35,
        "rsi_min5": 53.9,
        "rsi_max20": 68.2,
-       "dist_ema20_atr": -0.39,
-       "fib_retrace": 0.824
+       "value_zone": "2.122-2.134",
+       "low3_vs_zone_top_atr": -0.61,
+       "fib_retrace": 0.824,
+       "bear_power_atr": -0.11,
+       "bear_power_turn_up": false
       },
       "entry_confirmation": {
-       "pts": 4.0,
+       "pts": 5.6,
        "max": 25,
        "close_above_prior_high": false,
-       "d_macd_hist_upticks": 0,
-       "ha_green": false,
-       "ha_no_lower_wick": false
+       "d_macd_hist_upticks": 0
       }
      }
     },
@@ -4186,25 +4511,29 @@
      },
      "reward_risk": {
       "pass": false,
-      "value": "0.89R to T1"
+      "value": "0.67R to T1"
      },
      "atr_band": {
       "pass": true,
       "value": "ATR 1.87%"
      },
      "stop_width": {
+      "pass": false,
+      "value": "2.99 ATR"
+     },
+     "weekly_impulse": {
       "pass": true,
-      "value": "2.24 ATR"
+      "value": "weekly green"
      }
     },
     "plan": {
      "entry_buy_stop": 2.18,
-     "stop": 2.09,
-     "risk_per_share": 0.09,
-     "stop_in_atr": 2.24,
+     "stop": 2.06,
+     "risk_per_share": 0.12,
+     "stop_in_atr": 2.99,
      "target1": 2.26,
-     "target2": 2.45,
-     "rr_t1": 0.89,
+     "target2": 2.54,
+     "rr_t1": 0.67,
      "supports": [
       2.058,
       2.12
@@ -4213,14 +4542,22 @@
       2.273
      ],
      "atr": 0.0401,
+     "stop_method": "safezone",
+     "channel": {
+      "upper": 2.19,
+      "lower": 2.058,
+      "ema": 2.124,
+      "height": 0.131,
+      "t1_grade_pct": 61.0
+     },
      "management": [
       "Order valid 2 sessions; cancel if not filled",
       "At +1R: move stop to breakeven",
       "At T1: sell half; trail rest under 20-EMA or 2-bar low",
       "Time stop: exit if < +0.5R after 7 sessions"
      ],
-     "shares": 11100,
-     "capital": 24198.0
+     "shares": 8300,
+     "capital": 18094.0
     }
    }
   },
@@ -4284,16 +4621,18 @@
     "decision": "AVOID",
     "blocked_by": [
      "reward_risk",
+     "stop_width",
      "TS<80",
      "SM<75"
     ],
     "regime_bearish": true,
-    "combined": 49.5,
+    "version": "1.2",
+    "combined": 49.3,
     "sm": {
-     "score": 63.6,
+     "score": 68.0,
      "components": {
       "bid_ask": {
-       "pts": 30.6,
+       "pts": 35.0,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -4327,7 +4666,7 @@
      "weight_measured": 1.0
     },
     "ts": {
-     "score": 35.4,
+     "score": 30.6,
      "components": {
       "trend_alignment": {
        "pts": 9.0,
@@ -4338,20 +4677,21 @@
        "ema50_rising": false
       },
       "pullback_quality": {
-       "pts": 26.4,
+       "pts": 21.6,
        "max": 35,
        "rsi_min5": 51.6,
        "rsi_max20": 60.5,
-       "dist_ema20_atr": -0.71,
-       "fib_retrace": 0.75
+       "value_zone": "1.097-1.098",
+       "low3_vs_zone_top_atr": -0.78,
+       "fib_retrace": 0.75,
+       "bear_power_atr": -0.78,
+       "bear_power_turn_up": false
       },
       "entry_confirmation": {
        "pts": 0.0,
        "max": 25,
        "close_above_prior_high": false,
-       "d_macd_hist_upticks": 0,
-       "ha_green": false,
-       "ha_no_lower_wick": false
+       "d_macd_hist_upticks": 0
       }
      }
     },
@@ -4362,25 +4702,29 @@
      },
      "reward_risk": {
       "pass": false,
-      "value": "0.8R to T1"
+      "value": "0.5R to T1"
      },
      "atr_band": {
       "pass": true,
       "value": "ATR 2.06%"
      },
      "stop_width": {
+      "pass": false,
+      "value": "3.53 ATR"
+     },
+     "weekly_impulse": {
       "pass": true,
-      "value": "2.21 ATR"
+      "value": "weekly blue"
      }
     },
     "plan": {
      "entry_buy_stop": 1.12,
-     "stop": 1.07,
-     "risk_per_share": 0.05,
-     "stop_in_atr": 2.21,
+     "stop": 1.04,
+     "risk_per_share": 0.08,
+     "stop_in_atr": 3.53,
      "target1": 1.16,
      "target2": 1.19,
-     "rr_t1": 0.8,
+     "rr_t1": 0.5,
      "supports": [
       1.08
      ],
@@ -4390,14 +4734,22 @@
       1.255
      ],
      "atr": 0.0227,
+     "stop_method": "safezone",
+     "channel": {
+      "upper": 1.136,
+      "lower": 1.056,
+      "ema": 1.096,
+      "height": 0.081,
+      "t1_grade_pct": 49.5
+     },
      "management": [
       "Order valid 2 sessions; cancel if not filled",
       "At +1R: move stop to breakeven",
       "At T1: sell half; trail rest under 20-EMA or 2-bar low",
       "Time stop: exit if < +0.5R after 7 sessions"
      ],
-     "shares": 19900,
-     "capital": 22288.0
+     "shares": 12400,
+     "capital": 13888.0
     }
    }
   },
@@ -4461,17 +4813,19 @@
     "decision": "AVOID",
     "blocked_by": [
      "reward_risk",
+     "stop_width",
      "TS<80",
      "SM<75",
      "bid/ask below floor"
     ],
     "regime_bearish": true,
+    "version": "1.2",
     "combined": 40.6,
     "sm": {
-     "score": 48.3,
+     "score": 48.1,
      "components": {
       "bid_ask": {
-       "pts": 15.2,
+       "pts": 15.0,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -4520,16 +4874,17 @@
        "max": 35,
        "rsi_min5": 44.1,
        "rsi_max20": 61.4,
-       "dist_ema20_atr": -0.86,
-       "fib_retrace": 0.8
+       "value_zone": "1.164-1.170",
+       "low3_vs_zone_top_atr": -0.97,
+       "fib_retrace": 0.8,
+       "bear_power_atr": -0.47,
+       "bear_power_turn_up": true
       },
       "entry_confirmation": {
        "pts": 0.0,
        "max": 25,
        "close_above_prior_high": false,
-       "d_macd_hist_upticks": 0,
-       "ha_green": false,
-       "ha_no_lower_wick": false
+       "d_macd_hist_upticks": 0
       }
      }
     },
@@ -4540,25 +4895,29 @@
      },
      "reward_risk": {
       "pass": false,
-      "value": "0.5R to T1"
+      "value": "0.27R to T1"
      },
      "atr_band": {
       "pass": true,
       "value": "ATR 2.61%"
      },
      "stop_width": {
+      "pass": false,
+      "value": "3.63 ATR"
+     },
+     "weekly_impulse": {
       "pass": true,
-      "value": "1.98 ATR"
+      "value": "weekly blue"
      }
     },
     "plan": {
      "entry_buy_stop": 1.18,
-     "stop": 1.12,
-     "risk_per_share": 0.06,
-     "stop_in_atr": 1.98,
+     "stop": 1.07,
+     "risk_per_share": 0.11,
+     "stop_in_atr": 3.63,
      "target1": 1.21,
      "target2": 1.25,
-     "rr_t1": 0.5,
+     "rr_t1": 0.27,
      "supports": [
       1.125
      ],
@@ -4568,14 +4927,22 @@
       1.343
      ],
      "atr": 0.0303,
+     "stop_method": "safezone",
+     "channel": {
+      "upper": 1.215,
+      "lower": 1.119,
+      "ema": 1.167,
+      "height": 0.097,
+      "t1_grade_pct": 31.1
+     },
      "management": [
       "Order valid 2 sessions; cancel if not filled",
       "At +1R: move stop to breakeven",
       "At T1: sell half; trail rest under 20-EMA or 2-bar low",
       "Time stop: exit if < +0.5R after 7 sessions"
      ],
-     "shares": 16600,
-     "capital": 19588.0
+     "shares": 9000,
+     "capital": 10620.0
     }
    }
   },
@@ -4649,12 +5016,14 @@
     "decision": "AVOID",
     "blocked_by": [
      "reward_risk",
+     "weekly_impulse",
      "TS<80",
      "SM<75",
      "bid/ask below floor"
     ],
     "regime_bearish": true,
-    "combined": 20.2,
+    "version": "1.2",
+    "combined": 21.8,
     "sm": {
      "score": 14.1,
      "components": {
@@ -4693,7 +5062,7 @@
      "weight_measured": 1.0
     },
     "ts": {
-     "score": 26.2,
+     "score": 29.6,
      "components": {
       "trend_alignment": {
        "pts": 6.2,
@@ -4704,20 +5073,21 @@
        "ema50_rising": false
       },
       "pullback_quality": {
-       "pts": 12.0,
+       "pts": 12.4,
        "max": 35,
        "rsi_min5": 27.1,
        "rsi_max20": 46.0,
-       "dist_ema20_atr": -0.93,
-       "fib_retrace": 2.084
+       "value_zone": "28.590-29.015",
+       "low3_vs_zone_top_atr": -1.23,
+       "fib_retrace": 2.084,
+       "bear_power_atr": -0.58,
+       "bear_power_turn_up": false
       },
       "entry_confirmation": {
-       "pts": 8.0,
+       "pts": 11.0,
        "max": 25,
        "close_above_prior_high": false,
-       "d_macd_hist_upticks": 2,
-       "ha_green": false,
-       "ha_no_lower_wick": false
+       "d_macd_hist_upticks": 2
       }
      }
     },
@@ -4728,7 +5098,7 @@
      },
      "reward_risk": {
       "pass": false,
-      "value": "0.62R to T1"
+      "value": "0.55R to T1"
      },
      "atr_band": {
       "pass": true,
@@ -4736,17 +5106,21 @@
      },
      "stop_width": {
       "pass": true,
-      "value": "2.11 ATR"
+      "value": "2.36 ATR"
+     },
+     "weekly_impulse": {
+      "pass": false,
+      "value": "weekly red"
      }
     },
     "plan": {
      "entry_buy_stop": 28.72,
-     "stop": 27.34,
-     "risk_per_share": 1.38,
-     "stop_in_atr": 2.11,
+     "stop": 27.18,
+     "risk_per_share": 1.54,
+     "stop_in_atr": 2.36,
      "target1": 29.57,
-     "target2": 32.17,
-     "rr_t1": 0.62,
+     "target2": 31.29,
+     "rr_t1": 0.55,
      "supports": [
       24.65,
       27.22,
@@ -4757,14 +5131,22 @@
       32.181
      ],
      "atr": 0.653,
+     "stop_method": "safezone",
+     "channel": {
+      "upper": 31.31,
+      "lower": 26.459,
+      "ema": 28.884,
+      "height": 4.851,
+      "t1_grade_pct": 17.5
+     },
      "management": [
       "Order valid 2 sessions; cancel if not filled",
       "At +1R: move stop to breakeven",
       "At T1: sell half; trail rest under 20-EMA or 2-bar low",
       "Time stop: exit if < +0.5R after 7 sessions"
      ],
-     "shares": 700,
-     "capital": 20104.0
+     "shares": 600,
+     "capital": 17232.0
     }
    }
   },
@@ -4843,7 +5225,8 @@
      "bid/ask below floor"
     ],
     "regime_bearish": true,
-    "combined": 28.4,
+    "version": "1.2",
+    "combined": 28.0,
     "sm": {
      "score": 25.8,
      "components": {
@@ -4882,7 +5265,7 @@
      "weight_measured": 1.0
     },
     "ts": {
-     "score": 30.9,
+     "score": 30.1,
      "components": {
       "trend_alignment": {
        "pts": 9.0,
@@ -4893,20 +5276,21 @@
        "ema50_rising": false
       },
       "pullback_quality": {
-       "pts": 18.0,
+       "pts": 21.1,
        "max": 35,
        "rsi_min5": 40.6,
        "rsi_max20": 47.9,
-       "dist_ema20_atr": -0.9,
-       "fib_retrace": 1.471
+       "value_zone": "20.686-20.957",
+       "low3_vs_zone_top_atr": -1.25,
+       "fib_retrace": 1.471,
+       "bear_power_atr": -0.39,
+       "bear_power_turn_up": true
       },
       "entry_confirmation": {
-       "pts": 3.9,
+       "pts": 0.0,
        "max": 25,
        "close_above_prior_high": false,
-       "d_macd_hist_upticks": 0,
-       "ha_green": true,
-       "ha_no_lower_wick": false
+       "d_macd_hist_upticks": 0
       }
      }
     },
@@ -4917,7 +5301,7 @@
      },
      "reward_risk": {
       "pass": false,
-      "value": "1.08R to T1"
+      "value": "0.81R to T1"
      },
      "atr_band": {
       "pass": true,
@@ -4925,17 +5309,21 @@
      },
      "stop_width": {
       "pass": true,
-      "value": "1.72 ATR"
+      "value": "2.3 ATR"
+     },
+     "weekly_impulse": {
+      "pass": true,
+      "value": "weekly blue"
      }
     },
     "plan": {
      "entry_buy_stop": 20.91,
-     "stop": 20.14,
-     "risk_per_share": 0.77,
-     "stop_in_atr": 1.72,
+     "stop": 19.88,
+     "risk_per_share": 1.03,
+     "stop_in_atr": 2.3,
      "target1": 21.74,
-     "target2": 22.39,
-     "rr_t1": 1.08,
+     "target2": 22.38,
+     "rr_t1": 0.81,
      "supports": [
       18.7,
       20.0,
@@ -4947,14 +5335,22 @@
       22.995
      ],
      "atr": 0.4474,
+     "stop_method": "safezone",
+     "channel": {
+      "upper": 22.391,
+      "lower": 19.311,
+      "ema": 20.851,
+      "height": 3.08,
+      "t1_grade_pct": 26.9
+     },
      "management": [
       "Order valid 2 sessions; cancel if not filled",
       "At +1R: move stop to breakeven",
       "At T1: sell half; trail rest under 20-EMA or 2-bar low",
       "Time stop: exit if < +0.5R after 7 sessions"
      ],
-     "shares": 1200,
-     "capital": 25092.0
+     "shares": 900,
+     "capital": 18819.0
     }
    }
   },
@@ -5023,7 +5419,8 @@
      "bid/ask below floor"
     ],
     "regime_bearish": true,
-    "combined": 30.2,
+    "version": "1.2",
+    "combined": 30.4,
     "sm": {
      "score": 32.1,
      "components": {
@@ -5062,7 +5459,7 @@
      "weight_measured": 1.0
     },
     "ts": {
-     "score": 28.4,
+     "score": 28.8,
      "components": {
       "trend_alignment": {
        "pts": 9.0,
@@ -5073,20 +5470,21 @@
        "ema50_rising": false
       },
       "pullback_quality": {
-       "pts": 19.4,
+       "pts": 19.8,
        "max": 35,
        "rsi_min5": 43.3,
        "rsi_max20": 54.9,
-       "dist_ema20_atr": -1.01,
-       "fib_retrace": 0.763
+       "value_zone": "7.882-7.950",
+       "low3_vs_zone_top_atr": -1.24,
+       "fib_retrace": 0.763,
+       "bear_power_atr": -0.66,
+       "bear_power_turn_up": true
       },
       "entry_confirmation": {
        "pts": 0.0,
        "max": 25,
        "close_above_prior_high": false,
-       "d_macd_hist_upticks": 0,
-       "ha_green": false,
-       "ha_no_lower_wick": false
+       "d_macd_hist_upticks": 0
       }
      }
     },
@@ -5097,7 +5495,7 @@
      },
      "reward_risk": {
       "pass": false,
-      "value": "0.77R to T1"
+      "value": "0.51R to T1"
      },
      "atr_band": {
       "pass": true,
@@ -5105,17 +5503,21 @@
      },
      "stop_width": {
       "pass": true,
-      "value": "1.4 ATR"
+      "value": "2.11 ATR"
+     },
+     "weekly_impulse": {
+      "pass": true,
+      "value": "weekly blue"
      }
     },
     "plan": {
      "entry_buy_stop": 7.96,
-     "stop": 7.7,
-     "risk_per_share": 0.26,
-     "stop_in_atr": 1.4,
+     "stop": 7.57,
+     "risk_per_share": 0.39,
+     "stop_in_atr": 2.11,
      "target1": 8.16,
-     "target2": 8.73,
-     "rr_t1": 0.77,
+     "target2": 8.39,
+     "rr_t1": 0.51,
      "supports": [
       7.58,
       7.75
@@ -5126,14 +5528,22 @@
       9.23
      ],
      "atr": 0.1851,
+     "stop_method": "safezone",
+     "channel": {
+      "upper": 8.402,
+      "lower": 7.436,
+      "ema": 7.919,
+      "height": 0.966,
+      "t1_grade_pct": 20.7
+     },
      "management": [
       "Order valid 2 sessions; cancel if not filled",
       "At +1R: move stop to breakeven",
       "At T1: sell half; trail rest under 20-EMA or 2-bar low",
       "Time stop: exit if < +0.5R after 7 sessions"
      ],
-     "shares": 3800,
-     "capital": 30248.0
+     "shares": 2500,
+     "capital": 19900.0
     }
    }
   },
@@ -5202,7 +5612,8 @@
      "bid/ask below floor"
     ],
     "regime_bearish": true,
-    "combined": 22.6,
+    "version": "1.2",
+    "combined": 24.2,
     "sm": {
      "score": 14.0,
      "components": {
@@ -5241,7 +5652,7 @@
      "weight_measured": 1.0
     },
     "ts": {
-     "score": 31.3,
+     "score": 34.4,
      "components": {
       "trend_alignment": {
        "pts": 9.0,
@@ -5252,20 +5663,21 @@
        "ema50_rising": false
       },
       "pullback_quality": {
-       "pts": 14.3,
+       "pts": 14.4,
        "max": 35,
        "rsi_min5": 31.8,
        "rsi_max20": 48.9,
-       "dist_ema20_atr": -0.99,
-       "fib_retrace": 4.974
+       "value_zone": "14.943-15.283",
+       "low3_vs_zone_top_atr": -1.33,
+       "fib_retrace": 4.974,
+       "bear_power_atr": -0.56,
+       "bear_power_turn_up": false
       },
       "entry_confirmation": {
-       "pts": 8.0,
+       "pts": 11.0,
        "max": 25,
        "close_above_prior_high": false,
-       "d_macd_hist_upticks": 2,
-       "ha_green": false,
-       "ha_no_lower_wick": false
+       "d_macd_hist_upticks": 2
       }
      }
     },
@@ -5276,7 +5688,7 @@
      },
      "reward_risk": {
       "pass": false,
-      "value": "0.92R to T1"
+      "value": "0.96R to T1"
      },
      "atr_band": {
       "pass": true,
@@ -5284,17 +5696,21 @@
      },
      "stop_width": {
       "pass": true,
-      "value": "2.29 ATR"
+      "value": "2.2 ATR"
+     },
+     "weekly_impulse": {
+      "pass": true,
+      "value": "weekly blue"
      }
     },
     "plan": {
      "entry_buy_stop": 15.08,
-     "stop": 14.08,
-     "risk_per_share": 1.0,
-     "stop_in_atr": 2.29,
+     "stop": 14.12,
+     "risk_per_share": 0.96,
+     "stop_in_atr": 2.2,
      "target1": 16.0,
      "target2": 16.88,
-     "rr_t1": 0.92,
+     "rr_t1": 0.96,
      "supports": [
       14.09,
       14.777
@@ -5305,6 +5721,14 @@
       17.65
      ],
      "atr": 0.4368,
+     "stop_method": "safezone",
+     "channel": {
+      "upper": 16.011,
+      "lower": 14.356,
+      "ema": 15.184,
+      "height": 1.656,
+      "t1_grade_pct": 55.6
+     },
      "management": [
       "Order valid 2 sessions; cancel if not filled",
       "At +1R: move stop to breakeven",
@@ -5386,12 +5810,13 @@
      "SM<75"
     ],
     "regime_bearish": true,
-    "combined": 36.8,
+    "version": "1.2",
+    "combined": 32.8,
     "sm": {
-     "score": 43.2,
+     "score": 42.5,
      "components": {
       "bid_ask": {
-       "pts": 35.0,
+       "pts": 34.3,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -5425,7 +5850,7 @@
      "weight_measured": 1.0
     },
     "ts": {
-     "score": 30.3,
+     "score": 23.0,
      "components": {
       "trend_alignment": {
        "pts": 9.0,
@@ -5436,20 +5861,21 @@
        "ema50_rising": false
       },
       "pullback_quality": {
-       "pts": 17.4,
+       "pts": 14.0,
        "max": 35,
        "rsi_min5": 39.9,
        "rsi_max20": 52.2,
-       "dist_ema20_atr": -1.05,
-       "fib_retrace": 1.526
+       "value_zone": "4.135-4.167",
+       "low3_vs_zone_top_atr": -1.23,
+       "fib_retrace": 1.526,
+       "bear_power_atr": -0.87,
+       "bear_power_turn_up": false
       },
       "entry_confirmation": {
-       "pts": 3.9,
+       "pts": 0.0,
        "max": 25,
        "close_above_prior_high": false,
-       "d_macd_hist_upticks": 0,
-       "ha_green": true,
-       "ha_no_lower_wick": false
+       "d_macd_hist_upticks": 0
       }
      }
     },
@@ -5460,7 +5886,7 @@
      },
      "reward_risk": {
       "pass": false,
-      "value": "0.85R to T1"
+      "value": "0.59R to T1"
      },
      "atr_band": {
       "pass": true,
@@ -5468,17 +5894,21 @@
      },
      "stop_width": {
       "pass": false,
-      "value": "3.01 ATR"
+      "value": "4.28 ATR"
+     },
+     "weekly_impulse": {
+      "pass": true,
+      "value": "weekly blue"
      }
     },
     "plan": {
      "entry_buy_stop": 4.28,
-     "stop": 4.02,
-     "risk_per_share": 0.26,
-     "stop_in_atr": 3.01,
+     "stop": 3.91,
+     "risk_per_share": 0.37,
+     "stop_in_atr": 4.28,
      "target1": 4.5,
      "target2": 4.69,
-     "rr_t1": 0.85,
+     "rr_t1": 0.59,
      "supports": [
       4.16
      ],
@@ -5488,14 +5918,22 @@
       4.95
      ],
      "atr": 0.0864,
+     "stop_method": "safezone",
+     "channel": {
+      "upper": 4.301,
+      "lower": 4.01,
+      "ema": 4.156,
+      "height": 0.291,
+      "t1_grade_pct": 75.5
+     },
      "management": [
       "Order valid 2 sessions; cancel if not filled",
       "At +1R: move stop to breakeven",
       "At T1: sell half; trail rest under 20-EMA or 2-bar low",
       "Time stop: exit if < +0.5R after 7 sessions"
      ],
-     "shares": 3800,
-     "capital": 16264.0
+     "shares": 2700,
+     "capital": 11556.0
     }
    }
   }

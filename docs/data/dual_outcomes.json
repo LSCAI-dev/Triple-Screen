@@ -40,15 +40,15 @@
    "code": "S58",
    "name": "SATS",
    "decision": "WATCH",
-   "version": "1.1",
-   "sm": 90.2,
-   "ts": 61.2,
+   "version": "1.2",
+   "sm": 84.5,
+   "ts": 60.9,
    "entry": 4.21,
-   "stop": 3.54,
+   "stop": 3.82,
    "t1": 4.58,
    "t2": 4.78,
-   "rr": 0.55,
-   "qty": 1400,
+   "rr": 0.95,
+   "qty": 2500,
    "outcome": "Pending"
   },
   {
@@ -66,7 +66,7 @@
    "t2": 4.78,
    "rr": 0.46,
    "qty": 1400,
-   "outcome": "Not filled"
+   "outcome": "Pending"
   }
  ],
  "summary": {
