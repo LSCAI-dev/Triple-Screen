@@ -136,8 +136,11 @@ STOCK = """{% extends "base" %}{% block body %}
 <div><h3>Screen 3, trigger</h3><p>Daily MACD-H {{ 'turning up' if r.macd_hist_rising else 'turning down' }} ({{ r.macd_hist }}). ATR {{ '%.3f'|format(r.atr) }}.</p></div>
 </div>
 
-<h2>Daily: EMA 20/50, support/resistance, MACD, RSI</h2>
+<h2>Daily: EMA 20/50, support/resistance, bid/ask volume, OBV, MACD, RSI</h2>
 <div class="chart">{{ daily|safe }}</div>
+<p class="note">Volume panel: green = bought at the offer (buyers lifting), red = sold at the bid (sellers hitting), grey = unchanged; dotted line = 20-day average.
+Solid bars use the hourly tick rule (last ~60 sessions, same proxy as the Smart Money score); faded bars are estimates from where the close sits in the day's range.
+Yahoo has no true bid/ask data, so both are proxies. OBV panel: dotted line = 20-day EMA of OBV.</p>
 <h2>Weekly tide: EMA 13/26, MACD histogram</h2>
 <div class="chart">{{ weekly|safe }}</div>
 

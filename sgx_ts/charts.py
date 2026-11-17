@@ -1,4 +1,6 @@
-"""Plotly charts: daily (price + S/R + plan, MACD, RSI) and weekly (tide)."""
+"""Plotly charts: daily (price + S/R + plan, bid/ask volume, OBV, MACD, RSI) and weekly (tide)."""
+import numpy as np
+import pandas as pd
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
@@ -32,11 +34,38 @@ def _hline(fig, y, color, text, row=1, dash="dot", width=1):
                   annotation_font=dict(size=10, color=color))
 
 
+def bidask_split(daily: pd.DataFrame, hourly: pd.DataFrame | None = None) -> pd.DataFrame:
+    """Daily volume split into buyer-initiated (lifted the offer) and seller-initiated (hit the bid).
+    Hourly tick rule where 60m bars exist (same proxy as the Smart Money score), scaled to the
+    day's total volume; otherwise a close-location estimate: buy share = (C-L)/(H-L)."""
+    v = daily["Volume"].fillna(0)
+    rng = (daily["High"] - daily["Low"]).replace(0, np.nan)
+    share = ((daily["Close"] - daily["Low"]) / rng).fillna(0.5).clip(0, 1)
+    out = pd.DataFrame({"buy": v * share, "sell": v * (1 - share), "neutral": 0.0, "src": "est"}, index=daily.index)
+    if hourly is not None and len(hourly) > 40:
+        sgn = np.sign(hourly["Close"].diff()).replace(0, np.nan).ffill().fillna(0)
+        day = hourly.index.normalize()
+        hb = (hourly["Volume"] * (sgn > 0)).groupby(day).sum()
+        hs = (hourly["Volume"] * (sgn < 0)).groupby(day).sum()
+        ht = hourly["Volume"].groupby(day).sum()
+        for dt in ht.index:
+            if dt in out.index and ht[dt] > 0:
+                k = v.loc[dt] / ht[dt] if v.loc[dt] > 0 else 1.0
+                out.loc[dt, ["buy", "sell", "neutral", "src"]] = [hb[dt] * k, hs[dt] * k,
+                                                                 (ht[dt] - hb[dt] - hs[dt]) * k, "hourly"]
+    return out
+
+
+def obv(daily: pd.DataFrame) -> pd.Series:
+    return (np.sign(daily["Close"].diff()).fillna(0) * daily["Volume"].fillna(0)).cumsum()
+
+
 def daily_chart(r: dict):
-    d = r["_daily"].tail(C.CHART_DAILY_BARS)
+    full = r["_daily"]
+    d = full.tail(C.CHART_DAILY_BARS)
     x = d.index.strftime("%d %b %y")
-    fig = make_subplots(rows=3, cols=1, shared_xaxes=True, vertical_spacing=0.03,
-                        row_heights=[0.6, 0.2, 0.2])
+    fig = make_subplots(rows=5, cols=1, shared_xaxes=True, vertical_spacing=0.025,
+                        row_heights=[0.46, 0.14, 0.12, 0.14, 0.14])
     fig.add_trace(go.Candlestick(x=x, open=d["Open"], high=d["High"], low=d["Low"], close=d["Close"],
                                  name="Price", increasing_line_color=UP, decreasing_line_color=DN,
                                  increasing_fillcolor=UP, decreasing_fillcolor=DN, showlegend=False), 1, 1)
@@ -63,18 +92,40 @@ def daily_chart(r: dict):
         _hline(fig, dp["stop"], DS_C, f"{tag} stop {dp['stop']:.3f}", dash="dashdot", width=1.2)
         _hline(fig, dp["target1"], DS_C, f"{tag} T1 {dp['target1']:.3f}", dash="dashdot", width=1.2)
 
-    hcol = [UP if v >= 0 else DN for v in d["MACDhist"]]
-    fig.add_trace(go.Bar(x=x, y=d["MACDhist"], marker_color=hcol, name="MACD hist", showlegend=False), 2, 1)
-    fig.add_trace(go.Scatter(x=x, y=d["MACD"], name="MACD", line=dict(color=EMA20_C, width=1.2), showlegend=False), 2, 1)
-    fig.add_trace(go.Scatter(x=x, y=d["MACDsig"], name="Signal", line=dict(color=EMA50_C, width=1.2), showlegend=False), 2, 1)
+    # ---- volume: lifted offer vs hit bid
+    ba = bidask_split(full, r.get("_hourly")).loc[d.index]
+    hr = (ba["src"] == "hourly").values
+    tot = (ba["buy"] + ba["sell"] + ba["neutral"]).replace(0, np.nan)
+    bpct = (100 * ba["buy"] / tot).round(0).fillna(0)
+    src = np.where(hr, "hourly tick rule", "estimate (close in range)")
+    for col_, nm, c in (("buy", "Lifted offer (buy)", UP), ("sell", "Hit bid (sell)", DN), ("neutral", "Unchanged", "#9AA5A8")):
+        fig.add_trace(go.Bar(x=x, y=ba[col_], name=nm, marker_color=c, marker_opacity=np.where(hr, 0.9, 0.35),
+                             customdata=np.c_[bpct, src], showlegend=False,
+                             hovertemplate=f"{nm}: %{{y:,.0f}} (buy %{{customdata[0]}}%%, %{{customdata[1]}})<extra></extra>"
+                             if col_ == "buy" else f"{nm}: %{{y:,.0f}}<extra></extra>"), 2, 1)
+    fig.add_trace(go.Scatter(x=x, y=full["Volume"].rolling(20).mean().loc[d.index], name="Vol 20d avg",
+                             line=dict(color="#5E6B70", width=1, dash="dot"), showlegend=False), 2, 1)
+    fig.update_layout(barmode="relative")
+    # ---- OBV
+    o = obv(full)
+    fig.add_trace(go.Scatter(x=x, y=o.loc[d.index], name="OBV", line=dict(color="#2F5FA7", width=1.3), showlegend=False), 3, 1)
+    fig.add_trace(go.Scatter(x=x, y=o.ewm(span=20, adjust=False).mean().loc[d.index], name="OBV EMA20",
+                             line=dict(color=EMA50_C, width=1, dash="dot"), showlegend=False), 3, 1)
+    fig.update_yaxes(title_text="Vol bid/ask", title_font=dict(size=10), row=2, col=1)
+    fig.update_yaxes(title_text="OBV", title_font=dict(size=10), row=3, col=1)
 
-    fig.add_trace(go.Scatter(x=x, y=d["RSI"], name="RSI 14", line=dict(color="#6B4FA0", width=1.3), showlegend=False), 3, 1)
+    hcol = [UP if v >= 0 else DN for v in d["MACDhist"]]
+    fig.add_trace(go.Bar(x=x, y=d["MACDhist"], marker_color=hcol, name="MACD hist", showlegend=False), 4, 1)
+    fig.add_trace(go.Scatter(x=x, y=d["MACD"], name="MACD", line=dict(color=EMA20_C, width=1.2), showlegend=False), 4, 1)
+    fig.add_trace(go.Scatter(x=x, y=d["MACDsig"], name="Signal", line=dict(color=EMA50_C, width=1.2), showlegend=False), 4, 1)
+
+    fig.add_trace(go.Scatter(x=x, y=d["RSI"], name="RSI 14", line=dict(color="#6B4FA0", width=1.3), showlegend=False), 5, 1)
     for lvl, c in ((70, DN), (30, UP)):
-        fig.add_hline(y=lvl, line=dict(color=c, width=1, dash="dot"), row=3, col=1)
-    fig.update_yaxes(range=[0, 100], row=3, col=1, tickvals=[30, 50, 70])
-    fig.update_yaxes(title_text="MACD", title_font=dict(size=10), row=2, col=1)
-    fig.update_yaxes(title_text="RSI", title_font=dict(size=10), row=3, col=1)
-    return _layout(fig, 620)
+        fig.add_hline(y=lvl, line=dict(color=c, width=1, dash="dot"), row=5, col=1)
+    fig.update_yaxes(range=[0, 100], row=5, col=1, tickvals=[30, 50, 70])
+    fig.update_yaxes(title_text="MACD", title_font=dict(size=10), row=4, col=1)
+    fig.update_yaxes(title_text="RSI", title_font=dict(size=10), row=5, col=1)
+    return _layout(fig, 860)
 
 
 def weekly_chart(r: dict):
