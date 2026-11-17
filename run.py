@@ -48,6 +48,7 @@ def main():
     dp = ds.Params()
     for r in results:
         try:
+            r["_hourly"] = hourly.get(r["ticker"])
             r["dual"] = ds.evaluate(r["ticker"], prices[r["ticker"]], hourly=hourly.get(r["ticker"]),
                                     sti_daily=sti_raw, equity=C.ACCOUNT_SIZE_SGD, p=dp)
         except Exception as e:
