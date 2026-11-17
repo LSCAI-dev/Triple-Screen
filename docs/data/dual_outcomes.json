@@ -7,7 +7,7 @@
    "name": "Hongkong Land",
    "decision": "WATCH",
    "version": "1.2",
-   "sm": 67.4,
+   "sm": 70.9,
    "ts": 61.2,
    "entry": 8.4,
    "stop": 8.09,
@@ -24,7 +24,7 @@
    "name": "Keppel DC REIT",
    "decision": "WATCH",
    "version": "1.2",
-   "sm": 83.7,
+   "sm": 56.8,
    "ts": 66.7,
    "entry": 2.22,
    "stop": 2.1,
@@ -49,7 +49,7 @@
    "t2": 4.78,
    "rr": 0.95,
    "qty": 2500,
-   "outcome": "Not filled"
+   "outcome": "Pending"
   },
   {
    "date": "2026-11-12",
