@@ -1,0 +1,125 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Methodology | SGX Triple Screen</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📈</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+
+</head><body><div class="wrap">
+<header class="top"><h1>SGX Triple Screen</h1>
+<nav><a href="index.html" >Today</a><a href="archive.html" >Saved runs</a><a href="https://github.com/LSCAI-dev/Triple-Screen/actions/workflows/triple-screen.yml" target="_blank" rel="noopener" title="Opens GitHub: tap Run workflow, wait 2-3 min, then refresh Today">Update now&nbsp;&#8599;</a><a href="method.html" aria-current="page">Methodology</a></nav></header>
+
+<div class="method">
+<p class="stamp">How every number on this site is produced. Spec 1.2 &middot; thresholds below are read from the live settings, so this page always matches the scan.</p>
+<p class="jump"><a href="#overview">Overview</a><a href="#status">Status (original)</a><a href="#sm">Smart Money</a><a href="#ts">Triple Screen score</a><a href="#gates">Gates &amp; decision</a><a href="#plan">Trade plan</a><a href="#charts">Charts</a><a href="#gloss">Glossary</a></p>
+
+<h2 id="overview">Overview</h2>
+<p>Every weekday after the close the scan downloads daily, weekly and hourly prices for the 30 STI stocks and runs <b>two systems side by side</b>:</p>
+<div class="mt"><table class="t"><thead><tr><th class="l">Column</th><th class="l">System</th><th class="l">Answers</th><th class="l">Results</th></tr></thead><tbody>
+<tr><td><b>Status</b> + Grade</td><td class="l">Original Elder Triple Screen (price only, long and short)</td><td class="l">Is the classic pattern there?</td><td class="l">Long/Short setup, Long/Short watch, No trade; grade A/B/C</td></tr>
+<tr><td><b>Dual</b></td><td class="l">Dual-Score system: Smart Money score + Triple Screen score + hard gates (long only)</td><td class="l">Is it a disciplined buy right now?</td><td class="l">BUY / WATCH / AVOID</td></tr>
+</tbody></table></div>
+<p class="note">Strongest case: Status = Long setup <i>and</i> Dual = BUY. Long setup + WATCH = pattern without enough volume confirmation or a gate failing. All plans are for the <b>next</b> session.</p>
+
+<h2 id="status">1. Status: original Elder Triple Screen</h2>
+<p>Elder's idea (<i>Trading for a Living</i>, 1993): trade in the direction of the long timeframe, enter on a short-timeframe move against it, and let the market pull you in with a stop order.</p>
+<div class="mt"><table class="t"><thead><tr><th class="l">Screen</th><th class="l">Rule used here</th></tr></thead><tbody>
+<tr><td><b>1 &middot; Tide</b> (weekly)</td><td class="l"><b>Up</b> = weekly MACD-histogram rising and (26-week EMA rising or close above it). <b>Down</b> = histogram falling and (EMA falling or close below it). Otherwise <b>Mixed</b> &rarr; No trade. "Strong" = histogram and EMA agree.</td></tr>
+<tr><td><b>2 &middot; Wave</b> (daily)</td><td class="l">Up-tide needs a pullback: Force Index(2) &lt; 0, or RSI(14) &le; 45, or the low touched the 20-EMA (within 0.5%). Close must be &ge; 97% of the 50-EMA and not more than 1.0 ATR above the 20-EMA (too extended). Shorts mirror this (RSI &ge; 55).</td></tr>
+<tr><td><b>3 &middot; Entry</b></td><td class="l">Buy-stop 1 tick above today's high, valid 3 sessions (trail it down to each new high if unfilled). Stop = lower of 2-day low &minus; 1 tick and entry &minus; 0.75 ATR. T1 = first resistance &gt; 0.25 ATR above entry, else 2R; T2 = next level, at least 2R.</td></tr>
+</tbody></table></div>
+<p><b>Grade</b> counts 4 checks: touched the 20-EMA value zone &middot; daily MACD-histogram turned up &middot; R:R to T1 &ge; 2 &middot; strong tide. <b>A</b> = 3+ checks and R:R &ge; 1.5; <b>B</b> = 2+ and R:R &ge; 1.2; else <b>C</b>. If R:R to T1 &lt; 1.0 the setup is downgraded to Watch.</p>
+
+<h2 id="sm">2. Smart Money score (0&ndash;100)</h2>
+<p>Asks: <i>is volume showing accumulation?</i> Only volume-based measures live here (no price oscillators), so nothing is counted twice. Each component scores 0 &rarr; full points on a straight line between the two values shown.</p>
+<div class="mt"><table class="t"><thead><tr><th class="l">Component</th><th>Pts</th><th class="l">What is measured</th><th class="l">0 pts &rarr; full pts</th></tr></thead><tbody>
+<tr><td><b>Successful bid/ask</b></td><td>35</td><td class="l">Share of volume that <b>lifted the offer</b> (aggressive buyers). 70% on the last 5 sessions + 30% on improvement vs 20 sessions. Hourly tick rule as proxy (up-tick bar = buy volume).</td><td class="l">45% &rarr; 62% buy share; &minus;2 &rarr; +8 pts improvement</td></tr>
+<tr><td><b>Price-volume</b></td><td>25</td><td class="l">Volume on up days &divide; volume on down days, last 20 sessions (log scale).</td><td class="l">0.8&times; &rarr; 1.8&times;</td></tr>
+<tr><td><b>Block trades</b></td><td>15</td><td class="l">Net large-trade flow, last 10 sessions. Proxy: days with &ge; 2&times; average volume, signed by the close and where it sits in the range.</td><td class="l">net &minus;20% &rarr; +60%</td></tr>
+<tr><td><b>VWAP</b></td><td>10</td><td class="l">Close vs VWAP anchored at the 60-day low (in ATR) 50% + slope of the 20-day rolling VWAP 50%.</td><td class="l">&minus;0.5 &rarr; +1.0 ATR; &minus;1% &rarr; +2%</td></tr>
+<tr><td><b>OBV</b></td><td>10</td><td class="l">20-day OBV slope &divide; average volume 70% + where OBV sits in its 60-day range 30%.</td><td class="l">&minus;0.1 &rarr; +0.3</td></tr>
+<tr><td><b>Closing strength</b></td><td>5</td><td class="l">Average close-location value (where the close sits between low and high) over 5 sessions.</td><td class="l">0.30 &rarr; 0.75</td></tr>
+</tbody></table></div>
+<p class="note">Missing components are re-weighted over the rest. <b>Confidence</b> = share of the weight measured on real (not proxy) data. Yahoo has no true bid/ask feed, so the bid/ask and block components are always proxies here.</p>
+
+<h2 id="ts">3. Triple Screen score (0&ndash;100)</h2>
+<p>Asks: <i>is the price pattern right?</i> Price indicators only; each used once.</p>
+<div class="mt"><table class="t"><thead><tr><th class="l">Screen</th><th>Pts</th><th class="l">Checks (points)</th></tr></thead><tbody>
+<tr><td><b>1 &middot; Trend alignment</b></td><td>40</td><td class="l">Weekly MACD-histogram rising (15: 2 weeks = full, 1 week = 60%) &middot; weekly 26-EMA 4-week slope &minus;1% &rarr; +3% (15) &middot; close above a rising daily 50-EMA (10)</td></tr>
+<tr><td><b>2 &middot; Pullback quality</b></td><td>35</td><td class="l">RSI(14) 5-day low in 38&ndash;52 after RSI &ge; 58 within 20 days (9) &middot; 3-day low inside the <b>13&ndash;26 EMA value zone</b> (10) &middot; Fibonacci retracement of the last swing 38.2&ndash;61.8% (8) &middot; <b>Bear Power</b> below zero and turning up (8)</td></tr>
+<tr><td><b>3 &middot; Entry confirmation</b></td><td>25</td><td class="l">Close above prior high (14; above prior close = 40%) &middot; daily MACD-histogram up 2 bars (11; 1 bar = 60%)</td></tr>
+</tbody></table></div>
+
+<h2 id="gates">4. Hard gates &amp; decision</h2>
+<p>Gates are pass/fail filters, not scored. <b>All</b> must pass for a BUY.</p>
+<div class="mt"><table class="t"><thead><tr><th class="l">Gate</th><th class="l">Rule</th></tr></thead><tbody>
+<tr><td>Liquidity</td><td class="l">20-day average turnover &ge; S$1,000,000</td></tr>
+<tr><td>Reward:risk</td><td class="l">T1 is at least 2.0R above entry</td></tr>
+<tr><td>ATR band</td><td class="l">ATR is 0.8&ndash;6.0% of price (not dead, not wild)</td></tr>
+<tr><td>Stop width</td><td class="l">Stop no wider than 2.5 ATR</td></tr>
+<tr><td>Weekly Impulse</td><td class="l">Not red (red = weekly 13-EMA and MACD-histogram both falling: Elder's "no buying" signal)</td></tr>
+<tr><td>Events</td><td class="l">No results or ex-dividend within 5 sessions (when dates are supplied)</td></tr>
+<tr><td>6% rule</td><td class="l">Open risk + this month's loss + new trade risk &le; 6% of equity (only when portfolio figures are supplied; always on in the backtest)</td></tr>
+</tbody></table></div>
+<div class="mt"><table class="t"><thead><tr><th class="l">Decision</th><th class="l">Needs</th></tr></thead><tbody>
+<tr><td><b class="dec-BUY">BUY</b></td><td class="l">All gates pass &middot; TS &ge; 70 &middot; SM &ge; 65 &middot; bid/ask component &ge; 17.5 of 35</td></tr>
+<tr><td><b class="dec-WATCH">WATCH</b></td><td class="l">TS &ge; 60 and SM &ge; 50, but not a BUY</td></tr>
+<tr><td><b class="dec-AVOID">AVOID</b></td><td class="l">Everything else</td></tr>
+</tbody></table></div>
+<p class="note">When the STI is bearish (below a falling 50-EMA) both BUY thresholds rise by 10. "Blocked by" on each stock lists exactly which gate or score failed.</p>
+
+<h2 id="plan">5. Dual-score trade plan &amp; management</h2>
+<div class="mt"><table class="t"><tbody>
+<tr><td><b>Entry</b></td><td class="l">Buy-stop 1 tick above today's high (SGX ticks: 0.001 below S$0.20, 0.005 below S$1, 0.01 from S$1), valid 2 sessions.</td></tr>
+<tr><td><b>Stop</b></td><td class="l"><b>SafeZone</b>: today's low &minus; 2.5 &times; the average amount the low was undercut over 10 sessions; never closer than 0.75 ATR to entry.</td></tr>
+<tr><td><b>T1</b></td><td class="l">First resistance at least 1 ATR above entry (swing highs over 250 days + 52-week high, clustered), else 2R.</td></tr>
+<tr><td><b>T2</b></td><td class="l">Nearer of the 2nd resistance and the top of the price channel (22-EMA envelope holding 95% of the last 100 bars), at least T1 + 0.5 ATR.</td></tr>
+<tr><td><b>Size</b></td><td class="l">Risk 1.0% of equity (S$100,000 in settings) &divide; (entry &minus; stop), in 100-share lots.</td></tr>
+<tr><td><b>Manage</b></td><td class="l">Move stop to breakeven at +1R &rarr; sell half at T1 &rarr; exit the rest on a close below the 20-EMA &rarr; time stop after 7 sessions if under +0.5R &rarr; max hold 30 sessions.</td></tr>
+</tbody></table></div>
+<p class="note"><b>R</b> = profit or loss in units of the initial risk (entry &minus; stop). +2R = made twice what was risked. <b>MFE / MAE</b> on Saved runs = best and worst move from the fill, in R.</p>
+
+<h2 id="charts">6. Reading the charts</h2>
+<div class="mt"><table class="t"><tbody>
+<tr><td><b>Price</b></td><td class="l">Candles, 20-EMA (blue), 50-EMA (gold), support (green) and resistance (red) levels with touch counts, original plan lines (entry/stop/T1/T2) and, for BUY/WATCH, dual plan lines (purple, "DS").</td></tr>
+<tr><td><b>Vol bid/ask</b></td><td class="l">Green = bought at the offer, red = sold at the bid, grey = unchanged; dotted = 20-day average. Solid bars: hourly tick rule (last ~60 sessions); faded: estimate from the close's position in the range.</td></tr>
+<tr><td><b>OBV</b></td><td class="l">On-Balance Volume with dotted 20-day EMA. Rising OBV while price pulls back = accumulation.</td></tr>
+<tr><td><b>MACD</b></td><td class="l">Histogram (green above 0, red below), MACD line (blue) and signal (gold). Histogram turning up = momentum improving.</td></tr>
+<tr><td><b>RSI</b></td><td class="l">14-day; 70 overbought, 30 oversold. In an up-trend, dips to 40&ndash;50 are the pullbacks this system buys.</td></tr>
+<tr><td><b>Weekly</b></td><td class="l">13- and 26-week EMAs; histogram coloured by slope (green rising, red falling) = the tide.</td></tr>
+</tbody></table></div>
+
+<h2 id="gloss">7. Glossary</h2>
+<dl class="gl">
+<dt>EMA</dt><dd>Exponential moving average; weights recent prices more.</dd>
+<dt>MACD / histogram</dt><dd>12-EMA minus 26-EMA, with a 9-period signal line; histogram = MACD minus signal. Its slope is Elder's main trend tool.</dd>
+<dt>RSI</dt><dd>Relative Strength Index (14): 0&ndash;100 measure of recent gains vs losses.</dd>
+<dt>ATR</dt><dd>Average True Range (14): typical daily range, used to size stops and distances.</dd>
+<dt>Force Index (2)</dt><dd>2-day EMA of (price change &times; volume). Below 0 in an up-trend = pullback (original system only).</dd>
+<dt>Bear Power</dt><dd>Elder-ray: daily low &minus; 13-EMA. Negative but rising in an up-trend = sellers fading.</dd>
+<dt>Value zone</dt><dd>Area between the fast and slow EMAs where Elder buys pullbacks.</dd>
+<dt>Impulse System</dt><dd>Green = 13-EMA and MACD-histogram both rising; red = both falling; blue = mixed.</dd>
+<dt>SafeZone</dt><dd>Elder's stop placed beyond normal noise: recent average downside penetration &times; a factor.</dd>
+<dt>OBV</dt><dd>On-Balance Volume: running total adding volume on up days, subtracting it on down days.</dd>
+<dt>VWAP</dt><dd>Volume-weighted average price; "anchored" = measured from a chosen start (here the 60-day low).</dd>
+<dt>CLV</dt><dd>Close location value: 0 = closed at the low, 1 = at the high.</dd>
+<dt>Tick rule</dt><dd>A trade (or hourly bar) above the previous price counts as buying, below as selling.</dd>
+<dt>Fibonacci retracement</dt><dd>How much of the last up-swing a pullback has given back; 38.2&ndash;61.8% is the classic buy zone.</dd>
+<dt>R:R</dt><dd>Reward to risk: (target &minus; entry) &divide; (entry &minus; stop).</dd>
+</dl>
+
+<h2>Data &amp; limits</h2>
+<p class="note">Prices: Yahoo Finance via yfinance, unadjusted, usually 10&ndash;20 min delayed intraday; a scan during trading hours uses the day's bar so far. No true bid/ask or tick data, so bid/ask and block components are proxies. The STI list is today's constituents. This site is a screening aid, not advice: verify every level on your broker terminal before placing an order.</p>
+</div>
+<script>
+document.querySelectorAll('.method table.t').forEach(t=>{
+  const h=[...t.querySelectorAll('thead th')].map(x=>x.textContent);
+  if(!h.length) return;
+  t.querySelectorAll('tbody tr').forEach(r=>[...r.children].forEach((c,i)=>{ if(i>0&&h[i]) c.setAttribute('data-h',h[i]); }));
+});
+</script>
+
+<footer>Source: Yahoo Finance via yfinance (unadjusted daily OHLC). Daily bars to 2026-11-17; generated 2026-11-17 12:42 SGT.
+Prices are end-of-day and may differ from your broker. Verify every level on your broker terminal before placing an order. Not investment advice.</footer>
+</div><script src="assets/theme.js"></script></body></html>

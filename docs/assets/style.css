@@ -21,6 +21,22 @@ header.top nav a[aria-current]{color:var(--ink);border-bottom:2px solid var(--in
 .jump{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 4px}
 .jump a{padding:6px 12px;border:1px solid var(--rule);border-radius:16px;text-decoration:none;color:var(--ink);font-weight:600;font-size:14px}
 h2[id]{scroll-margin-top:12px}
+.method .mt{overflow-x:auto;margin:8px 0}
+.method table.t td{text-align:left;vertical-align:top}
+.method table.t td:first-child{white-space:nowrap}
+.method table.t th{text-align:left}
+.method p{max-width:80ch}
+dl.gl{display:grid;grid-template-columns:max-content 1fr;gap:6px 16px;max-width:80ch}
+dl.gl dt{font-weight:700}
+dl.gl dd{margin:0;color:var(--ink)}
+header.top nav a{white-space:nowrap}
+@media (max-width:640px){
+ .method table.t thead{display:none}
+ .method table.t tr{display:block;padding:10px;border-bottom:1px solid var(--rule)}
+ .method table.t td{display:block;border:0;padding:2px 0;white-space:normal}
+ .method table.t td:first-child{font-size:17px;margin-bottom:2px}
+ .method table.t td[data-h]::before{content:attr(data-h);display:block;font-size:11px;color:var(--muted)}
+ dl.gl{grid-template-columns:1fr} dl.gl dd{margin-bottom:6px}}
 .stamp{color:var(--muted);font-size:14px;margin:8px 0 0}
 .tide{display:flex;flex-wrap:wrap;gap:4px 28px;margin:22px 0 6px;align-items:baseline}
 .tide b{font-size:40px;line-height:1;font-weight:700}
