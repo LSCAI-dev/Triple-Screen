@@ -15,15 +15,7 @@
    "t2": 9.11,
    "rr": 0.81,
    "qty": 3200,
-   "filled": "2026-11-18",
-   "fill": 8.4,
-   "days": 1,
-   "mfe_r": 0.03,
-   "mae_r": -0.52,
-   "t1_hit": false,
-   "outcome": "Open",
-   "closed": "",
-   "r": -0.13
+   "outcome": "Pending"
   },
   {
    "date": "2026-11-16",
@@ -40,7 +32,7 @@
    "t2": 2.4,
    "rr": 0.42,
    "qty": 8300,
-   "outcome": "Not filled"
+   "outcome": "Pending"
   },
   {
    "date": "2026-11-13",
@@ -91,13 +83,13 @@
   },
   "WATCH": {
    "plans": 4,
-   "filled": 1,
+   "filled": 0,
    "closed": 0,
    "win_rate": null,
    "avg_r": null,
    "total_r": null,
-   "avg_mfe_r": 0.03,
-   "avg_mae_r": -0.52,
+   "avg_mfe_r": null,
+   "avg_mae_r": null,
    "avg_days": null
   }
  },
