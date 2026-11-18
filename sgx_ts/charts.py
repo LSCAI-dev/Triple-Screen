@@ -12,6 +12,8 @@ SUP_C, RES_C = "#127A5F", "#B23A3A"
 ENTRY_C, STOP_C, TGT_C = "#2F5FA7", "#B23A3A", "#127A5F"
 GRID = "rgba(120,135,140,0.18)"
 DS_C = "#7A4FB0"   # dual-score plan lines
+VZ_FILL = "rgba(47,95,167,0.13)"   # 13-26 EMA value zone
+EXT_C = "#C0662B"                  # "extended" line (EMA20 + EXTENDED_ATR x ATR)
 
 
 def _layout(fig, height):
@@ -69,6 +71,19 @@ def daily_chart(r: dict):
     fig.add_trace(go.Candlestick(x=x, open=d["Open"], high=d["High"], low=d["Low"], close=d["Close"],
                                  name="Price", increasing_line_color=UP, decreasing_line_color=DN,
                                  increasing_fillcolor=UP, decreasing_fillcolor=DN, showlegend=False), 1, 1)
+    # Value zone: shaded band between the daily 13- and 26-EMA (Screen 2 of the dual-score system)
+    e13 = full["Close"].ewm(span=13, adjust=False).mean().loc[d.index]
+    e26 = full["Close"].ewm(span=26, adjust=False).mean().loc[d.index]
+    vz_top, vz_bot = np.maximum(e13, e26), np.minimum(e13, e26)
+    fig.add_trace(go.Scatter(x=x, y=vz_top, line=dict(width=0), hoverinfo="skip",
+                             showlegend=False, name="VZ top"), 1, 1)
+    fig.add_trace(go.Scatter(x=x, y=vz_bot, line=dict(width=0), fill="tonexty", fillcolor=VZ_FILL,
+                             name="Value zone 13-26", customdata=np.c_[vz_top],
+                             hovertemplate="Value zone %{y:.3f}-%{customdata[0]:.3f}<extra></extra>"), 1, 1)
+    # Extended line: close above it = "Extended" in the Wave column (too far above value to chase)
+    ext = full["EMA20"].loc[d.index] + C.EXTENDED_ATR * full["ATR"].loc[d.index]
+    fig.add_trace(go.Scatter(x=x, y=ext, name=f"Extended (EMA20+{C.EXTENDED_ATR:g} ATR)",
+                             line=dict(color=EXT_C, width=1, dash="dot")), 1, 1)
     fig.add_trace(go.Scatter(x=x, y=d["EMA20"], name="EMA 20", line=dict(color=EMA20_C, width=1.4)), 1, 1)
     fig.add_trace(go.Scatter(x=x, y=d["EMA50"], name="EMA 50", line=dict(color=EMA50_C, width=1.4)), 1, 1)
 

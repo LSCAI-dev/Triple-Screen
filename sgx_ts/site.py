@@ -238,7 +238,23 @@ async function loadRun(d){
 METHOD = """{% extends "base" %}{% block body %}
 <div class="method">
 <p class="stamp">How every number on this site is produced. Spec {{ p.version }} &middot; thresholds below are read from the live settings, so this page always matches the scan.</p>
-<p class="jump"><a href="#overview">Overview</a><a href="#status">Status (original)</a><a href="#sm">Smart Money</a><a href="#ts">Triple Screen score</a><a href="#gates">Gates &amp; decision</a><a href="#plan">Trade plan</a><a href="#charts">Charts</a><a href="#gloss">Glossary</a></p>
+<p class="jump"><a href="#how">How it works</a><a href="#overview">Overview</a><a href="#status">Status (original)</a><a href="#sm">Smart Money</a><a href="#ts">Triple Screen score</a><a href="#gates">Gates &amp; decision</a><a href="#plan">Trade plan</a><a href="#charts">Charts</a><a href="#gloss">Glossary</a></p>
+
+<h2 id="how">How Triple Screen works (plain English)</h2>
+<p>Elder's rule: <b>trade with the tide, buy against the wave, enter only when price confirms</b>. Each screen is a filter; a stock must pass all three, in order.</p>
+<div class="mt"><table class="t"><thead><tr><th class="l">Screen</th><th class="l">Question</th><th class="l">What to look for</th></tr></thead><tbody>
+<tr><td><b>1 &middot; Tide</b><br>weekly chart</td><td class="l">Which way is the main trend?</td><td class="l">Weekly MACD-histogram rising and the 26-week EMA rising. Up-tide = only look for buys. Weekly Impulse red (13-week EMA and histogram both falling) = no buying.</td></tr>
+<tr><td><b>2 &middot; Wave</b><br>daily chart</td><td class="l">Has price pulled back to fair value?</td><td class="l">In an up-tide, wait for a dip <b>into the value zone</b> (shaded band between the daily 13- and 26-EMA). Signs the dip is ending: RSI back to 40&ndash;50, Bear Power below zero and turning up, Force Index(2) below zero.</td></tr>
+<tr><td><b>3 &middot; Entry</b><br>next session</td><td class="l">Is the dip over?</td><td class="l">Place a buy-stop 1 tick above today's high. It only fills if buyers push price up through it. Stop below the recent low; take profit at resistance.</td></tr>
+</tbody></table></div>
+<p><b>Pullback vs Rising vs Extended</b> (the <i>Wave</i> column). In an up-tide the daily price is in one of three states:</p>
+<div class="mt"><table class="t"><tbody>
+<tr><td><b>Pullback</b></td><td class="l">Price has dipped toward the EMAs, or RSI/Force Index show a dip. This is the buy zone: a setup can form.</td></tr>
+<tr><td><b>Rising</b></td><td class="l">Trend up, price moving up, no dip yet. Wait.</td></tr>
+<tr><td><b>Extended</b></td><td class="l">Price has already rallied and closed more than {{ c.EXTENDED_ATR }} ATR above the 20-EMA (the dotted orange line on the daily chart). Buying here means chasing: the stop is far away, reward:risk is poor, and price often drifts back to the EMAs first. Wait for it to return to the value zone.</td></tr>
+</tbody></table></div>
+<p class="note">Example: 20-EMA S$5.00, ATR S$0.10. Close above S${{ "%.2f"|format(5.0 + c.EXTENDED_ATR*0.10) }} = Extended. A dip back to roughly S$4.95&ndash;5.05 (the value zone) is where the next setup would come from.</p>
+<p>The site runs this classic method (<b>Status</b> column) and a stricter scored version (<b>Dual</b> column) that adds volume confirmation and hard gates. Both are explained below.</p>
 
 <h2 id="overview">Overview</h2>
 <p>Every weekday after the close the scan downloads daily, weekly and hourly prices for the {{ n_univ }} STI stocks and runs <b>two systems side by side</b>:</p>
@@ -308,7 +324,7 @@ METHOD = """{% extends "base" %}{% block body %}
 
 <h2 id="charts">6. Reading the charts</h2>
 <div class="mt"><table class="t"><tbody>
-<tr><td><b>Price</b></td><td class="l">Candles, 20-EMA (blue), 50-EMA (gold), support (green) and resistance (red) levels with touch counts, original plan lines (entry/stop/T1/T2) and, for BUY/WATCH, dual plan lines (purple, "DS").</td></tr>
+<tr><td><b>Price</b></td><td class="l">Candles, shaded <b>value zone</b> (band between the daily 13- and 26-EMA: where pullbacks are bought), dotted orange <b>Extended</b> line (20-EMA + {{ c.EXTENDED_ATR }} ATR: close above it = too far to chase), 20-EMA (blue: trailing exit after T1), 50-EMA (gold: daily trend), support (green) and resistance (red) levels with touch counts, original plan lines (entry/stop/T1/T2) and, for BUY/WATCH, dual plan lines (purple, "DS").</td></tr>
 <tr><td><b>Vol bid/ask</b></td><td class="l">Green = bought at the offer, red = sold at the bid, grey = unchanged; dotted = 20-day average. Solid bars: hourly tick rule (last ~60 sessions); faded: estimate from the close's position in the range.</td></tr>
 <tr><td><b>OBV</b></td><td class="l">On-Balance Volume with dotted 20-day EMA. Rising OBV while price pulls back = accumulation.</td></tr>
 <tr><td><b>MACD</b></td><td class="l">Histogram (green above 0, red below), MACD line (blue) and signal (gold). Histogram turning up = momentum improving.</td></tr>
@@ -324,7 +340,8 @@ METHOD = """{% extends "base" %}{% block body %}
 <dt>ATR</dt><dd>Average True Range (14): typical daily range, used to size stops and distances.</dd>
 <dt>Force Index (2)</dt><dd>2-day EMA of (price change &times; volume). Below 0 in an up-trend = pullback (original system only).</dd>
 <dt>Bear Power</dt><dd>Elder-ray: daily low &minus; 13-EMA. Negative but rising in an up-trend = sellers fading.</dd>
-<dt>Value zone</dt><dd>Area between the fast and slow EMAs where Elder buys pullbacks.</dd>
+<dt>Value zone</dt><dd>Area between the fast and slow EMAs (here the daily 13- and 26-EMA, shaded on the chart) where Elder buys pullbacks.</dd>
+<dt>Extended</dt><dd>Price has run too far above value (close &gt; 20-EMA + {{ c.EXTENDED_ATR }} ATR). Not a sell signal: the trend may still be up, but a new buy has poor reward:risk. Wait for the pullback.</dd>
 <dt>Impulse System</dt><dd>Green = 13-EMA and MACD-histogram both rising; red = both falling; blue = mixed.</dd>
 <dt>SafeZone</dt><dd>Elder's stop placed beyond normal noise: recent average downside penetration &times; a factor.</dd>
 <dt>OBV</dt><dd>On-Balance Volume: running total adding volume on up days, subtracting it on down days.</dd>
