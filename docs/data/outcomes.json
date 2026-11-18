@@ -9,10 +9,10 @@
    "entry": 8.4,
    "stop": 8.21,
    "t1": 8.75,
-   "outcome": "Pending",
-   "filled": "",
+   "outcome": "Open",
+   "filled": "2026-11-18",
    "closed": "",
-   "r": null
+   "r": -0.11
   },
   {
    "date": "2026-11-13",
@@ -26,7 +26,7 @@
    "outcome": "Open",
    "filled": "2026-11-16",
    "closed": "",
-   "r": -0.0
+   "r": -0.33
   },
   {
    "date": "2026-11-12",
@@ -68,7 +68,7 @@
    "outcome": "Open",
    "filled": "2026-11-11",
    "closed": "",
-   "r": -0.13
+   "r": 0.75
   },
   {
    "date": "2026-11-05",
@@ -521,7 +521,7 @@
  ],
  "summary": {
   "signals": 37,
-  "filled": 20,
+  "filled": 21,
   "closed": 17,
   "wins": 6,
   "win_rate": 35.3,
