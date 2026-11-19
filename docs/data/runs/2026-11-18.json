@@ -1,7 +1,7 @@
 {
  "meta": {
   "as_of": "2026-11-18",
-  "generated": "2026-11-18 21:18",
+  "generated": "2026-11-20 03:11",
   "source": "Yahoo Finance via yfinance (unadjusted daily OHLC)",
   "demo": false,
   "universe": 30,
@@ -94,12 +94,12 @@
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 24.8,
+    "combined": 25.2,
     "sm": {
-     "score": 36.8,
+     "score": 37.7,
      "components": {
       "bid_ask": {
-       "pts": 27.0,
+       "pts": 27.9,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -290,17 +290,16 @@
      "reward_risk",
      "stop_width",
      "TS<80",
-     "SM<75",
      "bid/ask below floor"
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 62.2,
+    "combined": 63.6,
     "sm": {
-     "score": 72.8,
+     "score": 75.7,
      "components": {
       "bid_ask": {
-       "pts": 9.0,
+       "pts": 11.9,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -489,21 +488,19 @@
     "symbol": "H78.SI",
     "date": "2026-11-18",
     "close": 8.359999656677246,
-    "decision": "AVOID",
+    "decision": "WATCH",
     "blocked_by": [
      "reward_risk",
-     "TS<80",
-     "SM<75",
-     "bid/ask below floor"
+     "TS<80"
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 57.4,
+    "combined": 74.2,
     "sm": {
-     "score": 45.5,
+     "score": 79.2,
      "components": {
       "bid_ask": {
-       "pts": 0.0,
+       "pts": 33.7,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -701,12 +698,12 @@
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 52.5,
+    "combined": 46.8,
     "sm": {
-     "score": 68.8,
+     "score": 57.5,
      "components": {
       "bid_ask": {
-       "pts": 11.2,
+       "pts": 0.0,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -1089,12 +1086,12 @@
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 16.8,
+    "combined": 19.6,
     "sm": {
-     "score": 24.7,
+     "score": 30.1,
      "components": {
       "bid_ask": {
-       "pts": 0.0,
+       "pts": 5.4,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -1235,7 +1232,7 @@
    "ema20": 9.852,
    "ema50": 10.335,
    "rsi": 26.4,
-   "fi2": -944539.0,
+   "fi2": -955062.0,
    "atr": 0.261,
    "macd": -0.3053,
    "macd_hist": -0.0382,
@@ -1283,12 +1280,12 @@
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 9.8,
+    "combined": 2.1,
     "sm": {
-     "score": 16.5,
+     "score": 1.0,
      "components": {
       "bid_ask": {
-       "pts": 15.5,
+       "pts": 0.0,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -1354,7 +1351,7 @@
     "gates": {
      "liquidity": {
       "pass": true,
-      "value": "S$38.98M/day"
+      "value": "S$39.03M/day"
      },
      "reward_risk": {
       "pass": false,
@@ -1487,12 +1484,12 @@
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 21.2,
+    "combined": 23.6,
     "sm": {
-     "score": 13.3,
+     "score": 18.3,
      "components": {
       "bid_ask": {
-       "pts": 4.9,
+       "pts": 9.9,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -2076,16 +2073,17 @@
      "stop_width",
      "weekly_impulse",
      "TS<80",
-     "SM<75"
+     "SM<75",
+     "bid/ask below floor"
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 24.3,
+    "combined": 6.8,
     "sm": {
-     "score": 43.4,
+     "score": 8.4,
      "components": {
       "bid_ask": {
-       "pts": 35.0,
+       "pts": 0.0,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -2228,7 +2226,7 @@
    "ema20": 0.591,
    "ema50": 0.604,
    "rsi": 23.7,
-   "fi2": -383254.0,
+   "fi2": -386286.0,
    "atr": 0.015,
    "macd": -0.0122,
    "macd_hist": -0.0063,
@@ -2276,12 +2274,12 @@
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 7.6,
+    "combined": 5.6,
     "sm": {
-     "score": 7.2,
+     "score": 3.1,
      "components": {
       "bid_ask": {
-       "pts": 4.1,
+       "pts": 0.0,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -2347,7 +2345,7 @@
     "gates": {
      "liquidity": {
       "pass": true,
-      "value": "S$18.15M/day"
+      "value": "S$18.18M/day"
      },
      "reward_risk": {
       "pass": false,
@@ -2463,17 +2461,16 @@
      "stop_width",
      "weekly_impulse",
      "TS<80",
-     "SM<75",
-     "bid/ask below floor"
+     "SM<75"
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 35.2,
+    "combined": 35.6,
     "sm": {
-     "score": 53.3,
+     "score": 54.0,
      "components": {
       "bid_ask": {
-       "pts": 17.4,
+       "pts": 18.2,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -3667,12 +3664,12 @@
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 8.4,
+    "combined": 12.0,
     "sm": {
-     "score": 10.1,
+     "score": 17.3,
      "components": {
       "bid_ask": {
-       "pts": 0.0,
+       "pts": 7.2,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -3861,12 +3858,12 @@
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 41.8,
+    "combined": 40.4,
     "sm": {
-     "score": 57.5,
+     "score": 54.9,
      "components": {
       "bid_ask": {
-       "pts": 30.2,
+       "pts": 27.6,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -4059,12 +4056,12 @@
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 51.4,
+    "combined": 51.0,
     "sm": {
-     "score": 52.1,
+     "score": 51.3,
      "components": {
       "bid_ask": {
-       "pts": 0.8,
+       "pts": 0.0,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -4250,16 +4247,17 @@
     "decision": "AVOID",
     "blocked_by": [
      "reward_risk",
-     "TS<80"
+     "TS<80",
+     "SM<75"
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 53.4,
+    "combined": 48.2,
     "sm": {
-     "score": 75.3,
+     "score": 65.0,
      "components": {
       "bid_ask": {
-       "pts": 35.0,
+       "pts": 24.7,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -4453,12 +4451,12 @@
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 59.4,
+    "combined": 56.5,
     "sm": {
-     "score": 67.1,
+     "score": 61.4,
      "components": {
       "bid_ask": {
-       "pts": 7.8,
+       "pts": 2.1,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -4645,12 +4643,12 @@
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 18.0,
+    "combined": 18.1,
     "sm": {
-     "score": 8.1,
+     "score": 8.2,
      "components": {
       "bid_ask": {
-       "pts": 6.6,
+       "pts": 6.7,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -4848,12 +4846,12 @@
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 53.0,
+    "combined": 55.7,
     "sm": {
-     "score": 30.6,
+     "score": 35.9,
      "components": {
       "bid_ask": {
-       "pts": 0.0,
+       "pts": 5.2,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -5041,12 +5039,12 @@
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 64.0,
+    "combined": 63.4,
     "sm": {
-     "score": 85.5,
+     "score": 84.4,
      "components": {
       "bid_ask": {
-       "pts": 29.1,
+       "pts": 28.1,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -5438,12 +5436,12 @@
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 21.8,
+    "combined": 20.2,
     "sm": {
-     "score": 23.0,
+     "score": 20.0,
      "components": {
       "bid_ask": {
-       "pts": 2.9,
+       "pts": 0.0,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -5807,16 +5805,17 @@
     "decision": "AVOID",
     "blocked_by": [
      "stop_width",
-     "TS<80"
+     "TS<80",
+     "SM<75"
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 63.4,
+    "combined": 58.2,
     "sm": {
-     "score": 81.4,
+     "score": 71.1,
      "components": {
       "bid_ask": {
-       "pts": 34.3,
+       "pts": 24.0,
        "max": 35,
        "tier": "hourly-proxy"
       },

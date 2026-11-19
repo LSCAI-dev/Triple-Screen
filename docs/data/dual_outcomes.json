@@ -34,13 +34,13 @@
    "qty": 3200,
    "filled": "2026-11-18",
    "fill": 8.4,
-   "days": 2,
-   "mfe_r": 0.19,
+   "days": 1,
+   "mfe_r": 0.03,
    "mae_r": -0.52,
    "t1_hit": false,
    "outcome": "Open",
    "closed": "",
-   "r": 0.06
+   "r": -0.13
   },
   {
    "date": "2026-11-16",
@@ -113,7 +113,7 @@
    "win_rate": null,
    "avg_r": null,
    "total_r": null,
-   "avg_mfe_r": 0.19,
+   "avg_mfe_r": 0.03,
    "avg_mae_r": -0.52,
    "avg_days": null
   }
