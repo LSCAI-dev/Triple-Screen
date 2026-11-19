@@ -1,6 +1,23 @@
 {
  "rows": [
   {
+   "date": "2026-11-19",
+   "ticker": "C38U.SI",
+   "code": "C38U",
+   "name": "CapitaLand Integrated Commercial Trust",
+   "decision": "WATCH",
+   "version": "1.2",
+   "sm": 60.5,
+   "ts": 62.2,
+   "entry": 2.35,
+   "stop": 2.24,
+   "t1": 2.49,
+   "t2": 2.56,
+   "rr": 1.27,
+   "qty": 9000,
+   "outcome": "Pending"
+  },
+  {
    "date": "2026-11-16",
    "ticker": "H78.SI",
    "code": "H78",
@@ -15,7 +32,15 @@
    "t2": 9.11,
    "rr": 0.81,
    "qty": 3200,
-   "outcome": "Pending"
+   "filled": "2026-11-18",
+   "fill": 8.4,
+   "days": 2,
+   "mfe_r": 0.19,
+   "mae_r": -0.52,
+   "t1_hit": false,
+   "outcome": "Open",
+   "closed": "",
+   "r": 0.06
   },
   {
    "date": "2026-11-16",
@@ -32,7 +57,7 @@
    "t2": 2.4,
    "rr": 0.42,
    "qty": 8300,
-   "outcome": "Pending"
+   "outcome": "Not filled"
   },
   {
    "date": "2026-11-13",
@@ -82,14 +107,14 @@
    "avg_days": null
   },
   "WATCH": {
-   "plans": 4,
-   "filled": 0,
+   "plans": 5,
+   "filled": 1,
    "closed": 0,
    "win_rate": null,
    "avg_r": null,
    "total_r": null,
-   "avg_mfe_r": null,
-   "avg_mae_r": null,
+   "avg_mfe_r": 0.19,
+   "avg_mae_r": -0.52,
    "avg_days": null
   }
  },
