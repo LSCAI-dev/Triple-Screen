@@ -1,7 +1,7 @@
 {
  "meta": {
   "as_of": "2026-11-19",
-  "generated": "2026-11-19 19:53",
+  "generated": "2026-11-21 02:52",
   "source": "Yahoo Finance via yfinance (unadjusted daily OHLC)",
   "demo": false,
   "universe": 30,
@@ -103,12 +103,12 @@
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 44.6,
+    "combined": 41.0,
     "sm": {
-     "score": 49.4,
+     "score": 42.4,
      "components": {
       "bid_ask": {
-       "pts": 7.0,
+       "pts": 0.0,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -251,7 +251,7 @@
    "ema20": 8.318,
    "ema50": 8.268,
    "rsi": 54.2,
-   "fi2": 71679.0,
+   "fi2": 76475.0,
    "atr": 0.216,
    "macd": 0.0258,
    "macd_hist": 0.001,
@@ -315,23 +315,21 @@
     "decision": "WATCH",
     "blocked_by": [
      "reward_risk",
-     "TS<80",
-     "SM<75",
-     "bid/ask below floor"
+     "TS<80"
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 66.8,
+    "combined": 77.0,
     "sm": {
-     "score": 60.7,
+     "score": 80.9,
      "components": {
       "bid_ask": {
-       "pts": 15.1,
+       "pts": 35.0,
        "max": 35,
        "tier": "hourly-proxy"
       },
       "price_volume": {
-       "pts": 21.5,
+       "pts": 21.7,
        "max": 25,
        "tier": "daily"
       },
@@ -392,7 +390,7 @@
     "gates": {
      "liquidity": {
       "pass": true,
-      "value": "S$13.05M/day"
+      "value": "S$13.10M/day"
      },
      "reward_risk": {
       "pass": false,
@@ -518,12 +516,12 @@
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 61.4,
+    "combined": 61.2,
     "sm": {
-     "score": 60.5,
+     "score": 60.3,
      "components": {
       "bid_ask": {
-       "pts": 0.2,
+       "pts": 0.0,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -716,16 +714,17 @@
      "reward_risk",
      "stop_width",
      "TS<80",
+     "SM<75",
      "bid/ask below floor"
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 67.5,
+    "combined": 62.9,
     "sm": {
-     "score": 77.6,
+     "score": 68.4,
      "components": {
       "bid_ask": {
-       "pts": 14.3,
+       "pts": 5.1,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -923,12 +922,12 @@
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 58.2,
+    "combined": 51.5,
     "sm": {
-     "score": 45.1,
+     "score": 31.8,
      "components": {
       "bid_ask": {
-       "pts": 13.3,
+       "pts": 0.0,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -1119,12 +1118,12 @@
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 16.3,
+    "combined": 17.8,
     "sm": {
-     "score": 22.9,
+     "score": 26.0,
      "components": {
       "bid_ask": {
-       "pts": 0.0,
+       "pts": 3.1,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -1310,12 +1309,12 @@
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 15.1,
+    "combined": 15.9,
     "sm": {
-     "score": 16.4,
+     "score": 18.0,
      "components": {
       "bid_ask": {
-       "pts": 3.6,
+       "pts": 5.3,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -1706,12 +1705,12 @@
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 22.8,
+    "combined": 23.2,
     "sm": {
-     "score": 17.1,
+     "score": 17.9,
      "components": {
       "bid_ask": {
-       "pts": 8.0,
+       "pts": 8.8,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -2094,12 +2093,12 @@
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 5.2,
+    "combined": 4.3,
     "sm": {
-     "score": 2.5,
+     "score": 0.6,
      "components": {
       "bid_ask": {
-       "pts": 1.9,
+       "pts": 0.0,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -2680,16 +2679,17 @@
      "stop_width",
      "weekly_impulse",
      "TS<80",
-     "SM<75"
+     "SM<75",
+     "bid/ask below floor"
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 31.5,
+    "combined": 22.6,
     "sm": {
-     "score": 48.7,
+     "score": 31.0,
      "components": {
       "bid_ask": {
-       "pts": 17.7,
+       "pts": 0.0,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -3671,16 +3671,17 @@
      "reward_risk",
      "weekly_impulse",
      "TS<80",
-     "SM<75"
+     "SM<75",
+     "bid/ask below floor"
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 24.9,
+    "combined": 12.2,
     "sm": {
-     "score": 29.6,
+     "score": 4.3,
      "components": {
       "bid_ask": {
-       "pts": 25.3,
+       "pts": 0.0,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -3878,12 +3879,12 @@
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 20.8,
+    "combined": 18.2,
     "sm": {
-     "score": 23.5,
+     "score": 18.1,
      "components": {
       "bid_ask": {
-       "pts": 11.8,
+       "pts": 6.4,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -4068,17 +4069,16 @@
      "reward_risk",
      "stop_width",
      "TS<80",
-     "SM<75",
-     "bid/ask below floor"
+     "SM<75"
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 25.2,
+    "combined": 27.8,
     "sm": {
-     "score": 27.2,
+     "score": 32.4,
      "components": {
       "bid_ask": {
-       "pts": 14.5,
+       "pts": 19.6,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -4270,12 +4270,12 @@
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 50.9,
+    "combined": 49.0,
     "sm": {
-     "score": 51.5,
+     "score": 47.8,
      "components": {
       "bid_ask": {
-       "pts": 3.8,
+       "pts": 0.0,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -4461,16 +4461,17 @@
     "decision": "AVOID",
     "blocked_by": [
      "reward_risk",
-     "TS<80"
+     "TS<80",
+     "SM<75"
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 54.0,
+    "combined": 47.2,
     "sm": {
-     "score": 75.6,
+     "score": 61.8,
      "components": {
       "bid_ask": {
-       "pts": 34.1,
+       "pts": 20.3,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -4851,12 +4852,12 @@
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 53.0,
+    "combined": 52.2,
     "sm": {
-     "score": 68.1,
+     "score": 66.6,
      "components": {
       "bid_ask": {
-       "pts": 14.3,
+       "pts": 12.8,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -4997,7 +4998,7 @@
    "ema20": 20.587,
    "ema50": 21.388,
    "rsi": 35.4,
-   "fi2": -119908.0,
+   "fi2": -119732.0,
    "atr": 0.442,
    "macd": -0.3295,
    "macd_hist": 0.0123,
@@ -5124,7 +5125,7 @@
     "gates": {
      "liquidity": {
       "pass": true,
-      "value": "S$53.36M/day"
+      "value": "S$53.37M/day"
      },
      "reward_risk": {
       "pass": false,
@@ -5442,7 +5443,7 @@
     "version": "1.2",
     "combined": 25.2,
     "sm": {
-     "score": 14.3,
+     "score": 14.4,
      "components": {
       "bid_ask": {
        "pts": 0.0,
@@ -5497,7 +5498,7 @@
        "value_zone": "14.724-15.066",
        "low3_vs_zone_top_atr": -2.02,
        "fib_retrace": 3.787,
-       "bear_power_atr": -0.97,
+       "bear_power_atr": -1.0,
        "bear_power_turn_up": true
       },
       "entry_confirmation": {
@@ -5515,15 +5516,15 @@
      },
      "reward_risk": {
       "pass": false,
-      "value": "0.71R to T1"
+      "value": "0.69R to T1"
      },
      "atr_band": {
       "pass": true,
-      "value": "ATR 2.72%"
+      "value": "ATR 2.73%"
      },
      "stop_width": {
       "pass": true,
-      "value": "2.01 ATR"
+      "value": "2.05 ATR"
      },
      "weekly_impulse": {
       "pass": true,
@@ -5532,12 +5533,12 @@
     },
     "plan": {
      "entry_buy_stop": 14.62,
-     "stop": 13.83,
-     "risk_per_share": 0.79,
-     "stop_in_atr": 2.01,
+     "stop": 13.81,
+     "risk_per_share": 0.81,
+     "stop_in_atr": 2.05,
      "target1": 15.18,
      "target2": 15.53,
-     "rr_t1": 0.71,
+     "rr_t1": 0.69,
      "supports": [
       14.09
      ],
@@ -5546,7 +5547,7 @@
       15.54,
       16.015
      ],
-     "atr": 0.3936,
+     "atr": 0.3943,
      "stop_method": "safezone",
      "channel": {
       "upper": 15.78,
@@ -5622,12 +5623,12 @@
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 55.8,
+    "combined": 53.3,
     "sm": {
-     "score": 72.3,
+     "score": 67.4,
      "components": {
       "bid_ask": {
-       "pts": 23.9,
+       "pts": 19.0,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -5813,16 +5814,17 @@
      "reward_risk",
      "stop_width",
      "TS<80",
-     "SM<75"
+     "SM<75",
+     "bid/ask below floor"
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 47.4,
+    "combined": 38.2,
     "sm": {
-     "score": 53.2,
+     "score": 34.9,
      "components": {
       "bid_ask": {
-       "pts": 30.4,
+       "pts": 12.2,
        "max": 35,
        "tier": "hourly-proxy"
       },
