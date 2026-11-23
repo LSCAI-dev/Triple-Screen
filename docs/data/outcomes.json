@@ -1,6 +1,20 @@
 {
  "rows": [
   {
+   "date": "2026-11-20",
+   "code": "H78",
+   "name": "Hongkong Land",
+   "side": "Long",
+   "grade": "B",
+   "entry": 8.49,
+   "stop": 8.33,
+   "t1": 8.75,
+   "outcome": "Pending",
+   "filled": "",
+   "closed": "",
+   "r": null
+  },
+  {
    "date": "2026-11-19",
    "code": "H78",
    "name": "Hongkong Land",
@@ -9,10 +23,10 @@
    "entry": 8.48,
    "stop": 8.22,
    "t1": 8.75,
-   "outcome": "Open",
-   "filled": "2026-11-23",
+   "outcome": "Pending",
+   "filled": "",
    "closed": "",
-   "r": 0.42
+   "r": null
   },
   {
    "date": "2026-11-19",
@@ -37,7 +51,7 @@
    "entry": 4.0,
    "stop": 4.17,
    "t1": 3.66,
-   "outcome": "Not filled",
+   "outcome": "Pending",
    "filled": "",
    "closed": "",
    "r": null
@@ -54,7 +68,7 @@
    "outcome": "Open",
    "filled": "2026-11-18",
    "closed": "",
-   "r": 1.0
+   "r": -0.05
   },
   {
    "date": "2026-11-13",
@@ -110,7 +124,7 @@
    "outcome": "Open",
    "filled": "2026-11-11",
    "closed": "",
-   "r": 1.25
+   "r": 0.88
   },
   {
    "date": "2026-11-05",
@@ -562,8 +576,8 @@
   }
  ],
  "summary": {
-  "signals": 40,
-  "filled": 22,
+  "signals": 41,
+  "filled": 21,
   "closed": 18,
   "wins": 6,
   "win_rate": 33.3,
