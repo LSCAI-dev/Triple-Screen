@@ -1,7 +1,7 @@
 {
  "meta": {
-  "as_of": "2026-11-24",
-  "generated": "2026-11-24 20:15",
+  "as_of": "2026-11-20",
+  "generated": "2026-11-25 04:54",
   "source": "Yahoo Finance via yfinance (unadjusted daily OHLC)",
   "demo": false,
   "universe": 30,
@@ -16,12 +16,225 @@
  },
  "results": [
   {
+   "ticker": "H78.SI",
+   "code": "H78",
+   "name": "Hongkong Land",
+   "date": "2026-11-20",
+   "close": 8.39,
+   "chg_pct": -0.36,
+   "status": "Long setup",
+   "wave": "Pullback",
+   "tide": {
+    "tide": "Up",
+    "hist_rising": true,
+    "ema26_rising": true,
+    "above_ema26": true,
+    "impulse": "green",
+    "strong": true
+   },
+   "ema20": 8.325,
+   "ema50": 8.273,
+   "rsi": 53.0,
+   "fi2": -16858.0,
+   "atr": 0.209,
+   "macd": 0.0283,
+   "macd_hist": 0.0028,
+   "macd_hist_rising": true,
+   "support": [
+    {
+     "price": 8.165,
+     "touches": 4,
+     "strength": 4.82
+    },
+    {
+     "price": 7.828,
+     "touches": 9,
+     "strength": 9.91
+    },
+    {
+     "price": 7.477,
+     "touches": 3,
+     "strength": 3.58
+    }
+   ],
+   "resistance": [
+    {
+     "price": 8.425,
+     "touches": 6,
+     "strength": 6.93
+    },
+    {
+     "price": 8.758,
+     "touches": 9,
+     "strength": 9.96
+    },
+    {
+     "price": 9.12,
+     "touches": 1,
+     "strength": 1.2
+    }
+   ],
+   "plan": {
+    "side": "Long",
+    "order": "Buy stop 8.490, valid 3 sessions; trail it to 1 tick beyond each new day's high if not filled",
+    "entry": 8.49,
+    "stop": 8.33,
+    "t1": 8.75,
+    "t2": 9.12,
+    "risk_per_share": 0.16,
+    "rr1": 1.62,
+    "rr2": 3.94,
+    "qty": 6200,
+    "cash_risk": 992.0,
+    "grade": "B",
+    "stop_pct": 1.88
+   },
+   "notes": [],
+   "dual": {
+    "symbol": "H78.SI",
+    "date": "2026-11-20",
+    "close": 8.390000343322754,
+    "decision": "WATCH",
+    "blocked_by": [
+     "reward_risk",
+     "TS<80",
+     "SM<75"
+    ],
+    "regime_bearish": true,
+    "version": "1.2",
+    "combined": 62.0,
+    "sm": {
+     "score": 60.1,
+     "components": {
+      "bid_ask": {
+       "pts": 17.9,
+       "max": 35,
+       "tier": "hourly-proxy"
+      },
+      "price_volume": {
+       "pts": 19.3,
+       "max": 25,
+       "tier": "daily"
+      },
+      "block_trades": {
+       "pts": 7.5,
+       "max": 15,
+       "tier": "daily-proxy"
+      },
+      "vwap": {
+       "pts": 6.1,
+       "max": 10,
+       "tier": "daily"
+      },
+      "obv": {
+       "pts": 7.1,
+       "max": 10,
+       "tier": "daily"
+      },
+      "closing_strength": {
+       "pts": 2.2,
+       "max": 5,
+       "tier": "daily"
+      }
+     },
+     "confidence": 0.5,
+     "weight_measured": 1.0
+    },
+    "ts": {
+     "score": 64.0,
+     "components": {
+      "trend_alignment": {
+       "pts": 25.9,
+       "max": 40,
+       "wk_macd_hist_rising": true,
+       "wk_ema26_slope_pct": 0.84,
+       "above_ema50": true,
+       "ema50_rising": true
+      },
+      "pullback_quality": {
+       "pts": 27.1,
+       "max": 35,
+       "rsi_min5": 49.5,
+       "rsi_max20": 63.2,
+       "value_zone": "8.315-8.341",
+       "low3_vs_zone_top_atr": -0.48,
+       "fib_retrace": 0.783,
+       "bear_power_atr": 0.14,
+       "bear_power_turn_up": true
+      },
+      "entry_confirmation": {
+       "pts": 11.0,
+       "max": 25,
+       "close_above_prior_high": false,
+       "d_macd_hist_upticks": 2
+      }
+     }
+    },
+    "gates": {
+     "liquidity": {
+      "pass": true,
+      "value": "S$13.50M/day"
+     },
+     "reward_risk": {
+      "pass": false,
+      "value": "1.41R to T1"
+     },
+     "atr_band": {
+      "pass": true,
+      "value": "ATR 2.49%"
+     },
+     "stop_width": {
+      "pass": true,
+      "value": "2.11 ATR"
+     },
+     "weekly_impulse": {
+      "pass": true,
+      "value": "weekly green"
+     }
+    },
+    "plan": {
+     "entry_buy_stop": 8.49,
+     "stop": 8.05,
+     "risk_per_share": 0.44,
+     "stop_in_atr": 2.11,
+     "target1": 9.11,
+     "target2": 9.81,
+     "rr_t1": 1.41,
+     "supports": [
+      7.45,
+      7.969,
+      8.43
+     ],
+     "resistances": [
+      9.12
+     ],
+     "atr": 0.2087,
+     "stop_method": "safezone",
+     "channel": {
+      "upper": 8.784,
+      "lower": 7.859,
+      "ema": 8.322,
+      "height": 0.926,
+      "t1_grade_pct": 67.0
+     },
+     "management": [
+      "Order valid 2 sessions; cancel if not filled",
+      "At +1R: move stop to breakeven",
+      "At T1: sell half; trail rest under 20-EMA or 2-bar low",
+      "Time stop: exit if < +0.5R after 7 sessions"
+     ],
+     "shares": 2200,
+     "capital": 18678.0
+    }
+   }
+  },
+  {
    "ticker": "C6L.SI",
    "code": "C6L",
    "name": "Singapore Airlines",
-   "date": "2026-11-24",
-   "close": 7.0,
-   "chg_pct": 0.14,
+   "date": "2026-11-20",
+   "close": 6.99,
+   "chg_pct": -0.57,
    "status": "Long watch",
    "wave": "Pullback",
    "tide": {
@@ -32,19 +245,19 @@
     "impulse": "green",
     "strong": true
    },
-   "ema20": 6.956,
-   "ema50": 6.866,
-   "rsi": 55.2,
-   "fi2": -28279.0,
-   "atr": 0.138,
-   "macd": 0.102,
-   "macd_hist": -0.0086,
+   "ema20": 6.952,
+   "ema50": 6.861,
+   "rsi": 54.7,
+   "fi2": -256108.0,
+   "atr": 0.14,
+   "macd": 0.1123,
+   "macd_hist": -0.0006,
    "macd_hist_rising": false,
    "support": [
     {
      "price": 6.81,
      "touches": 2,
-     "strength": 2.84
+     "strength": 2.85
     },
     {
      "price": 6.474,
@@ -66,23 +279,23 @@
     {
      "price": 7.225,
      "touches": 2,
-     "strength": 2.97
+     "strength": 2.98
     },
     {
      "price": 7.34,
      "touches": 1,
-     "strength": 1.67
+     "strength": 1.68
     }
    ],
    "plan": null,
    "notes": [
-    "Passed screens 1-2 but T1 (7.220) is only 0.9R away: resistance too close, no trade"
+    "Passed screens 1-2 but T1 (7.220) is only 0.7R away: resistance too close, no trade"
    ],
    "dual": {
     "symbol": "C6L.SI",
-    "date": "2026-11-24",
-    "close": 7.0,
-    "decision": "WATCH",
+    "date": "2026-11-20",
+    "close": 6.989999771118164,
+    "decision": "AVOID",
     "blocked_by": [
      "reward_risk",
      "TS<80",
@@ -91,9 +304,9 @@
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 61.5,
+    "combined": 55.2,
     "sm": {
-     "score": 59.3,
+     "score": 58.4,
      "components": {
       "bid_ask": {
        "pts": 0.0,
@@ -101,7 +314,7 @@
        "tier": "hourly-proxy"
       },
       "price_volume": {
-       "pts": 23.1,
+       "pts": 21.1,
        "max": 25,
        "tier": "daily"
       },
@@ -111,17 +324,17 @@
        "tier": "daily-proxy"
       },
       "vwap": {
-       "pts": 8.7,
+       "pts": 9.5,
        "max": 10,
        "tier": "daily"
       },
       "obv": {
-       "pts": 9.6,
+       "pts": 9.2,
        "max": 10,
        "tier": "daily"
       },
       "closing_strength": {
-       "pts": 2.9,
+       "pts": 3.7,
        "max": 5,
        "tier": "daily"
       }
@@ -130,229 +343,25 @@
      "weight_measured": 1.0
     },
     "ts": {
-     "score": 63.7,
+     "score": 52.1,
      "components": {
       "trend_alignment": {
-       "pts": 25.4,
+       "pts": 24.3,
        "max": 40,
        "wk_macd_hist_rising": true,
-       "wk_ema26_slope_pct": 0.72,
+       "wk_ema26_slope_pct": 0.41,
        "above_ema50": true,
        "ema50_rising": true
       },
       "pullback_quality": {
-       "pts": 32.6,
+       "pts": 27.8,
        "max": 35,
        "rsi_min5": 54.7,
        "rsi_max20": 76.0,
-       "value_zone": "6.918-7.013",
+       "value_zone": "6.912-7.015",
        "low3_vs_zone_top_atr": -0.89,
        "fib_retrace": 0.456,
-       "bear_power_atr": -0.6,
-       "bear_power_turn_up": true
-      },
-      "entry_confirmation": {
-       "pts": 5.6,
-       "max": 25,
-       "close_above_prior_high": false,
-       "d_macd_hist_upticks": 0
-      }
-     }
-    },
-    "gates": {
-     "liquidity": {
-      "pass": true,
-      "value": "S$45.97M/day"
-     },
-     "reward_risk": {
-      "pass": false,
-      "value": "0.55R to T1"
-     },
-     "atr_band": {
-      "pass": true,
-      "value": "ATR 1.96%"
-     },
-     "stop_width": {
-      "pass": true,
-      "value": "2.11 ATR"
-     },
-     "weekly_impulse": {
-      "pass": true,
-      "value": "weekly green"
-     }
-    },
-    "plan": {
-     "entry_buy_stop": 7.05,
-     "stop": 6.76,
-     "risk_per_share": 0.29,
-     "stop_in_atr": 2.11,
-     "target1": 7.21,
-     "target2": 7.32,
-     "rr_t1": 0.55,
-     "supports": [
-      6.265,
-      6.586,
-      6.99
-     ],
-     "resistances": [
-      7.225,
-      7.755,
-      7.92
-     ],
-     "atr": 0.1375,
-     "stop_method": "safezone",
-     "channel": {
-      "upper": 7.337,
-      "lower": 6.548,
-      "ema": 6.942,
-      "height": 0.789,
-      "t1_grade_pct": 20.3
-     },
-     "management": [
-      "Order valid 2 sessions; cancel if not filled",
-      "At +1R: move stop to breakeven",
-      "At T1: sell half; trail rest under 20-EMA or 2-bar low",
-      "Time stop: exit if < +0.5R after 7 sessions"
-     ],
-     "shares": 3400,
-     "capital": 23970.0
-    }
-   }
-  },
-  {
-   "ticker": "H78.SI",
-   "code": "H78",
-   "name": "Hongkong Land",
-   "date": "2026-11-24",
-   "close": 8.35,
-   "chg_pct": -0.48,
-   "status": "Long watch",
-   "wave": "Pullback",
-   "tide": {
-    "tide": "Up",
-    "hist_rising": true,
-    "ema26_rising": true,
-    "above_ema26": true,
-    "impulse": "green",
-    "strong": true
-   },
-   "ema20": 8.328,
-   "ema50": 8.276,
-   "rsi": 51.4,
-   "fi2": -65433.0,
-   "atr": 0.217,
-   "macd": 0.0267,
-   "macd_hist": 0.001,
-   "macd_hist_rising": false,
-   "support": [
-    {
-     "price": 8.165,
-     "touches": 4,
-     "strength": 4.81
-    },
-    {
-     "price": 7.828,
-     "touches": 9,
-     "strength": 9.91
-    },
-    {
-     "price": 7.435,
-     "touches": 4,
-     "strength": 4.58
-    }
-   ],
-   "resistance": [
-    {
-     "price": 8.425,
-     "touches": 6,
-     "strength": 6.92
-    },
-    {
-     "price": 8.758,
-     "touches": 9,
-     "strength": 9.96
-    },
-    {
-     "price": 9.12,
-     "touches": 1,
-     "strength": 1.2
-    }
-   ],
-   "plan": null,
-   "notes": [
-    "Passed screens 1-2 but T1 (8.750) is only 0.2R away: resistance too close, no trade"
-   ],
-   "dual": {
-    "symbol": "H78.SI",
-    "date": "2026-11-24",
-    "close": 8.350000381469727,
-    "decision": "AVOID",
-    "blocked_by": [
-     "reward_risk",
-     "stop_width",
-     "TS<80",
-     "SM<75"
-    ],
-    "regime_bearish": true,
-    "version": "1.2",
-    "combined": 54.0,
-    "sm": {
-     "score": 59.9,
-     "components": {
-      "bid_ask": {
-       "pts": 28.6,
-       "max": 35,
-       "tier": "hourly-proxy"
-      },
-      "price_volume": {
-       "pts": 10.1,
-       "max": 25,
-       "tier": "daily"
-      },
-      "block_trades": {
-       "pts": 7.5,
-       "max": 15,
-       "tier": "daily-proxy"
-      },
-      "vwap": {
-       "pts": 5.5,
-       "max": 10,
-       "tier": "daily"
-      },
-      "obv": {
-       "pts": 6.1,
-       "max": 10,
-       "tier": "daily"
-      },
-      "closing_strength": {
-       "pts": 2.2,
-       "max": 5,
-       "tier": "daily"
-      }
-     },
-     "confidence": 0.5,
-     "weight_measured": 1.0
-    },
-    "ts": {
-     "score": 48.2,
-     "components": {
-      "trend_alignment": {
-       "pts": 25.8,
-       "max": 40,
-       "wk_macd_hist_rising": true,
-       "wk_ema26_slope_pct": 0.82,
-       "above_ema50": true,
-       "ema50_rising": true
-      },
-      "pullback_quality": {
-       "pts": 22.3,
-       "max": 35,
-       "rsi_min5": 49.5,
-       "rsi_max20": 63.2,
-       "value_zone": "8.317-8.342",
-       "low3_vs_zone_top_atr": -0.1,
-       "fib_retrace": 0.783,
-       "bear_power_atr": -0.1,
+       "bear_power_atr": -0.89,
        "bear_power_turn_up": false
       },
       "entry_confirmation": {
@@ -366,19 +375,19 @@
     "gates": {
      "liquidity": {
       "pass": true,
-      "value": "S$13.59M/day"
+      "value": "S$44.07M/day"
      },
      "reward_risk": {
       "pass": false,
-      "value": "0.76R to T1"
+      "value": "0.41R to T1"
      },
      "atr_band": {
       "pass": true,
-      "value": "ATR 2.60%"
+      "value": "ATR 2.00%"
      },
      "stop_width": {
-      "pass": false,
-      "value": "2.71 ATR"
+      "pass": true,
+      "value": "2.43 ATR"
      },
      "weekly_impulse": {
       "pass": true,
@@ -386,29 +395,31 @@
      }
     },
     "plan": {
-     "entry_buy_stop": 8.66,
-     "stop": 8.07,
-     "risk_per_share": 0.59,
-     "stop_in_atr": 2.71,
-     "target1": 9.11,
-     "target2": 10.43,
-     "rr_t1": 0.76,
+     "entry_buy_stop": 7.07,
+     "stop": 6.73,
+     "risk_per_share": 0.34,
+     "stop_in_atr": 2.43,
+     "target1": 7.21,
+     "target2": 7.32,
+     "rr_t1": 0.41,
      "supports": [
-      7.45,
-      7.969,
-      8.43
+      6.265,
+      6.586,
+      6.99
      ],
      "resistances": [
-      9.12
+      7.225,
+      7.755,
+      7.92
      ],
-     "atr": 0.2173,
+     "atr": 0.1397,
      "stop_method": "safezone",
      "channel": {
-      "upper": 8.787,
-      "lower": 7.861,
-      "ema": 8.324,
-      "height": 0.926,
-      "t1_grade_pct": 48.6
+      "upper": 7.331,
+      "lower": 6.542,
+      "ema": 6.937,
+      "height": 0.789,
+      "t1_grade_pct": 17.8
      },
      "management": [
       "Order valid 2 sessions; cancel if not filled",
@@ -416,8 +427,8 @@
       "At T1: sell half; trail rest under 20-EMA or 2-bar low",
       "Time stop: exit if < +0.5R after 7 sessions"
      ],
-     "shares": 1600,
-     "capital": 13856.0
+     "shares": 2900,
+     "capital": 20503.0
     }
    }
   },
@@ -425,9 +436,9 @@
    "ticker": "5E2.SI",
    "code": "5E2",
    "name": "Seatrium",
-   "date": "2026-11-24",
-   "close": 1.42,
-   "chg_pct": -8.97,
+   "date": "2026-11-20",
+   "close": 1.56,
+   "chg_pct": -8.77,
    "status": "Short watch",
    "wave": "Extended",
    "tide": {
@@ -438,17 +449,17 @@
     "impulse": "red",
     "strong": true
    },
-   "ema20": 1.757,
-   "ema50": 1.877,
-   "rsi": 17.4,
-   "fi2": -6845163.0,
-   "atr": 0.078,
-   "macd": -0.0891,
-   "macd_hist": -0.0311,
+   "ema20": 1.793,
+   "ema50": 1.896,
+   "rsi": 22.5,
+   "fi2": -5139298.0,
+   "atr": 0.067,
+   "macd": -0.0678,
+   "macd_hist": -0.0176,
    "macd_hist_rising": false,
    "support": [
     {
-     "price": 1.38,
+     "price": 1.53,
      "touches": 1,
      "strength": 1.0
     }
@@ -460,14 +471,14 @@
      "strength": 1.92
     },
     {
-     "price": 2.018,
-     "touches": 23,
-     "strength": 23.96
+     "price": 1.927,
+     "touches": 7,
+     "strength": 7.62
     },
     {
-     "price": 2.236,
-     "touches": 8,
-     "strength": 8.83
+     "price": 2.031,
+     "touches": 10,
+     "strength": 10.96
     }
    ],
    "plan": null,
@@ -476,8 +487,8 @@
    ],
    "dual": {
     "symbol": "5E2.SI",
-    "date": "2026-11-24",
-    "close": 1.4199999570846558,
+    "date": "2026-11-20",
+    "close": 1.559999942779541,
     "decision": "AVOID",
     "blocked_by": [
      "reward_risk",
@@ -489,9 +500,9 @@
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 2.0,
+    "combined": 2.9,
     "sm": {
-     "score": 0.7,
+     "score": 2.6,
      "components": {
       "bid_ask": {
        "pts": 0.0,
@@ -499,7 +510,7 @@
        "tier": "hourly-proxy"
       },
       "price_volume": {
-       "pts": 0.0,
+       "pts": 1.6,
        "max": 25,
        "tier": "daily"
       },
@@ -509,17 +520,17 @@
        "tier": "daily-proxy"
       },
       "vwap": {
-       "pts": 0.0,
+       "pts": 0.2,
        "max": 10,
        "tier": "daily"
       },
       "obv": {
-       "pts": 0.0,
+       "pts": 0.5,
        "max": 10,
        "tier": "daily"
       },
       "closing_strength": {
-       "pts": 0.7,
+       "pts": 0.3,
        "max": 5,
        "tier": "daily"
       }
@@ -534,19 +545,19 @@
        "pts": 0.0,
        "max": 40,
        "wk_macd_hist_rising": false,
-       "wk_ema26_slope_pct": -5.57,
+       "wk_ema26_slope_pct": -4.39,
        "above_ema50": false,
        "ema50_rising": false
       },
       "pullback_quality": {
        "pts": 3.2,
        "max": 35,
-       "rsi_min5": 17.4,
+       "rsi_min5": 22.5,
        "rsi_max20": 55.0,
-       "value_zone": "1.709-1.789",
-       "low3_vs_zone_top_atr": -5.27,
-       "fib_retrace": 2.95,
-       "bear_power_atr": -4.23,
+       "value_zone": "1.757-1.818",
+       "low3_vs_zone_top_atr": -4.32,
+       "fib_retrace": 2.2,
+       "bear_power_atr": -3.4,
        "bear_power_turn_up": false
       },
       "entry_confirmation": {
@@ -560,19 +571,19 @@
     "gates": {
      "liquidity": {
       "pass": true,
-      "value": "S$32.31M/day"
+      "value": "S$30.29M/day"
      },
      "reward_risk": {
       "pass": false,
-      "value": "0.6R to T1"
+      "value": "0.59R to T1"
      },
      "atr_band": {
       "pass": true,
-      "value": "ATR 5.46%"
+      "value": "ATR 4.28%"
      },
      "stop_width": {
       "pass": false,
-      "value": "5.15 ATR"
+      "value": "4.35 ATR"
      },
      "weekly_impulse": {
       "pass": false,
@@ -580,27 +591,27 @@
      }
     },
     "plan": {
-     "entry_buy_stop": 1.62,
-     "stop": 1.22,
-     "risk_per_share": 0.4,
-     "stop_in_atr": 5.15,
+     "entry_buy_stop": 1.69,
+     "stop": 1.4,
+     "risk_per_share": 0.29,
+     "stop_in_atr": 4.35,
      "target1": 1.86,
-     "target2": 1.9,
-     "rr_t1": 0.6,
+     "target2": 1.94,
+     "rr_t1": 0.59,
      "supports": [],
      "resistances": [
       1.87,
       2.016,
-      2.205
+      2.181
      ],
-     "atr": 0.0776,
+     "atr": 0.0667,
      "stop_method": "safezone",
      "channel": {
-      "upper": 1.918,
-      "lower": 1.619,
-      "ema": 1.768,
-      "height": 0.299,
-      "t1_grade_pct": 80.3
+      "upper": 1.951,
+      "lower": 1.651,
+      "ema": 1.801,
+      "height": 0.3,
+      "t1_grade_pct": 56.7
      },
      "management": [
       "Order valid 2 sessions; cancel if not filled",
@@ -608,8 +619,8 @@
       "At T1: sell half; trail rest under 20-EMA or 2-bar low",
       "Time stop: exit if < +0.5R after 7 sessions"
      ],
-     "shares": 2400,
-     "capital": 3888.0
+     "shares": 3400,
+     "capital": 5746.0
     }
    }
   },
@@ -617,9 +628,9 @@
    "ticker": "9CI.SI",
    "code": "9CI",
    "name": "CapitaLand Investment",
-   "date": "2026-11-24",
-   "close": 2.26,
-   "chg_pct": -1.31,
+   "date": "2026-11-20",
+   "close": 2.29,
+   "chg_pct": -1.29,
    "status": "Short watch",
    "wave": "Extended",
    "tide": {
@@ -630,17 +641,17 @@
     "impulse": "red",
     "strong": true
    },
-   "ema20": 2.355,
-   "ema50": 2.427,
-   "rsi": 32.3,
-   "fi2": -291073.0,
+   "ema20": 2.364,
+   "ema50": 2.434,
+   "rsi": 35.4,
+   "fi2": -258345.0,
    "atr": 0.051,
-   "macd": -0.0388,
-   "macd_hist": -0.006,
+   "macd": -0.0346,
+   "macd_hist": -0.0033,
    "macd_hist_rising": false,
    "support": [
     {
-     "price": 2.26,
+     "price": 2.27,
      "touches": 1,
      "strength": 1.0
     }
@@ -649,7 +660,7 @@
     {
      "price": 2.293,
      "touches": 3,
-     "strength": 3.95
+     "strength": 3.96
     },
     {
      "price": 2.457,
@@ -657,9 +668,9 @@
      "strength": 6.96
     },
     {
-     "price": 2.624,
-     "touches": 16,
-     "strength": 16.84
+     "price": 2.627,
+     "touches": 17,
+     "strength": 17.84
     }
    ],
    "plan": null,
@@ -668,8 +679,8 @@
    ],
    "dual": {
     "symbol": "9CI.SI",
-    "date": "2026-11-24",
-    "close": 2.259999990463257,
+    "date": "2026-11-20",
+    "close": 2.2899999618530273,
     "decision": "AVOID",
     "blocked_by": [
      "reward_risk",
@@ -680,17 +691,17 @@
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 9.2,
+    "combined": 12.8,
     "sm": {
-     "score": 8.2,
+     "score": 19.2,
      "components": {
       "bid_ask": {
-       "pts": 0.0,
+       "pts": 7.3,
        "max": 35,
        "tier": "hourly-proxy"
       },
       "price_volume": {
-       "pts": 0.0,
+       "pts": 1.5,
        "max": 25,
        "tier": "daily"
       },
@@ -700,17 +711,17 @@
        "tier": "daily-proxy"
       },
       "vwap": {
-       "pts": 2.2,
+       "pts": 3.5,
        "max": 10,
        "tier": "daily"
       },
       "obv": {
-       "pts": 0.0,
+       "pts": 0.6,
        "max": 10,
        "tier": "daily"
       },
       "closing_strength": {
-       "pts": 0.0,
+       "pts": 0.2,
        "max": 5,
        "tier": "daily"
       }
@@ -719,26 +730,26 @@
      "weight_measured": 1.0
     },
     "ts": {
-     "score": 10.2,
+     "score": 6.3,
      "components": {
       "trend_alignment": {
        "pts": 0.0,
        "max": 40,
        "wk_macd_hist_rising": false,
-       "wk_ema26_slope_pct": -2.63,
+       "wk_ema26_slope_pct": -2.4,
        "above_ema50": false,
        "ema50_rising": false
       },
       "pullback_quality": {
-       "pts": 10.2,
+       "pts": 6.3,
        "max": 35,
-       "rsi_min5": 32.3,
+       "rsi_min5": 34.9,
        "rsi_max20": 53.9,
-       "value_zone": "2.335-2.371",
-       "low3_vs_zone_top_atr": -2.17,
-       "fib_retrace": 1.158,
-       "bear_power_atr": -1.47,
-       "bear_power_turn_up": true
+       "value_zone": "2.347-2.379",
+       "low3_vs_zone_top_atr": -2.15,
+       "fib_retrace": 1.105,
+       "bear_power_atr": -1.52,
+       "bear_power_turn_up": false
       },
       "entry_confirmation": {
        "pts": 0.0,
@@ -751,7 +762,7 @@
     "gates": {
      "liquidity": {
       "pass": true,
-      "value": "S$22.52M/day"
+      "value": "S$22.98M/day"
      },
      "reward_risk": {
       "pass": false,
@@ -759,7 +770,7 @@
      },
      "atr_band": {
       "pass": true,
-      "value": "ATR 2.25%"
+      "value": "ATR 2.23%"
      },
      "stop_width": {
       "pass": true,
@@ -786,14 +797,14 @@
       2.48,
       2.535
      ],
-     "atr": 0.0509,
+     "atr": 0.051,
      "stop_method": "safezone",
      "channel": {
-      "upper": 2.489,
-      "lower": 2.231,
-      "ema": 2.36,
-      "height": 0.257,
-      "t1_grade_pct": 31.1
+      "upper": 2.499,
+      "lower": 2.24,
+      "ema": 2.369,
+      "height": 0.258,
+      "t1_grade_pct": 31.0
      },
      "management": [
       "Order valid 2 sessions; cancel if not filled",
@@ -810,9 +821,9 @@
    "ticker": "A17U.SI",
    "code": "A17U",
    "name": "CapitaLand Ascendas REIT",
-   "date": "2026-11-24",
-   "close": 2.07,
-   "chg_pct": -2.36,
+   "date": "2026-11-20",
+   "close": 2.12,
+   "chg_pct": -2.3,
    "status": "Short watch",
    "wave": "Extended",
    "tide": {
@@ -823,17 +834,17 @@
     "impulse": "red",
     "strong": true
    },
-   "ema20": 2.199,
-   "ema50": 2.246,
-   "rsi": 29.1,
-   "fi2": -2421692.0,
-   "atr": 0.048,
-   "macd": -0.0249,
-   "macd_hist": -0.0141,
+   "ema20": 2.212,
+   "ema50": 2.253,
+   "rsi": 33.8,
+   "fi2": -1702042.0,
+   "atr": 0.046,
+   "macd": -0.0154,
+   "macd_hist": -0.0082,
    "macd_hist_rising": false,
    "support": [
     {
-     "price": 2.07,
+     "price": 2.12,
      "touches": 1,
      "strength": 1.0
     }
@@ -847,7 +858,7 @@
     {
      "price": 2.26,
      "touches": 1,
-     "strength": 1.92
+     "strength": 1.93
     },
     {
      "price": 2.335,
@@ -861,8 +872,8 @@
    ],
    "dual": {
     "symbol": "A17U.SI",
-    "date": "2026-11-24",
-    "close": 2.069999933242798,
+    "date": "2026-11-20",
+    "close": 2.119999885559082,
     "decision": "AVOID",
     "blocked_by": [
      "reward_risk",
@@ -874,9 +885,9 @@
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 6.3,
+    "combined": 9.4,
     "sm": {
-     "score": 8.4,
+     "score": 10.4,
      "components": {
       "bid_ask": {
        "pts": 0.0,
@@ -894,7 +905,7 @@
        "tier": "daily-proxy"
       },
       "vwap": {
-       "pts": 0.9,
+       "pts": 2.4,
        "max": 10,
        "tier": "daily"
       },
@@ -904,7 +915,7 @@
        "tier": "daily"
       },
       "closing_strength": {
-       "pts": 0.0,
+       "pts": 0.5,
        "max": 5,
        "tier": "daily"
       }
@@ -913,25 +924,25 @@
      "weight_measured": 1.0
     },
     "ts": {
-     "score": 4.2,
+     "score": 8.4,
      "components": {
       "trend_alignment": {
        "pts": 0.0,
        "max": 40,
        "wk_macd_hist_rising": false,
-       "wk_ema26_slope_pct": -2.6,
+       "wk_ema26_slope_pct": -2.33,
        "above_ema50": false,
        "ema50_rising": false
       },
       "pullback_quality": {
-       "pts": 4.2,
+       "pts": 8.4,
        "max": 35,
-       "rsi_min5": 29.1,
+       "rsi_min5": 33.8,
        "rsi_max20": 65.3,
-       "value_zone": "2.185-2.208",
-       "low3_vs_zone_top_atr": -2.89,
-       "fib_retrace": 1.368,
-       "bear_power_atr": -2.42,
+       "value_zone": "2.205-2.219",
+       "low3_vs_zone_top_atr": -2.15,
+       "fib_retrace": 1.105,
+       "bear_power_atr": -1.84,
        "bear_power_turn_up": false
       },
       "entry_confirmation": {
@@ -945,19 +956,19 @@
     "gates": {
      "liquidity": {
       "pass": true,
-      "value": "S$74.70M/day"
+      "value": "S$73.05M/day"
      },
      "reward_risk": {
       "pass": false,
-      "value": "0.22R to T1"
+      "value": "0.31R to T1"
      },
      "atr_band": {
       "pass": true,
-      "value": "ATR 2.30%"
+      "value": "ATR 2.17%"
      },
      "stop_width": {
       "pass": false,
-      "value": "3.78 ATR"
+      "value": "3.48 ATR"
      },
      "weekly_impulse": {
       "pass": false,
@@ -965,27 +976,29 @@
      }
     },
     "plan": {
-     "entry_buy_stop": 2.16,
-     "stop": 1.98,
-     "risk_per_share": 0.18,
-     "stop_in_atr": 3.78,
-     "target1": 2.2,
-     "target2": 2.24,
-     "rr_t1": 0.22,
-     "supports": [],
-     "resistances": [
-      2.21,
-      2.255,
-      2.327
+     "entry_buy_stop": 2.19,
+     "stop": 2.03,
+     "risk_per_share": 0.16,
+     "stop_in_atr": 3.48,
+     "target1": 2.24,
+     "target2": 2.29,
+     "rr_t1": 0.31,
+     "supports": [
+      2.16
      ],
-     "atr": 0.0476,
+     "resistances": [
+      2.255,
+      2.327,
+      2.552
+     ],
+     "atr": 0.0459,
      "stop_method": "safezone",
      "channel": {
-      "upper": 2.294,
-      "lower": 2.11,
-      "ema": 2.202,
-      "height": 0.184,
-      "t1_grade_pct": 21.8
+      "upper": 2.303,
+      "lower": 2.125,
+      "ema": 2.214,
+      "height": 0.178,
+      "t1_grade_pct": 28.1
      },
      "management": [
       "Order valid 2 sessions; cancel if not filled",
@@ -993,8 +1006,8 @@
       "At T1: sell half; trail rest under 20-EMA or 2-bar low",
       "Time stop: exit if < +0.5R after 7 sessions"
      ],
-     "shares": 5500,
-     "capital": 11880.0
+     "shares": 6200,
+     "capital": 13578.0
     }
    }
   },
@@ -1002,11 +1015,11 @@
    "ticker": "AJBU.SI",
    "code": "AJBU",
    "name": "Keppel DC REIT",
-   "date": "2026-11-24",
-   "close": 2.06,
-   "chg_pct": -2.83,
+   "date": "2026-11-20",
+   "close": 2.12,
+   "chg_pct": -0.93,
    "status": "Short watch",
-   "wave": "Extended",
+   "wave": "Rally",
    "tide": {
     "tide": "Down",
     "hist_rising": false,
@@ -1015,46 +1028,51 @@
     "impulse": "red",
     "strong": true
    },
-   "ema20": 2.135,
-   "ema50": 2.141,
-   "rsi": 36.3,
-   "fi2": -477701.0,
-   "atr": 0.043,
-   "macd": 0.0011,
-   "macd_hist": -0.008,
+   "ema20": 2.143,
+   "ema50": 2.145,
+   "rsi": 45.7,
+   "fi2": -98885.0,
+   "atr": 0.042,
+   "macd": 0.0089,
+   "macd_hist": -0.0023,
    "macd_hist_rising": false,
    "support": [
-    {
-     "price": 2.01,
-     "touches": 1,
-     "strength": 1.9
-    }
-   ],
-   "resistance": [
     {
      "price": 2.093,
      "touches": 3,
      "strength": 3.85
     },
     {
+     "price": 2.01,
+     "touches": 1,
+     "strength": 1.91
+    }
+   ],
+   "resistance": [
+    {
      "price": 2.232,
-     "touches": 54,
-     "strength": 54.98
+     "touches": 53,
+     "strength": 53.96
     },
     {
      "price": 2.36,
      "touches": 1,
      "strength": 1.66
+    },
+    {
+     "price": 2.42,
+     "touches": 1,
+     "strength": 1.41
     }
    ],
    "plan": null,
    "notes": [
-    "Extended below EMA20: wait for a rally"
+    "Passed screens 1-2 but T1 (2.010) is only 0.9R away: resistance too close, no trade"
    ],
    "dual": {
     "symbol": "AJBU.SI",
-    "date": "2026-11-24",
-    "close": 2.059999942779541,
+    "date": "2026-11-20",
+    "close": 2.119999885559082,
     "decision": "AVOID",
     "blocked_by": [
      "reward_risk",
@@ -1066,9 +1084,9 @@
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 18.7,
+    "combined": 37.1,
     "sm": {
-     "score": 25.0,
+     "score": 40.2,
      "components": {
       "bid_ask": {
        "pts": 0.0,
@@ -1076,7 +1094,7 @@
        "tier": "hourly-proxy"
       },
       "price_volume": {
-       "pts": 7.3,
+       "pts": 18.2,
        "max": 25,
        "tier": "daily"
       },
@@ -1086,17 +1104,17 @@
        "tier": "daily-proxy"
       },
       "vwap": {
-       "pts": 3.6,
+       "pts": 5.3,
        "max": 10,
        "tier": "daily"
       },
       "obv": {
-       "pts": 6.7,
+       "pts": 7.5,
        "max": 10,
        "tier": "daily"
       },
       "closing_strength": {
-       "pts": 0.0,
+       "pts": 1.7,
        "max": 5,
        "tier": "daily"
       }
@@ -1105,25 +1123,25 @@
      "weight_measured": 1.0
     },
     "ts": {
-     "score": 12.4,
+     "score": 34.0,
      "components": {
       "trend_alignment": {
-       "pts": 0.6,
+       "pts": 6.1,
        "max": 40,
        "wk_macd_hist_rising": false,
-       "wk_ema26_slope_pct": -0.84,
+       "wk_ema26_slope_pct": -0.72,
        "above_ema50": false,
-       "ema50_rising": false
+       "ema50_rising": true
       },
       "pullback_quality": {
-       "pts": 11.8,
+       "pts": 27.9,
        "max": 35,
-       "rsi_min5": 36.3,
+       "rsi_min5": 45.7,
        "rsi_max20": 64.6,
-       "value_zone": "2.134-2.136",
-       "low3_vs_zone_top_atr": -1.77,
-       "fib_retrace": 0.762,
-       "bear_power_atr": -1.77,
+       "value_zone": "2.140-2.149",
+       "low3_vs_zone_top_atr": -0.93,
+       "fib_retrace": 0.524,
+       "bear_power_atr": -0.93,
        "bear_power_turn_up": false
       },
       "entry_confirmation": {
@@ -1137,19 +1155,19 @@
     "gates": {
      "liquidity": {
       "pass": true,
-      "value": "S$19.95M/day"
+      "value": "S$21.26M/day"
      },
      "reward_risk": {
       "pass": false,
-      "value": "0.92R to T1"
+      "value": "0.54R to T1"
      },
      "atr_band": {
       "pass": true,
-      "value": "ATR 2.09%"
+      "value": "ATR 1.97%"
      },
      "stop_width": {
       "pass": false,
-      "value": "3.02 ATR"
+      "value": "3.12 ATR"
      },
      "weekly_impulse": {
       "pass": false,
@@ -1157,13 +1175,13 @@
      }
     },
     "plan": {
-     "entry_buy_stop": 2.12,
-     "stop": 1.99,
+     "entry_buy_stop": 2.17,
+     "stop": 2.04,
      "risk_per_share": 0.13,
-     "stop_in_atr": 3.02,
+     "stop_in_atr": 3.12,
      "target1": 2.24,
      "target2": 2.4,
-     "rr_t1": 0.92,
+     "rr_t1": 0.54,
      "supports": [
       2.01
      ],
@@ -1171,14 +1189,14 @@
       2.256,
       2.413
      ],
-     "atr": 0.043,
+     "atr": 0.0417,
      "stop_method": "safezone",
      "channel": {
-      "upper": 2.211,
-      "lower": 2.059,
-      "ema": 2.135,
+      "upper": 2.218,
+      "lower": 2.066,
+      "ema": 2.142,
       "height": 0.152,
-      "t1_grade_pct": 79.2
+      "t1_grade_pct": 46.0
      },
      "management": [
       "Order valid 2 sessions; cancel if not filled",
@@ -1187,7 +1205,7 @@
       "Time stop: exit if < +0.5R after 7 sessions"
      ],
      "shares": 7600,
-     "capital": 16112.0
+     "capital": 16492.0
     }
    }
   },
@@ -1195,9 +1213,9 @@
    "ticker": "BN4.SI",
    "code": "BN4",
    "name": "Keppel",
-   "date": "2026-11-24",
-   "close": 8.42,
-   "chg_pct": -4.86,
+   "date": "2026-11-20",
+   "close": 8.85,
+   "chg_pct": -3.07,
    "status": "Short watch",
    "wave": "Extended",
    "tide": {
@@ -1208,17 +1226,17 @@
     "impulse": "red",
     "strong": true
    },
-   "ema20": 9.573,
-   "ema50": 10.16,
-   "rsi": 18.7,
-   "fi2": -2895410.0,
-   "atr": 0.28,
-   "macd": -0.4175,
-   "macd_hist": -0.0979,
+   "ema20": 9.694,
+   "ema50": 10.231,
+   "rsi": 23.0,
+   "fi2": -1289304.0,
+   "atr": 0.262,
+   "macd": -0.3602,
+   "macd_hist": -0.0651,
    "macd_hist_rising": false,
    "support": [
     {
-     "price": 8.38,
+     "price": 8.73,
      "touches": 1,
      "strength": 1.0
     }
@@ -1235,9 +1253,9 @@
      "strength": 3.92
     },
     {
-     "price": 10.385,
-     "touches": 2,
-     "strength": 2.94
+     "price": 10.383,
+     "touches": 3,
+     "strength": 3.94
     }
    ],
    "plan": null,
@@ -1246,8 +1264,8 @@
    ],
    "dual": {
     "symbol": "BN4.SI",
-    "date": "2026-11-24",
-    "close": 8.420000076293945,
+    "date": "2026-11-20",
+    "close": 8.850000381469727,
     "decision": "AVOID",
     "blocked_by": [
      "reward_risk",
@@ -1259,9 +1277,9 @@
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 2.1,
+    "combined": 2.8,
     "sm": {
-     "score": 0.9,
+     "score": 2.4,
      "components": {
       "bid_ask": {
        "pts": 0.0,
@@ -1279,7 +1297,7 @@
        "tier": "daily-proxy"
       },
       "vwap": {
-       "pts": 0.0,
+       "pts": 1.5,
        "max": 10,
        "tier": "daily"
       },
@@ -1304,19 +1322,19 @@
        "pts": 0.0,
        "max": 40,
        "wk_macd_hist_rising": false,
-       "wk_ema26_slope_pct": -4.42,
+       "wk_ema26_slope_pct": -3.53,
        "above_ema50": false,
        "ema50_rising": false
       },
       "pullback_quality": {
        "pts": 3.2,
        "max": 35,
-       "rsi_min5": 18.7,
+       "rsi_min5": 23.0,
        "rsi_max20": 41.1,
-       "value_zone": "9.349-9.728",
-       "low3_vs_zone_top_atr": -4.81,
-       "fib_retrace": 4.039,
-       "bear_power_atr": -3.46,
+       "value_zone": "9.504-9.833",
+       "low3_vs_zone_top_atr": -4.21,
+       "fib_retrace": 3.353,
+       "bear_power_atr": -2.96,
        "bear_power_turn_up": false
       },
       "entry_confirmation": {
@@ -1330,19 +1348,19 @@
     "gates": {
      "liquidity": {
       "pass": true,
-      "value": "S$41.70M/day"
+      "value": "S$40.19M/day"
      },
      "reward_risk": {
       "pass": false,
-      "value": "1.36R to T1"
+      "value": "1.49R to T1"
      },
      "atr_band": {
       "pass": true,
-      "value": "ATR 3.33%"
+      "value": "ATR 2.96%"
      },
      "stop_width": {
       "pass": false,
-      "value": "3.82 ATR"
+      "value": "3.44 ATR"
      },
      "weekly_impulse": {
       "pass": false,
@@ -1350,27 +1368,27 @@
      }
     },
     "plan": {
-     "entry_buy_stop": 8.91,
-     "stop": 7.84,
-     "risk_per_share": 1.07,
-     "stop_in_atr": 3.82,
+     "entry_buy_stop": 9.03,
+     "stop": 8.13,
+     "risk_per_share": 0.9,
+     "stop_in_atr": 3.44,
      "target1": 10.37,
      "target2": 11.07,
-     "rr_t1": 1.36,
+     "rr_t1": 1.49,
      "supports": [],
      "resistances": [
       10.386,
       11.088,
-      11.908
+      11.675
      ],
-     "atr": 0.2801,
+     "atr": 0.2616,
      "stop_method": "safezone",
      "channel": {
-      "upper": 10.241,
-      "lower": 9.014,
-      "ema": 9.628,
-      "height": 1.226,
-      "t1_grade_pct": 119.1
+      "upper": 10.348,
+      "lower": 9.137,
+      "ema": 9.743,
+      "height": 1.21,
+      "t1_grade_pct": 110.7
      },
      "management": [
       "Order valid 2 sessions; cancel if not filled",
@@ -1378,8 +1396,8 @@
       "At T1: sell half; trail rest under 20-EMA or 2-bar low",
       "Time stop: exit if < +0.5R after 7 sessions"
      ],
-     "shares": 900,
-     "capital": 8019.0
+     "shares": 1100,
+     "capital": 9933.0
     }
    }
   },
@@ -1387,9 +1405,9 @@
    "ticker": "BS6.SI",
    "code": "BS6",
    "name": "Yangzijiang Shipbuilding",
-   "date": "2026-11-24",
-   "close": 4.27,
-   "chg_pct": -0.7,
+   "date": "2026-11-20",
+   "close": 4.3,
+   "chg_pct": -1.38,
    "status": "Short watch",
    "wave": "Extended",
    "tide": {
@@ -1400,13 +1418,13 @@
     "impulse": "red",
     "strong": true
    },
-   "ema20": 4.528,
-   "ema50": 4.672,
-   "rsi": 36.3,
-   "fi2": -446412.0,
-   "atr": 0.175,
-   "macd": -0.1615,
-   "macd_hist": -0.0165,
+   "ema20": 4.555,
+   "ema50": 4.689,
+   "rsi": 37.2,
+   "fi2": -643362.0,
+   "atr": 0.179,
+   "macd": -0.1586,
+   "macd_hist": -0.0178,
    "macd_hist_rising": true,
    "support": [
     {
@@ -1417,7 +1435,7 @@
     {
      "price": 3.88,
      "touches": 1,
-     "strength": 1.3
+     "strength": 1.31
     },
     {
      "price": 3.758,
@@ -1448,11 +1466,12 @@
    ],
    "dual": {
     "symbol": "BS6.SI",
-    "date": "2026-11-24",
-    "close": 4.269999980926514,
+    "date": "2026-11-20",
+    "close": 4.300000190734863,
     "decision": "AVOID",
     "blocked_by": [
      "reward_risk",
+     "stop_width",
      "weekly_impulse",
      "TS<80",
      "SM<75",
@@ -1460,12 +1479,12 @@
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 17.8,
+    "combined": 21.9,
     "sm": {
-     "score": 9.6,
+     "score": 22.3,
      "components": {
       "bid_ask": {
-       "pts": 2.5,
+       "pts": 13.5,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -1490,7 +1509,7 @@
        "tier": "daily"
       },
       "closing_strength": {
-       "pts": 1.1,
+       "pts": 2.8,
        "max": 5,
        "tier": "daily"
       }
@@ -1499,26 +1518,26 @@
      "weight_measured": 1.0
     },
     "ts": {
-     "score": 25.9,
+     "score": 21.5,
      "components": {
       "trend_alignment": {
-       "pts": 0.0,
+       "pts": 1.6,
        "max": 40,
        "wk_macd_hist_rising": false,
-       "wk_ema26_slope_pct": -0.99,
+       "wk_ema26_slope_pct": -0.57,
        "above_ema50": false,
        "ema50_rising": false
       },
       "pullback_quality": {
-       "pts": 14.8,
+       "pts": 8.9,
        "max": 35,
-       "rsi_min5": 36.3,
+       "rsi_min5": 36.8,
        "rsi_max20": 45.8,
-       "value_zone": "4.439-4.587",
-       "low3_vs_zone_top_atr": -2.04,
-       "fib_retrace": 2.643,
-       "bear_power_atr": -0.97,
-       "bear_power_turn_up": true
+       "value_zone": "4.467-4.612",
+       "low3_vs_zone_top_atr": -2.13,
+       "fib_retrace": 2.243,
+       "bear_power_atr": -1.32,
+       "bear_power_turn_up": false
       },
       "entry_confirmation": {
        "pts": 11.0,
@@ -1531,19 +1550,19 @@
     "gates": {
      "liquidity": {
       "pass": true,
-      "value": "S$78.05M/day"
+      "value": "S$78.94M/day"
      },
      "reward_risk": {
       "pass": false,
-      "value": "1.39R to T1"
+      "value": "0.32R to T1"
      },
      "atr_band": {
       "pass": true,
-      "value": "ATR 4.10%"
+      "value": "ATR 4.17%"
      },
      "stop_width": {
-      "pass": true,
-      "value": "1.89 ATR"
+      "pass": false,
+      "value": "3.18 ATR"
      },
      "weekly_impulse": {
       "pass": false,
@@ -1551,31 +1570,31 @@
      }
     },
     "plan": {
-     "entry_buy_stop": 4.4,
-     "stop": 4.07,
-     "risk_per_share": 0.33,
-     "stop_in_atr": 1.89,
-     "target1": 4.86,
-     "target2": 5.04,
-     "rr_t1": 1.39,
+     "entry_buy_stop": 4.38,
+     "stop": 3.81,
+     "risk_per_share": 0.57,
+     "stop_in_atr": 3.18,
+     "target1": 4.56,
+     "target2": 4.86,
+     "rr_t1": 0.32,
      "supports": [
       3.317,
       3.85,
       4.195
      ],
      "resistances": [
+      4.575,
       4.877,
-      5.22,
-      5.41
+      5.22
      ],
-     "atr": 0.175,
+     "atr": 0.1793,
      "stop_method": "safezone",
      "channel": {
-      "upper": 5.055,
-      "lower": 4.044,
-      "ema": 4.549,
-      "height": 1.011,
-      "t1_grade_pct": 45.5
+      "upper": 5.084,
+      "lower": 4.068,
+      "ema": 4.576,
+      "height": 1.016,
+      "t1_grade_pct": 17.7
      },
      "management": [
       "Order valid 2 sessions; cancel if not filled",
@@ -1583,8 +1602,8 @@
       "At T1: sell half; trail rest under 20-EMA or 2-bar low",
       "Time stop: exit if < +0.5R after 7 sessions"
      ],
-     "shares": 3000,
-     "capital": 13200.0
+     "shares": 1700,
+     "capital": 7446.0
     }
    }
   },
@@ -1592,9 +1611,9 @@
    "ticker": "BUOU.SI",
    "code": "BUOU",
    "name": "Frasers Logistics & Commercial Trust",
-   "date": "2026-11-24",
-   "close": 0.815,
-   "chg_pct": -1.21,
+   "date": "2026-11-20",
+   "close": 0.825,
+   "chg_pct": -0.6,
    "status": "Short watch",
    "wave": "Extended",
    "tide": {
@@ -1605,17 +1624,17 @@
     "impulse": "red",
     "strong": true
    },
-   "ema20": 0.871,
-   "ema50": 0.888,
-   "rsi": 26.7,
-   "fi2": -101137.0,
+   "ema20": 0.877,
+   "ema50": 0.891,
+   "rsi": 28.7,
+   "fi2": -141910.0,
    "atr": 0.02,
-   "macd": -0.0149,
-   "macd_hist": -0.0094,
+   "macd": -0.0115,
+   "macd_hist": -0.0083,
    "macd_hist_rising": false,
    "support": [
     {
-     "price": 0.815,
+     "price": 0.825,
      "touches": 1,
      "strength": 1.0
     }
@@ -1634,7 +1653,7 @@
     {
      "price": 0.92,
      "touches": 3,
-     "strength": 3.92
+     "strength": 3.93
     }
    ],
    "plan": null,
@@ -1643,8 +1662,8 @@
    ],
    "dual": {
     "symbol": "BUOU.SI",
-    "date": "2026-11-24",
-    "close": 0.8149999976158142,
+    "date": "2026-11-20",
+    "close": 0.824999988079071,
     "decision": "AVOID",
     "blocked_by": [
      "reward_risk",
@@ -1656,9 +1675,9 @@
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 5.8,
+    "combined": 10.6,
     "sm": {
-     "score": 8.5,
+     "score": 12.5,
      "components": {
       "bid_ask": {
        "pts": 0.0,
@@ -1666,7 +1685,7 @@
        "tier": "hourly-proxy"
       },
       "price_volume": {
-       "pts": 0.0,
+       "pts": 2.5,
        "max": 25,
        "tier": "daily"
       },
@@ -1676,12 +1695,12 @@
        "tier": "daily-proxy"
       },
       "vwap": {
-       "pts": 0.5,
+       "pts": 1.4,
        "max": 10,
        "tier": "daily"
       },
       "obv": {
-       "pts": 0.4,
+       "pts": 1.1,
        "max": 10,
        "tier": "daily"
       },
@@ -1695,26 +1714,26 @@
      "weight_measured": 1.0
     },
     "ts": {
-     "score": 3.2,
+     "score": 8.7,
      "components": {
       "trend_alignment": {
        "pts": 0.0,
        "max": 40,
        "wk_macd_hist_rising": false,
-       "wk_ema26_slope_pct": -1.91,
+       "wk_ema26_slope_pct": -1.37,
        "above_ema50": false,
        "ema50_rising": false
       },
       "pullback_quality": {
-       "pts": 3.2,
+       "pts": 8.7,
        "max": 35,
-       "rsi_min5": 26.7,
+       "rsi_min5": 28.7,
        "rsi_max20": 68.2,
-       "value_zone": "0.863-0.876",
-       "low3_vs_zone_top_atr": -3.07,
-       "fib_retrace": 1.563,
-       "bear_power_atr": -2.42,
-       "bear_power_turn_up": false
+       "value_zone": "0.871-0.881",
+       "low3_vs_zone_top_atr": -2.82,
+       "fib_retrace": 1.438,
+       "bear_power_atr": -2.31,
+       "bear_power_turn_up": true
       },
       "entry_confirmation": {
        "pts": 0.0,
@@ -1727,19 +1746,19 @@
     "gates": {
      "liquidity": {
       "pass": true,
-      "value": "S$11.73M/day"
+      "value": "S$12.42M/day"
      },
      "reward_risk": {
       "pass": false,
-      "value": "0.64R to T1"
+      "value": "0.75R to T1"
      },
      "atr_band": {
       "pass": true,
-      "value": "ATR 2.42%"
+      "value": "ATR 2.39%"
      },
      "stop_width": {
       "pass": false,
-      "value": "3.54 ATR"
+      "value": "3.04 ATR"
      },
      "weekly_impulse": {
       "pass": false,
@@ -1748,12 +1767,12 @@
     },
     "plan": {
      "entry_buy_stop": 0.84,
-     "stop": 0.77,
-     "risk_per_share": 0.07,
-     "stop_in_atr": 3.54,
+     "stop": 0.78,
+     "risk_per_share": 0.06,
+     "stop_in_atr": 3.04,
      "target1": 0.885,
-     "target2": 0.905,
-     "rr_t1": 0.64,
+     "target2": 0.91,
+     "rr_t1": 0.75,
      "supports": [],
      "resistances": [
       0.892,
@@ -1763,11 +1782,11 @@
      "atr": 0.0197,
      "stop_method": "safezone",
      "channel": {
-      "upper": 0.911,
-      "lower": 0.835,
-      "ema": 0.873,
+      "upper": 0.916,
+      "lower": 0.841,
+      "ema": 0.879,
       "height": 0.076,
-      "t1_grade_pct": 59.5
+      "t1_grade_pct": 59.4
      },
      "management": [
       "Order valid 2 sessions; cancel if not filled",
@@ -1775,8 +1794,8 @@
       "At T1: sell half; trail rest under 20-EMA or 2-bar low",
       "Time stop: exit if < +0.5R after 7 sessions"
      ],
-     "shares": 14200,
-     "capital": 11928.0
+     "shares": 16600,
+     "capital": 13944.0
     }
    }
   },
@@ -1784,9 +1803,9 @@
    "ticker": "C09.SI",
    "code": "C09",
    "name": "City Developments",
-   "date": "2026-11-24",
-   "close": 6.12,
-   "chg_pct": -3.16,
+   "date": "2026-11-20",
+   "close": 6.32,
+   "chg_pct": -2.32,
    "status": "Short watch",
    "wave": "Extended",
    "tide": {
@@ -1797,17 +1816,17 @@
     "impulse": "red",
     "strong": true
    },
-   "ema20": 6.808,
-   "ema50": 7.185,
-   "rsi": 19.8,
-   "fi2": -369546.0,
-   "atr": 0.184,
-   "macd": -0.2659,
-   "macd_hist": -0.0787,
+   "ema20": 6.88,
+   "ema50": 7.229,
+   "rsi": 23.1,
+   "fi2": -277076.0,
+   "atr": 0.18,
+   "macd": -0.2345,
+   "macd_hist": -0.0669,
    "macd_hist_rising": false,
    "support": [
     {
-     "price": 6.1,
+     "price": 6.22,
      "touches": 1,
      "strength": 1.0
     }
@@ -1816,7 +1835,7 @@
     {
      "price": 6.4,
      "touches": 1,
-     "strength": 1.97
+     "strength": 1.98
     },
     {
      "price": 6.96,
@@ -1826,7 +1845,7 @@
     {
      "price": 7.12,
      "touches": 1,
-     "strength": 1.04
+     "strength": 1.05
     }
    ],
    "plan": null,
@@ -1835,8 +1854,8 @@
    ],
    "dual": {
     "symbol": "C09.SI",
-    "date": "2026-11-24",
-    "close": 6.119999885559082,
+    "date": "2026-11-20",
+    "close": 6.320000171661377,
     "decision": "AVOID",
     "blocked_by": [
      "reward_risk",
@@ -1848,12 +1867,12 @@
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 2.8,
+    "combined": 4.6,
     "sm": {
-     "score": 2.3,
+     "score": 6.0,
      "components": {
       "bid_ask": {
-       "pts": 0.0,
+       "pts": 1.5,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -1868,7 +1887,7 @@
        "tier": "daily-proxy"
       },
       "vwap": {
-       "pts": 0.5,
+       "pts": 2.2,
        "max": 10,
        "tier": "daily"
       },
@@ -1878,7 +1897,7 @@
        "tier": "daily"
       },
       "closing_strength": {
-       "pts": 1.8,
+       "pts": 2.4,
        "max": 5,
        "tier": "daily"
       }
@@ -1893,19 +1912,19 @@
        "pts": 0.0,
        "max": 40,
        "wk_macd_hist_rising": false,
-       "wk_ema26_slope_pct": -4.35,
+       "wk_ema26_slope_pct": -3.44,
        "above_ema50": false,
        "ema50_rising": false
       },
       "pullback_quality": {
        "pts": 3.2,
        "max": 35,
-       "rsi_min5": 19.8,
+       "rsi_min5": 23.1,
        "rsi_max20": 57.8,
-       "value_zone": "6.664-6.903",
-       "low3_vs_zone_top_atr": -4.37,
-       "fib_retrace": 2.417,
-       "bear_power_atr": -3.07,
+       "value_zone": "6.754-6.966",
+       "low3_vs_zone_top_atr": -4.14,
+       "fib_retrace": 2.217,
+       "bear_power_atr": -2.97,
        "bear_power_turn_up": false
       },
       "entry_confirmation": {
@@ -1919,19 +1938,19 @@
     "gates": {
      "liquidity": {
       "pass": true,
-      "value": "S$13.92M/day"
+      "value": "S$14.03M/day"
      },
      "reward_risk": {
       "pass": false,
-      "value": "1.35R to T1"
+      "value": "1.71R to T1"
      },
      "atr_band": {
       "pass": true,
-      "value": "ATR 3.00%"
+      "value": "ATR 2.85%"
      },
      "stop_width": {
       "pass": false,
-      "value": "3.59 ATR"
+      "value": "3.22 ATR"
      },
      "weekly_impulse": {
       "pass": false,
@@ -1939,27 +1958,27 @@
      }
     },
     "plan": {
-     "entry_buy_stop": 6.34,
-     "stop": 5.68,
-     "risk_per_share": 0.66,
-     "stop_in_atr": 3.59,
-     "target1": 7.23,
-     "target2": 7.38,
-     "rr_t1": 1.35,
+     "entry_buy_stop": 6.36,
+     "stop": 5.78,
+     "risk_per_share": 0.58,
+     "stop_in_atr": 3.22,
+     "target1": 7.35,
+     "target2": 7.95,
+     "rr_t1": 1.71,
      "supports": [],
      "resistances": [
-      7.245,
-      7.49,
-      7.968
+      7.362,
+      7.968,
+      8.656
      ],
-     "atr": 0.1837,
+     "atr": 0.1801,
      "stop_method": "safezone",
      "channel": {
-      "upper": 7.393,
-      "lower": 6.29,
-      "ema": 6.841,
-      "height": 1.104,
-      "t1_grade_pct": 80.6
+      "upper": 7.449,
+      "lower": 6.372,
+      "ema": 6.91,
+      "height": 1.077,
+      "t1_grade_pct": 91.9
      },
      "management": [
       "Order valid 2 sessions; cancel if not filled",
@@ -1967,8 +1986,8 @@
       "At T1: sell half; trail rest under 20-EMA or 2-bar low",
       "Time stop: exit if < +0.5R after 7 sessions"
      ],
-     "shares": 1500,
-     "capital": 9510.0
+     "shares": 1700,
+     "capital": 10812.0
     }
    }
   },
@@ -1976,9 +1995,9 @@
    "ticker": "D05.SI",
    "code": "D05",
    "name": "DBS Group",
-   "date": "2026-11-24",
-   "close": 66.24,
-   "chg_pct": 0.2,
+   "date": "2026-11-20",
+   "close": 66.11,
+   "chg_pct": -1.83,
    "status": "Short watch",
    "wave": "Extended",
    "tide": {
@@ -1989,19 +2008,19 @@
     "impulse": "red",
     "strong": true
    },
-   "ema20": 69.948,
-   "ema50": 72.3,
-   "rsi": 22.3,
-   "fi2": -1750858.0,
-   "atr": 1.274,
-   "macd": -2.0863,
-   "macd_hist": -0.3703,
-   "macd_hist_rising": true,
+   "ema20": 70.339,
+   "ema50": 72.547,
+   "rsi": 21.2,
+   "fi2": -7204961.0,
+   "atr": 1.278,
+   "macd": -2.0106,
+   "macd_hist": -0.3871,
+   "macd_hist_rising": false,
    "support": [
     {
      "price": 65.145,
      "touches": 2,
-     "strength": 2.58
+     "strength": 2.59
     },
     {
      "price": 61.6,
@@ -2011,7 +2030,7 @@
     {
      "price": 58.105,
      "touches": 13,
-     "strength": 13.45
+     "strength": 13.46
     }
    ],
    "resistance": [
@@ -2028,7 +2047,7 @@
     {
      "price": 71.485,
      "touches": 2,
-     "strength": 2.97
+     "strength": 2.98
     }
    ],
    "plan": null,
@@ -2037,8 +2056,8 @@
    ],
    "dual": {
     "symbol": "D05.SI",
-    "date": "2026-11-24",
-    "close": 66.23999786376953,
+    "date": "2026-11-20",
+    "close": 66.11000061035156,
     "decision": "AVOID",
     "blocked_by": [
      "reward_risk",
@@ -2050,12 +2069,12 @@
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 13.8,
+    "combined": 8.8,
     "sm": {
-     "score": 7.4,
+     "score": 12.7,
      "components": {
       "bid_ask": {
-       "pts": 0.0,
+       "pts": 5.8,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -2070,17 +2089,17 @@
        "tier": "daily-proxy"
       },
       "vwap": {
-       "pts": 0.6,
-       "max": 10,
-       "tier": "daily"
-      },
-      "obv": {
        "pts": 0.2,
        "max": 10,
        "tier": "daily"
       },
+      "obv": {
+       "pts": 0.0,
+       "max": 10,
+       "tier": "daily"
+      },
       "closing_strength": {
-       "pts": 0.5,
+       "pts": 0.6,
        "max": 5,
        "tier": "daily"
       }
@@ -2089,51 +2108,51 @@
      "weight_measured": 1.0
     },
     "ts": {
-     "score": 20.2,
+     "score": 5.0,
      "components": {
       "trend_alignment": {
-       "pts": 0.0,
+       "pts": 1.8,
        "max": 40,
        "wk_macd_hist_rising": false,
-       "wk_ema26_slope_pct": -1.2,
+       "wk_ema26_slope_pct": -0.52,
        "above_ema50": false,
        "ema50_rising": false
       },
       "pullback_quality": {
-       "pts": 8.0,
+       "pts": 3.2,
        "max": 35,
        "rsi_min5": 20.7,
-       "rsi_max20": 39.9,
-       "value_zone": "68.812-70.709",
-       "low3_vs_zone_top_atr": -3.75,
-       "fib_retrace": 4.173,
-       "bear_power_atr": -2.08,
-       "bear_power_turn_up": true
+       "rsi_max20": 41.4,
+       "value_zone": "69.241-71.067",
+       "low3_vs_zone_top_atr": -4.04,
+       "fib_retrace": 3.694,
+       "bear_power_atr": -2.59,
+       "bear_power_turn_up": false
       },
       "entry_confirmation": {
-       "pts": 12.2,
+       "pts": 0.0,
        "max": 25,
        "close_above_prior_high": false,
-       "d_macd_hist_upticks": 1
+       "d_macd_hist_upticks": 0
       }
      }
     },
     "gates": {
      "liquidity": {
       "pass": true,
-      "value": "S$447.06M/day"
+      "value": "S$432.09M/day"
      },
      "reward_risk": {
       "pass": false,
-      "value": "1.0R to T1"
+      "value": "1.38R to T1"
      },
      "atr_band": {
       "pass": true,
-      "value": "ATR 1.92%"
+      "value": "ATR 1.93%"
      },
      "stop_width": {
       "pass": false,
-      "value": "3.31 ATR"
+      "value": "2.71 ATR"
      },
      "weekly_impulse": {
       "pass": false,
@@ -2141,31 +2160,31 @@
      }
     },
     "plan": {
-     "entry_buy_stop": 67.35,
-     "stop": 63.13,
-     "risk_per_share": 4.22,
-     "stop_in_atr": 3.31,
+     "entry_buy_stop": 66.82,
+     "stop": 63.36,
+     "risk_per_share": 3.46,
+     "stop_in_atr": 2.71,
      "target1": 71.59,
      "target2": 73.54,
-     "rr_t1": 1.0,
+     "rr_t1": 1.38,
      "supports": [
       57.212,
       61.6,
-      65.5
+      65.1
      ],
      "resistances": [
       71.6,
       73.55,
       75.035
      ],
-     "atr": 1.2738,
+     "atr": 1.2779,
      "stop_method": "safezone",
      "channel": {
-      "upper": 74.567,
-      "lower": 65.877,
-      "ema": 70.222,
-      "height": 8.691,
-      "t1_grade_pct": 48.8
+      "upper": 74.97,
+      "lower": 66.232,
+      "ema": 70.601,
+      "height": 8.738,
+      "t1_grade_pct": 54.6
      },
      "management": [
       "Order valid 2 sessions; cancel if not filled",
@@ -2174,2153 +2193,7 @@
       "Time stop: exit if < +0.5R after 7 sessions"
      ],
      "shares": 200,
-     "capital": 13470.0
-    }
-   }
-  },
-  {
-   "ticker": "G13.SI",
-   "code": "G13",
-   "name": "Genting Singapore",
-   "date": "2026-11-24",
-   "close": 0.535,
-   "chg_pct": -0.93,
-   "status": "Short watch",
-   "wave": "Extended",
-   "tide": {
-    "tide": "Down",
-    "hist_rising": false,
-    "ema26_rising": false,
-    "above_ema26": false,
-    "impulse": "red",
-    "strong": true
-   },
-   "ema20": 0.577,
-   "ema50": 0.597,
-   "rsi": 21.3,
-   "fi2": -131584.0,
-   "atr": 0.014,
-   "macd": -0.0181,
-   "macd_hist": -0.0069,
-   "macd_hist_rising": true,
-   "support": [
-    {
-     "price": 0.525,
-     "touches": 1,
-     "strength": 1.0
-    }
-   ],
-   "resistance": [
-    {
-     "price": 0.582,
-     "touches": 2,
-     "strength": 2.92
-    },
-    {
-     "price": 0.606,
-     "touches": 18,
-     "strength": 18.89
-    },
-    {
-     "price": 0.623,
-     "touches": 20,
-     "strength": 20.96
-    }
-   ],
-   "plan": null,
-   "notes": [
-    "Extended below EMA20: wait for a rally"
-   ],
-   "dual": {
-    "symbol": "G13.SI",
-    "date": "2026-11-24",
-    "close": 0.5350000262260437,
-    "decision": "AVOID",
-    "blocked_by": [
-     "reward_risk",
-     "stop_width",
-     "weekly_impulse",
-     "TS<80",
-     "SM<75",
-     "bid/ask below floor"
-    ],
-    "regime_bearish": true,
-    "version": "1.2",
-    "combined": 7.0,
-    "sm": {
-     "score": 4.1,
-     "components": {
-      "bid_ask": {
-       "pts": 0.0,
-       "max": 35,
-       "tier": "hourly-proxy"
-      },
-      "price_volume": {
-       "pts": 0.0,
-       "max": 25,
-       "tier": "daily"
-      },
-      "block_trades": {
-       "pts": 2.0,
-       "max": 15,
-       "tier": "daily-proxy"
-      },
-      "vwap": {
-       "pts": 2.1,
-       "max": 10,
-       "tier": "daily"
-      },
-      "obv": {
-       "pts": 0.0,
-       "max": 10,
-       "tier": "daily"
-      },
-      "closing_strength": {
-       "pts": 0.0,
-       "max": 5,
-       "tier": "daily"
-      }
-     },
-     "confidence": 0.5,
-     "weight_measured": 1.0
-    },
-    "ts": {
-     "score": 9.8,
-     "components": {
-      "trend_alignment": {
-       "pts": 0.0,
-       "max": 40,
-       "wk_macd_hist_rising": false,
-       "wk_ema26_slope_pct": -2.84,
-       "above_ema50": false,
-       "ema50_rising": false
-      },
-      "pullback_quality": {
-       "pts": 3.2,
-       "max": 35,
-       "rsi_min5": 21.3,
-       "rsi_max20": 66.2,
-       "value_zone": "0.567-0.583",
-       "low3_vs_zone_top_atr": -4.07,
-       "fib_retrace": 2.333,
-       "bear_power_atr": -2.94,
-       "bear_power_turn_up": false
-      },
-      "entry_confirmation": {
-       "pts": 6.6,
-       "max": 25,
-       "close_above_prior_high": false,
-       "d_macd_hist_upticks": 1
-      }
-     }
-    },
-    "gates": {
-     "liquidity": {
-      "pass": true,
-      "value": "S$19.22M/day"
-     },
-     "reward_risk": {
-      "pass": false,
-      "value": "0.69R to T1"
-     },
-     "atr_band": {
-      "pass": true,
-      "value": "ATR 2.67%"
-     },
-     "stop_width": {
-      "pass": false,
-      "value": "4.55 ATR"
-     },
-     "weekly_impulse": {
-      "pass": false,
-      "value": "weekly red"
-     }
-    },
-    "plan": {
-     "entry_buy_stop": 0.55,
-     "stop": 0.485,
-     "risk_per_share": 0.065,
-     "stop_in_atr": 4.55,
-     "target1": 0.595,
-     "target2": 0.62,
-     "rr_t1": 0.69,
-     "supports": [],
-     "resistances": [
-      0.6,
-      0.626,
-      0.655
-     ],
-     "atr": 0.0143,
-     "stop_method": "safezone",
-     "channel": {
-      "upper": 0.604,
-      "lower": 0.555,
-      "ema": 0.579,
-      "height": 0.048,
-      "t1_grade_pct": 93.1
-     },
-     "management": [
-      "Order valid 2 sessions; cancel if not filled",
-      "At +1R: move stop to breakeven",
-      "At T1: sell half; trail rest under 20-EMA or 2-bar low",
-      "Time stop: exit if < +0.5R after 7 sessions"
-     ],
-     "shares": 15300,
-     "capital": 8415.0
-    }
-   }
-  },
-  {
-   "ticker": "J69U.SI",
-   "code": "J69U",
-   "name": "Frasers Centrepoint Trust",
-   "date": "2026-11-24",
-   "close": 2.1,
-   "chg_pct": -0.94,
-   "status": "Short watch",
-   "wave": "Rally",
-   "tide": {
-    "tide": "Down",
-    "hist_rising": false,
-    "ema26_rising": false,
-    "above_ema26": false,
-    "impulse": "red",
-    "strong": true
-   },
-   "ema20": 2.128,
-   "ema50": 2.126,
-   "rsi": 44.6,
-   "fi2": -53060.0,
-   "atr": 0.036,
-   "macd": 0.0056,
-   "macd_hist": -0.005,
-   "macd_hist_rising": false,
-   "support": [
-    {
-     "price": 2.052,
-     "touches": 6,
-     "strength": 6.94
-    }
-   ],
-   "resistance": [
-    {
-     "price": 2.123,
-     "touches": 3,
-     "strength": 3.97
-    },
-    {
-     "price": 2.249,
-     "touches": 53,
-     "strength": 53.98
-    },
-    {
-     "price": 2.37,
-     "touches": 1,
-     "strength": 1.43
-    }
-   ],
-   "plan": null,
-   "notes": [
-    "Passed screens 1-2 but T1 (2.060) is only 0.2R away: resistance too close, no trade"
-   ],
-   "dual": {
-    "symbol": "J69U.SI",
-    "date": "2026-11-24",
-    "close": 2.0999999046325684,
-    "decision": "AVOID",
-    "blocked_by": [
-     "reward_risk",
-     "weekly_impulse",
-     "TS<80",
-     "SM<75",
-     "bid/ask below floor"
-    ],
-    "regime_bearish": true,
-    "version": "1.2",
-    "combined": 31.4,
-    "sm": {
-     "score": 35.7,
-     "components": {
-      "bid_ask": {
-       "pts": 0.0,
-       "max": 35,
-       "tier": "hourly-proxy"
-      },
-      "price_volume": {
-       "pts": 17.7,
-       "max": 25,
-       "tier": "daily"
-      },
-      "block_trades": {
-       "pts": 6.0,
-       "max": 15,
-       "tier": "daily-proxy"
-      },
-      "vwap": {
-       "pts": 2.4,
-       "max": 10,
-       "tier": "daily"
-      },
-      "obv": {
-       "pts": 9.6,
-       "max": 10,
-       "tier": "daily"
-      },
-      "closing_strength": {
-       "pts": 0.0,
-       "max": 5,
-       "tier": "daily"
-      }
-     },
-     "confidence": 0.5,
-     "weight_measured": 1.0
-    },
-    "ts": {
-     "score": 27.0,
-     "components": {
-      "trend_alignment": {
-       "pts": 6.7,
-       "max": 40,
-       "wk_macd_hist_rising": false,
-       "wk_ema26_slope_pct": -0.54,
-       "above_ema50": false,
-       "ema50_rising": true
-      },
-      "pullback_quality": {
-       "pts": 20.3,
-       "max": 35,
-       "rsi_min5": 44.6,
-       "rsi_max20": 65.5,
-       "value_zone": "2.125-2.130",
-       "low3_vs_zone_top_atr": -0.84,
-       "fib_retrace": 0.824,
-       "bear_power_atr": -0.84,
-       "bear_power_turn_up": false
-      },
-      "entry_confirmation": {
-       "pts": 0.0,
-       "max": 25,
-       "close_above_prior_high": false,
-       "d_macd_hist_upticks": 0
-      }
-     }
-    },
-    "gates": {
-     "liquidity": {
-      "pass": true,
-      "value": "S$16.98M/day"
-     },
-     "reward_risk": {
-      "pass": false,
-      "value": "0.33R to T1"
-     },
-     "atr_band": {
-      "pass": true,
-      "value": "ATR 1.71%"
-     },
-     "stop_width": {
-      "pass": true,
-      "value": "2.5 ATR"
-     },
-     "weekly_impulse": {
-      "pass": false,
-      "value": "weekly red"
-     }
-    },
-    "plan": {
-     "entry_buy_stop": 2.15,
-     "stop": 2.06,
-     "risk_per_share": 0.09,
-     "stop_in_atr": 2.5,
-     "target1": 2.18,
-     "target2": 2.28,
-     "rr_t1": 0.33,
-     "supports": [
-      2.058,
-      2.115
-     ],
-     "resistances": [
-      2.198,
-      2.296,
-      2.37
-     ],
-     "atr": 0.036,
-     "stop_method": "safezone",
-     "channel": {
-      "upper": 2.192,
-      "lower": 2.061,
-      "ema": 2.127,
-      "height": 0.131,
-      "t1_grade_pct": 22.9
-     },
-     "management": [
-      "Order valid 2 sessions; cancel if not filled",
-      "At +1R: move stop to breakeven",
-      "At T1: sell half; trail rest under 20-EMA or 2-bar low",
-      "Time stop: exit if < +0.5R after 7 sessions"
-     ],
-     "shares": 11100,
-     "capital": 23865.0
-    }
-   }
-  },
-  {
-   "ticker": "M44U.SI",
-   "code": "M44U",
-   "name": "Mapletree Logistics Trust",
-   "date": "2026-11-24",
-   "close": 1.04,
-   "chg_pct": -0.95,
-   "status": "Short watch",
-   "wave": "Extended",
-   "tide": {
-    "tide": "Down",
-    "hist_rising": false,
-    "ema26_rising": false,
-    "above_ema26": false,
-    "impulse": "red",
-    "strong": true
-   },
-   "ema20": 1.083,
-   "ema50": 1.1,
-   "rsi": 33.2,
-   "fi2": -210107.0,
-   "atr": 0.025,
-   "macd": -0.0087,
-   "macd_hist": -0.0056,
-   "macd_hist_rising": false,
-   "support": [
-    {
-     "price": 1.03,
-     "touches": 1,
-     "strength": 1.0
-    }
-   ],
-   "resistance": [
-    {
-     "price": 1.074,
-     "touches": 12,
-     "strength": 12.95
-    },
-    {
-     "price": 1.164,
-     "touches": 25,
-     "strength": 25.98
-    },
-    {
-     "price": 1.263,
-     "touches": 12,
-     "strength": 12.67
-    }
-   ],
-   "plan": null,
-   "notes": [
-    "Extended below EMA20: wait for a rally"
-   ],
-   "dual": {
-    "symbol": "M44U.SI",
-    "date": "2026-11-24",
-    "close": 1.0399999618530273,
-    "decision": "AVOID",
-    "blocked_by": [
-     "reward_risk",
-     "stop_width",
-     "weekly_impulse",
-     "TS<80",
-     "SM<75",
-     "bid/ask below floor"
-    ],
-    "regime_bearish": true,
-    "version": "1.2",
-    "combined": 12.0,
-    "sm": {
-     "score": 11.4,
-     "components": {
-      "bid_ask": {
-       "pts": 0.0,
-       "max": 35,
-       "tier": "hourly-proxy"
-      },
-      "price_volume": {
-       "pts": 0.0,
-       "max": 25,
-       "tier": "daily"
-      },
-      "block_trades": {
-       "pts": 7.5,
-       "max": 15,
-       "tier": "daily-proxy"
-      },
-      "vwap": {
-       "pts": 1.5,
-       "max": 10,
-       "tier": "daily"
-      },
-      "obv": {
-       "pts": 0.5,
-       "max": 10,
-       "tier": "daily"
-      },
-      "closing_strength": {
-       "pts": 1.9,
-       "max": 5,
-       "tier": "daily"
-      }
-     },
-     "confidence": 0.5,
-     "weight_measured": 1.0
-    },
-    "ts": {
-     "score": 12.7,
-     "components": {
-      "trend_alignment": {
-       "pts": 0.0,
-       "max": 40,
-       "wk_macd_hist_rising": false,
-       "wk_ema26_slope_pct": -1.9,
-       "above_ema50": false,
-       "ema50_rising": false
-      },
-      "pullback_quality": {
-       "pts": 12.7,
-       "max": 35,
-       "rsi_min5": 33.2,
-       "rsi_max20": 60.5,
-       "value_zone": "1.079-1.086",
-       "low3_vs_zone_top_atr": -2.22,
-       "fib_retrace": 1.375,
-       "bear_power_atr": -1.91,
-       "bear_power_turn_up": true
-      },
-      "entry_confirmation": {
-       "pts": 0.0,
-       "max": 25,
-       "close_above_prior_high": false,
-       "d_macd_hist_upticks": 0
-      }
-     }
-    },
-    "gates": {
-     "liquidity": {
-      "pass": true,
-      "value": "S$13.19M/day"
-     },
-     "reward_risk": {
-      "pass": false,
-      "value": "0.5R to T1"
-     },
-     "atr_band": {
-      "pass": true,
-      "value": "ATR 2.44%"
-     },
-     "stop_width": {
-      "pass": false,
-      "value": "3.15 ATR"
-     },
-     "weekly_impulse": {
-      "pass": false,
-      "value": "weekly red"
-     }
-    },
-    "plan": {
-     "entry_buy_stop": 1.07,
-     "stop": 0.99,
-     "risk_per_share": 0.08,
-     "stop_in_atr": 3.15,
-     "target1": 1.11,
-     "target2": 1.16,
-     "rr_t1": 0.5,
-     "supports": [],
-     "resistances": [
-      1.125,
-      1.175,
-      1.205
-     ],
-     "atr": 0.0254,
-     "stop_method": "safezone",
-     "channel": {
-      "upper": 1.126,
-      "lower": 1.043,
-      "ema": 1.084,
-      "height": 0.083,
-      "t1_grade_pct": 48.2
-     },
-     "management": [
-      "Order valid 2 sessions; cancel if not filled",
-      "At +1R: move stop to breakeven",
-      "At T1: sell half; trail rest under 20-EMA or 2-bar low",
-      "Time stop: exit if < +0.5R after 7 sessions"
-     ],
-     "shares": 12400,
-     "capital": 13268.0
-    }
-   }
-  },
-  {
-   "ticker": "ME8U.SI",
-   "code": "ME8U",
-   "name": "Mapletree Industrial Trust",
-   "date": "2026-11-24",
-   "close": 1.61,
-   "chg_pct": -2.42,
-   "status": "Short watch",
-   "wave": "Extended",
-   "tide": {
-    "tide": "Down",
-    "hist_rising": false,
-    "ema26_rising": false,
-    "above_ema26": false,
-    "impulse": "red",
-    "strong": true
-   },
-   "ema20": 1.714,
-   "ema50": 1.778,
-   "rsi": 23.4,
-   "fi2": -239582.0,
-   "atr": 0.038,
-   "macd": -0.041,
-   "macd_hist": -0.0079,
-   "macd_hist_rising": false,
-   "support": [
-    {
-     "price": 1.61,
-     "touches": 1,
-     "strength": 1.0
-    }
-   ],
-   "resistance": [
-    {
-     "price": 1.717,
-     "touches": 3,
-     "strength": 3.94
-    },
-    {
-     "price": 1.79,
-     "touches": 1,
-     "strength": 1.96
-    },
-    {
-     "price": 1.82,
-     "touches": 2,
-     "strength": 2.92
-    }
-   ],
-   "plan": null,
-   "notes": [
-    "Extended below EMA20: wait for a rally"
-   ],
-   "dual": {
-    "symbol": "ME8U.SI",
-    "date": "2026-11-24",
-    "close": 1.6100000143051147,
-    "decision": "AVOID",
-    "blocked_by": [
-     "reward_risk",
-     "stop_width",
-     "weekly_impulse",
-     "TS<80",
-     "SM<75",
-     "bid/ask below floor"
-    ],
-    "regime_bearish": true,
-    "version": "1.2",
-    "combined": 4.8,
-    "sm": {
-     "score": 1.7,
-     "components": {
-      "bid_ask": {
-       "pts": 0.0,
-       "max": 35,
-       "tier": "hourly-proxy"
-      },
-      "price_volume": {
-       "pts": 0.0,
-       "max": 25,
-       "tier": "daily"
-      },
-      "block_trades": {
-       "pts": 0.0,
-       "max": 15,
-       "tier": "daily-proxy"
-      },
-      "vwap": {
-       "pts": 0.2,
-       "max": 10,
-       "tier": "daily"
-      },
-      "obv": {
-       "pts": 0.1,
-       "max": 10,
-       "tier": "daily"
-      },
-      "closing_strength": {
-       "pts": 1.4,
-       "max": 5,
-       "tier": "daily"
-      }
-     },
-     "confidence": 0.5,
-     "weight_measured": 1.0
-    },
-    "ts": {
-     "score": 8.0,
-     "components": {
-      "trend_alignment": {
-       "pts": 0.0,
-       "max": 40,
-       "wk_macd_hist_rising": false,
-       "wk_ema26_slope_pct": -3.1,
-       "above_ema50": false,
-       "ema50_rising": false
-      },
-      "pullback_quality": {
-       "pts": 8.0,
-       "max": 35,
-       "rsi_min5": 23.4,
-       "rsi_max20": 45.5,
-       "value_zone": "1.692-1.730",
-       "low3_vs_zone_top_atr": -3.12,
-       "fib_retrace": 2.1,
-       "bear_power_atr": -2.15,
-       "bear_power_turn_up": true
-      },
-      "entry_confirmation": {
-       "pts": 0.0,
-       "max": 25,
-       "close_above_prior_high": false,
-       "d_macd_hist_upticks": 0
-      }
-     }
-    },
-    "gates": {
-     "liquidity": {
-      "pass": true,
-      "value": "S$16.21M/day"
-     },
-     "reward_risk": {
-      "pass": false,
-      "value": "0.46R to T1"
-     },
-     "atr_band": {
-      "pass": true,
-      "value": "ATR 2.38%"
-     },
-     "stop_width": {
-      "pass": false,
-      "value": "3.39 ATR"
-     },
-     "weekly_impulse": {
-      "pass": false,
-      "value": "weekly red"
-     }
-    },
-    "plan": {
-     "entry_buy_stop": 1.67,
-     "stop": 1.54,
-     "risk_per_share": 0.13,
-     "stop_in_atr": 3.39,
-     "target1": 1.73,
-     "target2": 1.77,
-     "rr_t1": 0.46,
-     "supports": [],
-     "resistances": [
-      1.74,
-      1.79,
-      1.82
-     ],
-     "atr": 0.0383,
-     "stop_method": "safezone",
-     "channel": {
-      "upper": 1.79,
-      "lower": 1.649,
-      "ema": 1.719,
-      "height": 0.141,
-      "t1_grade_pct": 42.6
-     },
-     "management": [
-      "Order valid 2 sessions; cancel if not filled",
-      "At +1R: move stop to breakeven",
-      "At T1: sell half; trail rest under 20-EMA or 2-bar low",
-      "Time stop: exit if < +0.5R after 7 sessions"
-     ],
-     "shares": 7600,
-     "capital": 12692.0
-    }
-   }
-  },
-  {
-   "ticker": "N2IU.SI",
-   "code": "N2IU",
-   "name": "Mapletree Pan Asia Commercial Trust",
-   "date": "2026-11-24",
-   "close": 1.11,
-   "chg_pct": 0.0,
-   "status": "Short watch",
-   "wave": "Extended",
-   "tide": {
-    "tide": "Down",
-    "hist_rising": false,
-    "ema26_rising": false,
-    "above_ema26": false,
-    "impulse": "red",
-    "strong": true
-   },
-   "ema20": 1.148,
-   "ema50": 1.176,
-   "rsi": 34.7,
-   "fi2": -47571.0,
-   "atr": 0.03,
-   "macd": -0.015,
-   "macd_hist": -0.0046,
-   "macd_hist_rising": false,
-   "support": [
-    {
-     "price": 1.1,
-     "touches": 1,
-     "strength": 1.0
-    }
-   ],
-   "resistance": [
-    {
-     "price": 1.125,
-     "touches": 4,
-     "strength": 4.94
-    },
-    {
-     "price": 1.186,
-     "touches": 7,
-     "strength": 7.92
-    },
-    {
-     "price": 1.227,
-     "touches": 7,
-     "strength": 7.96
-    }
-   ],
-   "plan": null,
-   "notes": [
-    "Extended below EMA20: wait for a rally"
-   ],
-   "dual": {
-    "symbol": "N2IU.SI",
-    "date": "2026-11-24",
-    "close": 1.1100000143051147,
-    "decision": "AVOID",
-    "blocked_by": [
-     "reward_risk",
-     "stop_width",
-     "weekly_impulse",
-     "TS<80",
-     "SM<75",
-     "bid/ask below floor"
-    ],
-    "regime_bearish": true,
-    "version": "1.2",
-    "combined": 14.9,
-    "sm": {
-     "score": 14.2,
-     "components": {
-      "bid_ask": {
-       "pts": 0.0,
-       "max": 35,
-       "tier": "hourly-proxy"
-      },
-      "price_volume": {
-       "pts": 0.2,
-       "max": 25,
-       "tier": "daily"
-      },
-      "block_trades": {
-       "pts": 7.5,
-       "max": 15,
-       "tier": "daily-proxy"
-      },
-      "vwap": {
-       "pts": 2.2,
-       "max": 10,
-       "tier": "daily"
-      },
-      "obv": {
-       "pts": 3.1,
-       "max": 10,
-       "tier": "daily"
-      },
-      "closing_strength": {
-       "pts": 1.3,
-       "max": 5,
-       "tier": "daily"
-      }
-     },
-     "confidence": 0.5,
-     "weight_measured": 1.0
-    },
-    "ts": {
-     "score": 15.6,
-     "components": {
-      "trend_alignment": {
-       "pts": 0.0,
-       "max": 40,
-       "wk_macd_hist_rising": false,
-       "wk_ema26_slope_pct": -2.41,
-       "above_ema50": false,
-       "ema50_rising": false
-      },
-      "pullback_quality": {
-       "pts": 15.6,
-       "max": 35,
-       "rsi_min5": 34.7,
-       "rsi_max20": 61.4,
-       "value_zone": "1.140-1.153",
-       "low3_vs_zone_top_atr": -1.8,
-       "fib_retrace": 1.2,
-       "bear_power_atr": -1.34,
-       "bear_power_turn_up": true
-      },
-      "entry_confirmation": {
-       "pts": 0.0,
-       "max": 25,
-       "close_above_prior_high": false,
-       "d_macd_hist_upticks": 0
-      }
-     }
-    },
-    "gates": {
-     "liquidity": {
-      "pass": true,
-      "value": "S$16.80M/day"
-     },
-     "reward_risk": {
-      "pass": false,
-      "value": "0.22R to T1"
-     },
-     "atr_band": {
-      "pass": true,
-      "value": "ATR 2.68%"
-     },
-     "stop_width": {
-      "pass": false,
-      "value": "3.03 ATR"
-     },
-     "weekly_impulse": {
-      "pass": false,
-      "value": "weekly red"
-     }
-    },
-    "plan": {
-     "entry_buy_stop": 1.14,
-     "stop": 1.05,
-     "risk_per_share": 0.09,
-     "stop_in_atr": 3.03,
-     "target1": 1.16,
-     "target2": 1.18,
-     "rr_t1": 0.22,
-     "supports": [
-      1.13
-     ],
-     "resistances": [
-      1.175,
-      1.225,
-      1.26
-     ],
-     "atr": 0.0297,
-     "stop_method": "safezone",
-     "channel": {
-      "upper": 1.199,
-      "lower": 1.1,
-      "ema": 1.15,
-      "height": 0.099,
-      "t1_grade_pct": 20.1
-     },
-     "management": [
-      "Order valid 2 sessions; cancel if not filled",
-      "At +1R: move stop to breakeven",
-      "At T1: sell half; trail rest under 20-EMA or 2-bar low",
-      "Time stop: exit if < +0.5R after 7 sessions"
-     ],
-     "shares": 11100,
-     "capital": 12654.0
-    }
-   }
-  },
-  {
-   "ticker": "O39.SI",
-   "code": "O39",
-   "name": "OCBC Bank",
-   "date": "2026-11-24",
-   "close": 26.62,
-   "chg_pct": 0.3,
-   "status": "Short watch",
-   "wave": "Extended",
-   "tide": {
-    "tide": "Down",
-    "hist_rising": false,
-    "ema26_rising": false,
-    "above_ema26": false,
-    "impulse": "red",
-    "strong": true
-   },
-   "ema20": 28.1,
-   "ema50": 28.952,
-   "rsi": 26.8,
-   "fi2": -2291766.0,
-   "atr": 0.655,
-   "macd": -0.6829,
-   "macd_hist": -0.1144,
-   "macd_hist_rising": false,
-   "support": [
-    {
-     "price": 25.32,
-     "touches": 1,
-     "strength": 1.57
-    },
-    {
-     "price": 24.665,
-     "touches": 2,
-     "strength": 2.59
-    },
-    {
-     "price": 23.105,
-     "touches": 2,
-     "strength": 2.54
-    }
-   ],
-   "resistance": [
-    {
-     "price": 27.22,
-     "touches": 1,
-     "strength": 1.95
-    },
-    {
-     "price": 28.52,
-     "touches": 2,
-     "strength": 2.9
-    },
-    {
-     "price": 29.535,
-     "touches": 4,
-     "strength": 4.97
-    }
-   ],
-   "plan": null,
-   "notes": [
-    "Extended below EMA20: wait for a rally"
-   ],
-   "dual": {
-    "symbol": "O39.SI",
-    "date": "2026-11-24",
-    "close": 26.6200008392334,
-    "decision": "AVOID",
-    "blocked_by": [
-     "reward_risk",
-     "stop_width",
-     "weekly_impulse",
-     "TS<80",
-     "SM<75",
-     "bid/ask below floor"
-    ],
-    "regime_bearish": true,
-    "version": "1.2",
-    "combined": 14.8,
-    "sm": {
-     "score": 14.9,
-     "components": {
-      "bid_ask": {
-       "pts": 4.8,
-       "max": 35,
-       "tier": "hourly-proxy"
-      },
-      "price_volume": {
-       "pts": 0.0,
-       "max": 25,
-       "tier": "daily"
-      },
-      "block_trades": {
-       "pts": 7.5,
-       "max": 15,
-       "tier": "daily-proxy"
-      },
-      "vwap": {
-       "pts": 1.2,
-       "max": 10,
-       "tier": "daily"
-      },
-      "obv": {
-       "pts": 0.2,
-       "max": 10,
-       "tier": "daily"
-      },
-      "closing_strength": {
-       "pts": 1.1,
-       "max": 5,
-       "tier": "daily"
-      }
-     },
-     "confidence": 0.5,
-     "weight_measured": 1.0
-    },
-    "ts": {
-     "score": 14.6,
-     "components": {
-      "trend_alignment": {
-       "pts": 1.0,
-       "max": 40,
-       "wk_macd_hist_rising": false,
-       "wk_ema26_slope_pct": -0.74,
-       "above_ema50": false,
-       "ema50_rising": false
-      },
-      "pullback_quality": {
-       "pts": 8.0,
-       "max": 35,
-       "rsi_min5": 25.3,
-       "rsi_max20": 46.0,
-       "value_zone": "27.739-28.363",
-       "low3_vs_zone_top_atr": -3.03,
-       "fib_retrace": 2.79,
-       "bear_power_atr": -1.72,
-       "bear_power_turn_up": true
-      },
-      "entry_confirmation": {
-       "pts": 5.6,
-       "max": 25,
-       "close_above_prior_high": false,
-       "d_macd_hist_upticks": 0
-      }
-     }
-    },
-    "gates": {
-     "liquidity": {
-      "pass": true,
-      "value": "S$212.96M/day"
-     },
-     "reward_risk": {
-      "pass": false,
-      "value": "1.25R to T1"
-     },
-     "atr_band": {
-      "pass": true,
-      "value": "ATR 2.46%"
-     },
-     "stop_width": {
-      "pass": false,
-      "value": "2.81 ATR"
-     },
-     "weekly_impulse": {
-      "pass": false,
-      "value": "weekly red"
-     }
-    },
-    "plan": {
-     "entry_buy_stop": 27.22,
-     "stop": 25.38,
-     "risk_per_share": 1.84,
-     "stop_in_atr": 2.81,
-     "target1": 29.52,
-     "target2": 30.54,
-     "rr_t1": 1.25,
-     "supports": [
-      22.16,
-      23.115,
-      24.65
-     ],
-     "resistances": [
-      29.535,
-      32.181
-     ],
-     "atr": 0.6549,
-     "stop_method": "safezone",
-     "channel": {
-      "upper": 30.56,
-      "lower": 25.825,
-      "ema": 28.192,
-      "height": 4.735,
-      "t1_grade_pct": 48.6
-     },
-     "management": [
-      "Order valid 2 sessions; cancel if not filled",
-      "At +1R: move stop to breakeven",
-      "At T1: sell half; trail rest under 20-EMA or 2-bar low",
-      "Time stop: exit if < +0.5R after 7 sessions"
-     ],
-     "shares": 500,
-     "capital": 13610.0
-    }
-   }
-  },
-  {
-   "ticker": "S63.SI",
-   "code": "S63",
-   "name": "ST Engineering",
-   "date": "2026-11-24",
-   "close": 8.67,
-   "chg_pct": 0.35,
-   "status": "Short watch",
-   "wave": "Extended",
-   "tide": {
-    "tide": "Down",
-    "hist_rising": false,
-    "ema26_rising": false,
-    "above_ema26": false,
-    "impulse": "red",
-    "strong": true
-   },
-   "ema20": 9.416,
-   "ema50": 9.928,
-   "rsi": 26.1,
-   "fi2": -116790.0,
-   "atr": 0.284,
-   "macd": -0.4325,
-   "macd_hist": -0.092,
-   "macd_hist_rising": true,
-   "support": [
-    {
-     "price": 8.455,
-     "touches": 2,
-     "strength": 2.08
-    },
-    {
-     "price": 8.085,
-     "touches": 2,
-     "strength": 2.06
-    }
-   ],
-   "resistance": [
-    {
-     "price": 9.01,
-     "touches": 1,
-     "strength": 1.96
-    },
-    {
-     "price": 9.3,
-     "touches": 1,
-     "strength": 1.17
-    },
-    {
-     "price": 9.728,
-     "touches": 5,
-     "strength": 5.82
-    }
-   ],
-   "plan": null,
-   "notes": [
-    "Extended below EMA20: wait for a rally"
-   ],
-   "dual": {
-    "symbol": "S63.SI",
-    "date": "2026-11-24",
-    "close": 8.670000076293945,
-    "decision": "AVOID",
-    "blocked_by": [
-     "reward_risk",
-     "stop_width",
-     "weekly_impulse",
-     "TS<80",
-     "SM<75"
-    ],
-    "regime_bearish": true,
-    "version": "1.2",
-    "combined": 29.4,
-    "sm": {
-     "score": 38.7,
-     "components": {
-      "bid_ask": {
-       "pts": 34.2,
-       "max": 35,
-       "tier": "hourly-proxy"
-      },
-      "price_volume": {
-       "pts": 0.0,
-       "max": 25,
-       "tier": "daily"
-      },
-      "block_trades": {
-       "pts": 0.0,
-       "max": 15,
-       "tier": "daily-proxy"
-      },
-      "vwap": {
-       "pts": 1.8,
-       "max": 10,
-       "tier": "daily"
-      },
-      "obv": {
-       "pts": 0.2,
-       "max": 10,
-       "tier": "daily"
-      },
-      "closing_strength": {
-       "pts": 2.6,
-       "max": 5,
-       "tier": "daily"
-      }
-     },
-     "confidence": 0.5,
-     "weight_measured": 1.0
-    },
-    "ts": {
-     "score": 20.2,
-     "components": {
-      "trend_alignment": {
-       "pts": 0.0,
-       "max": 40,
-       "wk_macd_hist_rising": false,
-       "wk_ema26_slope_pct": -3.61,
-       "above_ema50": false,
-       "ema50_rising": false
-      },
-      "pullback_quality": {
-       "pts": 8.0,
-       "max": 35,
-       "rsi_min5": 22.5,
-       "rsi_max20": 39.8,
-       "value_zone": "9.177-9.569",
-       "low3_vs_zone_top_atr": -3.76,
-       "fib_retrace": 4.289,
-       "bear_power_atr": -2.0,
-       "bear_power_turn_up": true
-      },
-      "entry_confirmation": {
-       "pts": 12.2,
-       "max": 25,
-       "close_above_prior_high": false,
-       "d_macd_hist_upticks": 1
-      }
-     }
-    },
-    "gates": {
-     "liquidity": {
-      "pass": true,
-      "value": "S$60.26M/day"
-     },
-     "reward_risk": {
-      "pass": false,
-      "value": "0.92R to T1"
-     },
-     "atr_band": {
-      "pass": true,
-      "value": "ATR 3.28%"
-     },
-     "stop_width": {
-      "pass": false,
-      "value": "3.59 ATR"
-     },
-     "weekly_impulse": {
-      "pass": false,
-      "value": "weekly red"
-     }
-    },
-    "plan": {
-     "entry_buy_stop": 8.83,
-     "stop": 7.81,
-     "risk_per_share": 1.02,
-     "stop_in_atr": 3.59,
-     "target1": 9.77,
-     "target2": 10.02,
-     "rr_t1": 0.92,
-     "supports": [
-      8.085,
-      8.5
-     ],
-     "resistances": [
-      9.785,
-      10.2,
-      10.457
-     ],
-     "atr": 0.2842,
-     "stop_method": "safezone",
-     "channel": {
-      "upper": 10.034,
-      "lower": 8.908,
-      "ema": 9.471,
-      "height": 1.126,
-      "t1_grade_pct": 83.5
-     },
-     "management": [
-      "Order valid 2 sessions; cancel if not filled",
-      "At +1R: move stop to breakeven",
-      "At T1: sell half; trail rest under 20-EMA or 2-bar low",
-      "Time stop: exit if < +0.5R after 7 sessions"
-     ],
-     "shares": 900,
-     "capital": 7947.0
-    }
-   }
-  },
-  {
-   "ticker": "U11.SI",
-   "code": "U11",
-   "name": "UOB",
-   "date": "2026-11-24",
-   "close": 35.28,
-   "chg_pct": -0.4,
-   "status": "Short watch",
-   "wave": "Extended",
-   "tide": {
-    "tide": "Down",
-    "hist_rising": false,
-    "ema26_rising": false,
-    "above_ema26": false,
-    "impulse": "red",
-    "strong": true
-   },
-   "ema20": 37.958,
-   "ema50": 39.679,
-   "rsi": 20.0,
-   "fi2": -1250898.0,
-   "atr": 0.81,
-   "macd": -1.4884,
-   "macd_hist": -0.2588,
-   "macd_hist_rising": true,
-   "support": [
-    {
-     "price": 34.947,
-     "touches": 3,
-     "strength": 3.28
-    },
-    {
-     "price": 33.95,
-     "touches": 1,
-     "strength": 1.04
-    }
-   ],
-   "resistance": [
-    {
-     "price": 35.81,
-     "touches": 2,
-     "strength": 2.41
-    },
-    {
-     "price": 36.5,
-     "touches": 1,
-     "strength": 1.96
-    },
-    {
-     "price": 37.77,
-     "touches": 5,
-     "strength": 5.54
-    }
-   ],
-   "plan": null,
-   "notes": [
-    "Extended below EMA20: wait for a rally"
-   ],
-   "dual": {
-    "symbol": "U11.SI",
-    "date": "2026-11-24",
-    "close": 35.279998779296875,
-    "decision": "AVOID",
-    "blocked_by": [
-     "reward_risk",
-     "weekly_impulse",
-     "TS<80",
-     "SM<75",
-     "bid/ask below floor"
-    ],
-    "regime_bearish": true,
-    "version": "1.2",
-    "combined": 8.2,
-    "sm": {
-     "score": 1.9,
-     "components": {
-      "bid_ask": {
-       "pts": 0.0,
-       "max": 35,
-       "tier": "hourly-proxy"
-      },
-      "price_volume": {
-       "pts": 0.0,
-       "max": 25,
-       "tier": "daily"
-      },
-      "block_trades": {
-       "pts": 0.0,
-       "max": 15,
-       "tier": "daily-proxy"
-      },
-      "vwap": {
-       "pts": 0.7,
-       "max": 10,
-       "tier": "daily"
-      },
-      "obv": {
-       "pts": 0.0,
-       "max": 10,
-       "tier": "daily"
-      },
-      "closing_strength": {
-       "pts": 1.2,
-       "max": 5,
-       "tier": "daily"
-      }
-     },
-     "confidence": 0.5,
-     "weight_measured": 1.0
-    },
-    "ts": {
-     "score": 14.6,
-     "components": {
-      "trend_alignment": {
-       "pts": 0.0,
-       "max": 40,
-       "wk_macd_hist_rising": false,
-       "wk_ema26_slope_pct": -2.88,
-       "above_ema50": false,
-       "ema50_rising": false
-      },
-      "pullback_quality": {
-       "pts": 8.0,
-       "max": 35,
-       "rsi_min5": 20.0,
-       "rsi_max20": 48.1,
-       "value_zone": "37.139-38.490",
-       "low3_vs_zone_top_atr": -4.0,
-       "fib_retrace": 2.722,
-       "bear_power_atr": -2.33,
-       "bear_power_turn_up": true
-      },
-      "entry_confirmation": {
-       "pts": 6.6,
-       "max": 25,
-       "close_above_prior_high": false,
-       "d_macd_hist_upticks": 1
-      }
-     }
-    },
-    "gates": {
-     "liquidity": {
-      "pass": true,
-      "value": "S$150.03M/day"
-     },
-     "reward_risk": {
-      "pass": false,
-      "value": "0.98R to T1"
-     },
-     "atr_band": {
-      "pass": true,
-      "value": "ATR 2.30%"
-     },
-     "stop_width": {
-      "pass": true,
-      "value": "2.07 ATR"
-     },
-     "weekly_impulse": {
-      "pass": false,
-      "value": "weekly red"
-     }
-    },
-    "plan": {
-     "entry_buy_stop": 36.01,
-     "stop": 34.33,
-     "risk_per_share": 1.68,
-     "stop_in_atr": 2.07,
-     "target1": 37.66,
-     "target2": 39.35,
-     "rr_t1": 0.98,
-     "supports": [
-      34.225
-     ],
-     "resistances": [
-      37.676,
-      39.36,
-      42.417
-     ],
-     "atr": 0.8103,
-     "stop_method": "safezone",
-     "channel": {
-      "upper": 41.303,
-      "lower": 34.998,
-      "ema": 38.151,
-      "height": 6.305,
-      "t1_grade_pct": 26.2
-     },
-     "management": [
-      "Order valid 2 sessions; cancel if not filled",
-      "At +1R: move stop to breakeven",
-      "At T1: sell half; trail rest under 20-EMA or 2-bar low",
-      "Time stop: exit if < +0.5R after 7 sessions"
-     ],
-     "shares": 500,
-     "capital": 18005.0
-    }
-   }
-  },
-  {
-   "ticker": "U14.SI",
-   "code": "U14",
-   "name": "UOL Group",
-   "date": "2026-11-24",
-   "close": 7.22,
-   "chg_pct": -1.5,
-   "status": "Short watch",
-   "wave": "Extended",
-   "tide": {
-    "tide": "Down",
-    "hist_rising": false,
-    "ema26_rising": false,
-    "above_ema26": false,
-    "impulse": "red",
-    "strong": true
-   },
-   "ema20": 7.729,
-   "ema50": 8.063,
-   "rsi": 29.1,
-   "fi2": -147152.0,
-   "atr": 0.198,
-   "macd": -0.1592,
-   "macd_hist": -0.0499,
-   "macd_hist_rising": false,
-   "support": [
-    {
-     "price": 7.21,
-     "touches": 1,
-     "strength": 1.0
-    }
-   ],
-   "resistance": [
-    {
-     "price": 7.58,
-     "touches": 1,
-     "strength": 1.9
-    },
-    {
-     "price": 8.17,
-     "touches": 1,
-     "strength": 1.96
-    },
-    {
-     "price": 8.32,
-     "touches": 1,
-     "strength": 1.04
-    }
-   ],
-   "plan": null,
-   "notes": [
-    "Extended below EMA20: wait for a rally"
-   ],
-   "dual": {
-    "symbol": "U14.SI",
-    "date": "2026-11-24",
-    "close": 7.21999979019165,
-    "decision": "AVOID",
-    "blocked_by": [
-     "reward_risk",
-     "weekly_impulse",
-     "TS<80",
-     "SM<75",
-     "bid/ask below floor"
-    ],
-    "regime_bearish": true,
-    "version": "1.2",
-    "combined": 9.2,
-    "sm": {
-     "score": 9.8,
-     "components": {
-      "bid_ask": {
-       "pts": 0.0,
-       "max": 35,
-       "tier": "hourly-proxy"
-      },
-      "price_volume": {
-       "pts": 0.0,
-       "max": 25,
-       "tier": "daily"
-      },
-      "block_trades": {
-       "pts": 7.5,
-       "max": 15,
-       "tier": "daily-proxy"
-      },
-      "vwap": {
-       "pts": 0.9,
-       "max": 10,
-       "tier": "daily"
-      },
-      "obv": {
-       "pts": 0.2,
-       "max": 10,
-       "tier": "daily"
-      },
-      "closing_strength": {
-       "pts": 1.2,
-       "max": 5,
-       "tier": "daily"
-      }
-     },
-     "confidence": 0.5,
-     "weight_measured": 1.0
-    },
-    "ts": {
-     "score": 8.5,
-     "components": {
-      "trend_alignment": {
-       "pts": 0.0,
-       "max": 40,
-       "wk_macd_hist_rising": false,
-       "wk_ema26_slope_pct": -4.13,
-       "above_ema50": false,
-       "ema50_rising": false
-      },
-      "pullback_quality": {
-       "pts": 8.5,
-       "max": 35,
-       "rsi_min5": 29.1,
-       "rsi_max20": 54.9,
-       "value_zone": "7.647-7.791",
-       "low3_vs_zone_top_atr": -2.94,
-       "fib_retrace": 1.627,
-       "bear_power_atr": -2.21,
-       "bear_power_turn_up": true
-      },
-      "entry_confirmation": {
-       "pts": 0.0,
-       "max": 25,
-       "close_above_prior_high": false,
-       "d_macd_hist_upticks": 0
-      }
-     }
-    },
-    "gates": {
-     "liquidity": {
-      "pass": true,
-      "value": "S$10.39M/day"
-     },
-     "reward_risk": {
-      "pass": false,
-      "value": "1.21R to T1"
-     },
-     "atr_band": {
-      "pass": true,
-      "value": "ATR 2.74%"
-     },
-     "stop_width": {
-      "pass": true,
-      "value": "2.37 ATR"
-     },
-     "weekly_impulse": {
-      "pass": false,
-      "value": "weekly red"
-     }
-    },
-    "plan": {
-     "entry_buy_stop": 7.42,
-     "stop": 6.95,
-     "risk_per_share": 0.47,
-     "stop_in_atr": 2.37,
-     "target1": 7.99,
-     "target2": 8.16,
-     "rr_t1": 1.21,
-     "supports": [],
-     "resistances": [
-      8.0,
-      8.17,
-      8.745
-     ],
-     "atr": 0.1979,
-     "stop_method": "safezone",
-     "channel": {
-      "upper": 8.234,
-      "lower": 7.265,
-      "ema": 7.75,
-      "height": 0.969,
-      "t1_grade_pct": 58.9
-     },
-     "management": [
-      "Order valid 2 sessions; cancel if not filled",
-      "At +1R: move stop to breakeven",
-      "At T1: sell half; trail rest under 20-EMA or 2-bar low",
-      "Time stop: exit if < +0.5R after 7 sessions"
-     ],
-     "shares": 2100,
-     "capital": 15582.0
-    }
-   }
-  },
-  {
-   "ticker": "C07.SI",
-   "code": "C07",
-   "name": "Jardine Cycle & Carriage",
-   "date": "2026-11-24",
-   "close": 23.52,
-   "chg_pct": -1.13,
-   "status": "No trade",
-   "wave": "-",
-   "tide": {
-    "tide": "Mixed",
-    "hist_rising": true,
-    "ema26_rising": false,
-    "above_ema26": false,
-    "impulse": "blue",
-    "strong": false
-   },
-   "ema20": 24.063,
-   "ema50": 24.786,
-   "rsi": 42.5,
-   "fi2": -62462.0,
-   "atr": 0.716,
-   "macd": -0.1298,
-   "macd_hist": 0.0791,
-   "macd_hist_rising": false,
-   "support": [
-    {
-     "price": 22.868,
-     "touches": 1,
-     "strength": 1.86
-    },
-    {
-     "price": 22.21,
-     "touches": 1,
-     "strength": 1.92
-    }
-   ],
-   "resistance": [
-    {
-     "price": 26.467,
-     "touches": 7,
-     "strength": 7.89
-    },
-    {
-     "price": 27.935,
-     "touches": 4,
-     "strength": 4.78
-    },
-    {
-     "price": 29.34,
-     "touches": 1,
-     "strength": 1.55
-    }
-   ],
-   "plan": null,
-   "notes": [
-    "Weekly tide is mixed: stand aside"
-   ],
-   "dual": {
-    "symbol": "C07.SI",
-    "date": "2026-11-24",
-    "close": 23.520000457763672,
-    "decision": "AVOID",
-    "blocked_by": [
-     "reward_risk",
-     "TS<80",
-     "SM<75",
-     "bid/ask below floor"
-    ],
-    "regime_bearish": true,
-    "version": "1.2",
-    "combined": 31.6,
-    "sm": {
-     "score": 30.8,
-     "components": {
-      "bid_ask": {
-       "pts": 0.0,
-       "max": 35,
-       "tier": "hourly-proxy"
-      },
-      "price_volume": {
-       "pts": 11.4,
-       "max": 25,
-       "tier": "daily"
-      },
-      "block_trades": {
-       "pts": 7.5,
-       "max": 15,
-       "tier": "daily-proxy"
-      },
-      "vwap": {
-       "pts": 5.4,
-       "max": 10,
-       "tier": "daily"
-      },
-      "obv": {
-       "pts": 6.4,
-       "max": 10,
-       "tier": "daily"
-      },
-      "closing_strength": {
-       "pts": 0.1,
-       "max": 5,
-       "tier": "daily"
-      }
-     },
-     "confidence": 0.5,
-     "weight_measured": 1.0
-    },
-    "ts": {
-     "score": 32.3,
-     "components": {
-      "trend_alignment": {
-       "pts": 9.0,
-       "max": 40,
-       "wk_macd_hist_rising": true,
-       "wk_ema26_slope_pct": -3.4,
-       "above_ema50": false,
-       "ema50_rising": false
-      },
-      "pullback_quality": {
-       "pts": 23.3,
-       "max": 35,
-       "rsi_min5": 42.5,
-       "rsi_max20": 54.3,
-       "value_zone": "24.030-24.163",
-       "low3_vs_zone_top_atr": -0.93,
-       "fib_retrace": 0.526,
-       "bear_power_atr": -0.74,
-       "bear_power_turn_up": false
-      },
-      "entry_confirmation": {
-       "pts": 0.0,
-       "max": 25,
-       "close_above_prior_high": false,
-       "d_macd_hist_upticks": 0
-      }
-     }
-    },
-    "gates": {
-     "liquidity": {
-      "pass": true,
-      "value": "S$6.24M/day"
-     },
-     "reward_risk": {
-      "pass": false,
-      "value": "1.54R to T1"
-     },
-     "atr_band": {
-      "pass": true,
-      "value": "ATR 3.04%"
-     },
-     "stop_width": {
-      "pass": true,
-      "value": "1.97 ATR"
-     },
-     "weekly_impulse": {
-      "pass": true,
-      "value": "weekly blue"
-     }
-    },
-    "plan": {
-     "entry_buy_stop": 24.31,
-     "stop": 22.9,
-     "risk_per_share": 1.41,
-     "stop_in_atr": 1.97,
-     "target1": 26.48,
-     "target2": 27.83,
-     "rr_t1": 1.54,
-     "supports": [
-      22.21,
-      22.934
-     ],
-     "resistances": [
-      26.49,
-      27.847,
-      29.34
-     ],
-     "atr": 0.7156,
-     "stop_method": "safezone",
-     "channel": {
-      "upper": 26.03,
-      "lower": 22.151,
-      "ema": 24.09,
-      "height": 3.879,
-      "t1_grade_pct": 55.9
-     },
-     "management": [
-      "Order valid 2 sessions; cancel if not filled",
-      "At +1R: move stop to breakeven",
-      "At T1: sell half; trail rest under 20-EMA or 2-bar low",
-      "Time stop: exit if < +0.5R after 7 sessions"
-     ],
-     "shares": 700,
-     "capital": 17017.0
-    }
-   }
-  },
-  {
-   "ticker": "C38U.SI",
-   "code": "C38U",
-   "name": "CapitaLand Integrated Commercial Trust",
-   "date": "2026-11-24",
-   "close": 2.29,
-   "chg_pct": -0.43,
-   "status": "No trade",
-   "wave": "-",
-   "tide": {
-    "tide": "Mixed",
-    "hist_rising": true,
-    "ema26_rising": false,
-    "above_ema26": false,
-    "impulse": "blue",
-    "strong": false
-   },
-   "ema20": 2.311,
-   "ema50": 2.304,
-   "rsi": 46.7,
-   "fi2": -536747.0,
-   "atr": 0.045,
-   "macd": 0.0119,
-   "macd_hist": -0.0053,
-   "macd_hist_rising": false,
-   "support": [
-    {
-     "price": 2.212,
-     "touches": 9,
-     "strength": 9.91
-    }
-   ],
-   "resistance": [
-    {
-     "price": 2.309,
-     "touches": 18,
-     "strength": 18.92
-    },
-    {
-     "price": 2.416,
-     "touches": 9,
-     "strength": 9.96
-    },
-    {
-     "price": 2.508,
-     "touches": 5,
-     "strength": 5.71
-    }
-   ],
-   "plan": null,
-   "notes": [
-    "Weekly tide is mixed: stand aside"
-   ],
-   "dual": {
-    "symbol": "C38U.SI",
-    "date": "2026-11-24",
-    "close": 2.2899999618530273,
-    "decision": "AVOID",
-    "blocked_by": [
-     "reward_risk",
-     "TS<80",
-     "SM<75",
-     "bid/ask below floor"
-    ],
-    "regime_bearish": true,
-    "version": "1.2",
-    "combined": 43.8,
-    "sm": {
-     "score": 42.0,
-     "components": {
-      "bid_ask": {
-       "pts": 0.0,
-       "max": 35,
-       "tier": "hourly-proxy"
-      },
-      "price_volume": {
-       "pts": 12.2,
-       "max": 25,
-       "tier": "daily"
-      },
-      "block_trades": {
-       "pts": 15.0,
-       "max": 15,
-       "tier": "daily-proxy"
-      },
-      "vwap": {
-       "pts": 4.3,
-       "max": 10,
-       "tier": "daily"
-      },
-      "obv": {
-       "pts": 9.1,
-       "max": 10,
-       "tier": "daily"
-      },
-      "closing_strength": {
-       "pts": 1.4,
-       "max": 5,
-       "tier": "daily"
-      }
-     },
-     "confidence": 0.5,
-     "weight_measured": 1.0
-    },
-    "ts": {
-     "score": 45.6,
-     "components": {
-      "trend_alignment": {
-       "pts": 17.1,
-       "max": 40,
-       "wk_macd_hist_rising": true,
-       "wk_ema26_slope_pct": -0.16,
-       "above_ema50": false,
-       "ema50_rising": true
-      },
-      "pullback_quality": {
-       "pts": 28.5,
-       "max": 35,
-       "rsi_min5": 46.7,
-       "rsi_max20": 70.3,
-       "value_zone": "2.307-2.318",
-       "low3_vs_zone_top_atr": -0.84,
-       "fib_retrace": 0.636,
-       "bear_power_atr": -0.84,
-       "bear_power_turn_up": false
-      },
-      "entry_confirmation": {
-       "pts": 0.0,
-       "max": 25,
-       "close_above_prior_high": false,
-       "d_macd_hist_upticks": 0
-      }
-     }
-    },
-    "gates": {
-     "liquidity": {
-      "pass": true,
-      "value": "S$80.22M/day"
-     },
-     "reward_risk": {
-      "pass": false,
-      "value": "1.45R to T1"
-     },
-     "atr_band": {
-      "pass": true,
-      "value": "ATR 1.98%"
-     },
-     "stop_width": {
-      "pass": true,
-      "value": "2.42 ATR"
-     },
-     "weekly_impulse": {
-      "pass": true,
-      "value": "weekly blue"
-     }
-    },
-    "plan": {
-     "entry_buy_stop": 2.33,
-     "stop": 2.22,
-     "risk_per_share": 0.11,
-     "stop_in_atr": 2.42,
-     "target1": 2.49,
-     "target2": 2.56,
-     "rr_t1": 1.45,
-     "supports": [
-      2.226
-     ],
-     "resistances": [
-      2.507,
-      2.57
-     ],
-     "atr": 0.0454,
-     "stop_method": "safezone",
-     "channel": {
-      "upper": 2.392,
-      "lower": 2.227,
-      "ema": 2.31,
-      "height": 0.165,
-      "t1_grade_pct": 97.2
-     },
-     "management": [
-      "Order valid 2 sessions; cancel if not filled",
-      "At +1R: move stop to breakeven",
-      "At T1: sell half; trail rest under 20-EMA or 2-bar low",
-      "Time stop: exit if < +0.5R after 7 sessions"
-     ],
-     "shares": 9000,
-     "capital": 20970.0
+     "capital": 13364.0
     }
    }
   },
@@ -4328,30 +2201,30 @@
    "ticker": "F34.SI",
    "code": "F34",
    "name": "Wilmar International",
-   "date": "2026-11-24",
-   "close": 2.82,
-   "chg_pct": -1.05,
-   "status": "No trade",
-   "wave": "-",
+   "date": "2026-11-20",
+   "close": 2.85,
+   "chg_pct": -2.06,
+   "status": "Short watch",
+   "wave": "Extended",
    "tide": {
-    "tide": "Mixed",
-    "hist_rising": true,
+    "tide": "Down",
+    "hist_rising": false,
     "ema26_rising": false,
     "above_ema26": false,
-    "impulse": "blue",
-    "strong": false
+    "impulse": "red",
+    "strong": true
    },
-   "ema20": 3.016,
-   "ema50": 3.253,
-   "rsi": 22.7,
-   "fi2": -400759.0,
-   "atr": 0.07,
-   "macd": -0.1384,
-   "macd_hist": 0.0044,
+   "ema20": 3.036,
+   "ema50": 3.27,
+   "rsi": 24.1,
+   "fi2": -622136.0,
+   "atr": 0.071,
+   "macd": -0.1378,
+   "macd_hist": 0.0062,
    "macd_hist_rising": false,
    "support": [
     {
-     "price": 2.82,
+     "price": 2.83,
      "touches": 1,
      "strength": 1.0
     }
@@ -4370,29 +2243,31 @@
     {
      "price": 3.13,
      "touches": 5,
-     "strength": 5.5
+     "strength": 5.51
     }
    ],
    "plan": null,
    "notes": [
-    "Weekly tide is mixed: stand aside"
+    "Extended below EMA20: wait for a rally"
    ],
    "dual": {
     "symbol": "F34.SI",
-    "date": "2026-11-24",
-    "close": 2.819999933242798,
+    "date": "2026-11-20",
+    "close": 2.8499999046325684,
     "decision": "AVOID",
     "blocked_by": [
      "reward_risk",
+     "stop_width",
+     "weekly_impulse",
      "TS<80",
      "SM<75",
      "bid/ask below floor"
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 9.0,
+    "combined": 2.4,
     "sm": {
-     "score": 0.9,
+     "score": 1.5,
      "components": {
       "bid_ask": {
        "pts": 0.0,
@@ -4410,7 +2285,7 @@
        "tier": "daily-proxy"
       },
       "vwap": {
-       "pts": 0.9,
+       "pts": 1.2,
        "max": 10,
        "tier": "daily"
       },
@@ -4420,7 +2295,7 @@
        "tier": "daily"
       },
       "closing_strength": {
-       "pts": 0.0,
+       "pts": 0.3,
        "max": 5,
        "tier": "daily"
       }
@@ -4429,225 +2304,25 @@
      "weight_measured": 1.0
     },
     "ts": {
-     "score": 17.0,
+     "score": 3.2,
      "components": {
       "trend_alignment": {
-       "pts": 9.0,
+       "pts": 0.0,
        "max": 40,
-       "wk_macd_hist_rising": true,
-       "wk_ema26_slope_pct": -5.15,
+       "wk_macd_hist_rising": false,
+       "wk_ema26_slope_pct": -5.07,
        "above_ema50": false,
        "ema50_rising": false
       },
       "pullback_quality": {
-       "pts": 8.0,
+       "pts": 3.2,
        "max": 35,
-       "rsi_min5": 22.7,
-       "rsi_max20": 30.4,
-       "value_zone": "2.945-3.074",
-       "low3_vs_zone_top_atr": -3.63,
-       "fib_retrace": 6.222,
-       "bear_power_atr": -1.79,
-       "bear_power_turn_up": true
-      },
-      "entry_confirmation": {
-       "pts": 0.0,
-       "max": 25,
-       "close_above_prior_high": false,
-       "d_macd_hist_upticks": 0
-      }
-     }
-    },
-    "gates": {
-     "liquidity": {
-      "pass": true,
-      "value": "S$29.52M/day"
-     },
-     "reward_risk": {
-      "pass": false,
-      "value": "0.93R to T1"
-     },
-     "atr_band": {
-      "pass": true,
-      "value": "ATR 2.48%"
-     },
-     "stop_width": {
-      "pass": true,
-      "value": "2.15 ATR"
-     },
-     "weekly_impulse": {
-      "pass": true,
-      "value": "weekly blue"
-     }
-    },
-    "plan": {
-     "entry_buy_stop": 2.88,
-     "stop": 2.73,
-     "risk_per_share": 0.15,
-     "stop_in_atr": 2.15,
-     "target1": 3.02,
-     "target2": 3.11,
-     "rr_t1": 0.93,
-     "supports": [],
-     "resistances": [
-      3.03,
-      3.12,
-      3.21
-     ],
-     "atr": 0.0699,
-     "stop_method": "safezone",
-     "channel": {
-      "upper": 3.261,
-      "lower": 2.81,
-      "ema": 3.035,
-      "height": 0.45,
-      "t1_grade_pct": 31.1
-     },
-     "management": [
-      "Order valid 2 sessions; cancel if not filled",
-      "At +1R: move stop to breakeven",
-      "At T1: sell half; trail rest under 20-EMA or 2-bar low",
-      "Time stop: exit if < +0.5R after 7 sessions"
-     ],
-     "shares": 6600,
-     "capital": 19008.0
-    }
-   }
-  },
-  {
-   "ticker": "J36.SI",
-   "code": "J36",
-   "name": "Jardine Matheson",
-   "date": "2026-11-24",
-   "close": 59.99,
-   "chg_pct": -0.83,
-   "status": "No trade",
-   "wave": "-",
-   "tide": {
-    "tide": "Mixed",
-    "hist_rising": true,
-    "ema26_rising": false,
-    "above_ema26": false,
-    "impulse": "green",
-    "strong": false
-   },
-   "ema20": 59.873,
-   "ema50": 59.3,
-   "rsi": 51.9,
-   "fi2": -167597.0,
-   "atr": 1.764,
-   "macd": 0.6631,
-   "macd_hist": -0.0971,
-   "macd_hist_rising": false,
-   "support": [
-    {
-     "price": 59.515,
-     "touches": 6,
-     "strength": 6.89
-    },
-    {
-     "price": 56.56,
-     "touches": 1,
-     "strength": 1.81
-    },
-    {
-     "price": 54.5,
-     "touches": 1,
-     "strength": 1.9
-    }
-   ],
-   "resistance": [
-    {
-     "price": 63.295,
-     "touches": 2,
-     "strength": 2.96
-    },
-    {
-     "price": 65.55,
-     "touches": 1,
-     "strength": 1.06
-    },
-    {
-     "price": 67.475,
-     "touches": 2,
-     "strength": 2.55
-    }
-   ],
-   "plan": null,
-   "notes": [
-    "Weekly tide is mixed: stand aside"
-   ],
-   "dual": {
-    "symbol": "J36.SI",
-    "date": "2026-11-24",
-    "close": 59.9900016784668,
-    "decision": "AVOID",
-    "blocked_by": [
-     "reward_risk",
-     "TS<80",
-     "SM<75",
-     "bid/ask below floor"
-    ],
-    "regime_bearish": true,
-    "version": "1.2",
-    "combined": 37.6,
-    "sm": {
-     "score": 23.8,
-     "components": {
-      "bid_ask": {
-       "pts": 0.0,
-       "max": 35,
-       "tier": "hourly-proxy"
-      },
-      "price_volume": {
-       "pts": 0.4,
-       "max": 25,
-       "tier": "daily"
-      },
-      "block_trades": {
-       "pts": 7.5,
-       "max": 15,
-       "tier": "daily-proxy"
-      },
-      "vwap": {
-       "pts": 10.0,
-       "max": 10,
-       "tier": "daily"
-      },
-      "obv": {
-       "pts": 4.0,
-       "max": 10,
-       "tier": "daily"
-      },
-      "closing_strength": {
-       "pts": 1.9,
-       "max": 5,
-       "tier": "daily"
-      }
-     },
-     "confidence": 0.5,
-     "weight_measured": 1.0
-    },
-    "ts": {
-     "score": 51.3,
-     "components": {
-      "trend_alignment": {
-       "pts": 21.1,
-       "max": 40,
-       "wk_macd_hist_rising": true,
-       "wk_ema26_slope_pct": -0.44,
-       "above_ema50": true,
-       "ema50_rising": true
-      },
-      "pullback_quality": {
-       "pts": 30.2,
-       "max": 35,
-       "rsi_min5": 49.7,
-       "rsi_max20": 65.1,
-       "value_zone": "59.606-60.226",
-       "low3_vs_zone_top_atr": -0.46,
-       "fib_retrace": 0.438,
-       "bear_power_atr": -0.46,
+       "rsi_min5": 23.2,
+       "rsi_max20": 32.2,
+       "value_zone": "2.966-3.094",
+       "low3_vs_zone_top_atr": -3.7,
+       "fib_retrace": 6.111,
+       "bear_power_atr": -1.9,
        "bear_power_turn_up": false
       },
       "entry_confirmation": {
@@ -4661,51 +2336,49 @@
     "gates": {
      "liquidity": {
       "pass": true,
-      "value": "S$22.76M/day"
+      "value": "S$29.25M/day"
      },
      "reward_risk": {
       "pass": false,
-      "value": "0.6R to T1"
+      "value": "0.53R to T1"
      },
      "atr_band": {
       "pass": true,
-      "value": "ATR 2.94%"
+      "value": "ATR 2.51%"
      },
      "stop_width": {
-      "pass": true,
-      "value": "1.89 ATR"
+      "pass": false,
+      "value": "2.66 ATR"
      },
      "weekly_impulse": {
-      "pass": true,
-      "value": "weekly green"
+      "pass": false,
+      "value": "weekly red"
      }
     },
     "plan": {
-     "entry_buy_stop": 61.06,
-     "stop": 57.72,
-     "risk_per_share": 3.34,
-     "stop_in_atr": 1.89,
-     "target1": 63.07,
-     "target2": 65.59,
-     "rr_t1": 0.6,
+     "entry_buy_stop": 2.92,
+     "stop": 2.73,
+     "risk_per_share": 0.19,
+     "stop_in_atr": 2.66,
+     "target1": 3.02,
+     "target2": 3.11,
+     "rr_t1": 0.53,
      "supports": [
-      52.85,
-      54.5,
-      59.682
+      2.907
      ],
      "resistances": [
-      63.08,
-      65.6,
-      67.85
+      3.03,
+      3.12,
+      3.21
      ],
-     "atr": 1.7643,
+     "atr": 0.0714,
      "stop_method": "safezone",
      "channel": {
-      "upper": 63.255,
-      "lower": 56.298,
-      "ema": 59.777,
-      "height": 6.957,
-      "t1_grade_pct": 28.9
+      "upper": 3.283,
+      "lower": 2.829,
+      "ema": 3.056,
+      "height": 0.453,
+      "t1_grade_pct": 22.1
      },
      "management": [
       "Order valid 2 sessions; cancel if not filled",
@@ -4713,114 +2386,105 @@
       "At T1: sell half; trail rest under 20-EMA or 2-bar low",
       "Time stop: exit if < +0.5R after 7 sessions"
      ],
-     "shares": 200,
-     "capital": 12212.0
+     "shares": 5200,
+     "capital": 15184.0
     }
    }
   },
   {
-   "ticker": "S58.SI",
-   "code": "S58",
-   "name": "SATS",
-   "date": "2026-11-24",
-   "close": 3.71,
-   "chg_pct": -1.33,
-   "status": "No trade",
-   "wave": "-",
+   "ticker": "G13.SI",
+   "code": "G13",
+   "name": "Genting Singapore",
+   "date": "2026-11-20",
+   "close": 0.54,
+   "chg_pct": 0.0,
+   "status": "Short watch",
+   "wave": "Extended",
    "tide": {
-    "tide": "Mixed",
-    "hist_rising": true,
+    "tide": "Down",
+    "hist_rising": false,
     "ema26_rising": false,
     "above_ema26": false,
-    "impulse": "blue",
-    "strong": false
+    "impulse": "red",
+    "strong": true
    },
-   "ema20": 3.841,
-   "ema50": 3.851,
-   "rsi": 43.1,
-   "fi2": -647350.0,
-   "atr": 0.131,
-   "macd": 0.0439,
-   "macd_hist": -0.0053,
+   "ema20": 0.582,
+   "ema50": 0.6,
+   "rsi": 22.5,
+   "fi2": -82439.0,
+   "atr": 0.014,
+   "macd": -0.0165,
+   "macd_hist": -0.007,
    "macd_hist_rising": false,
    "support": [
     {
-     "price": 3.506,
-     "touches": 5,
-     "strength": 5.95
-    },
-    {
-     "price": 3.395,
-     "touches": 2,
-     "strength": 2.45
-    },
-    {
-     "price": 3.27,
+     "price": 0.535,
      "touches": 1,
-     "strength": 1.43
+     "strength": 1.0
     }
    ],
    "resistance": [
     {
-     "price": 3.872,
-     "touches": 21,
-     "strength": 21.93
+     "price": 0.582,
+     "touches": 2,
+     "strength": 2.93
     },
     {
-     "price": 4.23,
-     "touches": 1,
-     "strength": 1.97
+     "price": 0.606,
+     "touches": 18,
+     "strength": 18.9
     },
     {
-     "price": 4.34,
-     "touches": 1,
-     "strength": 1.6
+     "price": 0.623,
+     "touches": 20,
+     "strength": 20.96
     }
    ],
    "plan": null,
    "notes": [
-    "Weekly tide is mixed: stand aside"
+    "Extended below EMA20: wait for a rally"
    ],
    "dual": {
-    "symbol": "S58.SI",
-    "date": "2026-11-24",
-    "close": 3.7100000381469727,
+    "symbol": "G13.SI",
+    "date": "2026-11-20",
+    "close": 0.5400000214576721,
     "decision": "AVOID",
     "blocked_by": [
      "reward_risk",
      "stop_width",
+     "weekly_impulse",
      "TS<80",
      "SM<75",
      "bid/ask below floor"
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 36.2,
+    "combined": 11.0,
     "sm": {
-     "score": 30.4,
+     "score": 14.1,
      "components": {
       "bid_ask": {
-       "pts": 0.0,
+       "pts": 10.4,
        "max": 35,
        "tier": "hourly-proxy"
       },
       "price_volume": {
-       "pts": 12.9,
+       "pts": 0.0,
        "max": 25,
        "tier": "daily"
       },
       "block_trades": {
-       "pts": 6.0,
+       "pts": 2.0,
        "max": 15,
        "tier": "daily-proxy"
       },
       "vwap": {
-       "pts": 4.5,
+       "pts": 1.7,
        "max": 10,
        "tier": "daily"
       },
       "obv": {
-       "pts": 7.1,
+       "pts": 0.0,
        "max": 10,
        "tier": "daily"
       },
@@ -4834,25 +2498,25 @@
      "weight_measured": 1.0
     },
     "ts": {
-     "score": 42.1,
+     "score": 8.0,
      "components": {
       "trend_alignment": {
-       "pts": 15.2,
+       "pts": 0.0,
        "max": 40,
-       "wk_macd_hist_rising": true,
-       "wk_ema26_slope_pct": -0.69,
+       "wk_macd_hist_rising": false,
+       "wk_ema26_slope_pct": -2.24,
        "above_ema50": false,
-       "ema50_rising": true
+       "ema50_rising": false
       },
       "pullback_quality": {
-       "pts": 27.0,
+       "pts": 8.0,
        "max": 35,
-       "rsi_min5": 43.1,
-       "rsi_max20": 74.9,
-       "value_zone": "3.828-3.868",
-       "low3_vs_zone_top_atr": -1.2,
-       "fib_retrace": 0.703,
-       "bear_power_atr": -1.2,
+       "rsi_min5": 22.5,
+       "rsi_max20": 66.2,
+       "value_zone": "0.572-0.587",
+       "low3_vs_zone_top_atr": -3.66,
+       "fib_retrace": 2.111,
+       "bear_power_atr": -2.63,
        "bear_power_turn_up": true
       },
       "entry_confirmation": {
@@ -4866,51 +2530,47 @@
     "gates": {
      "liquidity": {
       "pass": true,
-      "value": "S$27.40M/day"
+      "value": "S$19.38M/day"
      },
      "reward_risk": {
       "pass": false,
-      "value": "1.18R to T1"
+      "value": "0.67R to T1"
      },
      "atr_band": {
       "pass": true,
-      "value": "ATR 3.54%"
+      "value": "ATR 2.63%"
      },
      "stop_width": {
       "pass": false,
-      "value": "2.59 ATR"
+      "value": "4.22 ATR"
      },
      "weekly_impulse": {
-      "pass": true,
-      "value": "weekly blue"
+      "pass": false,
+      "value": "weekly red"
      }
     },
     "plan": {
-     "entry_buy_stop": 3.82,
-     "stop": 3.48,
-     "risk_per_share": 0.34,
-     "stop_in_atr": 2.59,
-     "target1": 4.22,
-     "target2": 4.58,
-     "rr_t1": 1.18,
-     "supports": [
-      3.223,
-      3.498,
-      3.786
-     ],
+     "entry_buy_stop": 0.555,
+     "stop": 0.495,
+     "risk_per_share": 0.06,
+     "stop_in_atr": 4.22,
+     "target1": 0.595,
+     "target2": 0.62,
+     "rr_t1": 0.67,
+     "supports": [],
      "resistances": [
-      4.23,
-      4.59,
-      4.795
+      0.6,
+      0.626,
+      0.655
      ],
-     "atr": 0.1313,
+     "atr": 0.0142,
      "stop_method": "safezone",
      "channel": {
-      "upper": 4.201,
-      "lower": 3.47,
-      "ema": 3.835,
-      "height": 0.731,
-      "t1_grade_pct": 54.7
+      "upper": 0.608,
+      "lower": 0.56,
+      "ema": 0.584,
+      "height": 0.048,
+      "t1_grade_pct": 83.4
      },
      "management": [
       "Order valid 2 sessions; cancel if not filled",
@@ -4918,8 +2578,992 @@
       "At T1: sell half; trail rest under 20-EMA or 2-bar low",
       "Time stop: exit if < +0.5R after 7 sessions"
      ],
-     "shares": 2900,
-     "capital": 11078.0
+     "shares": 16600,
+     "capital": 9213.0
+    }
+   }
+  },
+  {
+   "ticker": "M44U.SI",
+   "code": "M44U",
+   "name": "Mapletree Logistics Trust",
+   "date": "2026-11-20",
+   "close": 1.05,
+   "chg_pct": -1.87,
+   "status": "Short watch",
+   "wave": "Extended",
+   "tide": {
+    "tide": "Down",
+    "hist_rising": false,
+    "ema26_rising": false,
+    "above_ema26": false,
+    "impulse": "red",
+    "strong": true
+   },
+   "ema20": 1.088,
+   "ema50": 1.102,
+   "rsi": 35.6,
+   "fi2": -380773.0,
+   "atr": 0.025,
+   "macd": -0.0056,
+   "macd_hist": -0.0039,
+   "macd_hist_rising": false,
+   "support": [
+    {
+     "price": 1.03,
+     "touches": 1,
+     "strength": 1.0
+    }
+   ],
+   "resistance": [
+    {
+     "price": 1.074,
+     "touches": 12,
+     "strength": 12.96
+    },
+    {
+     "price": 1.166,
+     "touches": 24,
+     "strength": 24.96
+    },
+    {
+     "price": 1.263,
+     "touches": 12,
+     "strength": 12.68
+    }
+   ],
+   "plan": null,
+   "notes": [
+    "Extended below EMA20: wait for a rally"
+   ],
+   "dual": {
+    "symbol": "M44U.SI",
+    "date": "2026-11-20",
+    "close": 1.0499999523162842,
+    "decision": "AVOID",
+    "blocked_by": [
+     "reward_risk",
+     "stop_width",
+     "weekly_impulse",
+     "TS<80",
+     "SM<75",
+     "bid/ask below floor"
+    ],
+    "regime_bearish": true,
+    "version": "1.2",
+    "combined": 14.0,
+    "sm": {
+     "score": 17.9,
+     "components": {
+      "bid_ask": {
+       "pts": 0.0,
+       "max": 35,
+       "tier": "hourly-proxy"
+      },
+      "price_volume": {
+       "pts": 4.6,
+       "max": 25,
+       "tier": "daily"
+      },
+      "block_trades": {
+       "pts": 7.5,
+       "max": 15,
+       "tier": "daily-proxy"
+      },
+      "vwap": {
+       "pts": 3.0,
+       "max": 10,
+       "tier": "daily"
+      },
+      "obv": {
+       "pts": 1.7,
+       "max": 10,
+       "tier": "daily"
+      },
+      "closing_strength": {
+       "pts": 1.1,
+       "max": 5,
+       "tier": "daily"
+      }
+     },
+     "confidence": 0.5,
+     "weight_measured": 1.0
+    },
+    "ts": {
+     "score": 10.0,
+     "components": {
+      "trend_alignment": {
+       "pts": 0.0,
+       "max": 40,
+       "wk_macd_hist_rising": false,
+       "wk_ema26_slope_pct": -1.63,
+       "above_ema50": false,
+       "ema50_rising": false
+      },
+      "pullback_quality": {
+       "pts": 10.0,
+       "max": 35,
+       "rsi_min5": 35.6,
+       "rsi_max20": 60.5,
+       "value_zone": "1.085-1.090",
+       "low3_vs_zone_top_atr": -2.39,
+       "fib_retrace": 1.375,
+       "bear_power_atr": -2.2,
+       "bear_power_turn_up": false
+      },
+      "entry_confirmation": {
+       "pts": 0.0,
+       "max": 25,
+       "close_above_prior_high": false,
+       "d_macd_hist_upticks": 0
+      }
+     }
+    },
+    "gates": {
+     "liquidity": {
+      "pass": true,
+      "value": "S$13.54M/day"
+     },
+     "reward_risk": {
+      "pass": false,
+      "value": "0.19R to T1"
+     },
+     "atr_band": {
+      "pass": true,
+      "value": "ATR 2.39%"
+     },
+     "stop_width": {
+      "pass": false,
+      "value": "4.19 ATR"
+     },
+     "weekly_impulse": {
+      "pass": false,
+      "value": "weekly red"
+     }
+    },
+    "plan": {
+     "entry_buy_stop": 1.09,
+     "stop": 0.985,
+     "risk_per_share": 0.105,
+     "stop_in_atr": 4.19,
+     "target1": 1.11,
+     "target2": 1.16,
+     "rr_t1": 0.19,
+     "supports": [
+      1.08
+     ],
+     "resistances": [
+      1.125,
+      1.175,
+      1.205
+     ],
+     "atr": 0.0251,
+     "stop_method": "safezone",
+     "channel": {
+      "upper": 1.13,
+      "lower": 1.047,
+      "ema": 1.089,
+      "height": 0.082,
+      "t1_grade_pct": 24.3
+     },
+     "management": [
+      "Order valid 2 sessions; cancel if not filled",
+      "At +1R: move stop to breakeven",
+      "At T1: sell half; trail rest under 20-EMA or 2-bar low",
+      "Time stop: exit if < +0.5R after 7 sessions"
+     ],
+     "shares": 9500,
+     "capital": 10355.0
+    }
+   }
+  },
+  {
+   "ticker": "ME8U.SI",
+   "code": "ME8U",
+   "name": "Mapletree Industrial Trust",
+   "date": "2026-11-20",
+   "close": 1.65,
+   "chg_pct": 0.0,
+   "status": "Short watch",
+   "wave": "Extended",
+   "tide": {
+    "tide": "Down",
+    "hist_rising": false,
+    "ema26_rising": false,
+    "above_ema26": false,
+    "impulse": "red",
+    "strong": true
+   },
+   "ema20": 1.725,
+   "ema50": 1.785,
+   "rsi": 27.9,
+   "fi2": -147642.0,
+   "atr": 0.037,
+   "macd": -0.0363,
+   "macd_hist": -0.0052,
+   "macd_hist_rising": false,
+   "support": [
+    {
+     "price": 1.62,
+     "touches": 1,
+     "strength": 1.0
+    }
+   ],
+   "resistance": [
+    {
+     "price": 1.717,
+     "touches": 3,
+     "strength": 3.94
+    },
+    {
+     "price": 1.79,
+     "touches": 1,
+     "strength": 1.96
+    },
+    {
+     "price": 1.82,
+     "touches": 2,
+     "strength": 2.93
+    }
+   ],
+   "plan": null,
+   "notes": [
+    "Extended below EMA20: wait for a rally"
+   ],
+   "dual": {
+    "symbol": "ME8U.SI",
+    "date": "2026-11-20",
+    "close": 1.649999976158142,
+    "decision": "AVOID",
+    "blocked_by": [
+     "reward_risk",
+     "stop_width",
+     "weekly_impulse",
+     "TS<80",
+     "SM<75",
+     "bid/ask below floor"
+    ],
+    "regime_bearish": true,
+    "version": "1.2",
+    "combined": 4.1,
+    "sm": {
+     "score": 5.0,
+     "components": {
+      "bid_ask": {
+       "pts": 0.0,
+       "max": 35,
+       "tier": "hourly-proxy"
+      },
+      "price_volume": {
+       "pts": 0.0,
+       "max": 25,
+       "tier": "daily"
+      },
+      "block_trades": {
+       "pts": 0.0,
+       "max": 15,
+       "tier": "daily-proxy"
+      },
+      "vwap": {
+       "pts": 2.6,
+       "max": 10,
+       "tier": "daily"
+      },
+      "obv": {
+       "pts": 0.3,
+       "max": 10,
+       "tier": "daily"
+      },
+      "closing_strength": {
+       "pts": 2.1,
+       "max": 5,
+       "tier": "daily"
+      }
+     },
+     "confidence": 0.5,
+     "weight_measured": 1.0
+    },
+    "ts": {
+     "score": 3.2,
+     "components": {
+      "trend_alignment": {
+       "pts": 0.0,
+       "max": 40,
+       "wk_macd_hist_rising": false,
+       "wk_ema26_slope_pct": -2.82,
+       "above_ema50": false,
+       "ema50_rising": false
+      },
+      "pullback_quality": {
+       "pts": 3.2,
+       "max": 35,
+       "rsi_min5": 27.9,
+       "rsi_max20": 45.5,
+       "value_zone": "1.706-1.739",
+       "low3_vs_zone_top_atr": -3.19,
+       "fib_retrace": 2.0,
+       "bear_power_atr": -2.3,
+       "bear_power_turn_up": false
+      },
+      "entry_confirmation": {
+       "pts": 0.0,
+       "max": 25,
+       "close_above_prior_high": false,
+       "d_macd_hist_upticks": 0
+      }
+     }
+    },
+    "gates": {
+     "liquidity": {
+      "pass": true,
+      "value": "S$16.65M/day"
+     },
+     "reward_risk": {
+      "pass": false,
+      "value": "0.64R to T1"
+     },
+     "atr_band": {
+      "pass": true,
+      "value": "ATR 2.27%"
+     },
+     "stop_width": {
+      "pass": false,
+      "value": "2.94 ATR"
+     },
+     "weekly_impulse": {
+      "pass": false,
+      "value": "weekly red"
+     }
+    },
+    "plan": {
+     "entry_buy_stop": 1.66,
+     "stop": 1.55,
+     "risk_per_share": 0.11,
+     "stop_in_atr": 2.94,
+     "target1": 1.73,
+     "target2": 1.78,
+     "rr_t1": 0.64,
+     "supports": [],
+     "resistances": [
+      1.74,
+      1.79,
+      1.82
+     ],
+     "atr": 0.0374,
+     "stop_method": "safezone",
+     "channel": {
+      "upper": 1.8,
+      "lower": 1.659,
+      "ema": 1.73,
+      "height": 0.141,
+      "t1_grade_pct": 49.6
+     },
+     "management": [
+      "Order valid 2 sessions; cancel if not filled",
+      "At +1R: move stop to breakeven",
+      "At T1: sell half; trail rest under 20-EMA or 2-bar low",
+      "Time stop: exit if < +0.5R after 7 sessions"
+     ],
+     "shares": 9000,
+     "capital": 14940.0
+    }
+   }
+  },
+  {
+   "ticker": "N2IU.SI",
+   "code": "N2IU",
+   "name": "Mapletree Pan Asia Commercial Trust",
+   "date": "2026-11-20",
+   "close": 1.11,
+   "chg_pct": -0.89,
+   "status": "Short watch",
+   "wave": "Extended",
+   "tide": {
+    "tide": "Down",
+    "hist_rising": false,
+    "ema26_rising": false,
+    "above_ema26": false,
+    "impulse": "red",
+    "strong": true
+   },
+   "ema20": 1.152,
+   "ema50": 1.178,
+   "rsi": 34.7,
+   "fi2": -142714.0,
+   "atr": 0.03,
+   "macd": -0.0133,
+   "macd_hist": -0.004,
+   "macd_hist_rising": false,
+   "support": [
+    {
+     "price": 1.1,
+     "touches": 1,
+     "strength": 1.0
+    }
+   ],
+   "resistance": [
+    {
+     "price": 1.125,
+     "touches": 4,
+     "strength": 4.94
+    },
+    {
+     "price": 1.186,
+     "touches": 7,
+     "strength": 7.93
+    },
+    {
+     "price": 1.227,
+     "touches": 7,
+     "strength": 7.96
+    }
+   ],
+   "plan": null,
+   "notes": [
+    "Extended below EMA20: wait for a rally"
+   ],
+   "dual": {
+    "symbol": "N2IU.SI",
+    "date": "2026-11-20",
+    "close": 1.1100000143051147,
+    "decision": "AVOID",
+    "blocked_by": [
+     "reward_risk",
+     "stop_width",
+     "weekly_impulse",
+     "TS<80",
+     "SM<75",
+     "bid/ask below floor"
+    ],
+    "regime_bearish": true,
+    "version": "1.2",
+    "combined": 18.7,
+    "sm": {
+     "score": 28.2,
+     "components": {
+      "bid_ask": {
+       "pts": 5.4,
+       "max": 35,
+       "tier": "hourly-proxy"
+      },
+      "price_volume": {
+       "pts": 7.5,
+       "max": 25,
+       "tier": "daily"
+      },
+      "block_trades": {
+       "pts": 7.5,
+       "max": 15,
+       "tier": "daily-proxy"
+      },
+      "vwap": {
+       "pts": 2.7,
+       "max": 10,
+       "tier": "daily"
+      },
+      "obv": {
+       "pts": 3.5,
+       "max": 10,
+       "tier": "daily"
+      },
+      "closing_strength": {
+       "pts": 1.7,
+       "max": 5,
+       "tier": "daily"
+      }
+     },
+     "confidence": 0.5,
+     "weight_measured": 1.0
+    },
+    "ts": {
+     "score": 9.2,
+     "components": {
+      "trend_alignment": {
+       "pts": 0.0,
+       "max": 40,
+       "wk_macd_hist_rising": false,
+       "wk_ema26_slope_pct": -2.33,
+       "above_ema50": false,
+       "ema50_rising": false
+      },
+      "pullback_quality": {
+       "pts": 9.2,
+       "max": 35,
+       "rsi_min5": 34.7,
+       "rsi_max20": 61.4,
+       "value_zone": "1.145-1.157",
+       "low3_vs_zone_top_atr": -1.92,
+       "fib_retrace": 1.2,
+       "bear_power_atr": -1.51,
+       "bear_power_turn_up": false
+      },
+      "entry_confirmation": {
+       "pts": 0.0,
+       "max": 25,
+       "close_above_prior_high": false,
+       "d_macd_hist_upticks": 0
+      }
+     }
+    },
+    "gates": {
+     "liquidity": {
+      "pass": true,
+      "value": "S$17.31M/day"
+     },
+     "reward_risk": {
+      "pass": false,
+      "value": "0.2R to T1"
+     },
+     "atr_band": {
+      "pass": true,
+      "value": "ATR 2.67%"
+     },
+     "stop_width": {
+      "pass": false,
+      "value": "3.37 ATR"
+     },
+     "weekly_impulse": {
+      "pass": false,
+      "value": "weekly red"
+     }
+    },
+    "plan": {
+     "entry_buy_stop": 1.14,
+     "stop": 1.04,
+     "risk_per_share": 0.1,
+     "stop_in_atr": 3.37,
+     "target1": 1.16,
+     "target2": 1.19,
+     "rr_t1": 0.2,
+     "supports": [
+      1.13
+     ],
+     "resistances": [
+      1.175,
+      1.225,
+      1.26
+     ],
+     "atr": 0.0296,
+     "stop_method": "safezone",
+     "channel": {
+      "upper": 1.203,
+      "lower": 1.104,
+      "ema": 1.153,
+      "height": 0.099,
+      "t1_grade_pct": 20.2
+     },
+     "management": [
+      "Order valid 2 sessions; cancel if not filled",
+      "At +1R: move stop to breakeven",
+      "At T1: sell half; trail rest under 20-EMA or 2-bar low",
+      "Time stop: exit if < +0.5R after 7 sessions"
+     ],
+     "shares": 10000,
+     "capital": 11400.0
+    }
+   }
+  },
+  {
+   "ticker": "O39.SI",
+   "code": "O39",
+   "name": "OCBC Bank",
+   "date": "2026-11-20",
+   "close": 26.54,
+   "chg_pct": -3.21,
+   "status": "Short watch",
+   "wave": "Extended",
+   "tide": {
+    "tide": "Down",
+    "hist_rising": false,
+    "ema26_rising": false,
+    "above_ema26": false,
+    "impulse": "red",
+    "strong": true
+   },
+   "ema20": 28.256,
+   "ema50": 29.047,
+   "rsi": 25.3,
+   "fi2": -8106096.0,
+   "atr": 0.654,
+   "macd": -0.6295,
+   "macd_hist": -0.0896,
+   "macd_hist_rising": false,
+   "support": [
+    {
+     "price": 25.32,
+     "touches": 1,
+     "strength": 1.57
+    },
+    {
+     "price": 24.665,
+     "touches": 2,
+     "strength": 2.6
+    },
+    {
+     "price": 23.105,
+     "touches": 2,
+     "strength": 2.54
+    }
+   ],
+   "resistance": [
+    {
+     "price": 27.22,
+     "touches": 1,
+     "strength": 1.96
+    },
+    {
+     "price": 28.52,
+     "touches": 2,
+     "strength": 2.91
+    },
+    {
+     "price": 29.535,
+     "touches": 4,
+     "strength": 4.97
+    }
+   ],
+   "plan": null,
+   "notes": [
+    "Extended below EMA20: wait for a rally"
+   ],
+   "dual": {
+    "symbol": "O39.SI",
+    "date": "2026-11-20",
+    "close": 26.540000915527344,
+    "decision": "AVOID",
+    "blocked_by": [
+     "reward_risk",
+     "stop_width",
+     "weekly_impulse",
+     "TS<80",
+     "SM<75",
+     "bid/ask below floor"
+    ],
+    "regime_bearish": true,
+    "version": "1.2",
+    "combined": 11.8,
+    "sm": {
+     "score": 16.8,
+     "components": {
+      "bid_ask": {
+       "pts": 6.9,
+       "max": 35,
+       "tier": "hourly-proxy"
+      },
+      "price_volume": {
+       "pts": 0.0,
+       "max": 25,
+       "tier": "daily"
+      },
+      "block_trades": {
+       "pts": 7.5,
+       "max": 15,
+       "tier": "daily-proxy"
+      },
+      "vwap": {
+       "pts": 1.0,
+       "max": 10,
+       "tier": "daily"
+      },
+      "obv": {
+       "pts": 0.0,
+       "max": 10,
+       "tier": "daily"
+      },
+      "closing_strength": {
+       "pts": 1.4,
+       "max": 5,
+       "tier": "daily"
+      }
+     },
+     "confidence": 0.5,
+     "weight_measured": 1.0
+    },
+    "ts": {
+     "score": 6.8,
+     "components": {
+      "trend_alignment": {
+       "pts": 3.6,
+       "max": 40,
+       "wk_macd_hist_rising": false,
+       "wk_ema26_slope_pct": -0.04,
+       "above_ema50": false,
+       "ema50_rising": false
+      },
+      "pullback_quality": {
+       "pts": 3.2,
+       "max": 35,
+       "rsi_min5": 25.3,
+       "rsi_max20": 46.0,
+       "value_zone": "27.926-28.503",
+       "low3_vs_zone_top_atr": -3.24,
+       "fib_retrace": 2.79,
+       "bear_power_atr": -2.36,
+       "bear_power_turn_up": false
+      },
+      "entry_confirmation": {
+       "pts": 0.0,
+       "max": 25,
+       "close_above_prior_high": false,
+       "d_macd_hist_upticks": 0
+      }
+     }
+    },
+    "gates": {
+     "liquidity": {
+      "pass": true,
+      "value": "S$209.78M/day"
+     },
+     "reward_risk": {
+      "pass": false,
+      "value": "1.36R to T1"
+     },
+     "atr_band": {
+      "pass": true,
+      "value": "ATR 2.47%"
+     },
+     "stop_width": {
+      "pass": false,
+      "value": "2.74 ATR"
+     },
+     "weekly_impulse": {
+      "pass": false,
+      "value": "weekly red"
+     }
+    },
+    "plan": {
+     "entry_buy_stop": 27.08,
+     "stop": 25.29,
+     "risk_per_share": 1.79,
+     "stop_in_atr": 2.74,
+     "target1": 29.52,
+     "target2": 30.71,
+     "rr_t1": 1.36,
+     "supports": [
+      22.16,
+      23.115,
+      24.65
+     ],
+     "resistances": [
+      29.535,
+      32.181
+     ],
+     "atr": 0.6545,
+     "stop_method": "safezone",
+     "channel": {
+      "upper": 30.722,
+      "lower": 25.962,
+      "ema": 28.342,
+      "height": 4.76,
+      "t1_grade_pct": 51.3
+     },
+     "management": [
+      "Order valid 2 sessions; cancel if not filled",
+      "At +1R: move stop to breakeven",
+      "At T1: sell half; trail rest under 20-EMA or 2-bar low",
+      "Time stop: exit if < +0.5R after 7 sessions"
+     ],
+     "shares": 500,
+     "capital": 13540.0
+    }
+   }
+  },
+  {
+   "ticker": "S63.SI",
+   "code": "S63",
+   "name": "ST Engineering",
+   "date": "2026-11-20",
+   "close": 8.64,
+   "chg_pct": -1.59,
+   "status": "Short watch",
+   "wave": "Extended",
+   "tide": {
+    "tide": "Down",
+    "hist_rising": false,
+    "ema26_rising": false,
+    "above_ema26": false,
+    "impulse": "red",
+    "strong": true
+   },
+   "ema20": 9.494,
+   "ema50": 9.98,
+   "rsi": 25.0,
+   "fi2": -701817.0,
+   "atr": 0.29,
+   "macd": -0.4196,
+   "macd_hist": -0.1021,
+   "macd_hist_rising": false,
+   "support": [
+    {
+     "price": 8.455,
+     "touches": 2,
+     "strength": 2.09
+    },
+    {
+     "price": 8.085,
+     "touches": 2,
+     "strength": 2.07
+    }
+   ],
+   "resistance": [
+    {
+     "price": 9.01,
+     "touches": 1,
+     "strength": 1.96
+    },
+    {
+     "price": 9.3,
+     "touches": 1,
+     "strength": 1.18
+    },
+    {
+     "price": 9.728,
+     "touches": 5,
+     "strength": 5.82
+    }
+   ],
+   "plan": null,
+   "notes": [
+    "Extended below EMA20: wait for a rally"
+   ],
+   "dual": {
+    "symbol": "S63.SI",
+    "date": "2026-11-20",
+    "close": 8.640000343322754,
+    "decision": "AVOID",
+    "blocked_by": [
+     "reward_risk",
+     "stop_width",
+     "weekly_impulse",
+     "TS<80",
+     "SM<75",
+     "bid/ask below floor"
+    ],
+    "regime_bearish": true,
+    "version": "1.2",
+    "combined": 13.9,
+    "sm": {
+     "score": 19.8,
+     "components": {
+      "bid_ask": {
+       "pts": 16.4,
+       "max": 35,
+       "tier": "hourly-proxy"
+      },
+      "price_volume": {
+       "pts": 0.0,
+       "max": 25,
+       "tier": "daily"
+      },
+      "block_trades": {
+       "pts": 0.0,
+       "max": 15,
+       "tier": "daily-proxy"
+      },
+      "vwap": {
+       "pts": 1.5,
+       "max": 10,
+       "tier": "daily"
+      },
+      "obv": {
+       "pts": 0.0,
+       "max": 10,
+       "tier": "daily"
+      },
+      "closing_strength": {
+       "pts": 1.9,
+       "max": 5,
+       "tier": "daily"
+      }
+     },
+     "confidence": 0.5,
+     "weight_measured": 1.0
+    },
+    "ts": {
+     "score": 8.0,
+     "components": {
+      "trend_alignment": {
+       "pts": 0.0,
+       "max": 40,
+       "wk_macd_hist_rising": false,
+       "wk_ema26_slope_pct": -2.76,
+       "above_ema50": false,
+       "ema50_rising": false
+      },
+      "pullback_quality": {
+       "pts": 8.0,
+       "max": 35,
+       "rsi_min5": 22.5,
+       "rsi_max20": 39.8,
+       "value_zone": "9.262-9.641",
+       "low3_vs_zone_top_atr": -3.93,
+       "fib_retrace": 4.289,
+       "bear_power_atr": -2.42,
+       "bear_power_turn_up": true
+      },
+      "entry_confirmation": {
+       "pts": 0.0,
+       "max": 25,
+       "close_above_prior_high": false,
+       "d_macd_hist_upticks": 0
+      }
+     }
+    },
+    "gates": {
+     "liquidity": {
+      "pass": true,
+      "value": "S$58.97M/day"
+     },
+     "reward_risk": {
+      "pass": false,
+      "value": "0.96R to T1"
+     },
+     "atr_band": {
+      "pass": true,
+      "value": "ATR 3.36%"
+     },
+     "stop_width": {
+      "pass": false,
+      "value": "3.79 ATR"
+     },
+     "weekly_impulse": {
+      "pass": false,
+      "value": "weekly red"
+     }
+    },
+    "plan": {
+     "entry_buy_stop": 8.71,
+     "stop": 7.61,
+     "risk_per_share": 1.1,
+     "stop_in_atr": 3.79,
+     "target1": 9.77,
+     "target2": 10.07,
+     "rr_t1": 0.96,
+     "supports": [
+      8.085
+     ],
+     "resistances": [
+      9.785,
+      10.2,
+      10.457
+     ],
+     "atr": 0.2899,
+     "stop_method": "safezone",
+     "channel": {
+      "upper": 10.09,
+      "lower": 9.005,
+      "ema": 9.547,
+      "height": 1.085,
+      "t1_grade_pct": 97.7
+     },
+     "management": [
+      "Order valid 2 sessions; cancel if not filled",
+      "At +1R: move stop to breakeven",
+      "At T1: sell half; trail rest under 20-EMA or 2-bar low",
+      "Time stop: exit if < +0.5R after 7 sessions"
+     ],
+     "shares": 900,
+     "capital": 7839.0
     }
    }
   },
@@ -4927,26 +3571,26 @@
    "ticker": "S68.SI",
    "code": "S68",
    "name": "SGX Group",
-   "date": "2026-11-24",
-   "close": 19.62,
-   "chg_pct": 1.03,
-   "status": "No trade",
-   "wave": "-",
+   "date": "2026-11-20",
+   "close": 19.42,
+   "chg_pct": -3.14,
+   "status": "Short watch",
+   "wave": "Extended",
    "tide": {
-    "tide": "Mixed",
-    "hist_rising": true,
+    "tide": "Down",
+    "hist_rising": false,
     "ema26_rising": false,
     "above_ema26": false,
-    "impulse": "blue",
-    "strong": false
+    "impulse": "red",
+    "strong": true
    },
-   "ema20": 20.394,
-   "ema50": 21.244,
-   "rsi": 32.9,
-   "fi2": -196926.0,
-   "atr": 0.469,
-   "macd": -0.4071,
-   "macd_hist": -0.0454,
+   "ema20": 20.476,
+   "ema50": 21.31,
+   "rsi": 28.3,
+   "fi2": -1582669.0,
+   "atr": 0.47,
+   "macd": -0.3844,
+   "macd_hist": -0.0341,
    "macd_hist_rising": false,
    "support": [
     {
@@ -4957,7 +3601,7 @@
     {
      "price": 18.18,
      "touches": 1,
-     "strength": 1.19
+     "strength": 1.2
     },
     {
      "price": 17.83,
@@ -4974,7 +3618,7 @@
     {
      "price": 20.0,
      "touches": 1,
-     "strength": 1.95
+     "strength": 1.96
     },
     {
      "price": 20.43,
@@ -4984,26 +3628,29 @@
    ],
    "plan": null,
    "notes": [
-    "Weekly tide is mixed: stand aside"
+    "Extended below EMA20: wait for a rally"
    ],
    "dual": {
     "symbol": "S68.SI",
-    "date": "2026-11-24",
-    "close": 19.6200008392334,
+    "date": "2026-11-20",
+    "close": 19.420000076293945,
     "decision": "AVOID",
     "blocked_by": [
      "reward_risk",
+     "stop_width",
+     "weekly_impulse",
      "TS<80",
-     "SM<75"
+     "SM<75",
+     "bid/ask below floor"
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 34.3,
+    "combined": 15.6,
     "sm": {
-     "score": 45.9,
+     "score": 27.9,
      "components": {
       "bid_ask": {
-       "pts": 33.0,
+       "pts": 16.7,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -5018,17 +3665,17 @@
        "tier": "daily-proxy"
       },
       "vwap": {
-       "pts": 2.1,
+       "pts": 1.1,
        "max": 10,
        "tier": "daily"
       },
       "obv": {
-       "pts": 1.8,
+       "pts": 1.7,
        "max": 10,
        "tier": "daily"
       },
       "closing_strength": {
-       "pts": 1.6,
+       "pts": 0.9,
        "max": 5,
        "tier": "daily"
       }
@@ -5037,29 +3684,29 @@
      "weight_measured": 1.0
     },
     "ts": {
-     "score": 22.7,
+     "score": 3.3,
      "components": {
       "trend_alignment": {
-       "pts": 9.0,
+       "pts": 0.0,
        "max": 40,
-       "wk_macd_hist_rising": true,
-       "wk_ema26_slope_pct": -2.51,
+       "wk_macd_hist_rising": false,
+       "wk_ema26_slope_pct": -2.48,
        "above_ema50": false,
        "ema50_rising": false
       },
       "pullback_quality": {
-       "pts": 8.1,
+       "pts": 3.3,
        "max": 35,
        "rsi_min5": 28.3,
        "rsi_max20": 47.9,
-       "value_zone": "20.194-20.570",
-       "low3_vs_zone_top_atr": -2.9,
+       "value_zone": "20.290-20.646",
+       "low3_vs_zone_top_atr": -3.05,
        "fib_retrace": 1.669,
-       "bear_power_atr": -1.52,
-       "bear_power_turn_up": true
+       "bear_power_atr": -2.29,
+       "bear_power_turn_up": false
       },
       "entry_confirmation": {
-       "pts": 5.6,
+       "pts": 0.0,
        "max": 25,
        "close_above_prior_high": false,
        "d_macd_hist_upticks": 0
@@ -5069,33 +3716,33 @@
     "gates": {
      "liquidity": {
       "pass": true,
-      "value": "S$54.77M/day"
+      "value": "S$55.14M/day"
      },
      "reward_risk": {
       "pass": false,
-      "value": "1.03R to T1"
+      "value": "0.8R to T1"
      },
      "atr_band": {
       "pass": true,
-      "value": "ATR 2.39%"
+      "value": "ATR 2.42%"
      },
      "stop_width": {
-      "pass": true,
-      "value": "2.45 ATR"
+      "pass": false,
+      "value": "3.15 ATR"
      },
      "weekly_impulse": {
-      "pass": true,
-      "value": "weekly blue"
+      "pass": false,
+      "value": "weekly red"
      }
     },
     "plan": {
      "entry_buy_stop": 19.89,
-     "stop": 18.74,
-     "risk_per_share": 1.15,
-     "stop_in_atr": 2.45,
+     "stop": 18.41,
+     "risk_per_share": 1.48,
+     "stop_in_atr": 3.15,
      "target1": 21.07,
      "target2": 21.74,
-     "rr_t1": 1.03,
+     "rr_t1": 0.8,
      "supports": [
       17.057,
       17.9,
@@ -5106,14 +3753,14 @@
       21.757,
       22.405
      ],
-     "atr": 0.469,
+     "atr": 0.4704,
      "stop_method": "safezone",
      "channel": {
-      "upper": 21.962,
-      "lower": 18.941,
-      "ema": 20.452,
-      "height": 3.021,
-      "t1_grade_pct": 39.1
+      "upper": 22.047,
+      "lower": 19.015,
+      "ema": 20.531,
+      "height": 3.033,
+      "t1_grade_pct": 38.9
      },
      "management": [
       "Order valid 2 sessions; cancel if not filled",
@@ -5121,93 +3768,282 @@
       "At T1: sell half; trail rest under 20-EMA or 2-bar low",
       "Time stop: exit if < +0.5R after 7 sessions"
      ],
-     "shares": 800,
-     "capital": 15912.0
+     "shares": 600,
+     "capital": 11934.0
     }
    }
   },
   {
-   "ticker": "U96.SI",
-   "code": "U96",
-   "name": "Sembcorp Industries",
-   "date": "2026-11-24",
-   "close": 5.68,
-   "chg_pct": 2.53,
-   "status": "No trade",
-   "wave": "-",
+   "ticker": "U11.SI",
+   "code": "U11",
+   "name": "UOB",
+   "date": "2026-11-20",
+   "close": 35.42,
+   "chg_pct": -1.99,
+   "status": "Short watch",
+   "wave": "Extended",
    "tide": {
-    "tide": "Mixed",
-    "hist_rising": true,
+    "tide": "Down",
+    "hist_rising": false,
     "ema26_rising": false,
     "above_ema26": false,
-    "impulse": "blue",
-    "strong": false
+    "impulse": "red",
+    "strong": true
    },
-   "ema20": 5.738,
-   "ema50": 5.826,
-   "rsi": 44.1,
-   "fi2": 394866.0,
-   "atr": 0.13,
-   "macd": -0.0772,
-   "macd_hist": -0.0144,
-   "macd_hist_rising": true,
+   "ema20": 38.24,
+   "ema50": 39.858,
+   "rsi": 20.5,
+   "fi2": -2440708.0,
+   "atr": 0.815,
+   "macd": -1.4322,
+   "macd_hist": -0.2672,
+   "macd_hist_rising": false,
    "support": [
     {
-     "price": 5.61,
+     "price": 34.947,
      "touches": 3,
-     "strength": 3.96
+     "strength": 3.29
     },
     {
-     "price": 5.5,
+     "price": 33.95,
      "touches": 1,
-     "strength": 1.71
-    },
-    {
-     "price": 5.22,
-     "touches": 1,
-     "strength": 1.67
+     "strength": 1.05
     }
    ],
    "resistance": [
     {
-     "price": 5.85,
-     "touches": 7,
-     "strength": 7.96
-    },
-    {
-     "price": 6.134,
-     "touches": 10,
-     "strength": 10.92
-    },
-    {
-     "price": 6.38,
+     "price": 35.81,
      "touches": 2,
-     "strength": 2.24
+     "strength": 2.42
+    },
+    {
+     "price": 36.5,
+     "touches": 1,
+     "strength": 1.97
+    },
+    {
+     "price": 37.77,
+     "touches": 5,
+     "strength": 5.54
     }
    ],
    "plan": null,
    "notes": [
-    "Weekly tide is mixed: stand aside"
+    "Extended below EMA20: wait for a rally"
    ],
    "dual": {
-    "symbol": "U96.SI",
-    "date": "2026-11-24",
-    "close": 5.679999828338623,
+    "symbol": "U11.SI",
+    "date": "2026-11-20",
+    "close": 35.41999816894531,
     "decision": "AVOID",
     "blocked_by": [
      "reward_risk",
-     "stop_width",
+     "weekly_impulse",
      "TS<80",
-     "SM<75"
+     "SM<75",
+     "bid/ask below floor"
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 44.3,
+    "combined": 2.8,
     "sm": {
-     "score": 49.0,
+     "score": 2.5,
      "components": {
       "bid_ask": {
-       "pts": 35.0,
+       "pts": 0.0,
+       "max": 35,
+       "tier": "hourly-proxy"
+      },
+      "price_volume": {
+       "pts": 0.0,
+       "max": 25,
+       "tier": "daily"
+      },
+      "block_trades": {
+       "pts": 0.0,
+       "max": 15,
+       "tier": "daily-proxy"
+      },
+      "vwap": {
+       "pts": 1.3,
+       "max": 10,
+       "tier": "daily"
+      },
+      "obv": {
+       "pts": 0.1,
+       "max": 10,
+       "tier": "daily"
+      },
+      "closing_strength": {
+       "pts": 1.1,
+       "max": 5,
+       "tier": "daily"
+      }
+     },
+     "confidence": 0.5,
+     "weight_measured": 1.0
+    },
+    "ts": {
+     "score": 3.2,
+     "components": {
+      "trend_alignment": {
+       "pts": 0.0,
+       "max": 40,
+       "wk_macd_hist_rising": false,
+       "wk_ema26_slope_pct": -1.92,
+       "above_ema50": false,
+       "ema50_rising": false
+      },
+      "pullback_quality": {
+       "pts": 3.2,
+       "max": 35,
+       "rsi_min5": 20.5,
+       "rsi_max20": 48.1,
+       "value_zone": "37.448-38.747",
+       "low3_vs_zone_top_atr": -4.29,
+       "fib_retrace": 2.572,
+       "bear_power_atr": -2.7,
+       "bear_power_turn_up": false
+      },
+      "entry_confirmation": {
+       "pts": 0.0,
+       "max": 25,
+       "close_above_prior_high": false,
+       "d_macd_hist_upticks": 0
+      }
+     }
+    },
+    "gates": {
+     "liquidity": {
+      "pass": true,
+      "value": "S$147.98M/day"
+     },
+     "reward_risk": {
+      "pass": false,
+      "value": "1.04R to T1"
+     },
+     "atr_band": {
+      "pass": true,
+      "value": "ATR 2.30%"
+     },
+     "stop_width": {
+      "pass": true,
+      "value": "2.07 ATR"
+     },
+     "weekly_impulse": {
+      "pass": false,
+      "value": "weekly red"
+     }
+    },
+    "plan": {
+     "entry_buy_stop": 35.9,
+     "stop": 34.21,
+     "risk_per_share": 1.69,
+     "stop_in_atr": 2.07,
+     "target1": 37.66,
+     "target2": 39.35,
+     "rr_t1": 1.04,
+     "supports": [
+      34.225
+     ],
+     "resistances": [
+      37.676,
+      39.36,
+      42.417
+     ],
+     "atr": 0.8149,
+     "stop_method": "safezone",
+     "channel": {
+      "upper": 41.599,
+      "lower": 35.249,
+      "ema": 38.424,
+      "height": 6.351,
+      "t1_grade_pct": 27.7
+     },
+     "management": [
+      "Order valid 2 sessions; cancel if not filled",
+      "At +1R: move stop to breakeven",
+      "At T1: sell half; trail rest under 20-EMA or 2-bar low",
+      "Time stop: exit if < +0.5R after 7 sessions"
+     ],
+     "shares": 500,
+     "capital": 17950.0
+    }
+   }
+  },
+  {
+   "ticker": "U14.SI",
+   "code": "U14",
+   "name": "UOL Group",
+   "date": "2026-11-20",
+   "close": 7.33,
+   "chg_pct": -1.61,
+   "status": "Short watch",
+   "wave": "Extended",
+   "tide": {
+    "tide": "Down",
+    "hist_rising": false,
+    "ema26_rising": false,
+    "above_ema26": false,
+    "impulse": "red",
+    "strong": true
+   },
+   "ema20": 7.782,
+   "ema50": 8.097,
+   "rsi": 31.4,
+   "fi2": -237824.0,
+   "atr": 0.198,
+   "macd": -0.13,
+   "macd_hist": -0.0331,
+   "macd_hist_rising": false,
+   "support": [
+    {
+     "price": 7.22,
+     "touches": 1,
+     "strength": 1.0
+    }
+   ],
+   "resistance": [
+    {
+     "price": 7.58,
+     "touches": 1,
+     "strength": 1.9
+    },
+    {
+     "price": 8.17,
+     "touches": 1,
+     "strength": 1.96
+    },
+    {
+     "price": 8.345,
+     "touches": 2,
+     "strength": 2.05
+    }
+   ],
+   "plan": null,
+   "notes": [
+    "Extended below EMA20: wait for a rally"
+   ],
+   "dual": {
+    "symbol": "U14.SI",
+    "date": "2026-11-20",
+    "close": 7.329999923706055,
+    "decision": "AVOID",
+    "blocked_by": [
+     "reward_risk",
+     "weekly_impulse",
+     "TS<80",
+     "SM<75",
+     "bid/ask below floor"
+    ],
+    "regime_bearish": true,
+    "version": "1.2",
+    "combined": 9.0,
+    "sm": {
+     "score": 13.4,
+     "components": {
+      "bid_ask": {
+       "pts": 0.0,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -5227,12 +4063,12 @@
        "tier": "daily"
       },
       "obv": {
-       "pts": 0.3,
+       "pts": 0.7,
        "max": 10,
        "tier": "daily"
       },
       "closing_strength": {
-       "pts": 3.3,
+       "pts": 2.2,
        "max": 5,
        "tier": "daily"
       }
@@ -5241,83 +4077,79 @@
      "weight_measured": 1.0
     },
     "ts": {
-     "score": 39.6,
+     "score": 4.7,
      "components": {
       "trend_alignment": {
-       "pts": 9.0,
+       "pts": 0.0,
        "max": 40,
-       "wk_macd_hist_rising": true,
-       "wk_ema26_slope_pct": -1.42,
+       "wk_macd_hist_rising": false,
+       "wk_ema26_slope_pct": -3.82,
        "above_ema50": false,
        "ema50_rising": false
       },
       "pullback_quality": {
-       "pts": 10.0,
+       "pts": 4.7,
        "max": 35,
-       "rsi_min5": 32.5,
-       "rsi_max20": 49.4,
-       "value_zone": "5.696-5.766",
-       "low3_vs_zone_top_atr": -2.36,
-       "fib_retrace": 1.516,
-       "bear_power_atr": -0.58,
-       "bear_power_turn_up": true
+       "rsi_min5": 31.4,
+       "rsi_max20": 54.9,
+       "value_zone": "7.718-7.837",
+       "low3_vs_zone_top_atr": -3.12,
+       "fib_retrace": 1.61,
+       "bear_power_atr": -2.52,
+       "bear_power_turn_up": false
       },
       "entry_confirmation": {
-       "pts": 20.6,
+       "pts": 0.0,
        "max": 25,
-       "close_above_prior_high": true,
-       "d_macd_hist_upticks": 1
+       "close_above_prior_high": false,
+       "d_macd_hist_upticks": 0
       }
      }
     },
     "gates": {
      "liquidity": {
       "pass": true,
-      "value": "S$18.54M/day"
+      "value": "S$10.50M/day"
      },
      "reward_risk": {
       "pass": false,
-      "value": "0.89R to T1"
+      "value": "1.23R to T1"
      },
      "atr_band": {
       "pass": true,
-      "value": "ATR 2.28%"
+      "value": "ATR 2.70%"
      },
      "stop_width": {
-      "pass": false,
-      "value": "2.86 ATR"
+      "pass": true,
+      "value": "2.43 ATR"
      },
      "weekly_impulse": {
-      "pass": true,
-      "value": "weekly blue"
+      "pass": false,
+      "value": "weekly red"
      }
     },
     "plan": {
-     "entry_buy_stop": 5.82,
-     "stop": 5.45,
-     "risk_per_share": 0.37,
-     "stop_in_atr": 2.86,
-     "target1": 6.15,
-     "target2": 6.41,
-     "rr_t1": 0.89,
-     "supports": [
-      5.22,
-      5.5,
-      5.61
-     ],
+     "entry_buy_stop": 7.4,
+     "stop": 6.92,
+     "risk_per_share": 0.48,
+     "stop_in_atr": 2.43,
+     "target1": 7.99,
+     "target2": 8.16,
+     "rr_t1": 1.23,
+     "supports": [],
      "resistances": [
-      6.16,
-      6.42,
-      6.56
+      8.0,
+      8.17,
+      8.745
      ],
-     "atr": 0.1296,
+     "atr": 0.1978,
      "stop_method": "safezone",
      "channel": {
-      "upper": 6.196,
-      "lower": 5.301,
-      "ema": 5.748,
-      "height": 0.895,
-      "t1_grade_pct": 36.9
+      "upper": 8.283,
+      "lower": 7.317,
+      "ema": 7.8,
+      "height": 0.966,
+      "t1_grade_pct": 61.1
      },
      "management": [
       "Order valid 2 sessions; cancel if not filled",
@@ -5325,8 +4157,207 @@
       "At T1: sell half; trail rest under 20-EMA or 2-bar low",
       "Time stop: exit if < +0.5R after 7 sessions"
      ],
-     "shares": 2700,
-     "capital": 15714.0
+     "shares": 2000,
+     "capital": 14800.0
+    }
+   }
+  },
+  {
+   "ticker": "U96.SI",
+   "code": "U96",
+   "name": "Sembcorp Industries",
+   "date": "2026-11-20",
+   "close": 5.54,
+   "chg_pct": -1.25,
+   "status": "Short watch",
+   "wave": "Extended",
+   "tide": {
+    "tide": "Down",
+    "hist_rising": false,
+    "ema26_rising": false,
+    "above_ema26": false,
+    "impulse": "red",
+    "strong": true
+   },
+   "ema20": 5.745,
+   "ema50": 5.832,
+   "rsi": 32.5,
+   "fi2": -156714.0,
+   "atr": 0.119,
+   "macd": -0.0826,
+   "macd_hist": -0.0233,
+   "macd_hist_rising": false,
+   "support": [
+    {
+     "price": 5.5,
+     "touches": 1,
+     "strength": 1.72
+    },
+    {
+     "price": 5.22,
+     "touches": 1,
+     "strength": 1.67
+    }
+   ],
+   "resistance": [
+    {
+     "price": 5.61,
+     "touches": 3,
+     "strength": 3.96
+    },
+    {
+     "price": 5.85,
+     "touches": 7,
+     "strength": 7.96
+    },
+    {
+     "price": 6.134,
+     "touches": 10,
+     "strength": 10.92
+    }
+   ],
+   "plan": null,
+   "notes": [
+    "Extended below EMA20: wait for a rally"
+   ],
+   "dual": {
+    "symbol": "U96.SI",
+    "date": "2026-11-20",
+    "close": 5.539999961853027,
+    "decision": "AVOID",
+    "blocked_by": [
+     "reward_risk",
+     "stop_width",
+     "weekly_impulse",
+     "TS<80",
+     "SM<75"
+    ],
+    "regime_bearish": true,
+    "version": "1.2",
+    "combined": 26.3,
+    "sm": {
+     "score": 47.4,
+     "components": {
+      "bid_ask": {
+       "pts": 35.0,
+       "max": 35,
+       "tier": "hourly-proxy"
+      },
+      "price_volume": {
+       "pts": 0.0,
+       "max": 25,
+       "tier": "daily"
+      },
+      "block_trades": {
+       "pts": 7.5,
+       "max": 15,
+       "tier": "daily-proxy"
+      },
+      "vwap": {
+       "pts": 2.2,
+       "max": 10,
+       "tier": "daily"
+      },
+      "obv": {
+       "pts": 0.0,
+       "max": 10,
+       "tier": "daily"
+      },
+      "closing_strength": {
+       "pts": 2.6,
+       "max": 5,
+       "tier": "daily"
+      }
+     },
+     "confidence": 0.5,
+     "weight_measured": 1.0
+    },
+    "ts": {
+     "score": 5.2,
+     "components": {
+      "trend_alignment": {
+       "pts": 0.0,
+       "max": 40,
+       "wk_macd_hist_rising": false,
+       "wk_ema26_slope_pct": -1.31,
+       "above_ema50": false,
+       "ema50_rising": false
+      },
+      "pullback_quality": {
+       "pts": 5.2,
+       "max": 35,
+       "rsi_min5": 32.5,
+       "rsi_max20": 54.5,
+       "value_zone": "5.698-5.772",
+       "low3_vs_zone_top_atr": -2.63,
+       "fib_retrace": 2.037,
+       "bear_power_atr": -2.01,
+       "bear_power_turn_up": false
+      },
+      "entry_confirmation": {
+       "pts": 0.0,
+       "max": 25,
+       "close_above_prior_high": false,
+       "d_macd_hist_upticks": 0
+      }
+     }
+    },
+    "gates": {
+     "liquidity": {
+      "pass": true,
+      "value": "S$17.84M/day"
+     },
+     "reward_risk": {
+      "pass": false,
+      "value": "0.91R to T1"
+     },
+     "atr_band": {
+      "pass": true,
+      "value": "ATR 2.14%"
+     },
+     "stop_width": {
+      "pass": false,
+      "value": "2.95 ATR"
+     },
+     "weekly_impulse": {
+      "pass": false,
+      "value": "weekly red"
+     }
+    },
+    "plan": {
+     "entry_buy_stop": 5.57,
+     "stop": 5.22,
+     "risk_per_share": 0.35,
+     "stop_in_atr": 2.95,
+     "target1": 5.89,
+     "target2": 6.15,
+     "rr_t1": 0.91,
+     "supports": [
+      5.22,
+      5.5
+     ],
+     "resistances": [
+      5.903,
+      6.16,
+      6.42
+     ],
+     "atr": 0.1188,
+     "stop_method": "safezone",
+     "channel": {
+      "upper": 6.203,
+      "lower": 5.307,
+      "ema": 5.755,
+      "height": 0.896,
+      "t1_grade_pct": 35.7
+     },
+     "management": [
+      "Order valid 2 sessions; cancel if not filled",
+      "At +1R: move stop to breakeven",
+      "At T1: sell half; trail rest under 20-EMA or 2-bar low",
+      "Time stop: exit if < +0.5R after 7 sessions"
+     ],
+     "shares": 2800,
+     "capital": 15596.0
     }
    }
   },
@@ -5334,74 +4365,76 @@
    "ticker": "V03.SI",
    "code": "V03",
    "name": "Venture Corp",
-   "date": "2026-11-24",
-   "close": 14.15,
-   "chg_pct": 1.22,
-   "status": "No trade",
-   "wave": "-",
+   "date": "2026-11-20",
+   "close": 13.98,
+   "chg_pct": -3.32,
+   "status": "Short watch",
+   "wave": "Extended",
    "tide": {
-    "tide": "Mixed",
-    "hist_rising": true,
+    "tide": "Down",
+    "hist_rising": false,
     "ema26_rising": false,
     "above_ema26": false,
-    "impulse": "blue",
-    "strong": false
+    "impulse": "red",
+    "strong": true
    },
-   "ema20": 14.759,
-   "ema50": 15.418,
-   "rsi": 37.9,
-   "fi2": -97621.0,
-   "atr": 0.405,
-   "macd": -0.4036,
-   "macd_hist": -0.0151,
+   "ema20": 14.823,
+   "ema50": 15.47,
+   "rsi": 34.7,
+   "fi2": -585552.0,
+   "atr": 0.403,
+   "macd": -0.3982,
+   "macd_hist": -0.0134,
    "macd_hist_rising": false,
    "support": [
     {
-     "price": 14.09,
+     "price": 13.94,
      "touches": 1,
-     "strength": 1.96
+     "strength": 1.0
     }
    ],
    "resistance": [
     {
+     "price": 14.09,
+     "touches": 1,
+     "strength": 1.96
+    },
+    {
      "price": 14.76,
      "touches": 3,
-     "strength": 3.26
+     "strength": 3.27
     },
     {
      "price": 15.343,
      "touches": 8,
      "strength": 8.97
-    },
-    {
-     "price": 16.263,
-     "touches": 6,
-     "strength": 6.85
     }
    ],
    "plan": null,
    "notes": [
-    "Weekly tide is mixed: stand aside"
+    "Extended below EMA20: wait for a rally"
    ],
    "dual": {
     "symbol": "V03.SI",
-    "date": "2026-11-24",
-    "close": 14.149999618530273,
+    "date": "2026-11-20",
+    "close": 13.979999542236328,
     "decision": "AVOID",
     "blocked_by": [
      "reward_risk",
+     "stop_width",
+     "weekly_impulse",
      "TS<80",
      "SM<75",
      "bid/ask below floor"
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 18.6,
+    "combined": 11.4,
     "sm": {
-     "score": 11.6,
+     "score": 16.6,
      "components": {
       "bid_ask": {
-       "pts": 1.5,
+       "pts": 7.9,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -5416,17 +4449,17 @@
        "tier": "daily-proxy"
       },
       "vwap": {
-       "pts": 1.8,
+       "pts": 0.7,
        "max": 10,
        "tier": "daily"
       },
       "obv": {
-       "pts": 0.3,
+       "pts": 0.0,
        "max": 10,
        "tier": "daily"
       },
       "closing_strength": {
-       "pts": 2.1,
+       "pts": 2.0,
        "max": 5,
        "tier": "daily"
       }
@@ -5435,29 +4468,29 @@
      "weight_measured": 1.0
     },
     "ts": {
-     "score": 25.6,
+     "score": 6.2,
      "components": {
       "trend_alignment": {
-       "pts": 9.0,
+       "pts": 0.0,
        "max": 40,
-       "wk_macd_hist_rising": true,
-       "wk_ema26_slope_pct": -3.35,
+       "wk_macd_hist_rising": false,
+       "wk_ema26_slope_pct": -3.15,
        "above_ema50": false,
        "ema50_rising": false
       },
       "pullback_quality": {
-       "pts": 11.0,
+       "pts": 6.2,
        "max": 35,
        "rsi_min5": 34.7,
        "rsi_max20": 48.9,
-       "value_zone": "14.551-14.924",
-       "low3_vs_zone_top_atr": -2.43,
-       "fib_retrace": 1.103,
-       "bear_power_atr": -1.04,
-       "bear_power_turn_up": true
+       "value_zone": "14.617-14.986",
+       "low3_vs_zone_top_atr": -2.59,
+       "fib_retrace": 4.15,
+       "bear_power_atr": -1.68,
+       "bear_power_turn_up": false
       },
       "entry_confirmation": {
-       "pts": 5.6,
+       "pts": 0.0,
        "max": 25,
        "close_above_prior_high": false,
        "d_macd_hist_upticks": 0
@@ -5467,33 +4500,33 @@
     "gates": {
      "liquidity": {
       "pass": true,
-      "value": "S$13.68M/day"
+      "value": "S$13.69M/day"
      },
      "reward_risk": {
       "pass": false,
-      "value": "1.13R to T1"
+      "value": "0.9R to T1"
      },
      "atr_band": {
       "pass": true,
-      "value": "ATR 2.86%"
+      "value": "ATR 2.88%"
      },
      "stop_width": {
-      "pass": true,
-      "value": "1.93 ATR"
+      "pass": false,
+      "value": "2.53 ATR"
      },
      "weekly_impulse": {
-      "pass": true,
-      "value": "weekly blue"
+      "pass": false,
+      "value": "weekly red"
      }
     },
     "plan": {
-     "entry_buy_stop": 14.41,
-     "stop": 13.63,
-     "risk_per_share": 0.78,
-     "stop_in_atr": 1.93,
+     "entry_buy_stop": 14.37,
+     "stop": 13.35,
+     "risk_per_share": 1.02,
+     "stop_in_atr": 2.53,
      "target1": 15.29,
-     "target2": 15.62,
-     "rr_t1": 1.13,
+     "target2": 15.68,
+     "rr_t1": 0.9,
      "supports": [
       14.09
      ],
@@ -5502,14 +4535,14 @@
       16.015,
       16.892
      ],
-     "atr": 0.4045,
+     "atr": 0.4033,
      "stop_method": "safezone",
      "channel": {
-      "upper": 15.632,
-      "lower": 13.999,
-      "ema": 14.815,
-      "height": 1.634,
-      "t1_grade_pct": 53.9
+      "upper": 15.699,
+      "lower": 14.058,
+      "ema": 14.879,
+      "height": 1.641,
+      "t1_grade_pct": 56.1
      },
      "management": [
       "Order valid 2 sessions; cancel if not filled",
@@ -5517,8 +4550,8 @@
       "At T1: sell half; trail rest under 20-EMA or 2-bar low",
       "Time stop: exit if < +0.5R after 7 sessions"
      ],
-     "shares": 1200,
-     "capital": 17292.0
+     "shares": 900,
+     "capital": 12933.0
     }
    }
   },
@@ -5526,26 +4559,26 @@
    "ticker": "Y92.SI",
    "code": "Y92",
    "name": "Thai Beverage",
-   "date": "2026-11-24",
+   "date": "2026-11-20",
    "close": 0.42,
-   "chg_pct": 0.0,
-   "status": "No trade",
-   "wave": "-",
+   "chg_pct": -2.33,
+   "status": "Short watch",
+   "wave": "Falling",
    "tide": {
-    "tide": "Mixed",
-    "hist_rising": true,
+    "tide": "Down",
+    "hist_rising": false,
     "ema26_rising": false,
     "above_ema26": false,
-    "impulse": "blue",
-    "strong": false
+    "impulse": "red",
+    "strong": true
    },
-   "ema20": 0.427,
+   "ema20": 0.428,
    "ema50": 0.432,
    "rsi": 40.8,
-   "fi2": -27944.0,
+   "fi2": -83832.0,
    "atr": 0.011,
-   "macd": -0.0018,
-   "macd_hist": -0.0006,
+   "macd": -0.0013,
+   "macd_hist": -0.0003,
    "macd_hist_rising": false,
    "support": [
     {
@@ -5558,53 +4591,54 @@
     {
      "price": 0.448,
      "touches": 101,
-     "strength": 101.96
+     "strength": 101.97
     }
    ],
    "plan": null,
    "notes": [
-    "Weekly tide is mixed: stand aside"
+    "Wait for Force Index(2) > 0 or RSI >= 55"
    ],
    "dual": {
     "symbol": "Y92.SI",
-    "date": "2026-11-24",
+    "date": "2026-11-20",
     "close": 0.41999998688697815,
     "decision": "AVOID",
     "blocked_by": [
      "reward_risk",
      "stop_width",
+     "weekly_impulse",
      "TS<80",
      "SM<75",
      "bid/ask below floor"
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 33.7,
+    "combined": 32.5,
     "sm": {
-     "score": 36.9,
+     "score": 49.2,
      "components": {
       "bid_ask": {
-       "pts": 2.0,
+       "pts": 2.3,
        "max": 35,
        "tier": "hourly-proxy"
       },
       "price_volume": {
-       "pts": 19.1,
+       "pts": 25.0,
        "max": 25,
        "tier": "daily"
       },
       "block_trades": {
-       "pts": 6.0,
+       "pts": 12.0,
        "max": 15,
        "tier": "daily-proxy"
       },
       "vwap": {
-       "pts": 1.5,
+       "pts": 1.8,
        "max": 10,
        "tier": "daily"
       },
       "obv": {
-       "pts": 5.6,
+       "pts": 5.2,
        "max": 10,
        "tier": "daily"
       },
@@ -5618,26 +4652,26 @@
      "weight_measured": 1.0
     },
     "ts": {
-     "score": 30.5,
+     "score": 15.8,
      "components": {
       "trend_alignment": {
-       "pts": 9.0,
+       "pts": 0.0,
        "max": 40,
-       "wk_macd_hist_rising": true,
+       "wk_macd_hist_rising": false,
        "wk_ema26_slope_pct": -1.1,
        "above_ema50": false,
        "ema50_rising": false
       },
       "pullback_quality": {
-       "pts": 21.5,
+       "pts": 15.8,
        "max": 35,
        "rsi_min5": 40.8,
        "rsi_max20": 59.8,
-       "value_zone": "0.427-0.428",
-       "low3_vs_zone_top_atr": -1.2,
+       "value_zone": "0.428-0.429",
+       "low3_vs_zone_top_atr": -1.25,
        "fib_retrace": 1.143,
-       "bear_power_atr": -1.05,
-       "bear_power_turn_up": true
+       "bear_power_atr": -1.14,
+       "bear_power_turn_up": false
       },
       "entry_confirmation": {
        "pts": 0.0,
@@ -5650,7 +4684,7 @@
     "gates": {
      "liquidity": {
       "pass": true,
-      "value": "S$7.53M/day"
+      "value": "S$7.85M/day"
      },
      "reward_risk": {
       "pass": false,
@@ -5662,18 +4696,18 @@
      },
      "stop_width": {
       "pass": false,
-      "value": "3.65 ATR"
+      "value": "3.63 ATR"
      },
      "weekly_impulse": {
-      "pass": true,
-      "value": "weekly blue"
+      "pass": false,
+      "value": "weekly red"
      }
     },
     "plan": {
      "entry_buy_stop": 0.435,
      "stop": 0.395,
      "risk_per_share": 0.04,
-     "stop_in_atr": 3.65,
+     "stop_in_atr": 3.63,
      "target1": 0.455,
      "target2": 0.555,
      "rr_t1": 0.5,
@@ -5688,7 +4722,7 @@
       "lower": 0.412,
       "ema": 0.428,
       "height": 0.032,
-      "t1_grade_pct": 62.8
+      "t1_grade_pct": 62.7
      },
      "management": [
       "Order valid 2 sessions; cancel if not filled",
@@ -5702,12 +4736,12 @@
    }
   },
   {
-   "ticker": "Z74.SI",
-   "code": "Z74",
-   "name": "Singtel",
-   "date": "2026-11-24",
-   "close": 4.13,
-   "chg_pct": -0.72,
+   "ticker": "C07.SI",
+   "code": "C07",
+   "name": "Jardine Cycle & Carriage",
+   "date": "2026-11-20",
+   "close": 23.79,
+   "chg_pct": -1.86,
    "status": "No trade",
    "wave": "-",
    "tide": {
@@ -5718,14 +4752,1007 @@
     "impulse": "blue",
     "strong": false
    },
-   "ema20": 4.133,
-   "ema50": 4.204,
-   "rsi": 48.6,
-   "fi2": -550776.0,
-   "atr": 0.095,
-   "macd": -0.0226,
-   "macd_hist": 0.0107,
+   "ema20": 24.12,
+   "ema50": 24.838,
+   "rsi": 45.0,
+   "fi2": -91941.0,
+   "atr": 0.71,
+   "macd": -0.0879,
+   "macd_hist": 0.1408,
    "macd_hist_rising": false,
+   "support": [
+    {
+     "price": 22.868,
+     "touches": 1,
+     "strength": 1.87
+    },
+    {
+     "price": 22.21,
+     "touches": 1,
+     "strength": 1.92
+    }
+   ],
+   "resistance": [
+    {
+     "price": 26.467,
+     "touches": 7,
+     "strength": 7.89
+    },
+    {
+     "price": 27.935,
+     "touches": 4,
+     "strength": 4.79
+    },
+    {
+     "price": 29.34,
+     "touches": 1,
+     "strength": 1.55
+    }
+   ],
+   "plan": null,
+   "notes": [
+    "Weekly tide is mixed: stand aside"
+   ],
+   "dual": {
+    "symbol": "C07.SI",
+    "date": "2026-11-20",
+    "close": 23.790000915527344,
+    "decision": "AVOID",
+    "blocked_by": [
+     "reward_risk",
+     "TS<80",
+     "SM<75",
+     "bid/ask below floor"
+    ],
+    "regime_bearish": true,
+    "version": "1.2",
+    "combined": 38.3,
+    "sm": {
+     "score": 41.9,
+     "components": {
+      "bid_ask": {
+       "pts": 1.1,
+       "max": 35,
+       "tier": "hourly-proxy"
+      },
+      "price_volume": {
+       "pts": 19.1,
+       "max": 25,
+       "tier": "daily"
+      },
+      "block_trades": {
+       "pts": 7.5,
+       "max": 15,
+       "tier": "daily-proxy"
+      },
+      "vwap": {
+       "pts": 5.8,
+       "max": 10,
+       "tier": "daily"
+      },
+      "obv": {
+       "pts": 6.8,
+       "max": 10,
+       "tier": "daily"
+      },
+      "closing_strength": {
+       "pts": 1.6,
+       "max": 5,
+       "tier": "daily"
+      }
+     },
+     "confidence": 0.5,
+     "weight_measured": 1.0
+    },
+    "ts": {
+     "score": 34.7,
+     "components": {
+      "trend_alignment": {
+       "pts": 9.0,
+       "max": 40,
+       "wk_macd_hist_rising": true,
+       "wk_ema26_slope_pct": -3.81,
+       "above_ema50": false,
+       "ema50_rising": false
+      },
+      "pullback_quality": {
+       "pts": 25.7,
+       "max": 35,
+       "rsi_min5": 45.0,
+       "rsi_max20": 54.3,
+       "value_zone": "24.115-24.214",
+       "low3_vs_zone_top_atr": -0.64,
+       "fib_retrace": 0.43,
+       "bear_power_atr": -0.5,
+       "bear_power_turn_up": false
+      },
+      "entry_confirmation": {
+       "pts": 0.0,
+       "max": 25,
+       "close_above_prior_high": false,
+       "d_macd_hist_upticks": 0
+      }
+     }
+    },
+    "gates": {
+     "liquidity": {
+      "pass": true,
+      "value": "S$6.64M/day"
+     },
+     "reward_risk": {
+      "pass": false,
+      "value": "1.28R to T1"
+     },
+     "atr_band": {
+      "pass": true,
+      "value": "ATR 2.98%"
+     },
+     "stop_width": {
+      "pass": true,
+      "value": "2.04 ATR"
+     },
+     "weekly_impulse": {
+      "pass": true,
+      "value": "weekly blue"
+     }
+    },
+    "plan": {
+     "entry_buy_stop": 24.62,
+     "stop": 23.17,
+     "risk_per_share": 1.45,
+     "stop_in_atr": 2.04,
+     "target1": 26.48,
+     "target2": 27.83,
+     "rr_t1": 1.28,
+     "supports": [
+      22.21,
+      22.934
+     ],
+     "resistances": [
+      26.49,
+      27.847,
+      29.34
+     ],
+     "atr": 0.7099,
+     "stop_method": "safezone",
+     "channel": {
+      "upper": 26.089,
+      "lower": 22.201,
+      "ema": 24.145,
+      "height": 3.888,
+      "t1_grade_pct": 47.8
+     },
+     "management": [
+      "Order valid 2 sessions; cancel if not filled",
+      "At +1R: move stop to breakeven",
+      "At T1: sell half; trail rest under 20-EMA or 2-bar low",
+      "Time stop: exit if < +0.5R after 7 sessions"
+     ],
+     "shares": 600,
+     "capital": 14772.0
+    }
+   }
+  },
+  {
+   "ticker": "C38U.SI",
+   "code": "C38U",
+   "name": "CapitaLand Integrated Commercial Trust",
+   "date": "2026-11-20",
+   "close": 2.3,
+   "chg_pct": -1.29,
+   "status": "No trade",
+   "wave": "-",
+   "tide": {
+    "tide": "Mixed",
+    "hist_rising": true,
+    "ema26_rising": false,
+    "above_ema26": false,
+    "impulse": "blue",
+    "strong": false
+   },
+   "ema20": 2.314,
+   "ema50": 2.305,
+   "rsi": 48.6,
+   "fi2": -835631.0,
+   "atr": 0.046,
+   "macd": 0.0158,
+   "macd_hist": -0.0027,
+   "macd_hist_rising": false,
+   "support": [
+    {
+     "price": 2.212,
+     "touches": 9,
+     "strength": 9.92
+    }
+   ],
+   "resistance": [
+    {
+     "price": 2.309,
+     "touches": 18,
+     "strength": 18.93
+    },
+    {
+     "price": 2.416,
+     "touches": 9,
+     "strength": 9.96
+    },
+    {
+     "price": 2.508,
+     "touches": 5,
+     "strength": 5.71
+    }
+   ],
+   "plan": null,
+   "notes": [
+    "Weekly tide is mixed: stand aside"
+   ],
+   "dual": {
+    "symbol": "C38U.SI",
+    "date": "2026-11-20",
+    "close": 2.299999952316284,
+    "decision": "AVOID",
+    "blocked_by": [
+     "reward_risk",
+     "stop_width",
+     "TS<80",
+     "SM<75",
+     "bid/ask below floor"
+    ],
+    "regime_bearish": true,
+    "version": "1.2",
+    "combined": 49.4,
+    "sm": {
+     "score": 51.7,
+     "components": {
+      "bid_ask": {
+       "pts": 0.0,
+       "max": 35,
+       "tier": "hourly-proxy"
+      },
+      "price_volume": {
+       "pts": 20.3,
+       "max": 25,
+       "tier": "daily"
+      },
+      "block_trades": {
+       "pts": 15.0,
+       "max": 15,
+       "tier": "daily-proxy"
+      },
+      "vwap": {
+       "pts": 5.4,
+       "max": 10,
+       "tier": "daily"
+      },
+      "obv": {
+       "pts": 9.5,
+       "max": 10,
+       "tier": "daily"
+      },
+      "closing_strength": {
+       "pts": 1.6,
+       "max": 5,
+       "tier": "daily"
+      }
+     },
+     "confidence": 0.5,
+     "weight_measured": 1.0
+    },
+    "ts": {
+     "score": 47.2,
+     "components": {
+      "trend_alignment": {
+       "pts": 17.0,
+       "max": 40,
+       "wk_macd_hist_rising": true,
+       "wk_ema26_slope_pct": -0.21,
+       "above_ema50": false,
+       "ema50_rising": true
+      },
+      "pullback_quality": {
+       "pts": 30.2,
+       "max": 35,
+       "rsi_min5": 48.6,
+       "rsi_max20": 70.3,
+       "value_zone": "2.308-2.323",
+       "low3_vs_zone_top_atr": -0.71,
+       "fib_retrace": 0.591,
+       "bear_power_atr": -0.71,
+       "bear_power_turn_up": false
+      },
+      "entry_confirmation": {
+       "pts": 0.0,
+       "max": 25,
+       "close_above_prior_high": false,
+       "d_macd_hist_upticks": 0
+      }
+     }
+    },
+    "gates": {
+     "liquidity": {
+      "pass": true,
+      "value": "S$81.29M/day"
+     },
+     "reward_risk": {
+      "pass": false,
+      "value": "1.08R to T1"
+     },
+     "atr_band": {
+      "pass": true,
+      "value": "ATR 1.99%"
+     },
+     "stop_width": {
+      "pass": false,
+      "value": "2.84 ATR"
+     },
+     "weekly_impulse": {
+      "pass": true,
+      "value": "weekly blue"
+     }
+    },
+    "plan": {
+     "entry_buy_stop": 2.35,
+     "stop": 2.22,
+     "risk_per_share": 0.13,
+     "stop_in_atr": 2.84,
+     "target1": 2.49,
+     "target2": 2.56,
+     "rr_t1": 1.08,
+     "supports": [
+      2.226,
+      2.347
+     ],
+     "resistances": [
+      2.507,
+      2.57
+     ],
+     "atr": 0.0458,
+     "stop_method": "safezone",
+     "channel": {
+      "upper": 2.394,
+      "lower": 2.229,
+      "ema": 2.311,
+      "height": 0.165,
+      "t1_grade_pct": 85.0
+     },
+     "management": [
+      "Order valid 2 sessions; cancel if not filled",
+      "At +1R: move stop to breakeven",
+      "At T1: sell half; trail rest under 20-EMA or 2-bar low",
+      "Time stop: exit if < +0.5R after 7 sessions"
+     ],
+     "shares": 7600,
+     "capital": 17860.0
+    }
+   }
+  },
+  {
+   "ticker": "J36.SI",
+   "code": "J36",
+   "name": "Jardine Matheson",
+   "date": "2026-11-20",
+   "close": 60.49,
+   "chg_pct": -1.64,
+   "status": "No trade",
+   "wave": "-",
+   "tide": {
+    "tide": "Mixed",
+    "hist_rising": true,
+    "ema26_rising": false,
+    "above_ema26": false,
+    "impulse": "green",
+    "strong": false
+   },
+   "ema20": 59.861,
+   "ema50": 59.272,
+   "rsi": 54.1,
+   "fi2": -145542.0,
+   "atr": 1.774,
+   "macd": 0.7445,
+   "macd_hist": -0.04,
+   "macd_hist_rising": false,
+   "support": [
+    {
+     "price": 59.515,
+     "touches": 6,
+     "strength": 6.9
+    },
+    {
+     "price": 56.56,
+     "touches": 1,
+     "strength": 1.81
+    },
+    {
+     "price": 54.5,
+     "touches": 1,
+     "strength": 1.91
+    }
+   ],
+   "resistance": [
+    {
+     "price": 63.295,
+     "touches": 2,
+     "strength": 2.97
+    },
+    {
+     "price": 65.55,
+     "touches": 1,
+     "strength": 1.06
+    },
+    {
+     "price": 67.475,
+     "touches": 2,
+     "strength": 2.55
+    }
+   ],
+   "plan": null,
+   "notes": [
+    "Weekly tide is mixed: stand aside"
+   ],
+   "dual": {
+    "symbol": "J36.SI",
+    "date": "2026-11-20",
+    "close": 60.4900016784668,
+    "decision": "AVOID",
+    "blocked_by": [
+     "reward_risk",
+     "stop_width",
+     "TS<80",
+     "SM<75"
+    ],
+    "regime_bearish": true,
+    "version": "1.2",
+    "combined": 53.0,
+    "sm": {
+     "score": 56.0,
+     "components": {
+      "bid_ask": {
+       "pts": 24.2,
+       "max": 35,
+       "tier": "hourly-proxy"
+      },
+      "price_volume": {
+       "pts": 8.7,
+       "max": 25,
+       "tier": "daily"
+      },
+      "block_trades": {
+       "pts": 7.5,
+       "max": 15,
+       "tier": "daily-proxy"
+      },
+      "vwap": {
+       "pts": 10.0,
+       "max": 10,
+       "tier": "daily"
+      },
+      "obv": {
+       "pts": 4.2,
+       "max": 10,
+       "tier": "daily"
+      },
+      "closing_strength": {
+       "pts": 1.4,
+       "max": 5,
+       "tier": "daily"
+      }
+     },
+     "confidence": 0.5,
+     "weight_measured": 1.0
+    },
+    "ts": {
+     "score": 50.1,
+     "components": {
+      "trend_alignment": {
+       "pts": 19.9,
+       "max": 40,
+       "wk_macd_hist_rising": true,
+       "wk_ema26_slope_pct": -0.77,
+       "above_ema50": true,
+       "ema50_rising": true
+      },
+      "pullback_quality": {
+       "pts": 30.2,
+       "max": 35,
+       "rsi_min5": 49.7,
+       "rsi_max20": 65.1,
+       "value_zone": "59.575-60.265",
+       "low3_vs_zone_top_atr": -0.84,
+       "fib_retrace": 0.438,
+       "bear_power_atr": -0.37,
+       "bear_power_turn_up": false
+      },
+      "entry_confirmation": {
+       "pts": 0.0,
+       "max": 25,
+       "close_above_prior_high": false,
+       "d_macd_hist_upticks": 0
+      }
+     }
+    },
+    "gates": {
+     "liquidity": {
+      "pass": true,
+      "value": "S$23.66M/day"
+     },
+     "reward_risk": {
+      "pass": false,
+      "value": "0.56R to T1"
+     },
+     "atr_band": {
+      "pass": true,
+      "value": "ATR 2.93%"
+     },
+     "stop_width": {
+      "pass": false,
+      "value": "2.85 ATR"
+     },
+     "weekly_impulse": {
+      "pass": true,
+      "value": "weekly green"
+     }
+    },
+    "plan": {
+     "entry_buy_stop": 62.74,
+     "stop": 57.69,
+     "risk_per_share": 5.05,
+     "stop_in_atr": 2.85,
+     "target1": 65.59,
+     "target2": 67.84,
+     "rr_t1": 0.56,
+     "supports": [
+      52.85,
+      54.5,
+      59.682
+     ],
+     "resistances": [
+      65.6,
+      67.85,
+      69.813
+     ],
+     "atr": 1.7738,
+     "stop_method": "safezone",
+     "channel": {
+      "upper": 63.234,
+      "lower": 56.279,
+      "ema": 59.756,
+      "height": 6.955,
+      "t1_grade_pct": 41.0
+     },
+     "management": [
+      "Order valid 2 sessions; cancel if not filled",
+      "At +1R: move stop to breakeven",
+      "At T1: sell half; trail rest under 20-EMA or 2-bar low",
+      "Time stop: exit if < +0.5R after 7 sessions"
+     ],
+     "shares": 100,
+     "capital": 6274.0
+    }
+   }
+  },
+  {
+   "ticker": "J69U.SI",
+   "code": "J69U",
+   "name": "Frasers Centrepoint Trust",
+   "date": "2026-11-20",
+   "close": 2.12,
+   "chg_pct": 0.0,
+   "status": "No trade",
+   "wave": "-",
+   "tide": {
+    "tide": "Mixed",
+    "hist_rising": true,
+    "ema26_rising": false,
+    "above_ema26": false,
+    "impulse": "blue",
+    "strong": false
+   },
+   "ema20": 2.13,
+   "ema50": 2.127,
+   "rsi": 48.6,
+   "fi2": -19059.0,
+   "atr": 0.036,
+   "macd": 0.0091,
+   "macd_hist": -0.0028,
+   "macd_hist_rising": false,
+   "support": [
+    {
+     "price": 2.052,
+     "touches": 6,
+     "strength": 6.94
+    }
+   ],
+   "resistance": [
+    {
+     "price": 2.123,
+     "touches": 3,
+     "strength": 3.97
+    },
+    {
+     "price": 2.251,
+     "touches": 53,
+     "strength": 53.96
+    },
+    {
+     "price": 2.37,
+     "touches": 1,
+     "strength": 1.43
+    }
+   ],
+   "plan": null,
+   "notes": [
+    "Weekly tide is mixed: stand aside"
+   ],
+   "dual": {
+    "symbol": "J69U.SI",
+    "date": "2026-11-20",
+    "close": 2.119999885559082,
+    "decision": "AVOID",
+    "blocked_by": [
+     "reward_risk",
+     "stop_width",
+     "TS<80",
+     "SM<75",
+     "bid/ask below floor"
+    ],
+    "regime_bearish": true,
+    "version": "1.2",
+    "combined": 44.5,
+    "sm": {
+     "score": 51.2,
+     "components": {
+      "bid_ask": {
+       "pts": 0.0,
+       "max": 35,
+       "tier": "hourly-proxy"
+      },
+      "price_volume": {
+       "pts": 25.0,
+       "max": 25,
+       "tier": "daily"
+      },
+      "block_trades": {
+       "pts": 12.0,
+       "max": 15,
+       "tier": "daily-proxy"
+      },
+      "vwap": {
+       "pts": 3.7,
+       "max": 10,
+       "tier": "daily"
+      },
+      "obv": {
+       "pts": 9.7,
+       "max": 10,
+       "tier": "daily"
+      },
+      "closing_strength": {
+       "pts": 0.7,
+       "max": 5,
+       "tier": "daily"
+      }
+     },
+     "confidence": 0.5,
+     "weight_measured": 1.0
+    },
+    "ts": {
+     "score": 37.8,
+     "components": {
+      "trend_alignment": {
+       "pts": 15.6,
+       "max": 40,
+       "wk_macd_hist_rising": true,
+       "wk_ema26_slope_pct": -0.58,
+       "above_ema50": false,
+       "ema50_rising": true
+      },
+      "pullback_quality": {
+       "pts": 22.2,
+       "max": 35,
+       "rsi_min5": 48.6,
+       "rsi_max20": 68.2,
+       "value_zone": "2.127-2.135",
+       "low3_vs_zone_top_atr": -0.7,
+       "fib_retrace": 0.824,
+       "bear_power_atr": -0.7,
+       "bear_power_turn_up": false
+      },
+      "entry_confirmation": {
+       "pts": 0.0,
+       "max": 25,
+       "close_above_prior_high": false,
+       "d_macd_hist_upticks": 0
+      }
+     }
+    },
+    "gates": {
+     "liquidity": {
+      "pass": true,
+      "value": "S$18.84M/day"
+     },
+     "reward_risk": {
+      "pass": false,
+      "value": "0.2R to T1"
+     },
+     "atr_band": {
+      "pass": true,
+      "value": "ATR 1.72%"
+     },
+     "stop_width": {
+      "pass": false,
+      "value": "2.74 ATR"
+     },
+     "weekly_impulse": {
+      "pass": true,
+      "value": "weekly blue"
+     }
+    },
+    "plan": {
+     "entry_buy_stop": 2.16,
+     "stop": 2.06,
+     "risk_per_share": 0.1,
+     "stop_in_atr": 2.74,
+     "target1": 2.18,
+     "target2": 2.28,
+     "rr_t1": 0.2,
+     "supports": [
+      2.058,
+      2.115
+     ],
+     "resistances": [
+      2.198,
+      2.296,
+      2.37
+     ],
+     "atr": 0.0364,
+     "stop_method": "safezone",
+     "channel": {
+      "upper": 2.195,
+      "lower": 2.063,
+      "ema": 2.129,
+      "height": 0.131,
+      "t1_grade_pct": 15.2
+     },
+     "management": [
+      "Order valid 2 sessions; cancel if not filled",
+      "At +1R: move stop to breakeven",
+      "At T1: sell half; trail rest under 20-EMA or 2-bar low",
+      "Time stop: exit if < +0.5R after 7 sessions"
+     ],
+     "shares": 9900,
+     "capital": 21384.0
+    }
+   }
+  },
+  {
+   "ticker": "S58.SI",
+   "code": "S58",
+   "name": "SATS",
+   "date": "2026-11-20",
+   "close": 3.76,
+   "chg_pct": -5.29,
+   "status": "No trade",
+   "wave": "-",
+   "tide": {
+    "tide": "Mixed",
+    "hist_rising": true,
+    "ema26_rising": false,
+    "above_ema26": false,
+    "impulse": "blue",
+    "strong": false
+   },
+   "ema20": 3.855,
+   "ema50": 3.857,
+   "rsi": 45.6,
+   "fi2": -1558741.0,
+   "atr": 0.134,
+   "macd": 0.0639,
+   "macd_hist": 0.0133,
+   "macd_hist_rising": false,
+   "support": [
+    {
+     "price": 3.506,
+     "touches": 5,
+     "strength": 5.96
+    },
+    {
+     "price": 3.395,
+     "touches": 2,
+     "strength": 2.45
+    },
+    {
+     "price": 3.27,
+     "touches": 1,
+     "strength": 1.43
+    }
+   ],
+   "resistance": [
+    {
+     "price": 3.872,
+     "touches": 21,
+     "strength": 21.94
+    },
+    {
+     "price": 4.23,
+     "touches": 1,
+     "strength": 1.98
+    },
+    {
+     "price": 4.34,
+     "touches": 1,
+     "strength": 1.61
+    }
+   ],
+   "plan": null,
+   "notes": [
+    "Weekly tide is mixed: stand aside"
+   ],
+   "dual": {
+    "symbol": "S58.SI",
+    "date": "2026-11-20",
+    "close": 3.759999990463257,
+    "decision": "AVOID",
+    "blocked_by": [
+     "reward_risk",
+     "stop_width",
+     "TS<80",
+     "SM<75",
+     "bid/ask below floor"
+    ],
+    "regime_bearish": true,
+    "version": "1.2",
+    "combined": 37.2,
+    "sm": {
+     "score": 35.3,
+     "components": {
+      "bid_ask": {
+       "pts": 0.0,
+       "max": 35,
+       "tier": "hourly-proxy"
+      },
+      "price_volume": {
+       "pts": 16.2,
+       "max": 25,
+       "tier": "daily"
+      },
+      "block_trades": {
+       "pts": 6.0,
+       "max": 15,
+       "tier": "daily-proxy"
+      },
+      "vwap": {
+       "pts": 5.0,
+       "max": 10,
+       "tier": "daily"
+      },
+      "obv": {
+       "pts": 8.1,
+       "max": 10,
+       "tier": "daily"
+      },
+      "closing_strength": {
+       "pts": 0.0,
+       "max": 5,
+       "tier": "daily"
+      }
+     },
+     "confidence": 0.5,
+     "weight_measured": 1.0
+    },
+    "ts": {
+     "score": 39.0,
+     "components": {
+      "trend_alignment": {
+       "pts": 14.6,
+       "max": 40,
+       "wk_macd_hist_rising": true,
+       "wk_ema26_slope_pct": -0.84,
+       "above_ema50": false,
+       "ema50_rising": true
+      },
+      "pullback_quality": {
+       "pts": 24.4,
+       "max": 35,
+       "rsi_min5": 45.6,
+       "rsi_max20": 74.9,
+       "value_zone": "3.838-3.895",
+       "low3_vs_zone_top_atr": -1.23,
+       "fib_retrace": 0.676,
+       "bear_power_atr": -1.23,
+       "bear_power_turn_up": false
+      },
+      "entry_confirmation": {
+       "pts": 0.0,
+       "max": 25,
+       "close_above_prior_high": false,
+       "d_macd_hist_upticks": 0
+      }
+     }
+    },
+    "gates": {
+     "liquidity": {
+      "pass": true,
+      "value": "S$27.22M/day"
+     },
+     "reward_risk": {
+      "pass": false,
+      "value": "0.57R to T1"
+     },
+     "atr_band": {
+      "pass": true,
+      "value": "ATR 3.56%"
+     },
+     "stop_width": {
+      "pass": false,
+      "value": "3.51 ATR"
+     },
+     "weekly_impulse": {
+      "pass": true,
+      "value": "weekly blue"
+     }
+    },
+    "plan": {
+     "entry_buy_stop": 3.95,
+     "stop": 3.48,
+     "risk_per_share": 0.47,
+     "stop_in_atr": 3.51,
+     "target1": 4.22,
+     "target2": 4.58,
+     "rr_t1": 0.57,
+     "supports": [
+      3.429,
+      3.786
+     ],
+     "resistances": [
+      4.23,
+      4.59,
+      4.795
+     ],
+     "atr": 0.1338,
+     "stop_method": "safezone",
+     "channel": {
+      "upper": 4.214,
+      "lower": 3.481,
+      "ema": 3.847,
+      "height": 0.734,
+      "t1_grade_pct": 36.8
+     },
+     "management": [
+      "Order valid 2 sessions; cancel if not filled",
+      "At +1R: move stop to breakeven",
+      "At T1: sell half; trail rest under 20-EMA or 2-bar low",
+      "Time stop: exit if < +0.5R after 7 sessions"
+     ],
+     "shares": 2100,
+     "capital": 8295.0
+    }
+   }
+  },
+  {
+   "ticker": "Z74.SI",
+   "code": "Z74",
+   "name": "Singtel",
+   "date": "2026-11-20",
+   "close": 4.16,
+   "chg_pct": -0.95,
+   "status": "No trade",
+   "wave": "-",
+   "tide": {
+    "tide": "Mixed",
+    "hist_rising": true,
+    "ema26_rising": false,
+    "above_ema26": false,
+    "impulse": "blue",
+    "strong": false
+   },
+   "ema20": 4.134,
+   "ema50": 4.207,
+   "rsi": 50.8,
+   "fi2": 727641.0,
+   "atr": 0.096,
+   "macd": -0.0251,
+   "macd_hist": 0.0109,
+   "macd_hist_rising": true,
    "support": [
     {
      "price": 4.09,
@@ -5761,28 +5788,29 @@
    ],
    "dual": {
     "symbol": "Z74.SI",
-    "date": "2026-11-24",
-    "close": 4.130000114440918,
+    "date": "2026-11-20",
+    "close": 4.159999847412109,
     "decision": "AVOID",
     "blocked_by": [
      "reward_risk",
+     "stop_width",
      "TS<80",
      "SM<75",
      "bid/ask below floor"
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 29.7,
+    "combined": 32.2,
     "sm": {
-     "score": 34.5,
+     "score": 29.3,
      "components": {
       "bid_ask": {
-       "pts": 16.9,
+       "pts": 10.8,
        "max": 35,
        "tier": "hourly-proxy"
       },
       "price_volume": {
-       "pts": 0.0,
+       "pts": 0.7,
        "max": 25,
        "tier": "daily"
       },
@@ -5792,17 +5820,17 @@
        "tier": "daily-proxy"
       },
       "vwap": {
-       "pts": 3.5,
+       "pts": 4.1,
        "max": 10,
        "tier": "daily"
       },
       "obv": {
-       "pts": 0.5,
+       "pts": 1.4,
        "max": 10,
        "tier": "daily"
       },
       "closing_strength": {
-       "pts": 3.6,
+       "pts": 2.4,
        "max": 5,
        "tier": "daily"
       }
@@ -5811,51 +5839,51 @@
      "weight_measured": 1.0
     },
     "ts": {
-     "score": 24.9,
+     "score": 35.2,
      "components": {
       "trend_alignment": {
        "pts": 9.0,
        "max": 40,
        "wk_macd_hist_rising": true,
-       "wk_ema26_slope_pct": -1.56,
+       "wk_ema26_slope_pct": -1.68,
        "above_ema50": false,
        "ema50_rising": false
       },
       "pullback_quality": {
-       "pts": 15.9,
+       "pts": 15.2,
        "max": 35,
-       "rsi_min5": 40.9,
+       "rsi_min5": 34.5,
        "rsi_max20": 53.7,
-       "value_zone": "4.124-4.146",
-       "low3_vs_zone_top_atr": -0.91,
+       "value_zone": "4.123-4.147",
+       "low3_vs_zone_top_atr": -1.32,
        "fib_retrace": 1.036,
-       "bear_power_atr": -0.36,
-       "bear_power_turn_up": false
+       "bear_power_atr": 0.18,
+       "bear_power_turn_up": true
       },
       "entry_confirmation": {
-       "pts": 0.0,
+       "pts": 11.0,
        "max": 25,
        "close_above_prior_high": false,
-       "d_macd_hist_upticks": 0
+       "d_macd_hist_upticks": 2
       }
      }
     },
     "gates": {
      "liquidity": {
       "pass": true,
-      "value": "S$127.39M/day"
+      "value": "S$124.25M/day"
      },
      "reward_risk": {
       "pass": false,
-      "value": "0.38R to T1"
+      "value": "1.0R to T1"
      },
      "atr_band": {
       "pass": true,
-      "value": "ATR 2.29%"
+      "value": "ATR 2.32%"
      },
      "stop_width": {
-      "pass": true,
-      "value": "2.22 ATR"
+      "pass": false,
+      "value": "2.8 ATR"
      },
      "weekly_impulse": {
       "pass": true,
@@ -5863,27 +5891,27 @@
      }
     },
     "plan": {
-     "entry_buy_stop": 4.17,
+     "entry_buy_stop": 4.23,
      "stop": 3.96,
-     "risk_per_share": 0.21,
-     "stop_in_atr": 2.22,
-     "target1": 4.25,
-     "target2": 4.5,
-     "rr_t1": 0.38,
+     "risk_per_share": 0.27,
+     "stop_in_atr": 2.8,
+     "target1": 4.5,
+     "target2": 4.69,
+     "rr_t1": 1.0,
      "supports": [],
      "resistances": [
-      4.267,
       4.519,
-      4.705
+      4.705,
+      4.95
      ],
-     "atr": 0.0946,
+     "atr": 0.0965,
      "stop_method": "safezone",
      "channel": {
-      "upper": 4.289,
-      "lower": 3.985,
-      "ema": 4.137,
+      "upper": 4.29,
+      "lower": 3.986,
+      "ema": 4.138,
       "height": 0.304,
-      "t1_grade_pct": 26.3
+      "t1_grade_pct": 88.8
      },
      "management": [
       "Order valid 2 sessions; cancel if not filled",
@@ -5891,8 +5919,8 @@
       "At T1: sell half; trail rest under 20-EMA or 2-bar low",
       "Time stop: exit if < +0.5R after 7 sessions"
      ],
-     "shares": 4700,
-     "capital": 19599.0
+     "shares": 3700,
+     "capital": 15651.0
     }
    }
   }
