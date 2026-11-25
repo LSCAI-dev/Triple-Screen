@@ -1,7 +1,7 @@
 {
  "meta": {
   "as_of": "2026-11-24",
-  "generated": "2026-11-26 04:14",
+  "generated": "2026-11-26 04:41",
   "source": "Yahoo Finance via yfinance (unadjusted daily OHLC)",
   "demo": false,
   "universe": 30,
@@ -291,17 +291,16 @@
      "reward_risk",
      "stop_width",
      "TS<80",
-     "SM<75",
-     "bid/ask below floor"
+     "SM<75"
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 43.3,
+    "combined": 48.8,
     "sm": {
-     "score": 38.4,
+     "score": 49.4,
      "components": {
       "bid_ask": {
-       "pts": 7.1,
+       "pts": 18.0,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -676,16 +675,17 @@
      "reward_risk",
      "weekly_impulse",
      "TS<80",
-     "SM<75"
+     "SM<75",
+     "bid/ask below floor"
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 20.6,
+    "combined": 13.0,
     "sm": {
-     "score": 31.1,
+     "score": 15.7,
      "components": {
       "bid_ask": {
-       "pts": 23.0,
+       "pts": 7.6,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -1656,12 +1656,12 @@
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 5.8,
+    "combined": 7.3,
     "sm": {
-     "score": 8.5,
+     "score": 11.4,
      "components": {
       "bid_ask": {
-       "pts": 0.0,
+       "pts": 2.9,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -1848,12 +1848,12 @@
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 2.8,
+    "combined": 9.6,
     "sm": {
-     "score": 2.3,
+     "score": 16.1,
      "components": {
       "bid_ask": {
-       "pts": 0.0,
+       "pts": 13.8,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -2632,12 +2632,12 @@
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 13.9,
+    "combined": 14.0,
     "sm": {
-     "score": 15.1,
+     "score": 15.2,
      "components": {
       "bid_ask": {
-       "pts": 3.7,
+       "pts": 3.8,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -3016,12 +3016,12 @@
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 21.2,
+    "combined": 17.0,
     "sm": {
-     "score": 26.7,
+     "score": 18.5,
      "components": {
       "bid_ask": {
-       "pts": 12.5,
+       "pts": 4.3,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -3220,12 +3220,12 @@
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 15.1,
+    "combined": 14.2,
     "sm": {
-     "score": 15.6,
+     "score": 13.9,
      "components": {
       "bid_ask": {
-       "pts": 5.6,
+       "pts": 3.9,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -3419,9 +3419,9 @@
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 24.2,
+    "combined": 24.3,
     "sm": {
-     "score": 28.3,
+     "score": 28.4,
      "components": {
       "bid_ask": {
        "pts": 23.8,
@@ -4390,12 +4390,12 @@
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 9.0,
+    "combined": 11.6,
     "sm": {
-     "score": 0.9,
+     "score": 6.1,
      "components": {
       "bid_ask": {
-       "pts": 0.0,
+       "pts": 5.3,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -4585,16 +4585,17 @@
     "blocked_by": [
      "reward_risk",
      "TS<80",
-     "SM<75"
+     "SM<75",
+     "bid/ask below floor"
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 48.8,
+    "combined": 40.8,
     "sm": {
-     "score": 46.2,
+     "score": 30.3,
      "components": {
       "bid_ask": {
-       "pts": 22.4,
+       "pts": 6.6,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -4794,12 +4795,12 @@
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 36.2,
+    "combined": 37.2,
     "sm": {
-     "score": 30.4,
+     "score": 32.3,
      "components": {
       "bid_ask": {
-       "pts": 0.0,
+       "pts": 1.9,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -4993,17 +4994,16 @@
     "blocked_by": [
      "reward_risk",
      "TS<80",
-     "SM<75",
-     "bid/ask below floor"
+     "SM<75"
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 17.8,
+    "combined": 28.2,
     "sm": {
-     "score": 12.9,
+     "score": 33.6,
      "components": {
       "bid_ask": {
-       "pts": 0.0,
+       "pts": 20.7,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -5202,12 +5202,12 @@
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 41.9,
+    "combined": 44.3,
     "sm": {
-     "score": 44.2,
+     "score": 49.0,
      "components": {
       "bid_ask": {
-       "pts": 30.2,
+       "pts": 35.0,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -5771,12 +5771,12 @@
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 30.6,
+    "combined": 34.6,
     "sm": {
-     "score": 36.4,
+     "score": 44.4,
      "components": {
       "bid_ask": {
-       "pts": 18.8,
+       "pts": 26.8,
        "max": 35,
        "tier": "hourly-proxy"
       },
