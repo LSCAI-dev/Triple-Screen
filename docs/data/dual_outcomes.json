@@ -32,7 +32,7 @@
    "t2": 7.32,
    "rr": 0.55,
    "qty": 3400,
-   "outcome": "Not filled"
+   "outcome": "Pending"
   },
   {
    "date": "2026-11-19",
@@ -68,13 +68,13 @@
    "qty": 3200,
    "filled": "2026-11-18",
    "fill": 8.4,
-   "days": 6,
+   "days": 5,
    "mfe_r": 0.81,
    "mae_r": -0.52,
    "t1_hit": false,
    "outcome": "Open",
    "closed": "",
-   "r": 0.42
+   "r": 0.19
   },
   {
    "date": "2026-11-16",
