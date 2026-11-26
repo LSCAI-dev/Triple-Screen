@@ -1,6 +1,34 @@
 {
  "rows": [
   {
+   "date": "2026-11-26",
+   "code": "C38U",
+   "name": "CapitaLand Integrated Commercial Trust",
+   "side": "Long",
+   "grade": "A",
+   "entry": 2.34,
+   "stop": 2.25,
+   "t1": 2.5,
+   "outcome": "Pending",
+   "filled": "",
+   "closed": "",
+   "r": null
+  },
+  {
+   "date": "2026-11-26",
+   "code": "C6L",
+   "name": "Singapore Airlines",
+   "side": "Short",
+   "grade": "A",
+   "entry": 6.83,
+   "stop": 7.0,
+   "t1": 6.48,
+   "outcome": "Pending",
+   "filled": "",
+   "closed": "",
+   "r": null
+  },
+  {
    "date": "2026-11-20",
    "code": "H78",
    "name": "Hongkong Land",
@@ -26,7 +54,7 @@
    "outcome": "Open",
    "filled": "2026-11-24",
    "closed": "",
-   "r": -0.5
+   "r": 0.19
   },
   {
    "date": "2026-11-19",
@@ -37,7 +65,7 @@
    "entry": 4.05,
    "stop": 3.95,
    "t1": 4.23,
-   "outcome": "Pending",
+   "outcome": "Not filled",
    "filled": "",
    "closed": "",
    "r": null
@@ -68,7 +96,7 @@
    "outcome": "Open",
    "filled": "2026-11-18",
    "closed": "",
-   "r": -0.26
+   "r": 0.68
   },
   {
    "date": "2026-11-13",
@@ -124,7 +152,7 @@
    "outcome": "Open",
    "filled": "2026-11-11",
    "closed": "",
-   "r": 1.37
+   "r": 0.75
   },
   {
    "date": "2026-11-05",
@@ -576,7 +604,7 @@
   }
  ],
  "summary": {
-  "signals": 41,
+  "signals": 43,
   "filled": 23,
   "closed": 19,
   "wins": 6,

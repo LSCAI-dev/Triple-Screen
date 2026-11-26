@@ -1,6 +1,23 @@
 {
  "rows": [
   {
+   "date": "2026-11-26",
+   "ticker": "C38U.SI",
+   "code": "C38U",
+   "name": "CapitaLand Integrated Commercial Trust",
+   "decision": "WATCH",
+   "version": "1.2",
+   "sm": 70.1,
+   "ts": 71.8,
+   "entry": 2.34,
+   "stop": 2.23,
+   "t1": 2.49,
+   "t2": 2.56,
+   "rr": 1.36,
+   "qty": 9000,
+   "outcome": "Pending"
+  },
+  {
    "date": "2026-11-24",
    "ticker": "C6L.SI",
    "code": "C6L",
@@ -15,7 +32,7 @@
    "t2": 7.32,
    "rr": 0.55,
    "qty": 3400,
-   "outcome": "Pending"
+   "outcome": "Not filled"
   },
   {
    "date": "2026-11-19",
@@ -51,13 +68,13 @@
    "qty": 3200,
    "filled": "2026-11-18",
    "fill": 8.4,
-   "days": 4,
+   "days": 6,
    "mfe_r": 0.81,
    "mae_r": -0.52,
    "t1_hit": false,
    "outcome": "Open",
    "closed": "",
-   "r": -0.16
+   "r": 0.42
   },
   {
    "date": "2026-11-16",
@@ -124,7 +141,7 @@
    "avg_days": null
   },
   "WATCH": {
-   "plans": 6,
+   "plans": 7,
    "filled": 1,
    "closed": 0,
    "win_rate": null,
