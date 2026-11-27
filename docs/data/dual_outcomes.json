@@ -36,12 +36,29 @@
   },
   {
    "date": "2026-11-26",
+   "ticker": "J36.SI",
+   "code": "J36",
+   "name": "Jardine Matheson",
+   "decision": "WATCH",
+   "version": "1.2",
+   "sm": 57.0,
+   "ts": 61.9,
+   "entry": 61.04,
+   "stop": 58.54,
+   "t1": 62.99,
+   "t2": 65.59,
+   "rr": 0.78,
+   "qty": 400,
+   "outcome": "Pending"
+  },
+  {
+   "date": "2026-11-26",
    "ticker": "C38U.SI",
    "code": "C38U",
    "name": "CapitaLand Integrated Commercial Trust",
    "decision": "WATCH",
    "version": "1.2",
-   "sm": 70.1,
+   "sm": 77.5,
    "ts": 71.8,
    "entry": 2.34,
    "stop": 2.23,
@@ -102,13 +119,13 @@
    "qty": 3200,
    "filled": "2026-11-18",
    "fill": 8.4,
-   "days": 7,
+   "days": 6,
    "mfe_r": 0.81,
    "mae_r": -0.52,
    "t1_hit": false,
-   "outcome": "Time stop",
-   "closed": "2026-11-27",
-   "r": 0.06
+   "outcome": "Open",
+   "closed": "",
+   "r": 0.42
   },
   {
    "date": "2026-11-16",
@@ -175,15 +192,15 @@
    "avg_days": null
   },
   "WATCH": {
-   "plans": 9,
+   "plans": 10,
    "filled": 1,
-   "closed": 1,
-   "win_rate": 100.0,
-   "avg_r": 0.06,
-   "total_r": 0.06,
+   "closed": 0,
+   "win_rate": null,
+   "avg_r": null,
+   "total_r": null,
    "avg_mfe_r": 0.81,
    "avg_mae_r": -0.52,
-   "avg_days": 7.0
+   "avg_days": null
   }
  },
  "rules": "Buy-stop 2 sessions; stop first; BE at +1R; half at T1; rest out on close < EMA20; time stop day 7 if < +0.5R; max 30 sessions; R net of 0.25% round trip. MFE/MAE = best/worst excursion from fill, in R."

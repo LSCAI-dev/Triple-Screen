@@ -1,7 +1,7 @@
 {
  "meta": {
   "as_of": "2026-11-26",
-  "generated": "2026-11-26 20:34",
+  "generated": "2026-11-28 03:40",
   "source": "Yahoo Finance via yfinance (unadjusted daily OHLC)",
   "demo": false,
   "universe": 30,
@@ -87,18 +87,16 @@
     "decision": "WATCH",
     "blocked_by": [
      "reward_risk",
-     "TS<80",
-     "SM<75",
-     "bid/ask below floor"
+     "TS<80"
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 70.9,
+    "combined": 74.6,
     "sm": {
-     "score": 70.1,
+     "score": 77.5,
      "components": {
       "bid_ask": {
-       "pts": 14.4,
+       "pts": 21.9,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -505,12 +503,12 @@
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 55.0,
+    "combined": 51.1,
     "sm": {
-     "score": 39.7,
+     "score": 32.0,
      "components": {
       "bid_ask": {
-       "pts": 7.7,
+       "pts": 0.0,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -651,7 +649,7 @@
    "ema20": 1.68,
    "ema50": 1.835,
    "rsi": 14.5,
-   "fi2": -2696992.0,
+   "fi2": -2697005.0,
    "atr": 0.08,
    "macd": -0.1284,
    "macd_hist": -0.048,
@@ -886,17 +884,16 @@
      "reward_risk",
      "weekly_impulse",
      "TS<80",
-     "SM<75",
-     "bid/ask below floor"
+     "SM<75"
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 18.3,
+    "combined": 35.2,
     "sm": {
-     "score": 14.5,
+     "score": 48.2,
      "components": {
       "bid_ask": {
-       "pts": 0.0,
+       "pts": 33.7,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -1080,17 +1077,16 @@
      "stop_width",
      "weekly_impulse",
      "TS<80",
-     "SM<75",
-     "bid/ask below floor"
+     "SM<75"
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 24.9,
+    "combined": 32.0,
     "sm": {
-     "score": 20.2,
+     "score": 34.4,
      "components": {
       "bid_ask": {
-       "pts": 9.5,
+       "pts": 23.7,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -1670,12 +1666,12 @@
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 15.7,
+    "combined": 16.8,
     "sm": {
-     "score": 8.8,
+     "score": 11.0,
      "components": {
       "bid_ask": {
-       "pts": 0.0,
+       "pts": 2.2,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -1861,16 +1857,17 @@
      "stop_width",
      "weekly_impulse",
      "TS<80",
-     "SM<75"
+     "SM<75",
+     "bid/ask below floor"
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 25.4,
+    "combined": 22.6,
     "sm": {
-     "score": 31.7,
+     "score": 26.3,
      "components": {
       "bid_ask": {
-       "pts": 22.2,
+       "pts": 16.9,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -2057,12 +2054,12 @@
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 20.6,
+    "combined": 21.2,
     "sm": {
-     "score": 12.7,
+     "score": 13.9,
      "components": {
       "bid_ask": {
-       "pts": 7.5,
+       "pts": 8.7,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -2254,17 +2251,16 @@
      "stop_width",
      "weekly_impulse",
      "TS<80",
-     "SM<75",
-     "bid/ask below floor"
+     "SM<75"
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 19.4,
+    "combined": 27.0,
     "sm": {
-     "score": 18.7,
+     "score": 33.8,
      "components": {
       "bid_ask": {
-       "pts": 10.2,
+       "pts": 25.4,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -2455,12 +2451,12 @@
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 15.5,
+    "combined": 14.2,
     "sm": {
-     "score": 12.0,
+     "score": 9.4,
      "components": {
       "bid_ask": {
-       "pts": 5.2,
+       "pts": 2.6,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -2647,12 +2643,12 @@
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 14.4,
+    "combined": 12.2,
     "sm": {
-     "score": 16.0,
+     "score": 11.8,
      "components": {
       "bid_ask": {
-       "pts": 5.3,
+       "pts": 1.1,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -2836,17 +2832,16 @@
      "stop_width",
      "weekly_impulse",
      "TS<80",
-     "SM<75",
-     "bid/ask below floor"
+     "SM<75"
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 19.2,
+    "combined": 36.1,
     "sm": {
-     "score": 20.8,
+     "score": 54.6,
      "components": {
       "bid_ask": {
-       "pts": 1.2,
+       "pts": 35.0,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -3038,17 +3033,16 @@
      "stop_width",
      "weekly_impulse",
      "TS<80",
-     "SM<75",
-     "bid/ask below floor"
+     "SM<75"
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 17.0,
+    "combined": 22.8,
     "sm": {
-     "score": 17.7,
+     "score": 29.2,
      "components": {
       "bid_ask": {
-       "pts": 7.0,
+       "pts": 18.5,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -3446,12 +3440,12 @@
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 31.0,
+    "combined": 30.1,
     "sm": {
-     "score": 37.3,
+     "score": 35.6,
      "components": {
       "bid_ask": {
-       "pts": 32.2,
+       "pts": 30.5,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -3593,7 +3587,7 @@
    "ema20": 37.48,
    "ema50": 39.344,
    "rsi": 23.3,
-   "fi2": 34956.0,
+   "fi2": 36909.0,
    "atr": 0.766,
    "macd": -1.5117,
    "macd_hist": -0.1789,
@@ -3645,12 +3639,12 @@
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 13.6,
+    "combined": 19.4,
     "sm": {
-     "score": 2.7,
+     "score": 14.1,
      "components": {
       "bid_ask": {
-       "pts": 0.0,
+       "pts": 11.4,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -3716,7 +3710,7 @@
     "gates": {
      "liquidity": {
       "pass": true,
-      "value": "S$147.43M/day"
+      "value": "S$147.45M/day"
      },
      "reward_risk": {
       "pass": false,
@@ -3842,12 +3836,12 @@
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 25.8,
+    "combined": 20.3,
     "sm": {
-     "score": 44.9,
+     "score": 34.0,
      "components": {
       "bid_ask": {
-       "pts": 35.0,
+       "pts": 24.0,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -4036,12 +4030,12 @@
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 12.4,
+    "combined": 16.9,
     "sm": {
-     "score": 7.0,
+     "score": 15.9,
      "components": {
       "bid_ask": {
-       "pts": 0.0,
+       "pts": 8.9,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -4231,12 +4225,12 @@
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 37.5,
+    "combined": 30.2,
     "sm": {
-     "score": 43.9,
+     "score": 29.3,
      "components": {
       "bid_ask": {
-       "pts": 14.7,
+       "pts": 0.0,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -4424,12 +4418,12 @@
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 18.2,
+    "combined": 18.8,
     "sm": {
-     "score": 12.7,
+     "score": 13.9,
      "components": {
       "bid_ask": {
-       "pts": 8.6,
+       "pts": 9.8,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -4615,7 +4609,7 @@
     "symbol": "J36.SI",
     "date": "2026-11-26",
     "close": 60.380001068115234,
-    "decision": "AVOID",
+    "decision": "WATCH",
     "blocked_by": [
      "reward_risk",
      "TS<80",
@@ -4623,12 +4617,12 @@
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 54.2,
+    "combined": 59.4,
     "sm": {
-     "score": 46.6,
+     "score": 57.0,
      "components": {
       "bid_ask": {
-       "pts": 19.8,
+       "pts": 30.2,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -5206,16 +5200,17 @@
     "blocked_by": [
      "reward_risk",
      "TS<80",
-     "SM<75"
+     "SM<75",
+     "bid/ask below floor"
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 29.9,
+    "combined": 23.0,
     "sm": {
-     "score": 35.3,
+     "score": 21.6,
      "components": {
       "bid_ask": {
-       "pts": 18.5,
+       "pts": 4.8,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -5358,7 +5353,7 @@
    "ema20": 7.641,
    "ema50": 8.0,
    "rsi": 32.5,
-   "fi2": 24073.0,
+   "fi2": 24083.0,
    "atr": 0.2,
    "macd": -0.1906,
    "macd_hist": -0.0535,
@@ -5404,12 +5399,12 @@
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 20.5,
+    "combined": 21.5,
     "sm": {
-     "score": 11.4,
+     "score": 13.4,
      "components": {
       "bid_ask": {
-       "pts": 0.0,
+       "pts": 2.0,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -5585,12 +5580,12 @@
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 32.7,
+    "combined": 35.0,
     "sm": {
-     "score": 38.1,
+     "score": 42.7,
      "components": {
       "bid_ask": {
-       "pts": 0.0,
+       "pts": 4.7,
        "max": 35,
        "tier": "hourly-proxy"
       },
@@ -5777,12 +5772,12 @@
     ],
     "regime_bearish": true,
     "version": "1.2",
-    "combined": 61.0,
+    "combined": 58.6,
     "sm": {
-     "score": 70.2,
+     "score": 65.4,
      "components": {
       "bid_ask": {
-       "pts": 35.0,
+       "pts": 30.2,
        "max": 35,
        "tier": "hourly-proxy"
       },
