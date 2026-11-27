@@ -1,6 +1,40 @@
 {
  "rows": [
   {
+   "date": "2026-11-27",
+   "ticker": "Z74.SI",
+   "code": "Z74",
+   "name": "Singtel",
+   "decision": "WATCH",
+   "version": "1.2",
+   "sm": 71.7,
+   "ts": 69.8,
+   "entry": 4.36,
+   "stop": 4.14,
+   "t1": 4.5,
+   "t2": 4.69,
+   "rr": 0.64,
+   "qty": 4500,
+   "outcome": "Pending"
+  },
+  {
+   "date": "2026-11-27",
+   "ticker": "C38U.SI",
+   "code": "C38U",
+   "name": "CapitaLand Integrated Commercial Trust",
+   "decision": "WATCH",
+   "version": "1.2",
+   "sm": 78.8,
+   "ts": 61.7,
+   "entry": 2.35,
+   "stop": 2.25,
+   "t1": 2.49,
+   "t2": 2.56,
+   "rr": 1.4,
+   "qty": 9900,
+   "outcome": "Pending"
+  },
+  {
    "date": "2026-11-26",
    "ticker": "C38U.SI",
    "code": "C38U",
@@ -32,7 +66,7 @@
    "t2": 7.32,
    "rr": 0.55,
    "qty": 3400,
-   "outcome": "Pending"
+   "outcome": "Not filled"
   },
   {
    "date": "2026-11-19",
@@ -68,13 +102,13 @@
    "qty": 3200,
    "filled": "2026-11-18",
    "fill": 8.4,
-   "days": 5,
+   "days": 7,
    "mfe_r": 0.81,
    "mae_r": -0.52,
    "t1_hit": false,
-   "outcome": "Open",
-   "closed": "",
-   "r": 0.19
+   "outcome": "Time stop",
+   "closed": "2026-11-27",
+   "r": 0.06
   },
   {
    "date": "2026-11-16",
@@ -141,15 +175,15 @@
    "avg_days": null
   },
   "WATCH": {
-   "plans": 7,
+   "plans": 9,
    "filled": 1,
-   "closed": 0,
-   "win_rate": null,
-   "avg_r": null,
-   "total_r": null,
+   "closed": 1,
+   "win_rate": 100.0,
+   "avg_r": 0.06,
+   "total_r": 0.06,
    "avg_mfe_r": 0.81,
    "avg_mae_r": -0.52,
-   "avg_days": null
+   "avg_days": 7.0
   }
  },
  "rules": "Buy-stop 2 sessions; stop first; BE at +1R; half at T1; rest out on close < EMA20; time stop day 7 if < +0.5R; max 30 sessions; R net of 0.25% round trip. MFE/MAE = best/worst excursion from fill, in R."
